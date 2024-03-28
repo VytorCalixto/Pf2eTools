@@ -507,7 +507,12 @@ Parser.FULL_CURRENCY_CONVERSION_TABLE = [
 	},
 ];
 Parser.getCurrencyConversionTable = function (currencyConversionId) {
-	const fromBrew = currencyConversionId ? MiscUtil.get(BrewUtil.homebrewMeta, "currencyConversions", currencyConversionId)
+	const fromBrew = currencyConversionId
+		? MiscUtil.get(
+			BrewUtil.homebrewMeta,
+			"currencyConversions",
+			currencyConversionId,
+		)
 		: null;
 	const conversionTable =
 		fromBrew && fromBrew.length
@@ -1584,6 +1589,7 @@ SRC_BotD = "BotD";
 SRC_CFD = "CFD";
 SRC_CHD = "CHD";
 SRC_CRB = "CRB";
+SRC_PC1 = "PC1";
 SRC_DA = "DA";
 SRC_EC0 = "EC0";
 SRC_EC1 = "EC1";
@@ -1644,6 +1650,7 @@ SRC_SoT6 = "SoT6";
 SRC_TaL = "TaL";
 SRC_TiO = "TiO";
 SRC_ToK = "ToK";
+SRC_7DfS0 = "7DfS0";
 Parser.SOURCE_JSON_TO_FULL[SRC_SKT0] = "Sky King's Tomb Player's Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_RoE] = "Rage of Elements";
 Parser.SOURCE_JSON_TO_FULL[SRC_TV] = "Treasure Vault";
@@ -1694,6 +1701,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_BotD] = "Book of the Dead";
 Parser.SOURCE_JSON_TO_FULL[SRC_CFD] = "Critical Fumble Deck";
 Parser.SOURCE_JSON_TO_FULL[SRC_CHD] = "Critical Hit Deck";
 Parser.SOURCE_JSON_TO_FULL[SRC_CRB] = "Core Rulebook";
+Parser.SOURCE_JSON_TO_FULL[SRC_PC1] = "Player Core";
 Parser.SOURCE_JSON_TO_FULL[SRC_DA] = "Dark Archive";
 Parser.SOURCE_JSON_TO_FULL[SRC_EC0] = "Extinction Curse Player's Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_EC1] =
@@ -1780,6 +1788,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_SoT6] =
 Parser.SOURCE_JSON_TO_FULL[SRC_TaL] = "Torment and Legacy";
 Parser.SOURCE_JSON_TO_FULL[SRC_TiO] = "Troubles in Otari";
 Parser.SOURCE_JSON_TO_FULL[SRC_ToK] = "Threshold of Knowledge";
+Parser.SOURCE_JSON_TO_FULL[SRC_7DfS0] = "Seven Dooms for Sandpoint Player's Guide";
 Parser.SOURCE_JSON_TO_ABV[SRC_SKT0] = "SKT0";
 Parser.SOURCE_JSON_TO_ABV[SRC_RoE] = "RoE";
 Parser.SOURCE_JSON_TO_ABV[SRC_TV] = "TV";
@@ -1820,6 +1829,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_BotD] = "BotD";
 Parser.SOURCE_JSON_TO_ABV[SRC_CFD] = "CFD";
 Parser.SOURCE_JSON_TO_ABV[SRC_CHD] = "CHD";
 Parser.SOURCE_JSON_TO_ABV[SRC_CRB] = "CRB";
+Parser.SOURCE_JSON_TO_ABV[SRC_PC1] = "PC1";
 Parser.SOURCE_JSON_TO_ABV[SRC_DA] = "DA";
 Parser.SOURCE_JSON_TO_ABV[SRC_EC0] = "EC0";
 Parser.SOURCE_JSON_TO_ABV[SRC_EC1] = "EC1";
@@ -1880,6 +1890,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_SoT6] = "SoT6";
 Parser.SOURCE_JSON_TO_ABV[SRC_TaL] = "TaL";
 Parser.SOURCE_JSON_TO_ABV[SRC_TiO] = "TiO";
 Parser.SOURCE_JSON_TO_ABV[SRC_ToK] = "ToK";
+Parser.SOURCE_JSON_TO_ABV[SRC_7DfS0] = "7DfS0";
 Parser.SOURCE_JSON_TO_DATE[SRC_SKT0] = "2023-07-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_RoE] = "2023-08-02";
 Parser.SOURCE_JSON_TO_DATE[SRC_TV] = "2023-02-22";
@@ -1920,6 +1931,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_BotD] = "2022-04-27";
 Parser.SOURCE_JSON_TO_DATE[SRC_CFD] = "2019-10-16";
 Parser.SOURCE_JSON_TO_DATE[SRC_CHD] = "2019-10-16";
 Parser.SOURCE_JSON_TO_DATE[SRC_CRB] = "2019-08-01";
+Parser.SOURCE_JSON_TO_DATE[SRC_PC1] = "2023-11-15";
 Parser.SOURCE_JSON_TO_DATE[SRC_DA] = "2022-07-27";
 Parser.SOURCE_JSON_TO_DATE[SRC_EC0] = "2020-01-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_EC1] = "2020-01-30";
@@ -1980,6 +1992,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_SoT6] = "2021-07-26";
 Parser.SOURCE_JSON_TO_DATE[SRC_TaL] = "2019-09-11";
 Parser.SOURCE_JSON_TO_DATE[SRC_TiO] = "2020-12-09";
 Parser.SOURCE_JSON_TO_DATE[SRC_ToK] = "2021-11-19";
+Parser.SOURCE_JSON_TO_DATE[SRC_7DfS0] = "2024-03-08";
 Parser.SOURCE_JSON_TO_STORE[SRC_SKT0] =
 	"https://downloads.paizo.com/SkyKingsTombPlayersGuide.pdf";
 Parser.SOURCE_JSON_TO_STORE[SRC_RoE] = "https://paizo.com/products/btq02eal";
@@ -2024,6 +2037,7 @@ Parser.SOURCE_JSON_TO_STORE[SRC_BotD] = "https://paizo.com/products/btq02c0j";
 Parser.SOURCE_JSON_TO_STORE[SRC_CFD] = "https://paizo.com/products/btq024ud";
 Parser.SOURCE_JSON_TO_STORE[SRC_CHD] = "https://paizo.com/products/btq024tn";
 Parser.SOURCE_JSON_TO_STORE[SRC_CRB] = "https://paizo.com/products/btq01zp3";
+Parser.SOURCE_JSON_TO_STORE[SRC_PC1] = "https://paizo.com/products/btq02ej2";
 Parser.SOURCE_JSON_TO_STORE[SRC_DA] = "https://paizo.com/products/btq02arq";
 Parser.SOURCE_JSON_TO_STORE[SRC_EC0] = "https://paizo.com/products/btq022ks";
 Parser.SOURCE_JSON_TO_STORE[SRC_EC1] = "https://paizo.com/products/btq01zqb";
@@ -2091,6 +2105,7 @@ Parser.SOURCE_JSON_TO_STORE[SRC_SoT6] = "https://paizo.com/products/btq027u1";
 Parser.SOURCE_JSON_TO_STORE[SRC_TaL] = "https://paizo.com/products/btq021ax";
 Parser.SOURCE_JSON_TO_STORE[SRC_TiO] = "https://paizo.com/products/btq026k1";
 Parser.SOURCE_JSON_TO_STORE[SRC_ToK] = "https://paizo.com/products/btq027qf";
+Parser.SOURCE_JSON_TO_STORE[SRC_7DfS0] = "https://downloads.paizo.com/SevenDoomsforSandpoint_PlayersGuide.pdf";
 Parser.SOURCES_ADVENTURES = new Set([
 	SRC_AFoF,
 	SRC_AoA0,
@@ -2161,6 +2176,7 @@ Parser.SOURCES_ADVENTURES = new Set([
 	SRC_TiO,
 	SRC_ToK,
 	SRC_SKT0,
+	SRC_7DfS0,
 ]);
 Parser.SOURCES_VANILLA = new Set([
 	SRC_APG,
@@ -2169,6 +2185,7 @@ Parser.SOURCES_VANILLA = new Set([
 	SRC_B3,
 	SRC_BotD,
 	SRC_CRB,
+	SRC_PC1,
 	SRC_DA,
 	SRC_GnG,
 	SRC_GMG,
@@ -2230,6 +2247,7 @@ Parser.TAG_TO_DEFAULT_SOURCE = {
 	SRC_CFD,
 	SRC_CHD,
 	SRC_CRB,
+	SRC_PC1,
 	SRC_DA,
 	SRC_GnG,
 	SRC_GMG,
@@ -2324,6 +2342,7 @@ Parser.TAG_TO_DEFAULT_SOURCE = {
 	SRC_TiO,
 	SRC_ToK,
 	SRC_SKT0,
+	SRC_7DfS0,
 ].forEach((src) => {
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src.toLowerCase()] = src;
@@ -2356,7 +2375,7 @@ Parser.getTraitName = function (trait) {
 		: "";
 	if (name === name.toUpperCase()) return name;
 	else if (name.length <= 2) {
-		return name.toUpperCase() // Alignment traits: CG, LE, ...
+		return name.toUpperCase(); // Alignment traits: CG, LE, ...
 	} else return name.toTitleCase();
 };
 
@@ -2591,7 +2610,7 @@ Parser.parseSkills = function (array, opts) {
 // Naked: Scatter 10 ft.
 // Tag: {@trait Scatter||Scatter 10 ft.}
 /**
- 	@param {Object[]} array Array of traits
+	@param {Object[]} array Array of traits
 	@param {Object} opts Options object.
 	@param {string} opts.toTags Convert to tags.
 	@param {string} opts.toNaked Remove brackets {}.
