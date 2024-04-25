@@ -28,7 +28,7 @@ Parser.numberToText = function (number, freq) {
 	if (typeof number === "string") return number;
 	if (Math.abs(number) >= 100) return `${number}`;
 
-	function getAsText (num) {
+	function getAsText(num) {
 		const abs = Math.abs(num);
 		switch (abs) {
 			case 0:
@@ -356,9 +356,8 @@ Parser.priceToFull = function (price, noPlatinum) {
 	if (price == null) return "\u2014";
 	if (typeof price === "object") {
 		if (price.amount == null || price.coin == null) return "\u2014";
-		return `${Parser._addCommas(price.amount)} ${price.coin}${
-			price.note ? ` ${price.note}` : ""
-		}`;
+		return `${Parser._addCommas(price.amount)} ${price.coin}${price.note ? ` ${price.note}` : ""
+			}`;
 	} else if (typeof price === "number" && !isNaN(price)) {
 		// assume it's all copper (1/100 gp)
 		let coin = "";
@@ -716,7 +715,7 @@ Parser.getClassSideBarEntries = function (cls) {
 		],
 	});
 
-	function initProfParser (thing, entry) {
+	function initProfParser(thing, entry) {
 		Object.keys(thing).forEach((k) => {
 			let thingArray = [];
 			let prof = "";
@@ -766,10 +765,9 @@ Parser.getClassSideBarEntries = function (cls) {
 						);
 					} else {
 						return entry.push(
-							`{@indentSubsequent ${prof} in ${
-								element.skill.length === 1
-									? ""
-									: `your choice of`
+							`{@indentSubsequent ${prof} in ${element.skill.length === 1
+								? ""
+								: `your choice of`
 							} ${element.skill
 								.map((s) => `{@skill ${s}}`)
 								.joinConjunct(", ", " or ")}}`,
@@ -858,9 +856,8 @@ Parser.getArticle = function (str) {
 };
 
 Parser.spLevelToFullLevelText = function (level, dash) {
-	return `${Parser.spLevelToFull(level)}${
-		level === 0 ? "s" : `${dash ? "-" : " "}level`
-	}`;
+	return `${Parser.spLevelToFull(level)}${level === 0 ? "s" : `${dash ? "-" : " "}level`
+		}`;
 };
 
 Parser.COMPONENTS_TO_FULL = {};
@@ -1091,25 +1088,20 @@ Parser.bookOrdinalToAbv = (ordinal, preNoSuff) => {
 	if (ordinal === undefined) return "";
 	switch (ordinal.type) {
 		case "part":
-			return `${preNoSuff ? " " : ""}Part ${ordinal.identifier}${
-				preNoSuff ? "" : " \u2014 "
-			}`;
+			return `${preNoSuff ? " " : ""}Part ${ordinal.identifier}${preNoSuff ? "" : " \u2014 "
+				}`;
 		case "chapter":
-			return `${preNoSuff ? " " : ""}Ch. ${ordinal.identifier}${
-				preNoSuff ? "" : ": "
-			}`;
+			return `${preNoSuff ? " " : ""}Ch. ${ordinal.identifier}${preNoSuff ? "" : ": "
+				}`;
 		case "episode":
-			return `${preNoSuff ? " " : ""}Ep. ${ordinal.identifier}${
-				preNoSuff ? "" : ": "
-			}`;
+			return `${preNoSuff ? " " : ""}Ep. ${ordinal.identifier}${preNoSuff ? "" : ": "
+				}`;
 		case "appendix":
-			return `${preNoSuff ? " " : ""}App. ${ordinal.identifier}${
-				preNoSuff ? "" : ": "
-			}`;
+			return `${preNoSuff ? " " : ""}App. ${ordinal.identifier}${preNoSuff ? "" : ": "
+				}`;
 		case "level":
-			return `${preNoSuff ? " " : ""}Level ${ordinal.identifier}${
-				preNoSuff ? "" : ": "
-			}`;
+			return `${preNoSuff ? " " : ""}Level ${ordinal.identifier}${preNoSuff ? "" : ": "
+				}`;
 		default:
 			throw new Error(`Unhandled ordinal type "${ordinal.type}"`);
 	}
@@ -1230,15 +1222,13 @@ Parser.timeToFullEntry = function (time) {
 
 Parser.freqToFullEntry = function (freq) {
 	if (freq.special != null) return freq.special;
-	return `${Parser.numberToText(freq.number, true)} ${
-		freq.recurs ? "every" : "per"
-	} ${freq.interval || ""} ${
-		freq.interval >= 2
+	return `${Parser.numberToText(freq.number, true)} ${freq.recurs ? "every" : "per"
+		} ${freq.interval || ""} ${freq.interval >= 2
 			? `${freq.unit}s`
 			: freq.customUnit
 				? freq.customUnit
 				: freq.unit
-	}${freq.overcharge ? ", plus overcharge" : ""}`;
+		}${freq.overcharge ? ", plus overcharge" : ""}`;
 };
 
 Parser.timeToTableStr = function (time) {
@@ -1254,9 +1244,8 @@ Parser.timeToTableStr = function (time) {
 		}
 		return "Action";
 	}
-	return `${time.number} ${time.unit.uppercaseFirst()}${
-		time.number >= 2 ? "s" : ""
-	}`;
+	return `${time.number} ${time.unit.uppercaseFirst()}${time.number >= 2 ? "s" : ""
+		}`;
 };
 
 Parser.durationToFull = function (duration) {
@@ -1268,9 +1257,8 @@ Parser.durationToFull = function (duration) {
 	) {
 		return "sustained";
 	}
-	const rendered = `${duration.number == null ? "" : `${duration.number} `}${
-		duration.number > 1 ? `${duration.unit}s` : duration.unit
-	}`;
+	const rendered = `${duration.number == null ? "" : `${duration.number} `}${duration.number > 1 ? `${duration.unit}s` : duration.unit
+		}`;
 	if (duration.sustained) return `sustained up to ${rendered}`;
 	else return rendered;
 };
@@ -1550,6 +1538,7 @@ Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE = {};
 // Listing of all the sources
 /* PF2ETOOLS_SOURCE__OPEN */
 SRC_SKT0 = "SKT0";
+SRC_WoW0 = "WoW0";
 SRC_RoE = "RoE";
 SRC_TV = "TV";
 SRC_AAWS = "AAWS";
@@ -1652,6 +1641,7 @@ SRC_TiO = "TiO";
 SRC_ToK = "ToK";
 SRC_7DfS0 = "7DfS0";
 Parser.SOURCE_JSON_TO_FULL[SRC_SKT0] = "Sky King's Tomb Player's Guide";
+Parser.SOURCE_JSON_TO_FULL[SRC_WoW0] = "Wardens of Wildwood Player's Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_RoE] = "Rage of Elements";
 Parser.SOURCE_JSON_TO_FULL[SRC_TV] = "Treasure Vault";
 Parser.SOURCE_JSON_TO_FULL[SRC_AAWS] = "Azarketi Ancestry Web Supplement";
@@ -1790,6 +1780,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_TiO] = "Troubles in Otari";
 Parser.SOURCE_JSON_TO_FULL[SRC_ToK] = "Threshold of Knowledge";
 Parser.SOURCE_JSON_TO_FULL[SRC_7DfS0] = "Seven Dooms for Sandpoint Player's Guide";
 Parser.SOURCE_JSON_TO_ABV[SRC_SKT0] = "SKT0";
+Parser.SOURCE_JSON_TO_ABV[SRC_WoW0] = "WoW0";
 Parser.SOURCE_JSON_TO_ABV[SRC_RoE] = "RoE";
 Parser.SOURCE_JSON_TO_ABV[SRC_TV] = "TV";
 Parser.SOURCE_JSON_TO_ABV[SRC_AAWS] = "AAWS";
@@ -1892,6 +1883,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_TiO] = "TiO";
 Parser.SOURCE_JSON_TO_ABV[SRC_ToK] = "ToK";
 Parser.SOURCE_JSON_TO_ABV[SRC_7DfS0] = "7DfS0";
 Parser.SOURCE_JSON_TO_DATE[SRC_SKT0] = "2023-07-13";
+Parser.SOURCE_JSON_TO_DATE[SRC_WoW0] = "2024-04-23";
 Parser.SOURCE_JSON_TO_DATE[SRC_RoE] = "2023-08-02";
 Parser.SOURCE_JSON_TO_DATE[SRC_TV] = "2023-02-22";
 Parser.SOURCE_JSON_TO_DATE[SRC_AAWS] = "2021-02-24";
@@ -1995,6 +1987,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_ToK] = "2021-11-19";
 Parser.SOURCE_JSON_TO_DATE[SRC_7DfS0] = "2024-03-08";
 Parser.SOURCE_JSON_TO_STORE[SRC_SKT0] =
 	"https://downloads.paizo.com/SkyKingsTombPlayersGuide.pdf";
+Parser.SOURCE_JSON_TO_STORE[SRC_WoW0] = "https://downloads.paizo.com/WardensofWildwood_PlayersGuide.pdf";
 Parser.SOURCE_JSON_TO_STORE[SRC_RoE] = "https://paizo.com/products/btq02eal";
 Parser.SOURCE_JSON_TO_STORE[SRC_TV] = "https://paizo.com/products/btq02eav";
 Parser.SOURCE_JSON_TO_STORE[SRC_AAWS] =
@@ -2176,6 +2169,7 @@ Parser.SOURCES_ADVENTURES = new Set([
 	SRC_TiO,
 	SRC_ToK,
 	SRC_SKT0,
+	SRC_WoW0,
 	SRC_7DfS0,
 ]);
 Parser.SOURCES_VANILLA = new Set([
@@ -2342,6 +2336,7 @@ Parser.TAG_TO_DEFAULT_SOURCE = {
 	SRC_TiO,
 	SRC_ToK,
 	SRC_SKT0,
+	SRC_WoW0,
 	SRC_7DfS0,
 ].forEach((src) => {
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src] = src;
