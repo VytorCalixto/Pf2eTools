@@ -243,7 +243,7 @@
 					}
 				]
 			},
-			"description": "Female dwarf banker"
+			"description": "Female {@ancestry dwarf} banker"
 		},
 		{
 			"name": "Sludgespine Killers",
@@ -1337,7 +1337,7 @@
 			"skills": {
 				"athletics": {
 					"std": 4,
-					"to Climb": 8
+					"to {@action Climb}": 8
 				},
 				"stealth": {
 					"std": 8
@@ -1432,7 +1432,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"48 hours, {@dc 14}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -1494,7 +1498,7 @@
 			"skills": {
 				"athletics": {
 					"std": 7,
-					"to Disarm": 9
+					"to {@action Disarm}": 9
 				}
 			},
 			"abilityMods": {
@@ -1600,7 +1604,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 15}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"mid": [
@@ -1774,7 +1782,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 18}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -1922,7 +1934,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 19}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -1980,10 +1996,7 @@
 			"senses": [
 				{
 					"name": "tremorsense ",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -2122,10 +2135,7 @@
 			"senses": [
 				{
 					"name": "motion sense ",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					}
+					"range": 60
 				},
 				{
 					"name": "no vision"
@@ -2278,10 +2288,7 @@
 			"senses": [
 				{
 					"name": "motion sense ",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					}
+					"range": 60
 				},
 				{
 					"name": "no vision"
@@ -2427,7 +2434,7 @@
 				},
 				"athletics": {
 					"std": 11,
-					"to Climb": 15
+					"to {@action Climb}": 15
 				},
 				"crafting": {
 					"std": 9
@@ -2562,11 +2569,8 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Nixbrix flees the scene. He moves four times, each time using one of the following actions:"
+							"Nixbrix flees the scene. He moves four times, each time using one of the following actions: {@action Climb}, {@action Leap}, {@action Stand}, {@action Step}, or {@action Stride}."
 						]
-					},
-					{
-						"name": "Climb, Leap, Stand, Step, or Stride."
 					},
 					{
 						"name": "Really Big Gun",
@@ -2616,7 +2620,10 @@
 					"dwarven",
 					"elven",
 					"gnoll",
-					"gnomish,"
+					"gnomish",
+					"ignan",
+					"kelish",
+					"osiriani"
 				]
 			},
 			"skills": {
@@ -2718,9 +2725,6 @@
 			],
 			"abilities": {
 				"top": [
-					{
-						"name": "Ignan, Kelish, Osiriani"
-					},
 					{
 						"name": "Infused",
 						"entries": [

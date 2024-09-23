@@ -35,15 +35,8 @@ class TokenizerUtils {
 	static get traits () {
 		return [
 			{regex: /^MODULAR B, P, OR S\s/, type: "TRAIT"},
-			{regex: /^LG\s/, type: "TRAIT"},
-			{regex: /^NG\s/, type: "TRAIT"},
-			{regex: /^CG\s/, type: "TRAIT"},
-			{regex: /^LN\s/, type: "TRAIT"},
+			{regex: /^[LNC][GNE]\s/, type: "TRAIT"},
 			{regex: /^N\s/, type: "TRAIT"},
-			{regex: /^CN\s/, type: "TRAIT"},
-			{regex: /^LE\s/, type: "TRAIT"},
-			{regex: /^NE\s/, type: "TRAIT"},
-			{regex: /^CE\s/, type: "TRAIT"},
 			{regex: /^[A-Z-]{3,}( [\dBPS])?\s/, type: "TRAIT"},
 		]
 	}
@@ -55,8 +48,8 @@ class TokenizerUtils {
 	}
 	static get activate () {
 		return [
-			{regex: /^Activate\s/, type: "ACTIVATE", lookbehind: /(\n|[;.)]\s)$/},
-			{regex: /^Activation\s/, type: "ACTIVATE", lookbehind: /(\n|[;.)]\s)$/},
+			{regex: /^Activate\b(?!—)/, type: "ACTIVATE", lookbehind: /(\n|[;.)]\s)$/},
+			{regex: /^Activation\b(?!—)/, type: "ACTIVATE", lookbehind: /(\n|[;.)]\s)$/},
 		]
 	}
 	static get ammunition () {
@@ -200,7 +193,7 @@ class TokenizerUtils {
 			{regex: /^Intimidate\s/, type: "INTIMIDATION"},
 			{regex: /^([A-Z][a-z]*?)\sLore\s/, type: "LORE"},
 			// We are back with ugly regex
-			{regex: /^((?:\b[\w-]*?\s)+)Lore\s/, type: "LORE"},
+			{regex: /^((?:\b[\w'-]*?\s)+)Lore\s/, type: "LORE"},
 			{regex: /^Lore\s+\(.*?\)\s/, type: "LORE_SOME"},
 			{regex: /^Lore\s/, type: "LORE_ALL"},
 			{regex: /^Medicine\s/, type: "MEDICINE"},
@@ -296,8 +289,8 @@ class TokenizerUtils {
 	}
 	static get attacks () {
 		return [
-			{regex: /^Melee\s(?![A-Z])/, type: "MELEE", lookbehind: /(\n|action?]\s?)$/},
-			{regex: /^Ranged\s(?![A-Z])/, type: "RANGED", lookbehind: /(\n|action?]\s?)$/},
+			{regex: /^Melee\b(?!\s?[A-Z])/, type: "MELEE", lookbehind: /(\n|action?]\s?)$/},
+			{regex: /^Ranged\b(?!\s?[A-Z])/, type: "RANGED", lookbehind: /(\n|action?]\s?)$/},
 		]
 	}
 	// TODO: Improve this pattern... need to catch "Arcane Spontaneous Spells", "Occult Spells", "Champion Devotion Spells", etc.
@@ -613,9 +606,9 @@ class TokenizerUtils {
 
 	static get actions () {
 		return [
-			{regex: /^\[one.action][\s;,.]/, type: "ACTION", lookaheadIncDepth: 1},
-			{regex: /^\[two.actions?][\s;,.]/, type: "TWO_ACTIONS", lookaheadIncDepth: 1},
-			{regex: /^\[three.actions?][\s;,.]/, type: "THREE_ACTIONS", lookaheadIncDepth: 1},
+			{regex: /^\[one.action][\s;,.]?/, type: "ACTION", lookaheadIncDepth: 1},
+			{regex: /^\[two.actions?][\s;,.]?/, type: "TWO_ACTIONS", lookaheadIncDepth: 1},
+			{regex: /^\[three.actions?][\s;,.]?/, type: "THREE_ACTIONS", lookaheadIncDepth: 1},
 			{regex: /^\[reaction][\s;,.]/, type: "REACTION", lookaheadIncDepth: 1},
 			{regex: /^\[free.action][\s;,.]/, type: "FREE_ACTION", lookaheadIncDepth: 1},
 			{regex: /^\[>][\s;,.]/, type: "ACTION", lookaheadIncDepth: 1},

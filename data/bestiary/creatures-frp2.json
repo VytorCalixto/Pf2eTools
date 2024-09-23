@@ -124,12 +124,9 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Akila {@action Stride||Strides}, then {@action Strike||Strikes}. If she was {@condition hidden} at the start of this action, she remains {@condition hidden} until after."
+							"Akila {@action Stride||Strides}, then {@action Strike||Strikes}. If she was {@condition hidden} at the start of this action, she remains {@condition hidden} until after the Strike."
 						],
 						"name": "Pounce"
-					},
-					{
-						"name": "the Strike."
 					},
 					{
 						"activity": {
@@ -1418,7 +1415,7 @@
 			}
 		},
 		{
-			"name": "Halspin The Stung",
+			"name": "Halspin the Stung",
 			"source": "FRP2",
 			"page": 41,
 			"level": 15,
@@ -1822,15 +1819,12 @@
 							"unit": "reaction"
 						},
 						"entries": [
-							"Huldrin gets 1 extra reaction each turn that she can use only to make an."
+							"Huldrin gets 1 extra reaction each turn that she can use only to make an Attack of Opportunity."
 						],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
 						}
-					},
-					{
-						"name": "Attack of Opportunity."
 					},
 					{
 						"activity": {
@@ -2616,7 +2610,7 @@
 				"halfling",
 				"humanoid"
 			],
-			"description": "Male halfling witch",
+			"description": "Male {@ancestry halfling} witch",
 			"perception": {
 				"std": 27
 			},
@@ -4289,7 +4283,7 @@
 			}
 		},
 		{
-			"name": "Minister Of Tumult",
+			"name": "Minister of Tumult",
 			"source": "FRP2",
 			"page": 87,
 			"level": 14,
@@ -4400,13 +4394,15 @@
 					{
 						"name": "Jiang-Shi Vulnerabilities",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"source": "BotD"
 						}
 					},
 					{
 						"name": "Warped Fulu",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"source": "BotD"
 						}
 					}
 				],
@@ -5295,13 +5291,15 @@
 					{
 						"name": "Jiang-Shi Vulnerabilities",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"source": "BotD"
 						}
 					},
 					{
 						"name": "Warped Fulu",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"source": "BotD"
 						}
 					}
 				],
@@ -7274,7 +7272,7 @@
 					"jotun"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -8534,7 +8532,7 @@
 			}
 		},
 		{
-			"name": "Yabin The Just",
+			"name": "Yabin the Just",
 			"source": "FRP2",
 			"page": 27,
 			"level": 13,

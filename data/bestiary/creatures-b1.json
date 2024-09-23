@@ -947,7 +947,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -1189,7 +1189,7 @@
 					"gnomish"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -4175,7 +4175,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -4410,7 +4410,7 @@
 					"gnomish"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -6047,10 +6047,7 @@
 						"entries": [
 							"15 feet, {@damage 3d6} cold damage. The silver dragon can turn this aura on or off as a single action, which has the {@trait concentrate} trait, and can choose not to affect allies within the aura."
 						],
-						"name": "Cold Aura",
-						"generic": {
-							"tag": "ability"
-						}
+						"name": "Cold Aura"
 					},
 					{
 						"activity": {
@@ -6721,6 +6718,9 @@
 			"otherSources": {
 				"Expanded": [
 					"LOIL|323"
+				],
+				"Reprinted": [
+					"DaLl|9"
 				]
 			},
 			"level": 3,
@@ -7099,7 +7099,7 @@
 				},
 				"athletics": {
 					"std": 14,
-					"to Grapple": 16
+					"to {@action Grapple}": 16
 				},
 				"deception": {
 					"std": 11
@@ -8071,7 +8071,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -8870,7 +8870,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -9932,6 +9932,11 @@
 		},
 		{
 			"name": "Barbazu",
+			"otherSources": {
+				"Reprinted": [
+					"DaLl|11"
+				]
+			},
 			"source": "B1",
 			"page": 88,
 			"level": 5,
@@ -14200,6 +14205,11 @@
 			"name": "Ceustodaemon",
 			"source": "B1",
 			"page": 71,
+			"otherSources": {
+				"Reprinted": [
+					"MotM|19"
+				]
+			},
 			"level": 6,
 			"traits": [
 				"ne",
@@ -14364,7 +14374,7 @@
 					},
 					{
 						"entries": [
-							"When bringing a ceustodaemon to another plane with effects like a planar binding or planar ally ritual, the primary and secondary skill DCs are reduced by 5, and the ceustodaemon demands only half the normal cost for its service."
+							"When bringing a ceustodaemon to another plane with effects like a {@ritual planar binding} or {@ritual planar ally} ritual, the primary and secondary skill DCs are reduced by 5, and the ceustodaemon demands only half the normal cost for its service."
 						],
 						"name": "Drawn to Service"
 					},
@@ -14788,7 +14798,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -15514,7 +15524,7 @@
 			"skills": {
 				"deception": {
 					"std": 14,
-					"to Impersonate a cloak, sheet, or ray": 16
+					"to {@action Impersonate} a cloak, sheet, or ray": 16
 				},
 				"religion": {
 					"std": 12
@@ -21937,7 +21947,13 @@
 						"name": "Nature Empathy"
 					},
 					{
-						"name": "Tied to the Land"
+						"name": "Tied to the Land",
+						"entries": [
+							"The dryad queen is tied to a forest or other woodland."
+						],
+						"generic": {
+							"tag": "ability"
+						}
 					}
 				],
 				"mid": [
@@ -21954,6 +21970,9 @@
 						"entries": [
 							"{@dc 30}. On a failed save, the target is {@condition immobilized} in awe for 1 minute."
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Nymph's Beauty"
 					}
 				],
@@ -21970,7 +21989,8 @@
 						],
 						"name": "Change Shape",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"add_hash": "Nymph Queen"
 						}
 					},
 					{
@@ -21989,6 +22009,9 @@
 						"entries": [
 							"On a failed save, if the target was already affected by the dryad queen's beauty, the target suffers the effects of a failed save against charm."
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Focus Beauty"
 					},
 					{
@@ -22002,6 +22025,9 @@
 							"mental",
 							"primal"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Inspiration"
 					},
 					{
@@ -22017,9 +22043,6 @@
 							"As dryad, except the hamadryad can enter and exit her extradimensional domain from any tree in her domain and she can bring up to eight other creatures with her when she does so."
 						],
 						"name": "Tree Meld"
-					},
-					{
-						"name": "Octopus, Giant"
 					}
 				]
 			},
@@ -23477,7 +23500,7 @@
 				},
 				"survival": {
 					"std": 14,
-					"to Track": 17
+					"to {@action Track}": 17
 				}
 			},
 			"abilityMods": {
@@ -25071,7 +25094,7 @@
 					"common"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -26926,7 +26949,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -27686,7 +27709,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -29805,7 +29828,7 @@
 				},
 				"athletics": {
 					"std": 5,
-					"to Climb": 9
+					"to {@action Climb}": 9
 				},
 				"stealth": {
 					"std": 6
@@ -30463,7 +30486,7 @@
 				},
 				"athletics": {
 					"std": 2,
-					"to Climb or Swim": 4
+					"to {@action Climb} or {@action Swim}": 4
 				},
 				"stealth": {
 					"std": 5
@@ -31915,9 +31938,9 @@
 				"cha": 5
 			},
 			"items": [
-				"composite longbow (20 arrows)",
-				"+1 resilient full plate",
-				"greatsword"
+				"{@item composite longbow} (20 {@item arrow (generic)||arrows})",
+				"{@runeItem full plate||+1 armor potency||resilient|}",
+				"{@item greatsword}"
 			],
 			"defenses": {
 				"ac": {
@@ -31981,11 +32004,11 @@
 					"range": "Ranged",
 					"traits": [
 						"cold",
-						"deadly 1d10",
+						"deadly <1d10>",
 						"magical",
-						"range increment 100 feet",
-						"reload 0",
-						"volley 30 feet"
+						"range increment <100 feet>",
+						"reload <0>",
+						"volley <30 feet>"
 					],
 					"name": "frost composite longbow",
 					"attack": 21,
@@ -31996,8 +32019,14 @@
 				"mid": [
 					{
 						"name": "Sacrilegious Aura",
+						"traits": [
+							"abjuration",
+							"aura",
+							"divine",
+							"evil"
+						],
 						"entries": [
-							"30 feet. +17"
+							"30 feet. When a creature in the aura uses a positive spell or ability, the graveknight automatically attempts to counteract it, with a +17 counteract modifier."
 						]
 					},
 					{
@@ -32024,13 +32053,34 @@
 							"evocation"
 						],
 						"entries": [
-							"{@damage 6d12} cold, {@dc 29}"
+							"The graveknight unleases a 30-foot cone of energy. Creatures in the area take {@damage 6d12} cold damage ({@dc 29} basic Reflex save). The graveknight can use this ability once every 1d4 rounds."
 						]
 					},
 					{
-						"name": "Graveknight's Curse DC",
-						"entries": [
-							"33"
+						"type": "affliction",
+						"name": "Graveknight's Curse",
+						"traits": [
+							"curse"
+						],
+						"note": "This curse affects anyone who wears a graveknight's armor for at least 1 hour.",
+						"DC": 33,
+						"savingThrow": "Will",
+						"onset": "1 hour",
+						"stages": [
+							{
+								"stage": 1,
+								"entry": "{@condition doomed 1} and cannot remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 2,
+								"entry": "{@condition doomed 2}, hampered 10, and cannot remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 3,
+								"entry": "dies and transforms into the armor's graveknight"
+							}
 						]
 					},
 					{
@@ -32044,11 +32094,15 @@
 							"conjuration"
 						],
 						"entries": [
-							"HP 58; AC 27,"
+							"The graveknight summons a supernatural mount as per {@spell phantom steed}, heightened to a level equal to half the graveknight's level. Unlike phantom steed, the steed's AC and saving throw bonuses are all 4 lower than the graveknight's, and the steed has one-third the graveknight's Hit Points (rounded down). If the steed is destroyed, the graveknight must wait 1 hour before using this ability again.",
+							"HP 58; AC 27, Fort +17, Ref +15, Will +14."
 						]
 					},
 					{
-						"name": "Weapon Master"
+						"name": "Weapon Master",
+						"entries": [
+							"The graveknight has access to the critical specialization effects of any weapons it wields."
+						]
 					}
 				]
 			}
@@ -33557,7 +33611,7 @@
 				},
 				"survival": {
 					"std": 17,
-					"to Track": 24
+					"to {@action Track}": 24
 				}
 			},
 			"abilityMods": {
@@ -35044,7 +35098,7 @@
 					"jotun"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -35431,7 +35485,7 @@
 				},
 				"athletics": {
 					"std": 2,
-					"to High Jump or Long Jump": 6
+					"to {@action High Jump} or Long Jump": 6
 				},
 				"performance": {
 					"std": 7
@@ -36611,7 +36665,7 @@
 			"skills": {
 				"acrobatics": {
 					"std": 19,
-					"to Squeeze": 23
+					"to {@action Squeeze}": 23
 				},
 				"athletics": {
 					"std": 23
@@ -37122,7 +37176,7 @@
 				},
 				"survival": {
 					"std": 9,
-					"to Track": 11
+					"to {@action Track}": 11
 				}
 			},
 			"abilityMods": {
@@ -38074,7 +38128,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -38092,7 +38146,7 @@
 				},
 				"survival": {
 					"std": 11,
-					"to Track": 15
+					"to {@action Track}": 15
 				}
 			},
 			"abilityMods": {
@@ -39079,6 +39133,11 @@
 			"perception": {
 				"std": 7
 			},
+			"otherSources": {
+				"Reprinted": [
+					"DaLl|10"
+				]
+			},
 			"senses": [
 				{
 					"name": "greater darkvision"
@@ -39206,10 +39265,10 @@
 							{
 								"type": "list",
 								"items": [
-									"{@bold Boar size} Medium; {@ability scent} (imprecise) 30 feet; Speed 40 feet; Melee tusk +9 (finesse), Damage {@dice 1d10-1} piercing",
-									"{@bold Giant Spider size} Medium; Speed 25 feet, climb 25 feet; Melee fangs +9 (finesse, poison), Damage {@dice 1d6-1} piercing plus {@damage 1d4} poison",
-									"Rat {@ability scent}; Speed 20 feet; Melee jaws +9 (agile, finesse), Damage 1 piercing",
-									"Raven {@ability scent}; Speed 10 feet, fly 40 feet; Melee beak +9 (finesse), Damage 1 piercing"
+									"{@b Boar} size Medium; {@ability scent} (imprecise) 30 feet; {@b Speed} 40 feet; {@b Melee} tusk +9 ({@trait finesse}), {@b Damage} {@dice 1d10-1} piercing",
+									"{@b Giant Spider} size Medium; {@b Speed} 25 feet, climb 25 feet; {@b Melee} fangs +9 ({@trait finesse}, {@trait poison}), {@b Damage} {@dice 1d6-1} piercing plus {@damage 1d4} poison",
+									"{@b Rat} {@ability scent} (imprecise) 30 feet; {@b Speed} 20 feet; {@b Melee} jaws +9 ({@trait agile}, {@trait finesse}), {@b Damage} 1 piercing",
+									"{@b Raven} {@ability scent}; {@b Speed} 10 feet, fly 40 feet; {@b Melee} beak +9 ({@trait finesse}), {@b Damage} 1 piercing"
 								]
 							}
 						],
@@ -39277,7 +39336,7 @@
 							"number": 1
 						},
 						"entries": [
-							"The imp offers a non-fiend within 15 feet a bargain, granting a boon of good luck if the creature accepts. The boon lasts for 1 hour once accepted. If the creature dies while the boon is in place, its soul travels to Hell, where it is bound for eternity and unable to be raised or resurrected except by wish or similar magic. Once during the hour, the creature can roll an attack roll or saving throw twice and use the higher result."
+							"The imp offers a non-fiend within 15 feet a bargain, granting a boon of good luck if the creature accepts. The boon lasts for 1 hour once accepted. If the creature dies while the boon is in place, its soul travels to Hell, where it is bound for eternity and unable to be raised or resurrected except by {@spell wish} or similar magic. Once during the hour, the creature can roll an attack roll or saving throw twice and use the higher result."
 						],
 						"name": "Infernal Temptation"
 					}
@@ -39357,7 +39416,7 @@
 				},
 				"survival": {
 					"std": 15,
-					"to Track": 19
+					"to {@action Track}": 19
 				}
 			},
 			"abilityMods": {
@@ -41551,7 +41610,7 @@
 				},
 				"survival": {
 					"std": 17,
-					"to Track a bleeding creature": 20
+					"to {@action Track} a bleeding creature": 20
 				}
 			},
 			"abilityMods": {
@@ -42614,7 +42673,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -43923,7 +43982,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"speak with animals",
+					"{@spell speak with animals}",
 					"speak with plants",
 					"tongues"
 				]
@@ -45840,7 +45899,7 @@
 			"skills": {
 				"athletics": {
 					"std": 20,
-					"to swim": 24
+					"to {@action Swim}": 24
 				},
 				"crafting": {
 					"std": 16
@@ -46886,7 +46945,7 @@
 			"skills": {
 				"athletics": {
 					"std": 5,
-					"to Swim": 7
+					"to {@action Swim}": 7
 				},
 				"medicine": {
 					"std": 4
@@ -46995,7 +47054,7 @@
 			"skills": {
 				"athletics": {
 					"std": 7,
-					"to Swim": 9
+					"to {@action Swim}": 9
 				},
 				"deception": {
 					"std": 6
@@ -47616,7 +47675,7 @@
 					"requian"
 				],
 				"abilities": [
-					"speak with animals",
+					"{@spell speak with animals}",
 					"tongues"
 				]
 			},
@@ -48538,7 +48597,7 @@
 							"necromancy",
 							"negative"
 						],
-						"note": "This disease and any damage from it can't be healed until this curse is removed. A creature killed by mummy rot turns to dust and can't be resurrected except by a 7th-level resurrect ritual or similar magic.",
+						"note": "This disease and any damage from it can't be healed until this curse is removed. A creature killed by mummy rot turns to dust and can't be resurrected except by a 7th-level {@ritual resurrect} ritual or similar magic.",
 						"DC": 22,
 						"savingThrow": "Fortitude",
 						"stages": [
@@ -48767,7 +48826,7 @@
 							"divine",
 							"necromancy"
 						],
-						"note": "This disease and any damage from it can't be healed until this curse is removed. A creature killed by insidious mummy rot turns to sand and can't be resurrected except by a 7th-level resurrect ritual or similar magic.",
+						"note": "This disease and any damage from it can't be healed until this curse is removed. A creature killed by insidious mummy rot turns to sand and can't be resurrected except by a 7th-level {@ritual resurrect} ritual or similar magic.",
 						"DC": 26,
 						"savingThrow": "Fortitude",
 						"stages": [
@@ -48868,7 +48927,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -49060,7 +49119,7 @@
 				},
 				"athletics": {
 					"std": 9,
-					"to Swim": 13
+					"to {@action Swim}": 13
 				},
 				"diplomacy": {
 					"std": 20
@@ -49217,7 +49276,13 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Tied to the Land"
+						"name": "Tied to the Land",
+						"entries": [
+							"The queen is tied to a body of water or area with a great deal of water features."
+						],
+						"generic": {
+							"tag": "ability"
+						}
 					},
 					{
 						"entries": [
@@ -49239,6 +49304,9 @@
 						"entries": [
 							"30 feet. {@dc 23}. On a failed save, the target is {@condition stunned 1} for this turn and whenever it begins its turn within 30 feet of the naiad queen for the next 24 hours, even if it can't see her on subsequent turns."
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Nymph's Beauty"
 					}
 				],
@@ -49255,7 +49323,8 @@
 						],
 						"name": "Change Shape",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"add_hash": "Nymph Queen"
 						}
 					},
 					{
@@ -49274,6 +49343,9 @@
 						"entries": [
 							"On a failed save, if the target was already affected by the naiad queen's beauty, the image of the queen sears into the creature's mind, allowing no further sight and effectively blinding the creature until restored via restore senses or a similar effect, or until the naiad queen chooses to remove the effect using a single action, which has the {@trait concentrate} trait."
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Focus Beauty"
 					},
 					{
@@ -49287,6 +49359,9 @@
 							"mental",
 							"primal"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Inspiration"
 					},
 					{
@@ -49698,7 +49773,7 @@
 				},
 				"survival": {
 					"std": 20,
-					"to Track": 22
+					"to {@action Track}": 22
 				}
 			},
 			"abilityMods": {
@@ -52484,7 +52559,7 @@
 						],
 						"entries": [
 							"The contract devil produces an infernal contract for a single living mortal. This contract can grant a wide range of abilities and effects, akin to the power of a {@spell wish} spell but fulfilled to the letter by the contract devil. To receive any of those benefits, the mortal must willingly sign its true name to the contract. At that point, the mortal's soul is bound to the contract devil and Hell.",
-							"While the contract is in effect, the victim can't be restored to life except by wish or similar magic. If the mortal is restored to life by those means, the contract devil knows which mortal came to life and can locate the creature or creatures who restored the mortal to life for 1 year, gaining the effects of a {@spell locate} spell with unlimited range. Avoiding the terms of an infernal contract is difficult and often dangerous."
+							"While the contract is in effect, the victim can't be restored to life except by {@spell wish} or similar magic. If the mortal is restored to life by those means, the contract devil knows which mortal came to life and can locate the creature or creatures who restored the mortal to life for 1 year, gaining the effects of a {@spell locate} spell with unlimited range. Avoiding the terms of an infernal contract is difficult and often dangerous."
 						],
 						"name": "Draft Contract"
 					},
@@ -53448,6 +53523,10 @@
 			"otherSources": {
 				"Expanded": [
 					"LOIL|323"
+				],
+				"Reprinted": [
+					"HStR|8",
+					"HStR|9"
 				]
 			},
 			"source": "B1",
@@ -53551,8 +53630,12 @@
 							},
 							{
 								"stage": 4,
-								"entry": "{@damage 1d6} negative damage ;",
+								"entry": "{@damage 1d6} negative damage",
 								"duration": "1 day"
+							},
+							{
+								"stage": 5,
+								"entry": "dead, rising as a plague zombie immediately"
 							}
 						]
 					}
@@ -53588,6 +53671,16 @@
 					"disease",
 					"paralyzed",
 					"unconscious"
+				],
+				"weaknesses": [
+					{
+						"name": "positive",
+						"amount": 10
+					},
+					{
+						"name": "slashing",
+						"amount": 10
+					}
 				]
 			}
 		},
@@ -55833,7 +55926,7 @@
 				},
 				"athletics": {
 					"std": 4,
-					"to Climb or Swim": 6
+					"to {@action Climb} or {@action Swim}": 6
 				},
 				"stealth": {
 					"std": 6
@@ -56323,7 +56416,7 @@
 				},
 				"athletics": {
 					"std": 4,
-					"to Swim": 8
+					"to {@action Swim}": 8
 				}
 			},
 			"abilityMods": {
@@ -57745,7 +57838,7 @@
 			"skills": {
 				"athletics": {
 					"std": 7,
-					"to Disarm a metal item": 13
+					"to {@action Disarm} a metal item": 13
 				}
 			},
 			"abilityMods": {
@@ -58402,7 +58495,7 @@
 			"skills": {
 				"athletics": {
 					"std": 15,
-					"to Swim": 18
+					"to {@action Swim}": 18
 				},
 				"intimidation": {
 					"std": 12
@@ -58584,7 +58677,7 @@
 			"skills": {
 				"athletics": {
 					"std": 12,
-					"to Swim": 15
+					"to {@action Swim}": 15
 				},
 				"intimidation": {
 					"std": 9
@@ -58750,7 +58843,7 @@
 			"skills": {
 				"athletics": {
 					"std": 9,
-					"to Swim": 11
+					"to {@action Swim}": 11
 				},
 				"intimidation": {
 					"std": 5
@@ -59051,7 +59144,7 @@
 				},
 				"athletics": {
 					"std": 26,
-					"to Swim": 28
+					"to {@action Swim}": 28
 				},
 				"stealth": {
 					"std": 28
@@ -59721,6 +59814,9 @@
 			"otherSources": {
 				"Expanded": [
 					"LOIL|323"
+				],
+				"Reprinted": [
+					"MotM|12"
 				]
 			},
 			"page": 290,
@@ -60182,7 +60278,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -62242,7 +62338,7 @@
 			"skills": {
 				"acrobatics": {
 					"std": 6,
-					"to Escape": 8
+					"to {@action Escape}": 8
 				},
 				"athletics": {
 					"std": 8
@@ -62670,7 +62766,7 @@
 				},
 				"survival": {
 					"std": 9,
-					"to Track": 11
+					"to {@action Track}": 11
 				}
 			},
 			"abilityMods": {
@@ -64609,7 +64705,7 @@
 							"number": 1
 						},
 						"entries": [
-							"The succubus on can give a willing humanoid a profane gift. That creature gains a +1 status bonus to attack rolls, skill checks, and saving throws. As long as the gift persists, the succubus can communicate telepathically with the target at any distance, see through the creature's senses, and target the creature with suggestion through the telepathic link. In addition, the creature uses an outcome one degree of success worse than it rolls on saving throws against the lust demon's suggestions. A humanoid can't have more than one profane gift at a time, and a succubus can't grant more than one profane gift at a time. Removing the gift requires an atone ritual. The succubus can remove the gift as a free action to give the recipient a permanent {@condition stupefied 3} condition. A 4th-level {@spell restoration} spell is required to reduce this {@condition stupefied} condition by 1. A summoned succubus can't grant a profane gift."
+							"The succubus on can give a willing humanoid a profane gift. That creature gains a +1 status bonus to attack rolls, skill checks, and saving throws. As long as the gift persists, the succubus can communicate telepathically with the target at any distance, see through the creature's senses, and target the creature with suggestion through the telepathic link. In addition, the creature uses an outcome one degree of success worse than it rolls on saving throws against the lust demon's suggestions. A humanoid can't have more than one profane gift at a time, and a succubus can't grant more than one profane gift at a time. Removing the gift requires an {@ritual atone} ritual. The succubus can remove the gift as a free action to give the recipient a permanent {@condition stupefied 3} condition. A 4th-level {@spell restoration} spell is required to reduce this {@condition stupefied} condition by 1. A summoned succubus can't grant a profane gift."
 						],
 						"name": "Profane Gift"
 					}
@@ -66316,7 +66412,8 @@
 					"DC": 49,
 					"rituals": [
 						{
-							"name": "Abyssal pact|B1"
+							"name": "Abyssal pact",
+							"source": "B1"
 						},
 						{
 							"name": "planar ally"
@@ -67484,7 +67581,7 @@
 				},
 				"athletics": {
 					"std": 4,
-					"to Climb": 7
+					"to {@action Climb}": 7
 				},
 				"stealth": {
 					"std": 7
@@ -67674,6 +67771,10 @@
 							"enchantment",
 							"mental"
 						],
+						"generic": {
+							"tag": "ability",
+							"source": "B1"
+						},
 						"name": "Children of the Night"
 					}
 				],
@@ -67682,6 +67783,9 @@
 						"activity": {
 							"number": 1,
 							"unit": "free"
+						},
+						"generic": {
+							"tag": "ability"
 						},
 						"name": "Mist Escape"
 					}
@@ -67712,6 +67816,9 @@
 							"downtime",
 							"necromancy"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Create Spawn"
 					},
 					{
@@ -67729,7 +67836,11 @@
 						"entries": [
 							"{@dc 22}"
 						],
-						"name": "Dominate"
+						"name": "Dominate",
+						"generic": {
+							"source": "B1",
+							"tag": "ability"
+						}
 					},
 					{
 						"activity": {
@@ -67743,7 +67854,12 @@
 						"entries": [
 							"When Drinking Blood, the vampire regains 10 HP."
 						],
-						"name": "Drink Blood"
+						"name": "Drink Blood",
+						"generic": {
+							"source": "B1",
+							"tag": "ability",
+							"add_hash": "True Vampire"
+						}
 					},
 					{
 						"activity": {
@@ -67755,6 +67871,9 @@
 							"divine",
 							"transmutation"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Turn to Mist"
 					}
 				]
@@ -68000,6 +68119,10 @@
 							"enchantment",
 							"mental"
 						],
+						"generic": {
+							"tag": "ability",
+							"source": "B1"
+						},
 						"name": "Children of the Night"
 					}
 				],
@@ -68008,6 +68131,9 @@
 						"activity": {
 							"number": 1,
 							"unit": "free"
+						},
+						"generic": {
+							"tag": "ability"
 						},
 						"name": "Mist Escape"
 					}
@@ -68038,6 +68164,9 @@
 							"downtime",
 							"necromancy"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Create Spawn"
 					},
 					{
@@ -68055,7 +68184,11 @@
 						"entries": [
 							"{@dc 26}"
 						],
-						"name": "Dominate"
+						"name": "Dominate",
+						"generic": {
+							"source": "B1",
+							"tag": "ability"
+						}
 					},
 					{
 						"activity": {
@@ -68091,7 +68224,12 @@
 						"entries": [
 							"When Drinking Blood, the vampire regains 10 HP."
 						],
-						"name": "Drink Blood"
+						"name": "Drink Blood",
+						"generic": {
+							"source": "B1",
+							"tag": "ability",
+							"add_hash": "True Vampire"
+						}
 					},
 					{
 						"entries": [
@@ -68109,6 +68247,9 @@
 							"divine",
 							"transmutation"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Turn to Mist"
 					}
 				]
@@ -68255,7 +68396,12 @@
 						"entries": [
 							"When Drinking Blood, the spawn regains 5 HP."
 						],
-						"name": "Drink Blood"
+						"name": "Drink Blood",
+						"generic": {
+							"source": "B1",
+							"tag": "ability",
+							"add_hash": "Vampire"
+						}
 					},
 					{
 						"entries": [
@@ -68337,7 +68483,7 @@
 					"undercommon"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -68818,7 +68964,7 @@
 				},
 				"athletics": {
 					"std": 1,
-					"to Climb": 4
+					"to {@action Climb}": 4
 				},
 				"stealth": {
 					"std": 5
@@ -69922,7 +70068,7 @@
 						],
 						"trigger": "The warsworn moves into a {@condition dying} creature's space.",
 						"entries": [
-							"The warsworn absorbs the {@condition dying} creature into itself, instantly killing the creature and healing the warsworn for a number of Hit Points equal to the creature's level. As long as the warsworn still exists, absorbed creatures can't be resurrected except by wish or a similarly powerful effect."
+							"The warsworn absorbs the {@condition dying} creature into itself, instantly killing the creature and healing the warsworn for a number of Hit Points equal to the creature's level. As long as the warsworn still exists, absorbed creatures can't be resurrected except by {@spell wish} or a similarly powerful effect."
 						],
 						"name": "Absorb"
 					},
@@ -70282,7 +70428,7 @@
 				},
 				"crafting": {
 					"std": 8,
-					"to craft traps and snares": 12
+					"to {@action craft} traps and snares": 12
 				},
 				"stealth": {
 					"std": 11
@@ -71055,6 +71201,9 @@
 							"primal",
 							"transmutation"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Moon Frenzy"
 					},
 					{
@@ -71128,7 +71277,7 @@
 				},
 				"athletics": {
 					"std": 6,
-					"to Climb or Swim": 8
+					"to {@action Climb} or {@action Swim}": 8
 				},
 				"deception": {
 					"std": 5
@@ -73719,7 +73868,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -73934,7 +74083,7 @@
 					"elven"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -75658,7 +75807,7 @@
 			"skills": {
 				"athletics": {
 					"std": 31,
-					"to Disarm stone or metal objects": 35
+					"to {@action Disarm} stone or metal objects": 35
 				},
 				"religion": {
 					"std": 26
@@ -76249,6 +76398,11 @@
 			"otherSources": {
 				"Expanded": [
 					"LOIL|323"
+				],
+				"Reprinted": [
+					"HStR|4",
+					"HStR|8",
+					"HStR|10"
 				]
 			},
 			"traits": [

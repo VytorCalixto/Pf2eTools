@@ -1,7 +1,7 @@
 {
 	"creature": [
 		{
-			"name": "Agent Of The Gray Queen",
+			"name": "Agent of the Gray Queen",
 			"source": "AoE6",
 			"page": 21,
 			"level": 19,
@@ -478,7 +478,7 @@
 							"number": 1
 						},
 						"entries": [
-							"The agradaemon designates a single willing mortal as a pledged fanatic. That creature gains resistance to fire equal to its level, immunity to the agradaemon's choking smog aura, and smoke vision. The agradaemon can have up to 10 pledged fanatics at one time and can remove the status from any number of pledged fanatics as a free action with the {@trait concentrate} trait. The status can also be removed with an atone ritual."
+							"The agradaemon designates a single willing mortal as a pledged fanatic. That creature gains resistance to fire equal to its level, immunity to the agradaemon's choking smog aura, and smoke vision. The agradaemon can have up to 10 pledged fanatics at one time and can remove the status from any number of pledged fanatics as a free action with the {@trait concentrate} trait. The status can also be removed with an {@ritual atone} ritual."
 						],
 						"name": "Daemonic Pledge"
 					},
@@ -700,7 +700,7 @@
 			}
 		},
 		{
-			"name": "Avsheros The Betrayer",
+			"name": "Avsheros the Betrayer",
 			"source": "AoE6",
 			"page": 42,
 			"level": 23,
@@ -729,7 +729,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -1212,7 +1212,7 @@
 				"gnome",
 				"humanoid"
 			],
-			"description": "Male gnome architect, ex-thief, and illusionist",
+			"description": "Male {@ancestry gnome} architect, ex-thief, and illusionist",
 			"perception": {
 				"std": 36
 			},
@@ -3199,7 +3199,7 @@
 			}
 		},
 		{
-			"name": "Ghaele Of Kharnas",
+			"name": "Ghaele of Kharnas",
 			"source": "AoE6",
 			"page": 32,
 			"level": 17,
@@ -3229,7 +3229,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -3554,7 +3554,7 @@
 			}
 		},
 		{
-			"name": "Graveknight Of Kharnas",
+			"name": "Graveknight of Kharnas",
 			"source": "AoE6",
 			"page": 36,
 			"level": 17,
@@ -3679,10 +3679,30 @@
 						"name": "Devastating Blast"
 					},
 					{
-						"entries": [
-							"This curse affects anyone who wears a graveknight's armor for at least 1 hour; Saving Throw {@dc 43} Will save; Onset 1 hour; Stage 1 {@condition doomed|CRB|doomed 1} and can't remove the armor (1 day); Stage 2 {@condition doomed|CRB|doomed 2}, hampered 10, and can't remove the armor (1 day); Stage 3 dies and transforms into the armor's graveknight."
+						"type": "affliction",
+						"name": "Graveknight's Curse",
+						"notes": [
+							"This curse affects anyone who wears a graveknight's armor for at least 1 hour"
 						],
-						"name": "Graveknight's Curse"
+						"DC": 43,
+						"savingThrow": "Will",
+						"onset": "1 hour",
+						"stages": [
+							{
+								"stage": 1,
+								"entry": "{@condition doomed||doomed 1} and can't remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 2,
+								"entry": "{@condition doomed||doomed 2}, hampered 10, and can't remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 3,
+								"entry": "dies and transforms into the armor's graveknight"
+							}
+						]
 					},
 					{
 						"activity": {
@@ -3690,15 +3710,9 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The graveknight carves the sigil of Kharnas onto an adjacent {@condition immobilized} or {@condition unconscious} creature. As long as the creature bears the sigil of Kharnas, it takes a \u20132 status penalty to saving throws against the abilities of any creature that previously served Kharnas, but it can also freely pass through any hazards that can be bypassed by those bearing the sigil."
+							"The graveknight carves the sigil of Kharnas onto an adjacent {@condition immobilized} or {@condition unconscious} creature. As long as the creature bears the sigil of Kharnas, it takes a \u20132 status penalty to saving throws against the abilities of any creature that previously served Kharnas, but it can also freely pass through any hazards that can be bypassed by those bearing the sigil of Kharnas, such as Kharnas's glyphs."
 						],
 						"name": "Kharnas's Blessing"
-					},
-					{
-						"entries": [
-							"Kharnas, such as Kharnas's glyphs."
-						],
-						"name": "of"
 					},
 					{
 						"entries": [
@@ -6397,7 +6411,7 @@
 					"protean"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -7633,7 +7647,7 @@
 			"hasImages": true
 		},
 		{
-			"name": "Ulressia The Blessed",
+			"name": "Ulressia the Blessed",
 			"source": "AoE6",
 			"page": 39,
 			"level": 19,
@@ -7665,7 +7679,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {

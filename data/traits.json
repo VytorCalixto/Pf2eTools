@@ -1,6 +1,150 @@
 {
 	"trait": [
 		{
+			"name": "Herald",
+			"source": "AoE4",
+			"page": 85,
+			"categories": [
+				"Creature"
+			],
+			"entries": [
+				"Nearly all deities have a specific representative known as a herald; heralds are as diverse in their appearances and abilities as the gods themselves. A creature with the herald type is always {@trait unique}."
+			]
+		},
+		{
+			"name": "Flirt",
+			"source": "CC0",
+			"page": 11,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public perceives you as the most romantic of the group, and you may be thought of as a seducer or vapid pretender who gets by on their looks and brings nothing of value to the party."
+			]
+		},
+		{
+			"name": "Guardian",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public perceives you as the healer and protector of the group, but some may also consider you too soft-hearted and meek to be a \"true hero.\""
+			]
+		},
+		{
+			"name": "Leader",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public perceives you as the leader of the group, but some likewise consider you too brash or even pompous."
+			]
+		},
+		{
+			"name": "Scholar",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public considers you the problem-solver and brains of the group, though some also perceive you as arrogant or incapable of physical tasks."
+			]
+		},
+		{
+			"name": "Scoundrel",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public is convinced you are the \"bad boy/bad girl\" of the group who gets the distasteful but necessary things done, but who is at times thought of as a criminal or potential traitor to the party."
+			]
+		},
+		{
+			"name": "Underdog",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public perceives you as a \"fish out of water\"\u2014someone who accidentally got swept up by the group and still manages to triumph, but who is sometimes thought of as a weak link or loser."
+			]
+		},
+		{
+			"name": "Warrior",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public believes you are the strong-arm of the group, the person who excels in a fight but is also at times considered cruel, uncouth, or even a bully."
+			]
+		},
+		{
+			"name": "Wildcard",
+			"source": "CC0",
+			"page": 12,
+			"categories": [
+				"Persona"
+			],
+			"entries": [
+				"The public perceives you as a source of whimsy, outlandish ideas, and comedy in the group, but that reputation is a double-edged sword, as some also consider you a liability or unreliable."
+			]
+		},
+		{
+			"name": "Kami",
+			"source": "B3",
+			"page": 309,
+			"categories": [
+				"Creature Type"
+			],
+			"entries": [
+				"Kami are spirits of the Material Plane that bond with a specific object or place."
+			]
+		},
+		{
+			"name": "Reincarnated",
+			"source": "SoG4",
+			"page": 79,
+			"categories": [
+				"Ancestry & Heritage"
+			],
+			"entries": [
+				"These {@trait rare} ancestry feats are available to any character who has {@ritual reincarnate|APG|reincarnated} at least once, either as part of their backstory or because of a {@ritual reincarnate|APG|reincarnation} that took place during play."
+			]
+		},
+		{
+			"name": "Div",
+			"source": "B3",
+			"page": 308,
+			"categories": [
+				"Creature Type"
+			],
+			"entries": [
+				"Divs are a family of fiends spawned from the spirits of evil {@trait genie||genies} within the desolation of {@place Abaddon|GMG}. Most divs are neutral evil. They typically have greater {@ability darkvision} and weakness to {@item cold iron (generic)||cold iron} and good damage."
+			]
+		},
+		{
+			"name": "Trial",
+			"source": "LOTXWG",
+			"remaster": true,
+			"page": 51,
+			"categories": [
+				"Spell"
+			],
+			"entries": [
+				"Rituals with the trial trait extend beyond the initial checks necessary when the ritual is first performed, and they typically have a following condition or set of conditions that must be met before they grant their full benefits. The particulars of the conditions are specified in each individual ritual and can vary from defeating a set number of a particular type of monster to performing some other notable deed or accomplishment."
+			]
+		},
+		{
 			"name": "Tea",
 			"source": "SoG2",
 			"page": 76,
@@ -3299,7 +3443,7 @@
 				"Weapon"
 			],
 			"entries": [
-				"A weapon with the hampering trait is designed to be shaken, cast outward, or whipped about to control space on the battlefield. After you hit with the weapon, you can use an Interact action to give the target a \u201310-foot circumstance penalty to all Speeds. The penalty ends after the target takes a move action, at the start of your next turn, if you attack with the weapon, or if you move out of reach of the target, whichever comes first."
+				"A weapon with the hampering trait is designed to be shaken, cast outward, or whipped about to control space on the battlefield. After you hit with the weapon, you can use an {@action Interact} action to give the target a \u201310-foot circumstance penalty to all Speeds. The penalty ends after the target takes a move action, at the start of your next turn, if you attack with the weapon, or if you move out of reach of the target, whichever comes first."
 			]
 		},
 		{
@@ -5276,7 +5420,7 @@
 				"Item"
 			],
 			"entries": [
-				"This shield can collapse into a smaller form attached to a {@item gauntlet} for stability and easy travel. You can use an Interact action to deploy or stow the shield. While it's deployed, you can {@action Raise the Shield} as long as you have that hand free or are holding an object of light Bulk that's not a weapon in that hand. The shield impedes the use of your hand while it's deployed. Though you can still hold items in that hand, you can't wield weapons in that hand, operate anything that takes two hands, or attack with the {@item gauntlet}.",
+				"This shield can collapse into a smaller form attached to a {@item gauntlet} for stability and easy travel. You can use an {@action Interact} action to deploy or stow the shield. While it's deployed, you can {@action Raise the Shield} as long as you have that hand free or are holding an object of light Bulk that's not a weapon in that hand. The shield impedes the use of your hand while it's deployed. Though you can still hold items in that hand, you can't wield weapons in that hand, operate anything that takes two hands, or attack with the {@item gauntlet}.",
 				"A foldaway shield must be attached to a {@item gauntlet} for stability. It can be affixed to an item with 10 minutes of work and a successful DC 10 {@skill Crafting} check; this includes the time needed to remove the shield from a previous {@item gauntlet}, if necessary. If the {@item gauntlet} is destroyed, the foldaway shield can usually be salvaged. The collapsible nature of the shield makes it impossible to affix an attached weapon to it."
 			]
 		},

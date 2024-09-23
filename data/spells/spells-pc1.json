@@ -4037,7 +4037,7 @@
 			}
 		},
 		{
-			"name": "Feet To Fins",
+			"name": "Feet to Fins",
 			"source": "PC1",
 			"remaster": true,
 			"page": 331,
@@ -5413,9 +5413,9 @@
 				"primal"
 			],
 			"cast": {
-				"number": 1,
+				"number": 2,
 				"unit": "varies",
-				"entry": "{@as 1} to {@as 3}"
+				"entry": "{@as 2} to {@as 3}"
 			},
 			"area": {
 				"types": [
@@ -7925,7 +7925,7 @@
 			}
 		},
 		{
-			"name": "One With Plants",
+			"name": "One with Plants",
 			"source": "PC1",
 			"remaster": true,
 			"page": 347,
@@ -7962,7 +7962,7 @@
 			]
 		},
 		{
-			"name": "One With Stone",
+			"name": "One with Stone",
 			"source": "PC1",
 			"remaster": true,
 			"page": 347,
@@ -10661,7 +10661,7 @@
 			}
 		},
 		{
-			"name": "Speak with Stone",
+			"name": "Speak with Stones",
 			"source": "PC1",
 			"remaster": true,
 			"page": 358,

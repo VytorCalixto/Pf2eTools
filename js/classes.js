@@ -180,8 +180,14 @@ class ClassesPage extends BaseComponent {
 		let isAddedAnyClass = false;
 		let isAddedAnySubclass = false;
 
-		if (data.class && data.class.length) (isAddedAnyClass = true) && this._addData_addClassData(data.class)
-		if (data.subclass && data.subclass.length) (isAddedAnySubclass = true) && this._addData_addSubclassData(data.subclass)
+		if (data.class && data.class.length) {
+			isAddedAnyClass = true;
+			this._addData_addClassData(data.class);
+		}
+		if (data.subclass && data.subclass.length) {
+			isAddedAnySubclass = true;
+			this._addData_addSubclassData(data.subclass);
+		}
 
 		if (isAddedAnyClass || isAddedAnySubclass) {
 			this._list.update();
@@ -402,7 +408,7 @@ class ClassesPage extends BaseComponent {
 		let [[clsH, ...subs], [ftH, ...ftSubs]] = Hist.getDoubleHashParts();
 		if (clsH === "" && !subs.length) return;
 		subs = this.filterBox.setFromSubHashes(subs);
-		ftSubs = this.featFilterBox.setFromSubHashes(ftSubs);
+		ftSubs = this.featFilterBox.setFromSubHashes(ftSubs); // eslint-disable-line
 
 		const target = isInitialLoad ? this.__state : this._state;
 
@@ -421,7 +427,7 @@ class ClassesPage extends BaseComponent {
 		subs.forEach(sub => {
 			const unpacked = UrlUtil.unpackSubHash(sub);
 			if (!unpacked.state) return;
-			unpacked.state.map(it => {
+			unpacked.state.forEach(it => {
 				let [k, v] = it.split("=");
 				k = k.toLowerCase();
 				v = UrlUtil.mini.decompress(v);
@@ -949,7 +955,7 @@ class ClassesPage extends BaseComponent {
 							lvlFeaturesFilt.push({
 								name: "class feat",
 								source: cls.source,
-								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:class=1,flstclasses:${this.activeClass.name.toLowerCase()}=1">class feat</a>`),
+								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:class=1,flstclasses:${this.activeClass.name.toLowerCase()}=1">${this.activeClass.name.toLowerCase()} feat</a>`),
 								preCalc: true,
 							});
 							break;
@@ -994,7 +1000,7 @@ class ClassesPage extends BaseComponent {
 							lvlFeaturesFilt.push({
 								name: "ability boosts",
 								source: cls.source,
-								$lnk: $(`<span>ability boosts</span>`),
+								$lnk: $(`<span>${this.activeClass.remaster ? "attribute" : "ability"} boosts</span>`),
 								preCalc: true,
 							});
 							break;
@@ -1011,10 +1017,11 @@ class ClassesPage extends BaseComponent {
 			});
 
 			// FIXME: this works for now
+			// (it really doesn't)
 			const skipSort = lvlFeaturesFilt.filter(f => !f.preCalc).length;
-			const metasFeatureLinks = lvlFeaturesFilt.sort(skipSort ? () => {} : SortUtil.compareListNames)
+			const metasFeatureLinks = lvlFeaturesFilt.sort(SortUtil.compareListNames)
 				.map((it, ixFeature) => {
-					const featureId = `${ixLvl}-${lvlFeaturesFilt.filter(ft => !ft.preCalc).indexOf(it)}`;
+					const featureId = `${ixLvl}-${lvlFeatures.indexOf(it)}`;
 
 					let $lnk;
 					let name;
@@ -1049,6 +1056,7 @@ class ClassesPage extends BaseComponent {
 					}
 
 					if (ixFeature === 0) $lnk.html($lnk.html().uppercaseFirst());
+
 					return {
 						name,
 						$wrpLink: $$`<span>${$lnk}${ixFeature === lvlFeaturesFilt.length - 1 ? "" : ", "}</span>`,
@@ -1056,6 +1064,7 @@ class ClassesPage extends BaseComponent {
 						source,
 					};
 				});
+
 			return {
 				$row: $$`<div class="pf2-table__entry pf2-table--minimize ${ixLvl % 2 ? "odd" : ""}">${ixLvl + 1}</div>
 					<div class="pf2-table__entry pf2-table--minimize ${ixLvl % 2 ? "odd" : ""}">${metasFeatureLinks.length ? metasFeatureLinks.map(it => it.$wrpLink) : `\u2014`}</div>`,

@@ -514,7 +514,7 @@
 			}
 		},
 		{
-			"name": "Blessing Of Defiance",
+			"name": "Blessing of Defiance",
 			"source": "SoM",
 			"page": 91,
 			"level": 5,
@@ -966,7 +966,7 @@
 			}
 		},
 		{
-			"name": "Canticle Of Everlasting Grief",
+			"name": "Canticle of Everlasting Grief",
 			"source": "SoM",
 			"page": 94,
 			"level": 8,
@@ -2410,7 +2410,7 @@
 			}
 		},
 		{
-			"name": "Draw The Lightning",
+			"name": "Draw the Lightning",
 			"source": "SoM",
 			"page": 101,
 			"otherSources": {
@@ -3760,7 +3760,7 @@
 			}
 		},
 		{
-			"name": "Glimmer Of Charm",
+			"name": "Glimmer of Charm",
 			"source": "SoM",
 			"page": 108,
 			"level": 5,
@@ -4885,7 +4885,7 @@
 			}
 		},
 		{
-			"name": "Lose The Path",
+			"name": "Lose the Path",
 			"source": "SoM",
 			"page": 113,
 			"level": 1,
@@ -4961,8 +4961,23 @@
 				"unit": "special"
 			},
 			"entries": [
-				"When you {@action Cast a Spell||Cast this Spell}, roll {@dice 1d20} and make a note of the result. You gain the following reaction; once you use the reaction, the spell ends, and you become temporarily immune to lucky number until the next time you make your daily preparations.",
-				"That's My Number! {@as R} (divination, fortune) Trigger You roll your lucky number as your d20 result on a non-secret attack roll, saving throw, or skill check; Effect You call upon the fortune stored within your lucky number and reroll the triggering check. However, pushing your luck has a price: if your result on the reroll is the same number again, you critically fail, regardless of what degree of success you ordinarily would have received."
+				"When you {@action Cast a Spell||Cast this Spell}, roll {@dice 1d20} and make a note of the result. You gain the following reaction; once you use the reaction, the spell ends, and you become temporarily immune to {@i lucky number} until the next time you make your daily preparations.",
+				{
+					"type": "ability",
+					"name": "That's My Number!",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"divination",
+						"fortune"
+					],
+					"trigger": "You roll your lucky number as your {@dice d20} result on a non-{@trait secret} attack roll, saving throw, or skill check",
+					"entries": [
+						"You call upon the fortune stored within your lucky number and reroll the triggering check. However, pushing your luck has a price: if your result on the reroll is the same number again, you critically fail, regardless of what degree of success you ordinarily would have received."
+					]
+				}
 			]
 		},
 		{
@@ -5134,7 +5149,7 @@
 			}
 		},
 		{
-			"name": "Mantle Of The Frozen Heart",
+			"name": "Mantle of the Frozen Heart",
 			"source": "SoM",
 			"page": 115,
 			"level": 5,
@@ -5165,7 +5180,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You surround yourself in a mantle of frigid ice magic, and your skin and armor morph into cold blue ice. Freezing air emanates from your body, sending a chill down anyone's spine who draws too close and leaving a fine dusting of frost in your wake. Upon Casting this Spell, pick two of the options below. As a single action, which has the {@trait concentrate} trait, you can change one of your chosen abilities to a different option from the list.",
+				"You surround yourself in a mantle of frigid ice magic, and your skin and armor morph into cold blue ice. Freezing air emanates from your body, sending a chill down anyone's spine who draws too close and leaving a fine dusting of frost in your wake. Upon {@action Cast a Spell||Casting this Spell}, pick two of the options below. As a single action, which has the {@trait concentrate} trait, you can change one of your chosen abilities to a different option from the list.",
 				{
 					"type": "list",
 					"items": [
@@ -5178,7 +5193,7 @@
 			]
 		},
 		{
-			"name": "Mantle Of The Magma Heart",
+			"name": "Mantle of the Magma Heart",
 			"source": "SoM",
 			"page": 115,
 			"level": 5,
@@ -5255,7 +5270,7 @@
 			]
 		},
 		{
-			"name": "Mind Of Menace",
+			"name": "Mind of Menace",
 			"source": "SoM",
 			"page": 116,
 			"level": 3,
@@ -5289,14 +5304,32 @@
 			},
 			"entries": [
 				"This spell wards against those who attempt to subvert your mind and turns mental magic back on them. When the spell is complete, you gain the Fight with Fear reaction; once you use the reaction, the spell ends.",
-				"Fight with Fear {@as R} (concentrate, emotion, enchantment, fear, mental) Trigger A creature that you can see uses a {@trait mental} effect against you; Effect The triggering creature must attempt a Will save, which has the following effects.",
 				{
-					"type": "successDegree",
-					"entries": {
-						"Success": "The creature is unaffected.",
-						"Failure": "The creature is {@condition frightened 2}, and you gain a +2 status bonus to your saving throw or other defense against the triggering {@trait mental} effect.",
-						"Critical Failure": "The creature is {@condition frightened 2}, and you're unaffected by the triggering {@trait mental} effect."
-					}
+					"type": "ability",
+					"name": "Fight with Fear",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"concentrate",
+						"emotion",
+						"enchantment",
+						"fear",
+						"mental"
+					],
+					"trigger": "A creature that you can see uses a {@trait mental} effect against you",
+					"entries": [
+						"The triggering creature must attempt a Will save, which has the following effects.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Success": "The creature is unaffected.",
+								"Failure": "The creature is {@condition frightened 2}, and you gain a +2 status bonus to your saving throw or other defense against the triggering {@trait mental} effect.",
+								"Critical Failure": "The creature is {@condition frightened 2}, and you're unaffected by the triggering {@trait mental} effect."
+							}
+						}
+					]
 				}
 			]
 		},
@@ -5658,7 +5691,7 @@
 			}
 		},
 		{
-			"name": "Nudge The Odds",
+			"name": "Nudge the Odds",
 			"source": "SoM",
 			"page": 118,
 			"level": 1,
@@ -5795,7 +5828,7 @@
 			]
 		},
 		{
-			"name": "One With The Land",
+			"name": "One with the Land",
 			"source": "SoM",
 			"page": 118,
 			"level": 9,
@@ -6358,7 +6391,7 @@
 			}
 		},
 		{
-			"name": "Portrait Of The Artist",
+			"name": "Portrait of the Artist",
 			"source": "SoM",
 			"page": 122,
 			"level": 5,
@@ -6619,7 +6652,18 @@
 			},
 			"entries": [
 				"You extend your aura, as a magical shield that protects your eidolon or minion. The target gains a +1 circumstance bonus to AC until the start of your next turn. You gain the following reaction; after using the reaction, the spell ends and you can't cast {@spell protect companion|SoM} again for 10 minutes.",
-				"Life Block {@as R} Trigger The spell's target would take damage; Effect Reduce the triggering damage by 10, but you lose 5 Hit Points. Even if this reduces the damage to 0, the target still takes any effects that would come with the damage, such as the poison on a viper's fangs {@action Strike}."
+				{
+					"type": "ability",
+					"name": "Life Block",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "The spell's target would take damage",
+					"entries": [
+						"Reduce the triggering damage by 10, but you lose 5 Hit Points. Even if this reduces the damage to 0, the target still takes any effects that would come with the damage, such as the poison on a viper's fangs {@action Strike}."
+					]
+				}
 			],
 			"heightened": {
 				"plusX": {
@@ -6679,7 +6723,7 @@
 			}
 		},
 		{
-			"name": "Puff Of Poison",
+			"name": "Puff of Poison",
 			"source": "SoM",
 			"page": 124,
 			"level": 1,
@@ -6926,7 +6970,7 @@
 			]
 		},
 		{
-			"name": "Read The Air",
+			"name": "Read the Air",
 			"source": "SoM",
 			"page": 125,
 			"level": 1,
@@ -7176,7 +7220,7 @@
 			}
 		},
 		{
-			"name": "Rip The Spirit",
+			"name": "Rip the Spirit",
 			"source": "SoM",
 			"page": 126,
 			"level": 5,
@@ -7650,7 +7694,7 @@
 			}
 		},
 		{
-			"name": "Seashell Of Stolen Sound",
+			"name": "Seashell of Stolen Sound",
 			"source": "SoM",
 			"page": 127,
 			"level": 1,
@@ -8719,7 +8763,21 @@
 			},
 			"entries": [
 				"You create a buffer in the link between yourself and your eidolon in order to prevent you from falling alongside your bonded ally. You gain the following reaction; after using it, the spell ends.",
-				"Sever Conduit {@as R} (concentrate) Trigger Your eidolon takes damage that would bring you to 0 Hit Points and comes from an effect other than a {@trait death} effect; Effect You quickly shut the buffer in your link with your eidolon, causing your bonded ally to wink out of existence before you can be laid low. Your eidolon unmanifests, and you can't Manifest your Eidolon for 1 minute. In exchange, you don't take the triggering damage, though your eidolon still suffers any other adverse effects that accompanied the damage."
+				{
+					"type": "ability",
+					"name": "Sever Conduit",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"concentrate"
+					],
+					"trigger": "Your eidolon takes damage that would bring you to 0 Hit Points and comes from an effect other than a {@trait death} effect",
+					"entries": [
+						"You quickly shut the buffer in your link with your eidolon, causing your bonded ally to wink out of existence before you can be laid low. Your eidolon unmanifests, and you can't {@action Manifest Eidolon|SoM|Manifest your Eidolon} for 1 minute. In exchange, you don't take the triggering damage, though your eidolon still suffers any other adverse effects that accompanied the damage."
+					]
+				}
 			]
 		},
 		{
@@ -8872,7 +8930,7 @@
 			}
 		},
 		{
-			"name": "Tempest Of Shades",
+			"name": "Tempest of Shades",
 			"source": "SoM",
 			"page": 135,
 			"level": 7,
@@ -8971,7 +9029,7 @@
 			]
 		},
 		{
-			"name": "Thicket Of Knives",
+			"name": "Thicket of Knives",
 			"source": "SoM",
 			"page": 136,
 			"level": 1,
@@ -9035,7 +9093,27 @@
 			},
 			"entries": [
 				"You shroud the target in a powerful predatory aura and amplify its vocalizations. It gains a +1 status bonus to {@skill Intimidation} checks. Once during this spell's duration, it can take the Thundering Roar action.",
-				"Thundering Roar {@as 1} (auditory, concentrate, emotion, enchantment, fear, flourish, mental, sonic) The target unleashes a powerful vocalization. Each enemy in a 10-foot emanation takes {@damage 4d8} sonic damage with a basic Will save against your spell DC. A creature that fails its Will save is also {@condition frightened 1}."
+				{
+					"type": "ability",
+					"name": "Thundering Roar",
+					"activity": {
+						"number": 1,
+						"unit": "action"
+					},
+					"traits": [
+						"auditory",
+						"concentrate",
+						"emotion",
+						"enchantment",
+						"fear",
+						"flourish",
+						"mental",
+						"sonic"
+					],
+					"entries": [
+						"The target unleashes a powerful vocalization. Each enemy in a 10-foot emanation takes {@damage 4d8} sonic damage with a basic Will save against your spell DC. A creature that fails its Will save is also {@condition frightened 1}."
+					]
+				}
 			],
 			"heightened": {
 				"plusX": {
@@ -9144,7 +9222,7 @@
 			]
 		},
 		{
-			"name": "Tortoise And The Hare",
+			"name": "Tortoise And the Hare",
 			"source": "SoM",
 			"page": 137,
 			"level": 4,
@@ -9535,7 +9613,7 @@
 			}
 		},
 		{
-			"name": "Wall Of Water",
+			"name": "Wall of Water",
 			"source": "SoM",
 			"page": 139,
 			"level": 3,
@@ -9706,7 +9784,7 @@
 			]
 		},
 		{
-			"name": "Web Of Eyes",
+			"name": "Web of Eyes",
 			"source": "SoM",
 			"page": 140,
 			"level": 3,

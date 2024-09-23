@@ -1,7 +1,7 @@
 {
 	"feat": [
 		{
-			"name": "A Home In Every Port",
+			"name": "A Home in Every Port",
 			"source": "APG",
 			"page": 202,
 			"level": 11,
@@ -492,7 +492,7 @@
 			]
 		},
 		{
-			"name": "All In My Head",
+			"name": "All in My Head",
 			"source": "APG",
 			"page": 115,
 			"activity": {
@@ -650,7 +650,7 @@
 			]
 		},
 		{
-			"name": "Angel Of Death",
+			"name": "Angel of Death",
 			"source": "APG",
 			"page": 158,
 			"level": 10,
@@ -974,7 +974,7 @@
 			]
 		},
 		{
-			"name": "Arrow Of Death",
+			"name": "Arrow of Death",
 			"source": "APG",
 			"page": 173,
 			"activity": {
@@ -1036,7 +1036,7 @@
 				"You can't select another dedication feat until you've gained two other feats from the assassin archetype."
 			],
 			"leadsTo": [
-				"Angel Of Death|APG",
+				"Angel of Death|APG",
 				"Assassinate|APG",
 				"Expert Backstabber|APG",
 				"Surprise Attack|APG",
@@ -1151,7 +1151,7 @@
 			]
 		},
 		{
-			"name": "Attack Of Opportunity",
+			"name": "Attack of Opportunity",
 			"source": "APG",
 			"page": 91,
 			"add_hash": "Swashbuckler",
@@ -1170,7 +1170,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Despair",
+			"name": "Aura of Despair",
 			"source": "APG",
 			"page": 119,
 			"level": 4,
@@ -1184,7 +1184,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Preservation",
+			"name": "Aura of Preservation",
 			"source": "APG",
 			"page": 121,
 			"level": 14,
@@ -1260,7 +1260,7 @@
 			]
 		},
 		{
-			"name": "Back To Back",
+			"name": "Back to Back",
 			"source": "APG",
 			"page": 181,
 			"level": 8,
@@ -1643,7 +1643,7 @@
 				"Mature Beastmaster Companion|APG",
 				"Incredible Beastmaster Companion|APG",
 				"Specialized Beastmaster Companion|APG",
-				"Lead The Pack|APG"
+				"Lead the Pack|APG"
 			]
 		},
 		{
@@ -1727,7 +1727,7 @@
 			]
 		},
 		{
-			"name": "Between The Scales",
+			"name": "Between the Scales",
 			"source": "APG",
 			"page": 15,
 			"level": 9,
@@ -1806,7 +1806,7 @@
 			]
 		},
 		{
-			"name": "Blaze Of Revelation",
+			"name": "Blaze of Revelation",
 			"source": "APG",
 			"page": 81,
 			"level": 18,
@@ -2142,11 +2142,11 @@
 				"Keep Pace|APG",
 				"Opportunistic Grapple|APG",
 				"Posse|APG",
-				"Tools Of The Trade|APG"
+				"Tools of the Trade|APG"
 			]
 		},
 		{
-			"name": "Breath Of The Dragon",
+			"name": "Breath of the Dragon",
 			"source": "APG",
 			"page": 169,
 			"level": 8,
@@ -2177,7 +2177,7 @@
 				"Whenever you roll a success on an {@skill Athletics} check to {@action Swim}, you get a critical success instead. If you end your turn in water without having succeeded at a {@action Swim} action that round, you don't sink (but you might still be moved by the current)."
 			],
 			"leadsTo": [
-				"Invoke The Elements|LOAG",
+				"Invoke the Elements|LOAG",
 				"Stormy Heart|LOAG"
 			]
 		},
@@ -2424,7 +2424,7 @@
 				"Reliable Luck|APG",
 				"Shared Luck|APG",
 				"Lucky Break|LOAG",
-				"Sense For Trouble|LOAG"
+				"Sense for Trouble|LOAG"
 			]
 		},
 		{
@@ -2848,7 +2848,7 @@
 			]
 		},
 		{
-			"name": "Claws Of The Dragon",
+			"name": "Claws of the Dragon",
 			"source": "APG",
 			"page": 168,
 			"level": 4,
@@ -2867,7 +2867,7 @@
 			]
 		},
 		{
-			"name": "Clear The Way",
+			"name": "Clear the Way",
 			"source": "APG",
 			"page": 183,
 			"activity": {
@@ -3151,7 +3151,7 @@
 			]
 		},
 		{
-			"name": "Connect The Dots",
+			"name": "Connect the Dots",
 			"source": "APG",
 			"page": 62,
 			"level": 6,
@@ -3177,7 +3177,7 @@
 			]
 		},
 		{
-			"name": "Consult The Spirits",
+			"name": "Consult the Spirits",
 			"source": "APG",
 			"page": 204,
 			"level": 7,
@@ -3568,7 +3568,7 @@
 			]
 		},
 		{
-			"name": "Cut From The Air",
+			"name": "Cut From the Air",
 			"source": "APG",
 			"page": 127,
 			"activity": {
@@ -3585,7 +3585,7 @@
 				"You can knock aside ranged attacks. You gain a +4 circumstance bonus to AC against the triggering attack. If the attack misses, you knocked or cut it out of the air."
 			],
 			"leadsTo": [
-				"Smash From The Air|APG"
+				"Smash From the Air|APG"
 			]
 		},
 		{
@@ -3806,7 +3806,7 @@
 			]
 		},
 		{
-			"name": "Defy The Darkness",
+			"name": "Defy the Darkness",
 			"source": "APG",
 			"page": 42,
 			"level": 5,
@@ -4561,15 +4561,15 @@
 				"You can't select another dedication feat until you have gained two other feats from the dragon disciple archetype. If you later take the {@archetype sorcerer|crb|sorcerer archetype}, you must choose the {@class Sorcerer|CRB|draconic bloodline|draconic}."
 			],
 			"leadsTo": [
-				"Breath Of The Dragon|APG",
-				"Claws Of The Dragon|APG",
+				"Breath of the Dragon|APG",
+				"Claws of the Dragon|APG",
 				"Disciple's Breath|APG",
 				"Draconic Scent|APG",
 				"Dragon Arcana|APG",
-				"Scales Of The Dragon|APG",
-				"Shape Of The Dragon|APG",
+				"Scales of the Dragon|APG",
+				"Shape of the Dragon|APG",
 				"Mighty Dragon Shape|APG",
-				"Wings Of The Dragon|APG",
+				"Wings of the Dragon|APG",
 				"Cloud Walk|SoT3",
 				"Deflecting Cloud|SoT3",
 				"Mighty Wings|SoT3",
@@ -4849,7 +4849,7 @@
 			"leadsTo": [
 				"Duelist's Challenge|APG",
 				"Selfless Parry|APG",
-				"Student Of The Dueling Arts|APG"
+				"Student of the Dueling Arts|APG"
 			]
 		},
 		{
@@ -5002,7 +5002,7 @@
 			]
 		},
 		{
-			"name": "Echoes In Stone",
+			"name": "Echoes in Stone",
 			"source": "APG",
 			"page": 42,
 			"activity": {
@@ -5167,7 +5167,7 @@
 				"You can't select another dedication feat until you have gained two other feats from the eldritch archer archetype."
 			],
 			"leadsTo": [
-				"Arrow Of Death|APG",
+				"Arrow of Death|APG",
 				"Basic Eldritch Archer Spellcasting|APG",
 				"Expert Eldritch Archer Spellcasting|APG",
 				"Master Eldritch Archer Spellcasting|APG",
@@ -5263,7 +5263,7 @@
 			]
 		},
 		{
-			"name": "Embrace The Pain",
+			"name": "Embrace the Pain",
 			"source": "APG",
 			"page": 111,
 			"activity": {
@@ -5537,7 +5537,7 @@
 			]
 		},
 		{
-			"name": "Entreat With Forebears",
+			"name": "Entreat with Forebears",
 			"source": "APG",
 			"page": 139,
 			"level": 2,
@@ -5578,7 +5578,7 @@
 				"You don't consider evil aberrations to be legitimate authorities, even in nations they rule."
 			],
 			"leadsTo": [
-				"Aura Of Preservation|APG"
+				"Aura of Preservation|APG"
 			]
 		},
 		{
@@ -5625,7 +5625,7 @@
 			]
 		},
 		{
-			"name": "Exhort The Faithful",
+			"name": "Exhort the Faithful",
 			"source": "APG",
 			"page": 205,
 			"level": 2,
@@ -5869,7 +5869,7 @@
 			]
 		},
 		{
-			"name": "Eye For Numbers",
+			"name": "Eye for Numbers",
 			"source": "APG",
 			"page": 206,
 			"activity": {
@@ -5893,7 +5893,7 @@
 			]
 		},
 		{
-			"name": "Eye For Treasure",
+			"name": "Eye for Treasure",
 			"source": "APG",
 			"page": 42,
 			"level": 1,
@@ -5907,7 +5907,7 @@
 			]
 		},
 		{
-			"name": "Eyes Of Night",
+			"name": "Eyes of Night",
 			"source": "APG",
 			"page": 33,
 			"level": 1,
@@ -6000,7 +6000,7 @@
 				"dedication"
 			],
 			"entries": [
-				"You have forged a mystical bond with a creature. This might have involved complex rituals and invocations, such as meditating under the moon until something crept out of the forest. Or maybe you just did each other a good turn, such as rescuing the beast from a trap or a foe, and then being rescued in turn. Whatever the details, you are now comrades until the end. You gain a {@filter familiar|companionsfamiliars||Type=Familiar} (Core Rulebook 198). If you already have a familiar, you gain the {@feat Enhanced Familiar (Wizard)|CRB|Enhanced Familiar} feat."
+				"You have forged a mystical bond with a creature. This might have involved complex rituals and invocations, such as meditating under the moon until something crept out of the forest. Or maybe you just did each other a good turn, such as rescuing the beast from a trap or a foe, and then being rescued in turn. Whatever the details, you are now comrades until the end. You gain a {@filter familiar|companionsfamiliars||Type=Familiar}. If you already have a familiar, you gain the {@feat Enhanced Familiar (Wizard)|CRB|Enhanced Familiar} feat."
 			],
 			"special": [
 				"You can't select another dedication feat until you have gained two other feats from the familiar master archetype."
@@ -6009,7 +6009,15 @@
 				"Familiar Conduit|APG",
 				"Familiar Mascot|APG",
 				"Improved Familiar (Familiar Master)|APG",
-				"Mutable Familiar|APG"
+				"Mutable Familiar|APG",
+				"Scion of Domora Dedication|GW2",
+				"Guided Skill|GW2",
+				"Spiritual Strike|GW2",
+				"Spiritual Flurry|GW2",
+				"Guardian's Embrace|GW2",
+				"Invigorating Breath|GW2",
+				"Spiritual Aid|GW2",
+				"Spirit Guide Form|GW2"
 			]
 		},
 		{
@@ -6416,7 +6424,7 @@
 			"prerequisites": "{@feat Ritualist Dedication|APG}",
 			"entries": [
 				"You can perform two aspects of a ritual yourself. When you cast a ritual, you can reduce the number of secondary casters by 1.",
-				"When you do, you must fulfill any requirements for the secondary caster, and you attempt the secondary check normally performed by that secondary caster. You can't replace a secondary caster who is the target of the spell (as in the atone ritual)."
+				"When you do, you must fulfill any requirements for the secondary caster, and you attempt the secondary check normally performed by that secondary caster. You can't replace a secondary caster who is the target of the spell (as in the {@ritual atone} ritual)."
 			],
 			"leadsTo": [
 				"Assured Ritualist|APG"
@@ -6648,7 +6656,7 @@
 			]
 		},
 		{
-			"name": "Form Of The Bat",
+			"name": "Form of the Bat",
 			"source": "APG",
 			"page": 33,
 			"activity": {
@@ -6672,7 +6680,7 @@
 			]
 		},
 		{
-			"name": "Form Of The Fiend",
+			"name": "Form of the Fiend",
 			"source": "APG",
 			"page": 40,
 			"level": 1,
@@ -6681,10 +6689,37 @@
 			],
 			"entries": [
 				"Part of your body has an obvious, fiendish appearance. Your hands end in razor-sharp claws, you have hooves instead of feet, sharp teeth fill your mouth, or a whipping tail extends from your spine. You gain your choice of one of the following unarmed attacks. The attack is in the {@group brawling} group and has the listed damage die and traits.",
-				"Claw {@damage 1d4} slashing (agile, finesse, unarmed, versatile piercing)",
-				"Hoof {@damage 1d6} bludgeoning (finesse, unarmed)",
-				"Jaws {@damage 1d6} piercing (finesse, unarmed)",
-				"Tail {@damage 1d4} bludgeoning (agile, finesse, unarmed)"
+				{
+					"type": "pf2-options",
+					"skipSort": true,
+					"noColon": true,
+					"items": [
+						{
+							"name": "Claw",
+							"entries": [
+								"{@damage 1d4} slashing ({@trait agile}, {@trait finesse}, {@trait unarmed}, {@trait versatile <piercing>})"
+							]
+						},
+						{
+							"name": "Hoof",
+							"entries": [
+								"{@damage 1d6} bludgeoning ({@trait finesse}, {@trait unarmed})"
+							]
+						},
+						{
+							"name": "Jaws",
+							"entries": [
+								"{@damage 1d6} piercing ({@trait finesse}, {@trait unarmed})"
+							]
+						},
+						{
+							"name": "Tail",
+							"entries": [
+								"{@damage 1d4} bludgeoning ({@trait agile}, {@trait finesse}, {@trait unarmed})"
+							]
+						}
+					]
+				}
 			],
 			"special": [
 				"You can select this feat only at 1st level, and you can't retrain into or out of this feat, nor can you change the type of attack you gained."
@@ -6837,7 +6872,7 @@
 			"leadsTo": [
 				"Fancy Moves|APG",
 				"Performative Weapons Training|APG",
-				"Play To The Crowd|APG",
+				"Play To the Crowd|APG",
 				"Call Your Shot|APG",
 				"Stage Fighting|APG"
 			]
@@ -7742,7 +7777,7 @@
 			]
 		},
 		{
-			"name": "Hymn Of Healing",
+			"name": "Hymn of Healing",
 			"source": "APG",
 			"page": 112,
 			"level": 1,
@@ -8268,7 +8303,7 @@
 			]
 		},
 		{
-			"name": "Instrument Of Slaughter",
+			"name": "Instrument of Slaughter",
 			"source": "APG",
 			"page": 121,
 			"level": 16,
@@ -8390,7 +8425,7 @@
 			]
 		},
 		{
-			"name": "Just The Facts",
+			"name": "Just the Facts",
 			"source": "APG",
 			"page": 65,
 			"level": 20,
@@ -8635,7 +8670,7 @@
 			]
 		},
 		{
-			"name": "Lead The Pack",
+			"name": "Lead the Pack",
 			"source": "APG",
 			"page": 161,
 			"level": 16,
@@ -8889,7 +8924,7 @@
 			]
 		},
 		{
-			"name": "Litany Of Depravity",
+			"name": "Litany of Depravity",
 			"source": "APG",
 			"page": 121,
 			"level": 14,
@@ -8903,7 +8938,7 @@
 			]
 		},
 		{
-			"name": "Litany Of Self-interest",
+			"name": "Litany of Self-interest",
 			"source": "APG",
 			"page": 120,
 			"level": 10,
@@ -9270,16 +9305,16 @@
 				"You can't select another dedication feat until you have gained two other feats from the marshal archetype."
 			],
 			"leadsTo": [
-				"Back To Back|APG",
+				"Back to Back|APG",
 				"Cadence Call|APG",
 				"Tactical Cadence|APG",
 				"Coordinated Charge|APG",
 				"Dread Marshal Stance|APG",
 				"Inspiring Marshal Stance|APG",
 				"Rallying Charge|APG",
-				"Snap Out Of It!|APG",
+				"Snap Out of It!|APG",
 				"Steel Yourself!|APG",
-				"Target Of Opportunity|APG",
+				"Target of Opportunity|APG",
 				"To Battle!|APG",
 				"Topple Foe|APG",
 				"Push Back the Dead!|LOKL"
@@ -9309,7 +9344,7 @@
 			"leadsTo": [
 				"Follow-up Strike|APG",
 				"Grievous Blow|APG",
-				"Path Of Iron|APG",
+				"Path of Iron|APG",
 				"Powder Punch Stance|OoA1",
 				"Black Powder Flash|OoA1",
 				"Thunder Clap|OoA1"
@@ -9470,7 +9505,7 @@
 			"leadsTo": [
 				"Incredible Beastmaster Companion|APG",
 				"Specialized Beastmaster Companion|APG",
-				"Lead The Pack|APG"
+				"Lead the Pack|APG"
 			]
 		},
 		{
@@ -9496,7 +9531,7 @@
 			],
 			"leadsTo": [
 				"Avalanche Strike|APG",
-				"Clear The Way|APG",
+				"Clear the Way|APG",
 				"Hammer Quake|APG",
 				"Shoving Sweep|APG"
 			]
@@ -9795,7 +9830,7 @@
 			],
 			"leadsTo": [
 				"Azata Magic|APG",
-				"Call Of Elysium|LOAG"
+				"Call of Elysium|LOAG"
 			]
 		},
 		{
@@ -9977,7 +10012,7 @@
 			]
 		},
 		{
-			"name": "No Cause For Alarm",
+			"name": "No Cause for Alarm",
 			"source": "APG",
 			"page": 208,
 			"activity": {
@@ -10052,7 +10087,7 @@
 			]
 		},
 		{
-			"name": "Ode To Ouroboros",
+			"name": "Ode to Ouroboros",
 			"source": "APG",
 			"page": 114,
 			"level": 10,
@@ -10064,7 +10099,7 @@
 			]
 		},
 		{
-			"name": "One For All",
+			"name": "One for All",
 			"source": "APG",
 			"page": 88,
 			"activity": {
@@ -10542,7 +10577,7 @@
 			]
 		},
 		{
-			"name": "Path Of Iron",
+			"name": "Path of Iron",
 			"source": "APG",
 			"page": 182,
 			"activity": {
@@ -10778,7 +10813,7 @@
 			]
 		},
 		{
-			"name": "Pick Up The Pace",
+			"name": "Pick Up the Pace",
 			"source": "APG",
 			"page": 208,
 			"level": 3,
@@ -10906,7 +10941,7 @@
 			"leadsTo": [
 				"Pirate Weapon Training|APG",
 				"Rope Runner|APG",
-				"Walk The Plank|APG"
+				"Walk the Plank|APG"
 			]
 		},
 		{
@@ -10962,7 +10997,7 @@
 			]
 		},
 		{
-			"name": "Play To The Crowd",
+			"name": "Play To the Crowd",
 			"source": "APG",
 			"page": 175,
 			"activity": {
@@ -11015,7 +11050,7 @@
 			]
 		},
 		{
-			"name": "Plot The Future",
+			"name": "Plot the Future",
 			"source": "APG",
 			"page": 64,
 			"level": 14,
@@ -11266,7 +11301,7 @@
 			]
 		},
 		{
-			"name": "Premonition Of Avoidance",
+			"name": "Premonition of Avoidance",
 			"source": "APG",
 			"page": 122,
 			"activity": {
@@ -11286,7 +11321,7 @@
 			]
 		},
 		{
-			"name": "Premonition Of Clarity",
+			"name": "Premonition of Clarity",
 			"source": "APG",
 			"page": 123,
 			"activity": {
@@ -11970,7 +12005,7 @@
 			]
 		},
 		{
-			"name": "Reconstruct The Scene",
+			"name": "Reconstruct the Scene",
 			"source": "APG",
 			"page": 65,
 			"add_hash": "Investigator",
@@ -11984,7 +12019,7 @@
 			]
 		},
 		{
-			"name": "Reconstruct The Scene",
+			"name": "Reconstruct the Scene",
 			"source": "APG",
 			"page": 137,
 			"add_hash": "Rogue",
@@ -12386,7 +12421,7 @@
 			]
 		},
 		{
-			"name": "Rites Of Convocation",
+			"name": "Rites of Convocation",
 			"source": "APG",
 			"page": 102,
 			"level": 4,
@@ -12398,7 +12433,7 @@
 			]
 		},
 		{
-			"name": "Rites Of Transfiguration",
+			"name": "Rites of Transfiguration",
 			"source": "APG",
 			"page": 105,
 			"level": 14,
@@ -12561,7 +12596,7 @@
 			]
 		},
 		{
-			"name": "Scales Of The Dragon",
+			"name": "Scales of the Dragon",
 			"source": "APG",
 			"page": 169,
 			"level": 4,
@@ -12651,7 +12686,7 @@
 			]
 		},
 		{
-			"name": "Schooled In Secrets",
+			"name": "Schooled in Secrets",
 			"source": "APG",
 			"page": 208,
 			"level": 1,
@@ -12986,7 +13021,7 @@
 			]
 		},
 		{
-			"name": "Sense The Unseen",
+			"name": "Sense the Unseen",
 			"source": "APG",
 			"page": 64,
 			"add_hash": "Investigator",
@@ -13233,7 +13268,7 @@
 			]
 		},
 		{
-			"name": "Shape Of The Dragon",
+			"name": "Shape of the Dragon",
 			"source": "APG",
 			"page": 169,
 			"level": 14,
@@ -13370,7 +13405,7 @@
 			]
 		},
 		{
-			"name": "Shield Of Faith",
+			"name": "Shield of Faith",
 			"source": "APG",
 			"page": 122,
 			"level": 10,
@@ -13605,7 +13640,7 @@
 			]
 		},
 		{
-			"name": "Smash From The Air",
+			"name": "Smash From the Air",
 			"source": "APG",
 			"page": 127,
 			"level": 18,
@@ -13637,7 +13672,7 @@
 			]
 		},
 		{
-			"name": "Snap Out Of It!",
+			"name": "Snap Out of It!",
 			"source": "APG",
 			"page": 180,
 			"activity": {
@@ -13794,7 +13829,7 @@
 			]
 		},
 		{
-			"name": "Song Of Marching",
+			"name": "Song of Marching",
 			"source": "APG",
 			"page": 113,
 			"level": 6,
@@ -13806,7 +13841,7 @@
 			]
 		},
 		{
-			"name": "Song Of Strength",
+			"name": "Song of Strength",
 			"source": "APG",
 			"page": 112,
 			"level": 2,
@@ -14495,7 +14530,7 @@
 			]
 		},
 		{
-			"name": "Student Of The Dueling Arts",
+			"name": "Student of the Dueling Arts",
 			"source": "APG",
 			"page": 171,
 			"level": 12,
@@ -14839,7 +14874,7 @@
 			]
 		},
 		{
-			"name": "Suspect Of Opportunity",
+			"name": "Suspect of Opportunity",
 			"source": "APG",
 			"page": 63,
 			"activity": {
@@ -14980,7 +15015,7 @@
 			]
 		},
 		{
-			"name": "Symphony Of Blood",
+			"name": "Symphony of Blood",
 			"source": "APG",
 			"page": 33,
 			"level": 17,
@@ -14992,7 +15027,7 @@
 			]
 		},
 		{
-			"name": "Symphony Of The Unfettered Heart",
+			"name": "Symphony of the Unfettered Heart",
 			"source": "APG",
 			"page": 114,
 			"level": 10,
@@ -15099,7 +15134,7 @@
 			]
 		},
 		{
-			"name": "Tangle Of Battle",
+			"name": "Tangle of Battle",
 			"source": "APG",
 			"page": 111,
 			"activity": {
@@ -15117,7 +15152,7 @@
 			]
 		},
 		{
-			"name": "Target Of Opportunity",
+			"name": "Target of Opportunity",
 			"source": "APG",
 			"page": 181,
 			"activity": {
@@ -15368,7 +15403,7 @@
 				"When you succeed at a {@action Recall Knowledge} check, you learn an additional fact about the subject. When you critically succeed at a {@action Recall Knowledge} check, you can gain even more additional information or context than normal, at the GM's discretion."
 			],
 			"leadsTo": [
-				"Just The Facts|APG"
+				"Just the Facts|APG"
 			]
 		},
 		{
@@ -15440,7 +15475,7 @@
 			]
 		},
 		{
-			"name": "Tools Of The Trade",
+			"name": "Tools of the Trade",
 			"source": "APG",
 			"page": 163,
 			"level": 4,
@@ -16268,7 +16303,7 @@
 			]
 		},
 		{
-			"name": "Vision Of Weakness",
+			"name": "Vision of Weakness",
 			"source": "APG",
 			"page": 79,
 			"level": 4,
@@ -16297,7 +16332,7 @@
 			]
 		},
 		{
-			"name": "Voice Of The Night",
+			"name": "Voice of the Night",
 			"source": "APG",
 			"page": 33,
 			"level": 1,
@@ -16309,7 +16344,7 @@
 			]
 		},
 		{
-			"name": "Walk The Plank",
+			"name": "Walk the Plank",
 			"source": "APG",
 			"page": 185,
 			"activity": {
@@ -16631,7 +16666,7 @@
 			]
 		},
 		{
-			"name": "Wings Of The Dragon",
+			"name": "Wings of the Dragon",
 			"source": "APG",
 			"page": 169,
 			"level": 12,

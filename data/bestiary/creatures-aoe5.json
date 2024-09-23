@@ -158,7 +158,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human rogue",
+			"description": "Male {@ancestry human} rogue",
 			"perception": {
 				"std": 25
 			},
@@ -311,6 +311,7 @@
 		},
 		{
 			"name": "Calennia",
+			"description": "Female {@ancestry human} Hellknight maralictor of the Scourge",
 			"source": "AoE5",
 			"page": 32,
 			"level": 16,
@@ -342,6 +343,12 @@
 				},
 				"religion": {
 					"std": 25
+				},
+				"hell lore": {
+					"std": 26
+				},
+				"legal lore": {
+					"std": 24
 				}
 			},
 			"abilityMods": {
@@ -389,26 +396,14 @@
 					]
 				}
 			],
+			"items": [
+				"{@runeItem heavy crossbow||+1 weapon potency||striking|} (with {@item bolt (10)||10 bolts})",
+				"{@runeItem Hellknight plate|TV|+2 armor potency||resilient|}",
+				"{@runeItem scourge|LOCG|+2 weapon potency||greater striking||axiomatic|}",
+				"{@item tower shield} (Hardness 5, HP 20, BT 10)"
+			],
 			"abilities": {
 				"top": [
-					{
-						"entries": [
-							"+26, {@skill Intimidation} +30, {@skill Lore||Legal Lore} +24, {@skill Religion} +25 Str +5, Dex +0, Con +5, Int +2, Wis +3"
-						],
-						"name": "Lore"
-					},
-					{
-						"entries": [
-							"+4 Items +1 striking heavy crossbow (with 10 bolts), +2 resilient Hellknight plate (Pathfinder Lost."
-						],
-						"name": "Cha"
-					},
-					{
-						"entries": [
-							"80), +2 greater striking axiomatic scourge (Pathfinder Lost Omens Character Guide 80), tower shield (Hardness 5, HP 20, BT 10)"
-						],
-						"name": "Omens Character Guide"
-					},
 					{
 						"entries": [
 							"When making a {@action Recall Knowledge} check about a devil she's observing, whenever Calennia rolls a critical failure, she gets a failure instead."
@@ -492,7 +487,7 @@
 			}
 		},
 		{
-			"name": "Child Of Venom",
+			"name": "Child of Venom",
 			"source": "AoE5",
 			"page": 16,
 			"level": 13,
@@ -1062,7 +1057,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Female human assassin",
+			"description": "Female {@ancestry human} assassin",
 			"perception": {
 				"std": 30
 			},
@@ -1430,7 +1425,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human Starwatch secret agent",
+			"description": "Male {@ancestry human} Starwatch secret agent",
 			"perception": {
 				"std": 27
 			},
@@ -2039,7 +2034,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human prison warden",
+			"description": "Male {@ancestry human} prison warden",
 			"perception": {
 				"std": 37
 			},
@@ -3713,12 +3708,9 @@
 							"number": 1
 						},
 						"entries": [
-							"The fanged mouths at the ends of a myrucarx's tendrils twist around obstacles. The myrucarx makes two jaws {@action Strike||Strikes} against the same target, ignoring the target's cover. Both attacks count toward the myrucarx's multiple attack penalty, but the penalty doesn't increase until after both attacks are made. The myrucarx can't Grab as its next action after."
+							"The fanged mouths at the ends of a myrucarx's tendrils twist around obstacles. The myrucarx makes two jaws {@action Strike||Strikes} against the same target, ignoring the target's cover. Both attacks count toward the myrucarx's multiple attack penalty, but the penalty doesn't increase until after both attacks are made. The myrucarx can't Grab as its next action after Twisting Reach."
 						],
 						"name": "Twisting Reach"
-					},
-					{
-						"name": "Twisting Reach."
 					}
 				]
 			},
@@ -3780,7 +3772,7 @@
 			"skills": {
 				"athletics": {
 					"std": 26,
-					"to Swim": 28
+					"to {@action Swim}": 28
 				},
 				"deception": {
 					"std": 27
@@ -4584,7 +4576,7 @@
 				"humanoid",
 				"tiefling"
 			],
-			"description": "Male human tiefling gangster (Pathfinder Advanced Player's Guide 39)",
+			"description": "Male {@ancestry human} tiefling gangster (Pathfinder Advanced Player's Guide 39)",
 			"perception": {
 				"std": 32
 			},
@@ -4625,9 +4617,9 @@
 				"cha": 5
 			},
 			"items": [
-				"daggers (16)",
-				"+2 resilient studded leather",
-				"+2 greater striking war razor (Pathfinder Lost Omens Gods & Magic 120)"
+				"{@item dagger||daggers} (16)",
+				"{@runeItem studded leather||+2 armor potency||resilient|}",
+				"{@runeItem war razor|TV|+2 weapon potency||greater striking|}"
 			],
 			"speed": {
 				"walk": 25

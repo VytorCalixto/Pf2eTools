@@ -478,10 +478,7 @@
 			"senses": [
 				{
 					"name": "echolocation",
-					"range": {
-						"unit": "feet",
-						"number": 40
-					},
+					"range": 40,
 					"type": "precise"
 				},
 				{
@@ -679,7 +676,8 @@
 					{
 						"name": "Troop Defenses",
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"source": "B3"
 						}
 					}
 				],
@@ -691,7 +689,8 @@
 							"unit": "action"
 						},
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"source": "B3"
 						}
 					},
 					{
@@ -847,7 +846,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 29}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"mid": [
@@ -934,7 +937,7 @@
 				},
 				"deception": {
 					"std": 12,
-					"to Feint": 20
+					"to {@action Feint}": 20
 				},
 				"stealth": {
 					"std": 20
@@ -1036,10 +1039,14 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Wind Up",
+						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 26}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -1218,10 +1225,14 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Wind Up",
+						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 22}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"mid": [
@@ -1497,10 +1508,7 @@
 				},
 				{
 					"name": "tremorsense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				}
 			],
@@ -1640,10 +1648,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					}
+					"range": 60
 				}
 			],
 			"languages": {
@@ -2102,7 +2107,7 @@
 					}
 				]
 			},
-			"description": "Female elf changeling shieldmarshal deputy"
+			"description": "Female {@ancestry elf} changeling shieldmarshal deputy"
 		},
 		{
 			"name": "Ibrium",
@@ -2323,7 +2328,7 @@
 					}
 				]
 			},
-			"description": "Male human vitrumancer and Nexian agent"
+			"description": "Male {@ancestry human} vitrumancer and Nexian agent"
 		},
 		{
 			"name": "Parsus",
@@ -2526,6 +2531,7 @@
 								},
 								{
 									"name": "enervation",
+									"source": "APG",
 									"amount": 2
 								}
 							]

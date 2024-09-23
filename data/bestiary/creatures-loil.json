@@ -200,10 +200,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 120
-					}
+					"range": 120
 				}
 			],
 			"skills": {
@@ -719,7 +716,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 33}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -1322,10 +1323,7 @@
 			"senses": [
 				{
 					"name": "a taste for skin",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				}
 			],
@@ -1463,10 +1461,7 @@
 				},
 				{
 					"name": "tremorsense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				}
 			],
@@ -1814,10 +1809,7 @@
 			"senses": [
 				{
 					"name": "magic hunger",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -1917,20 +1909,18 @@
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
-						}
+						},
+						"trigger": "A creature critically hits the mutant with a melee unarmed Strike or a non-reach melee Strike",
+						"entries": [
+							"The mutant makes a maw Strike against the triggering creature."
+						]
 					}
 				],
 				"bot": [
 					{
-						"name": "Pack Attack A Mana",
+						"name": "Pack Attack",
 						"entries": [
-							"Wastes mutant gnoll hulk deals {@damage 1d4} extra damage to any creature who's within reach of at least two of the"
-						]
-					},
-					{
-						"name": "Mana",
-						"entries": [
-							"Wastes mutant gnoll hulk's allies."
+							"A Mana Wastes mutant gnoll hulk deals {@damage 1d4} extra damage to any creature who's within reach of at least two of the Mana Wastes mutant gnoll hulk's allies."
 						]
 					},
 					{
@@ -1960,10 +1950,7 @@
 			"senses": [
 				{
 					"name": "motion sense ",
-					"range": {
-						"unit": "feet",
-						"number": 120
-					}
+					"range": 120
 				},
 				{
 					"name": "no vision"
@@ -2233,10 +2220,7 @@
 				},
 				{
 					"name": "magic sense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],

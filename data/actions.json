@@ -1,6 +1,695 @@
 {
 	"action": [
 		{
+			"name": "Unwavering Resilience",
+			"source": "WoW2",
+			"page": 69,
+			"activity": {
+				"number": 1,
+				"unit": "reaction"
+			},
+			"trigger": "You attempt a saving throw against a {@trait poison}, {@trait disease}, or {@trait mental} effect, but you haven't rolled yet.",
+			"entries": [
+				"You tap into the power of the {@plane Plane of Wood|RoE}, gaining strength and mental fortitude. You gain a +1 circumstance bonus on the triggering save. If you critically succeed at this saving throw, you become bolstered by your success; blossoms and new growth temporarily sprout all over your body, and you gain a number of temporary Hit Point equal to your level. These temporary Hit Points last for one minute. When there temporary Hit Points are lost, the verdant growth subsides."
+			]
+		},
+		{
+			"name": "Defend Tern Hill",
+			"source": "WoW2",
+			"page": 8,
+			"traits": [
+				"downtime"
+			],
+			"entries": [
+				"You spend 8 hours performing tasks to aid in the defense of Tern Hill and its people, such as constructing fortifications, setting snares, patrolling, or training other members of the Rootweft. Roll a skill check related to the specific task you perform. The GM determines which skill or other check is required, such as {@skill Crafting} to build a barrier, {@skill Perception} to man a watch post, or {@skill Diplomacy} to train noncombatants. You earn a number of Defense Points based on your check result.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "Tern Hill gains 2 Defense Points.",
+						"Success": "Tern Hill gains 1 Defense Point.",
+						"Failure": "Your efforts earn no Defense Points.",
+						"Critical Failure": "Tern Hill loses 1 Defense Point. This can't reduce the total Defense Points to less than 0."
+					}
+				}
+			]
+		},
+		{
+			"name": "Negotiate Peace",
+			"source": "WoW1",
+			"page": 35,
+			"traits": [
+				"auditory",
+				"concentrate",
+				"exploration",
+				"linguistic",
+				"mental"
+			],
+			"requirements": "The arboreals have an unfriendly or higher attitude toward the PCs.",
+			"entries": [
+				"You attempt to mediate the conflict between the loggers of Marin's Mill and the neighboring arboreals by making a case to their leader. Without any supporting evidence, convincing the angry arboreals to leave Marin's Mill alone requires a successful DC 32 {@skill Diplomacy} check. However, the PCs can lower this DC by successfully making any of the following arguments:",
+				{
+					"type": "list",
+					"items": [
+						"{@b The villagers of Marin's Mill are defending themselves against unprovoked twigjack attacks.} A first-hand account of the twigjack attacks reduces the DC by 5, although Ironbark openly questions whether the twigjack attacks were truly \"unprovoked.\" Providing plausible justification for the twigjack attacks by reporting on the worship site reduces the DC by an additional 2; if the PCs also provide proof of Splintershank's demise, they reduce the DC by an additional 3.",
+						"{@b The villagers actively want peace.} If the PCs can convince the loggers' leader, Declan Berk, to accompany them while they make their case before Ironbark, they reduce the DC by 4."
+					]
+				},
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, but Ironbark agrees to help the people of Marin's Mill repair the damage inflicted by the twigjacks in exchange for their assistance in replanting the burned trees.",
+						"Success": "Ironbark agrees to spare the town, although he and the arboreals remain suspicious and resentful of the people of Marin's Mill.",
+						"Failure": "Ironbark is unconvinced, and a new attempt to convince him cannot be made again for 12 hours.",
+						"Critical Failure": "As failure, but Ironbark's attitude toward the PCs decreases by one step, and a new attempt to convince him cannot be made for 24 hours."
+					}
+				}
+			]
+		},
+		{
+			"name": "Prismati Catch",
+			"source": "WoW1",
+			"page": 23,
+			"traits": [
+				"manipulate"
+			],
+			"entries": [
+				"You try to catch a prismati object that's thrown to you. Attempt a DC 18 {@skill Acrobatics}, {@skill Athletics}, or {@skill Lore||Games Lore} check, or a DC 18 Reflex save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Success": "You catch the thrown item.",
+						"Failure": "You fail to catch the thrown item, which lands outside of your dig and earns no points."
+					}
+				}
+			]
+		},
+		{
+			"name": "Prismati Throw",
+			"source": "WoW1",
+			"page": 22,
+			"traits": [
+				"manipulate"
+			],
+			"entries": [
+				"You throw one of the prismati objects toward a catcher atop the dig of your choice. Attempt a DC 15 {@skill Lore||Games Lore} check or a ranged {@action Strike} against AC 15, applying any range increment penalties to either roll.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "Your throw is practically perfect. Your intended catcher gains a +2 circumstance bonus on their check to {@action Prismati Catch|WoW1|Catch} the object, and any check to {@action Prismati Intercept|WoW1|Intercept} the throw takes a \u20132 penalty.",
+						"Success": "Your throw is accurate but must still be caught.",
+						"Failure": "Your throw goes wide, missing the target."
+					}
+				}
+			]
+		},
+		{
+			"name": "Prismati Intercept",
+			"source": "WoW1",
+			"page": 23,
+			"traits": [
+				"manipulate"
+			],
+			"entries": [
+				"You try to disrupt or even catch a prismati object that's thrown past you. Attempt a DC 18 {@skill Acrobatics}, {@skill Athletics}, or {@skill Lore||Games Lore} check, or a DC 18 Reflex save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You catch the object, ensuring it doesn't score any points.",
+						"Success": "You disrupt the object's trajectory, increasing the DC required to {@action Prismati Catch|WoW1|Catch} it by 4.",
+						"Failure": "You fail to disrupt the throw."
+					}
+				}
+			]
+		},
+		{
+			"name": "Prismati Maneuver",
+			"source": "WoW1",
+			"page": 22,
+			"traits": [
+				"move"
+			],
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"entries": [
+				"You dash from one dig to another. Attempt a DC 25 {@skill Acrobatics}, {@skill Athletics}, or {@skill Lore||Games Lore} check. You gain a circumstance bonus to the check equal to your Speed divided by 5 (e.g., {@hit +5} for 25 feet).",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You move to a dig up to two spaces away. Alternatively, you can move to an adjacent dig and then Arrange a Scarf as a free action.",
+						"Success": "You move to an adjacent dig.",
+						"Failure": "You make slow progress; you do not move, but your circumstance bonus to your next Prismati Maneuver check increases by 5."
+					}
+				}
+			]
+		},
+		{
+			"name": "Counter-quip",
+			"source": "WoW1",
+			"page": 20,
+			"traits": [
+				"auditory",
+				"concentrate",
+				"exploration",
+				"linguistic"
+			],
+			"trigger": "A contestant attempts a skill check when targeting you with a Wildwood Flyte.",
+			"entries": [
+				"You deliver a snappy, witty rebuttal that deflects your opponent's mockery. Attempt a {@skill Deception}, {@skill Intimidation}, or {@skill Performance} check; the DC equals 10 + the opponent's modifier for the skill they used for the Wildwood Flyte.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "Your rebuttal is cleverer than the attack! Negate the Wildwood Flyte result, and your opponent loses 1 point.",
+						"Success": "Your witty response reduces the number of points you lose by 1 (minimum 0).",
+						"Failure": "No effect.",
+						"Critical Failure": "Your clumsy comeback only exacerbates the mockery, and you lose 1 additional point."
+					}
+				}
+			]
+		},
+		{
+			"name": "Wildwood Flyte",
+			"source": "WoW1",
+			"page": 20,
+			"traits": [
+				"auditory",
+				"concentrate",
+				"linguistic"
+			],
+			"entries": [
+				"You spontaneously compose and deliver a string of rhyming verse to ridicule a contestant. Attempt a {@skill Deception}, {@skill Intimidation}, or {@skill Performance} check against the target's DC associated with that skill. Because the audience gets bored easily, you take a \u20132 penalty to this check if you used this skill for your most recent Wildwood Flyte attempt.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You verbally eviscerate your target and delight the audience. You gain 1 point. Your target loses 2 points and is {@condition stupefied||stupefied 1} until they gain at least 1 point.",
+						"Success": "Your verbal takedown works well, earning widespread approval. You gain 1 point, and your target loses 1 point.",
+						"Failure": "Though coherent, your mockery has no effect.",
+						"Critical Failure": "Your flyting is so clumsy that you lose 1 point."
+					}
+				}
+			]
+		},
+		{
+			"name": "Study",
+			"source": "WoW1",
+			"page": 19,
+			"traits": [
+				"auditory",
+				"concentrate",
+				"secret",
+				"visual"
+			],
+			"trigger": "Your turn to Wildwood Flyte begins.",
+			"entries": [
+				"You examine a contestant's mannerisms and recall trivia about them to identify their weaknesses. Attempt a DC 20 {@skill Perception} check or relevant check to {@action Recall Knowledge} about the target.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, but the circumstance bonus increases to +3.",
+						"Success": "You identify one of the target's weaknesses. The first time you incorporate that weakness into your Wildwood Flyte against the target, you gain a +2 circumstance bonus to the accompanying skill check.",
+						"Failure": "No effect.",
+						"Critical Failure": "You mistakenly identify something about the target. Using this fake weakness against the target imposes a \u20132 penalty to your check to Wildwood Flyte."
+					}
+				}
+			]
+		},
+		{
+			"name": "Caber Toss",
+			"source": "WoW1",
+			"page": 17,
+			"traits": [
+				"concentrate",
+				"manipulate"
+			],
+			"entries": [
+				"You precariously heft a caber, jog a short distance, and heave it end over end. First, attempt a DC 19 {@skill Acrobatics} check to keep the caber balanced as you move. If you succeed, you gain a +1 circumstance bonus to the subsequent {@skill Athletics} check. If you critically succeed, increase the circumstance bonus to +3.",
+				"Second, attempt a DC 21 {@skill Athletics} check or a ranged attack against AC 22 (the caber belongs to the {@group club} weapon group) to hurl the caber.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "Your exceptional throw earns 4 points.",
+						"Success": "Your throw lands off-kilter yet earns {@dice 1d3} points.",
+						"Failure": "You struggle to throw the caber, earning no points.",
+						"Critical Failure": "You stumble while lifting or tossing the caber, injuring yourself in the process. You earn no points, you take {@dice 1d10} bludgeoning damage, and you are {@condition enfeebled||enfeebled 1} for the rest of the contest."
+					}
+				}
+			]
+		},
+		{
+			"name": "Tenacious Stance",
+			"source": "LOHh",
+			"page": 110,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"stance"
+			],
+			"actionType": {
+				"archetype": [
+					"Stalwart Defender|LOHh"
+				]
+			},
+			"requirements": "You are wearing armor",
+			"entries": [
+				"You steady yourself, as tough and immutable as stone. You gain a number of temporary Hit Points equal to half your level (minimum 1) and a +2 circumstance bonus to DCs against being {@action shove||Shoved} and {@action trip||Tripped}. However, you no longer negate your armor check penalty or Speed penalty for having a high Strength while in this stance. After you leave Tenacious Stance, you lose any remaining temporary Hit Points from the stance, and you become temporarily immune to gaining temporary Hit Points from Tenacious Stance for 1 minute."
+			]
+		},
+		{
+			"name": "Distract Crew",
+			"source": "Rust",
+			"page": 14,
+			"traits": [
+				"concentrate",
+				"exploration",
+				"mental"
+			],
+			"entries": [
+				"Whether it's an attempt to engage the crew of the {@i Swordfish} from the pier in a confusing conversation, staging a distracting event, asking them about their reasons for being here, or simply attempting to chat up the crew, a creature does their best for 10 minutes to distract the guards on deck to give those sneaking onboard a better chance at success. Have the PC describe what they are doing to be distracting, and determine if they need to attempt a DC 15 {@skill Deception} check, a DC 17 {@skill Diplomacy} check, or a DC 13 {@skill Performance} check or {@skill Lore||Xin-Edasseril Lore} check. Only one attempt to Distract the Crew can be attempted at a time, but other PCs can attempt to {@action Aid} the Distract Crew attempt.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The crew becomes distracted. Grant all attempts to {@action Search Ship|Rust|Search the Ship} during this 10 minutes a +1 circumstance bonus.",
+						"Success": "The crew becomes distracted.",
+						"Failure": "The crew does not become distracted.",
+						"Critical Failure": "The crew becomes suspicious, and all attempts to {@action Search Ship|Rust|Search the Ship} during this 10 minutes take a -1 circumstance penalty."
+					}
+				}
+			]
+		},
+		{
+			"name": "Search Ship",
+			"source": "Rust",
+			"page": 15,
+			"traits": [
+				"concentrate",
+				"exploration"
+			],
+			"entries": [
+				"The PC sneaks onto the {@i Swordfish} and skulks around the ship looking for clues for 10 minutes. If the crew is not distracted, have them attempt a DC 15 {@skill Stealth} check or a DC 13 {@skill Lore||Sailing Lore} check. If the crew is distracted, the DC is reduced by 5. If the crew is suspicious, the DC is increased by 5.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The PC makes multiple discoveries. Roll three times on the {@table Swordfish Discoveries|Rust} table.",
+						"Success": "The PC makes a discovery! Roll once the {@table Swordfish Discoveries|Rust} table.",
+						"Failure": " The PC fails to make any discoveries but is not caught by the crew.",
+						"Critical Failure": "Not only does the PC fail to make any discoveries, but they are spotted by a deckhand! At this point, the PC can call for parley (in which case, proceed with Speaking to the Crew), attack (in which case, proceed with Getting in a Fight), or try to flee by attempting a second {@skill Stealth} check against the same DC. On a success, they escape capture, but the Swordfish's crew remains suspicious from this point onward and can no longer be distracted. On a failure, they're cornered and must either fight, talk, or surrender."
+					}
+				}
+			]
+		},
+		{
+			"name": "Investigate Domora",
+			"source": "GW2",
+			"page": 55,
+			"traits": [
+				"concentrate",
+				"exploration"
+			],
+			"entries": [
+				"Over the course of the day, you sift through ruins, study relics, or comb through archives in order to learn about Domora. Attempt a skill check to determine how many Investigation Points (IP) your efforts yield. Which skills you can use and the DC for it depend on the site you visit.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You gain 2 IP.",
+						"Success": "You gain 1 IP.",
+						"Critical Failure": "You make a false discovery and lose 1 IP."
+					}
+				}
+			]
+		},
+		{
+			"name": "Repair Karahai Bridge",
+			"source": "SoG4",
+			"page": 16,
+			"traits": [
+				"downtime",
+				"manipulate"
+			],
+			"entries": [
+				"You create a plan for rebuilding Karahai Bridge and recruit a team to enact that plan over the course of 3 days. Attempt a {@dc 25} {@skill lore||Engineering Lore} check, a {@dc 27} {@skill Crafting} check, or a {@dc 29} {@skill Society} check; other PCs can {@action Aid} this check with any of those skills by spending the same amount of downtime providing that assistance. If a PC has access to spells or other magic effects that the GM decides could be of significant aid to the process, and that PC spends their downtime helping, that PC's magic grants the primary check a +1 status bonus. This bonus stacks with multiple different spellcasting PCs, up to a maximum status bonus of +3. Once this check has been attempted, the PCs don't need to spend more downtime on the project.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The PCs hit upon a brilliant plan for the project, and the town's workers prove to be particularly skilled and exuberant. The bridge takes only 1 month to rebuild and is finished before the events of Chapter 2 begin.",
+						"Success": "The plans are solid and the project proceeds quickly without any major setbacks. The bridge takes 2 months to rebuild.",
+						"Failure": "The plans for rebuilding the bridge take longer to complete, and the project suffers several minor setbacks and delays. The bridge takes 3 months to complete and is thus unlikely to be finished before this adventure ends.",
+						"Critical Failure": "While the plans seem solid, disaster strikes several days into the job, resulting in several deaths (roll {@dice 1d8} if you wish to randomly determine how many of Willowshore's citizens perish in this event). The PCs must start over, taking the Rebuild Karahai Bridge downtime activity once more to get the project restarted, but the roll suffers a \u20134 penalty to the check as a result of the later start."
+					}
+				}
+			]
+		},
+		{
+			"name": "Free Shackled Soul",
+			"source": "SoG4",
+			"page": 50,
+			"traits": [
+				"auditory",
+				"concentrate",
+				"exploration",
+				"linguistic",
+				"mental"
+			],
+			"entries": [
+				"You speak to a shackled soul for 10 minutes and help them to cast off their bonds by reminding them of what they loved in life. Each attempt requires a {@dc 28} skill check that's specific to the soul in question (and mentioned in each of the following encounters), or a {@dc 32} {@skill Diplomacy} or {@skill Intimidation} check. If you carry and display a significant token taken from the soul's murder scene, you gain a +3 item bonus to this check.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You convince the soul to cast off its shackles; it rewards you as detailed in the following encounters before it fades away from Kugaptee's Grasp. Your words have been so compelling that rather than moving on to the afterlife, you allow the soul to return to life, as if from the effects of a {@ritual resurrect} ritual that had been heightened to 7th level.",
+						"Success": "As critical success, but the soul doesn't resurrect; instead, it moves on to the {@plane Boneyard} for its afterlife and remains dead in the living world.",
+						"Failure": "You fail to convince the soul to cast off its shackles but can attempt to do so again.",
+						"Critical Failure": "The soul spirals even deeper into its bondage to Kugaptee. It can't be freed until {@creature Heh Shan-Bao|SoG4} is defeated (upon which the shackled soul is freed automatically); no further attempts to Free this Shackled Soul can be attempted."
+					}
+				}
+			]
+		},
+		{
+			"name": "Search for Clues",
+			"source": "SoG4",
+			"page": 88,
+			"traits": [
+				"concentrate",
+				"exploration",
+				"secret"
+			],
+			"entries": [
+				"You spend 10 minutes {@action investigate||Investigating} a body, object, or location, or 2 hours {@action gather information||Gathering Information} from potential witnesses; you then attempt one of the checks listed for the examination. An investigator can use {@action Pursue a Lead|APG} when they do so to gain that ability's bonus to their check and can use {@action Clue In|APG} to aid others in Searching for Clues.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You discover minor, moderate, and major clues.",
+						"Success": "You learn the minor and moderate clues.",
+						"Failure": "You learn the minor clues.",
+						"Critical Failure": "You learn the false lead and believe it to be a minor clue."
+					}
+				}
+			]
+		},
+		{
+			"name": "Invoke Eiseth",
+			"source": "SaS",
+			"page": 51,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"auditory",
+				"concentrate",
+				"emotion",
+				"linguistic",
+				"mental"
+			],
+			"frequency": {
+				"number": 1,
+				"unit": "round"
+			},
+			"entries": [
+				"You attempt to demoralize Lorthact by invoking his nemesis. Attempt a DC 33 {@skill Deception}, {@skill Intimidation}, {@skill Performance}, or {@skill Religion} check. Regardless of your result, Lorthact is temporarily immune to your further attempts to Invoke Eiseth for 10 minutes, though not the attempts of others.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "Lorthact becomes {@condition frightened 2} and {@condition slowed 1}.",
+						"Success": "Lorthact becomes {@condition frightened 2}.",
+						"Failure": "Lorthact becomes {@condition frightened 1}.",
+						"Critical Failure": "Your floundering attempt backfires and instead amuses Lorthact; he is temporarily immune to all attempts to Invoke Eiseth until the end of your next turn."
+					}
+				}
+			]
+		},
+		{
+			"name": "Spread Disinformation",
+			"page": 7,
+			"source": "SaS",
+			"traits": [
+				"exploration",
+				"secret"
+			],
+			"entries": [
+				"You spread falsehoods through the city's rumor mill to reduce attention your party has received while investigating. After spending four hours on this activity, attempt a DC 28 {@skill Deception} check. Attention Points can never be reduced below 0.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "Reduce Attention Points by 2.",
+						"Success": "Reduce Attention Points by 1.",
+						"Critical Failure": "Increase Attention Points by 1."
+					}
+				}
+			]
+		},
+		{
+			"name": "Dream Research",
+			"page": 59,
+			"source": "Mal",
+			"traits": [
+				"concentrate",
+				"downtime"
+			],
+			"trigger": "You fall asleep within 5 miles of Xarwin Manor.",
+			"frequency": {
+				"unit": "hour",
+				"number": 12
+			},
+			"entries": [
+				"While you sleep, you experience dreams that verge on nightmares. In these dreams, your mind drifts from your soul, and everything you know feels like it's being drawn up into the dark places between the stars to be devoured. During the dream, you can concentrate on one research topic you've unlocked that you haven't fully investigated. If you choose a topic for which the party has already discovered all research thresholds, you can immediately switch to a different topic.",
+				"The skill you use and the DC for the check depend on the topic, as detailed in that topic's Dreams venue. If you're not dreaming within the manor grounds, the spiritual link to the malevolence is lessened and you take a \u20132 status penalty to the check.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You gain 2 RP.",
+						"Success": "You gain 1 RP.",
+						"Critical Failure": "You peer too far into the malevolence, which notices your attempt. You manage to break the mental link just before you lose some memories to its ravenous appetite. Increase your {@condition malevolence|Mal} condition value by 1."
+					}
+				}
+			]
+		},
+		{
+			"name": "Swipe Manor Keys",
+			"page": 6,
+			"source": "MotM",
+			"traits": [
+				"uncommon",
+				"exploration"
+			],
+			"entries": [
+				"Manors often contain locked passageways, and you secure one of the keys without anyone noticing. Attempt a DC 22 {@skill Thievery} check; this is DC 20 for Kangir to reflect her {@feat Pickpocket} skill feat.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, but you also acquire a security key designed to deactivate the manor's traps. Whoever is holding the key gains a +2 circumstance bonus to checks to {@action Disable a Device||Disable} traps within the manor.",
+						"Success": "You acquire a key that belongs to one locked obstacle inside the manor, such as unlocking the doors to area {@b A5} or the desk in area {@b A10}. You decide which lock the key works on when you use it, after which the key only works for that lock.",
+						"Failure": "You don't acquire keys.",
+						"Critical Failure": "Though you escape before being caught, you raise the suspicion of the guards. Gain 1 AP."
+					}
+				}
+			]
+		},
+		{
+			"name": "Scope Everbloom Manor",
+			"page": 6,
+			"source": "MotM",
+			"traits": [
+				"uncommon",
+				"exploration",
+				"secret"
+			],
+			"entries": [
+				"You study Everbloom Manor from several vantage points, identifying its layout, likely obstacles, and defenses. Attempt a DC 20 {@skill Perception}, {@skill Stealth}, or {@skill Survival} check or a DC 18 {@skill Lore||Warfare Lore} check. If you have a {@item spyglass} and succeed at the check, you receive the results of a critical success instead.",
+				"Note that many of these facts might change if the adventure uses any of the alternate challenges.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You gain the unmarked map at the back of this adventure. In addition, you learn three of the facts listed in the success result that you or your allies haven't already discovered.",
+						"Success": [
+							"You gain the unmarked map at the back of this adventure. In addition, you learn one of the following facts that you or your allies have not already discovered.",
+							{
+								"type": "list",
+								"items": [
+									"Several of the manor's windows are barred\u2014specifically, those into areas {@b A6}, {@b A8}, {@b A11}, {@b A12}, and {@b A13}.",
+									"Several of the doors are kept locked\u2014the west door near area {@b A8} and the doors into area A5. The main door to area {@b A3} seems to be left unlocked.",
+									"The flat roof has limited access. There is a hatch toward the north, providing access into the manor. There's also a ladder stowed in the bushes east of the round tower. The roof has two large skylights that likely can't support a human's weight.",
+									"{@i {@creature Pairaka|MotM} only}\u2014The manor has many flowering bushes. Some of these should be in bloom, yet the red flowers appear to have been pruned so that no flowers are visible from the manor itself. There are also several red blankets and tapestries amid the estate's garbage.",
+									"{@i {@creature Shambler} only}\u2014The manor grounds show signs of recent excavation and renovation. More than a dozen flowering bushes having been removed, forming stacks of brush in several places behind the manor. Birds and squirrels seem to purposefully avoid these brush piles.",
+									"The PC counts six guards on duty and expects there will be 10\u201312 guards during the evening event. The flat roof provides a natural vantage point for a few guards, though most will be patrolling the grounds."
+								]
+							}
+						],
+						"Failure": "You gain the unmarked map at the back of this adventure but no additional information.",
+						"Critical Failure": "You gain the unmarked map at the back of this adventure. You also learn about two of the topics above but gain misleading information, such as misjudging where obstacles are or misinterpreting what the exterior guard creature is."
+					}
+				}
+			]
+		},
+		{
+			"name": "Orchestrate Timely Distraction",
+			"page": 6,
+			"source": "MotM",
+			"traits": [
+				"uncommon",
+				"exploration"
+			],
+			"entries": [
+				"You organize an attention-grabbing event that's primed to occur this evening near the manor. This might be an unsanctioned street performance, an explosion, a brawl, or other clash. Attempt a DC 20 {@skill Deception}, {@skill Performance}, {@skill Religion}, or {@skill Society} check.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, plus the distraction is so spectacular that when you use it, it pulls the manor staff's attention away from your infiltration and drowns out subtle signs of your presence. Reduce your Awareness Point total by 1.",
+						"Success": "You gain 1 EP that you can use while outside the manor.",
+						"Failure": "The manor's guards hold fast to their duties.",
+						"Critical Failure": "The distraction backfires, reminding the guards of the need to remain vigilant against danger at all times. Gain 1 AP."
+					}
+				}
+			]
+		},
+		{
+			"name": "Uncover Everbloom Manor's Secrets",
+			"page": 5,
+			"source": "MotM",
+			"traits": [
+				"uncommon",
+				"exploration",
+				"secret"
+			],
+			"entries": [
+				"You learn key information about Everbloom Manor through interviews and archival investigation. Attempt a DC 20 {@skill Diplomacy}, {@skill Intimidation}, or {@skill Society} check. Alternatively, attempt a DC 18 {@skill Lore||Absalom Lore} check. Cumulatively, the PCs can attempt this check twice.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Success": [
+							"You learn two of the following facts.",
+							{
+								"type": "list",
+								"items": [
+									"Everbloom Manor is built atop the ruins of an estate destroyed during a siege a millennium ago. It gets its name from its myriad red-flowering bushes, at least one of which is always in bloom regardless of season.",
+									"Absalom is so old that the city surface rests atop countless layers of older construction. Many Petal District manors have cellars built into the millennia-old, subterranean ruins, though the means of accessing these rooms is often hidden.",
+									"The Kelorbeyan family tree boasts many proud worshippers of Iomedae. The manor has a private chapel, and the family often celebrates {@deity Iomedae||Iomedaean} holidays by hosting large picnics. The most recent holiday passed with little fanfare. The Kelorbeyan family founders were divine champions who famously defeated myriad arctic beasts before settling in Absalom. Their motto is \"A green wall against evil winds.\"",
+									"Discouraged by Doatara's rhetoric, the district's Lotus Guard often avoids her manor. She's hired her own household guards, with several on duty at all hours."
+								]
+							}
+						],
+						"Critical Failure": "You learn nothing of note, but your prying draws unwanted attention. Gain 1 AP."
+					}
+				}
+			]
+		},
+		{
+			"name": "Uncover Doatara's Secrets",
+			"page": 5,
+			"source": "MotM",
+			"traits": [
+				"uncommon",
+				"exploration",
+				"secret"
+			],
+			"entries": [
+				"You uncover key information about Doatara Kelorbeyan. Attempt a DC 20 {@skill Diplomacy}, {@skill Intimidation}, or {@skill Society} check. Alternatively, attempt a DC 18 {@skill Lore||Assassin Lore} or {@skill Lore||Underworld Lore} check. If you are using {@creature Doatara the Priest|MotM}, swap the information about Doatara from the second success bullet point and the critical failure entry.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Success": [
+							"You learn the following about Doatara.",
+							{
+								"type": "list",
+								"items": [
+									"Once an Osirian cotton merchant of some repute in the region, Doatara married the heiress of the impressive Kelorbeyan fortune. Mere months later, footpads killed Doatara's wife in a bungled robbery, leaving the Kelorbeyan estate under the young widow's control. Doatara has since become an outspoken anti-crime advocate running for a district council position. She's trained tirelessly with fencing masters to ensure she can defend herself where Absalom's guards have clearly failed to keep the peace.",
+									"{@i {@creature Doatara the Poisoner|MotM} Only}\u2014Although Doatara often wears heavy perfume and dresses in extravagant clothing of the finest quality, witnesses report that she also smells of bitter herbs. Because she also regularly orders strange powders, animal parts, and glassware, you conclude that Doatara is an accomplished alchemist. Expect her to have numerous powerful toxins and explosives at her disposal."
+								]
+							}
+						],
+						"Critical Failure": "{@i {@creature Doatara the Poisoner|MotM} Only}\u2014Doatara spends considerable time in the Ascendant Court, where temples of nearly every god can be found. By combining reports of her magically vanishing from parties and your knowledge of her divine patron, you conclude Doatara is a cleric of {@deity Norgorber}. Expect her to have defensive and evasive spells, plus negative energy attacks."
+					}
+				}
+			]
+		},
+		{
+			"name": "Prepare Tools for Assassination",
+			"page": 5,
+			"source": "MotM",
+			"traits": [
+				"uncommon",
+				"exploration"
+			],
+			"entries": [
+				"You create a tool specially designed for an upcoming obstacle, such as a specific outfit, a camouflaged cloak that perfectly matches the manor's gardens, forged invitations to the party, a prybar sized for the manor's windows, carefully formulated bait, or the like. As a master assassin, whatever comes your way, you've thought of it. Attempt a DC 20 {@skill Crafting} check to create these tools.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Success": "You create an effective tool that grants 1 Edge Point for an obstacle. At any point during the infiltration, you can spend that EP to describe a flashback scene of you preparing just the right tool for the job. In doing so, you must describe how the tool helps overcome the specific obstacle.",
+						"Failure": "You create a middling tool. You gain 1 EP that (unknown to you) provides no benefit when used.",
+						"Critical Failure": "As a failure, but a PC who tries to use the Edge Point gets a critical failure, even if they use the EP after rolling a failure."
+					}
+				}
+			]
+		},
+		{
+			"name": "Red Mantis Assassination",
+			"page": 10,
+			"source": "MotM",
+			"traits": [
+				"rare",
+				"exploration",
+				"move"
+			],
+			"entries": [
+				"You stalk the shadows, watching for targets and preparing to dispatch them with a quiet, decisive blow. While using this activity, if you are unnoticed by a {@trait humanoid} of your level or lower, you can {@action Stride} up to half your Speed, ending the movement adjacent to the target. Attempt either an attack roll against the target's AC + 5, or attempt a {@skill Deception} check or {@skill Stealth} check against the target's {@skill Perception} DC.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You kill the target without earning an Awareness Point, even if another creature could witness the attack.",
+						"Success": "You kill the target without earning an Awareness Point, so long as no other creatures witness the attack. If witnessed, you earn 1 Awareness Point.",
+						"Failure": "You kill the target but make noise, earning 1 Awareness Point.",
+						"Critical Failure": "You kill the target after a prolonged struggle, earning 2 Awareness Points."
+					}
+				}
+			],
+			"special": [
+				"Kangir and Zeah can perform this action with a ranged weapon so long as they end their movement within the first {@trait range increment} of their ranged or {@trait thrown} weapon."
+			]
+		},
+		{
+			"name": "Solving Tenon's Problem",
+			"source": "SoG3",
+			"page": 31,
+			"traits": [
+				"exploration",
+				"secret"
+			],
+			"entries": [
+				"You spend the day considering a solution to Tenon's problem, speaking to Kawaka and others in town to try to recruit assistance, and then report the results of your work back to Tenon. Attempt a {@dc 22} {@skill Diplomacy} check, a {@dc 24} {@skill lore||Willowshore Lore} check, or a {@dc 24} {@skill Society} check. This activity can only be attempted once, but other PCs can {@action Aid} this attempt by succeeding at a {@dc 20} {@skill Diplomacy}, {@skill Society}, or {@skill lore||Willowshore Lore} check.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The PCs\u2014working with Kawaka, {@creature shou matsuki|SoG1|Old Matsuki}, and several artisans in town\u2014manage to recruit enough support to begin work on shoring up the old farmhouse immediately, ensuring that it will survive the winter. Kawaka and other townsfolk agree to visit Tenon regularly to keep him from getting lonely until a new family can be found to live in the house. Many townsfolk pitch in to help shore up and protect the building from the winter storms yet to come, at no cost to the PCs or the town's security. The PCs earn 120 XP and {@dice 1d4+1} Hope Points.",
+						"Success": "As critical success, but the PCs must either spend 400 gp or the town must expend 2 Security Points to ensure the house is protected from the coming winter. The PCs earn 80 XP and 1 Hope Point.",
+						"Failure": "As success, but no one in town is interested in spending time with a potentially dangerous and unpredictable spirit, including Kawaka. A PC can commit to keeping Tenon company through the winter by making several lengthy visits to the house as their weekly downtime activity; however, if no PC performs this in a week, his despair takes over. In a fit of frustration, Tenon accidentally damages the slipshod repair work on the house, causing the house to collapse into ruins, killing Tenon permanently. If this occurs, the tragic news costs 1 Hope Point. The PCs earn 40 XP.",
+						"Critical Failure": "As failure, but a local offers to keep Tenon company. This local should be someone who recently lost a loved one or friend to a vanishing or death in town\u2014choose an NPC who fits your game's story. Unfortunately, this NPC is only volunteering out of a misplaced sense of obligation and has been more affected by their grief than anyone (including themself) realizes. This NPC's grief compounds with Tenon's,forming a destructive cycle that eventually compels the NPC to burn the house down while they're inside. Reduce Willowshore's population by 1; worse, the tragic end costs {@dice 1d4+1} Hope Points."
+					}
+				}
+			]
+		},
+		{
+			"name": "Prepare for Royalty",
+			"source": "SoG3",
+			"page": 38,
+			"traits": [
+				"exploration"
+			],
+			"entries": [
+				"One of the PCs spends 8 hours preparing a chosen site to host {@creature ren mei li|SOG4|Lady Ren}. Other PCs can {@action Aid} this check, but if no PC even attempts the check to prepare, then treat it as if they'd critically failed at this activity. The PC must attempt a {@dc 24} {@skill Crafting}, {@skill Society}, or {@skill lore||Tea Lore} check. This check takes a \u20134 circumstance penalty if the site the PCs choose hasn't been built up over the course of the campaign.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The PCs gain a +1 circumstance bonus to all {@action Influence|GMG} checks during this encounter.",
+						"Success": "The PCs prepare the site but had to dip into the stores to get everything set up. Reduce Food Points by 1.",
+						"Failure": "As success, but reduce Food Points by {@dice 1d4+1}.",
+						"Critical Failure": "As Failure, but the shabby job causes the PCs to take a \u20132 circumstance penalty to all {@action Influence|GMG} checks during this encounter."
+					}
+				}
+			]
+		},
+		{
 			"name": "Repair and Restore",
 			"source": "SoG2",
 			"page": 9,
@@ -998,7 +1687,7 @@
 			]
 		},
 		{
-			"name": "Recall The Teachings",
+			"name": "Recall the Teachings",
 			"source": "DA",
 			"page": 15,
 			"activity": {
@@ -1016,7 +1705,7 @@
 			]
 		},
 		{
-			"name": "Restore The Mind",
+			"name": "Restore the Mind",
 			"source": "DA",
 			"page": 15,
 			"activity": {
@@ -3423,6 +4112,11 @@
 		{
 			"name": "Fortify Camp",
 			"source": "GMG",
+			"otherSources": {
+				"Reprinted": [
+					"QFF0|10"
+				]
+			},
 			"page": 173,
 			"actionType": {
 				"variantrule": [
@@ -3987,7 +4681,7 @@
 				"basic": true
 			},
 			"entries": [
-				"You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your Interact action was successful."
+				"You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your {@action Interact} action was successful."
 			]
 		},
 		{
@@ -4506,6 +5200,11 @@
 		{
 			"name": "Map the Area",
 			"source": "GMG",
+			"otherSources": {
+				"Reprinted": [
+					"QFF0|10"
+				]
+			},
 			"page": 173,
 			"traits": [
 				"concentrate"
@@ -5361,6 +6060,11 @@
 			"name": "Reconnoiter",
 			"source": "GMG",
 			"page": 173,
+			"otherSources": {
+				"Reprinted": [
+					"QFF0|10"
+				]
+			},
 			"traits": [
 				"concentrate"
 			],
@@ -6763,6 +7467,11 @@
 		{
 			"name": "Travel",
 			"source": "GMG",
+			"otherSources": {
+				"Reprinted": [
+					"QFF0|9"
+				]
+			},
 			"page": 172,
 			"traits": [
 				"move"
@@ -8231,6 +8940,25 @@
 						"Critical Failure": "You anger the deity. The copper coin vanishes, you can't attempt to invoke a blessing at this shrine again for 1 week, and you become {@condition stupefied||stupefied 1} for 1 hour."
 					}
 				}
+			]
+		},
+		{
+			"name": "Reactive Strike",
+			"page": 138,
+			"otherSources": {
+				"Reprinted": [
+					"PC1|422"
+				]
+			},
+			"source": "PC1",
+			"remaster": true,
+			"activity": {
+				"number": 1,
+				"unit": "reaction"
+			},
+			"trigger": "A creature within your reach uses a {@trait manipulate} action or a {@trait move} action, makes a ranged attack, or leaves a square during a {@trait move} action it's using.",
+			"entries": [
+				"You lash out at a foe that leaves an opening. Make a melee {@action Strike} against the triggering creature. If your attack is a critical hit and the trigger was a {@trait manipulate} action, you disrupt that action. This {@action Strike} doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this {@action Strike}."
 			]
 		}
 	]

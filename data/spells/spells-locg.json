@@ -1,7 +1,7 @@
 {
 	"spell": [
 		{
-			"name": "Invoke The Crimson Oath",
+			"name": "Invoke the Crimson Oath",
 			"source": "LOCG",
 			"page": 90,
 			"focus": true,
@@ -32,7 +32,7 @@
 			]
 		},
 		{
-			"name": "Light Of Revelation",
+			"name": "Light of Revelation",
 			"source": "LOCG",
 			"page": 91,
 			"focus": true,

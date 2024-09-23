@@ -365,7 +365,7 @@
 				"spirit",
 				"undead"
 			],
-			"description": "Female human {@trait ghost}",
+			"description": "Female {@ancestry human} {@trait ghost}",
 			"perception": {
 				"std": 15
 			},
@@ -1111,7 +1111,7 @@
 				"ce",
 				"medium",
 				"fiend",
-				"nindoru|SoG2"
+				"nindoru"
 			],
 			"perception": {
 				"std": 9
@@ -1337,7 +1337,7 @@
 				"ce",
 				"medium",
 				"fiend",
-				"nindoru|SoG2"
+				"nindoru"
 			],
 			"perception": {
 				"std": 11
@@ -1827,7 +1827,7 @@
 				"ce",
 				"large",
 				"fiend",
-				"nindoru|SoG2"
+				"nindoru"
 			],
 			"perception": {
 				"std": 15

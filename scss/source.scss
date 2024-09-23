@@ -3,9 +3,9 @@
 .source {
 	$rgb-source-APG: #4a6898;
 	$rgb-source-GMG: purple;
-	$rgb-source-B1: rgb(0, 137, 0);
-	$rgb-source-B2: rgb(0, 107, 0);
-	$rgb-source-B3: rgb(0, 77, 0);
+	$rgb-source-B1: rgb(0 137 0);
+	$rgb-source-B2: rgb(0 107 0);
+	$rgb-source-B3: rgb(0 77 0);
 	$rgb-source-LOGM: #1b8fac;
 	$rgb-source-Homebrew: $rgb-class-brew;
 	$rgb-source-CRB: #a2201f;
@@ -22,7 +22,9 @@
 	$rgb-source-RoE: #a78015;
 	$rgb-source-TV: #8b8b56;
 	$rgb-source-PC1: #038027;
-
+	$rgb-source-LOTXWG: #ca3052;
+	$rgb-source-LOACLO: #91d4d1;
+	$rgb-source-LOHh: #72879b;
 
 	&TV {
 		color: $rgb-source-TV !important;
@@ -83,6 +85,7 @@
 	&LOWG,
 	&LOL,
 	&LOPSG,
+	&LOMM,
 	&LOAG {
 		color: $rgb-source-LOGM !important;
 		border-color: $rgb-source-LOGM !important;
@@ -155,10 +158,29 @@
 		text-decoration-color: $rgb-source-LOIL !important;
 	}
 
+	&LOACLO {
+		color: $rgb-source-LOACLO !important;
+		border-color: $rgb-source-LOACLO !important;
+		text-decoration-color: $rgb-source-LOACLO !important;
+	}
+
 	&PC1 {
 		color: $rgb-source-PC1 !important;
 		border-color: $rgb-source-PC1 !important;
 		text-decoration-color: $rgb-source-PC1 !important;
 		font-style: italic; /* hack to make remaster stuff obvious */
+	}
+
+	&LOTXWG {
+		color: $rgb-source-LOTXWG !important;
+		border-color: $rgb-source-LOTXWG !important;
+		text-decoration-color: $rgb-source-LOTXWG !important;
+		font-style: italic; /* hack to make remaster stuff obvious */
+	}
+
+	&LOHh {
+		color: $rgb-source-LOHh !important;
+		border-color: $rgb-source-LOHh !important;
+		text-decoration-color: $rgb-source-LOHh !important;
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"creature": [
 		{
-			"name": "Aives The Smoke Dragon",
+			"name": "Aives the Smoke Dragon",
 			"source": "EC2",
 			"page": 16,
 			"level": 4,
@@ -200,7 +200,7 @@
 			"skills": {
 				"athletics": {
 					"std": 19,
-					"to Disarm": 22
+					"to {@action Disarm}": 22
 				},
 				"diplomacy": {
 					"std": 22
@@ -509,7 +509,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -1218,7 +1218,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human deputy constable",
+			"description": "Male {@ancestry human} deputy constable",
 			"perception": {
 				"std": 17
 			},
@@ -1372,7 +1372,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human agitator",
+			"description": "Male {@ancestry human} agitator",
 			"perception": {
 				"std": 14
 			},
@@ -1872,7 +1872,7 @@
 					{
 						"name": "Sneak Attack",
 						"entries": [
-							"A babau deals an additional {@damage 1d6} precision damage to {@condition flat‐footed} creatures."
+							"A babau deals an additional {@damage 1d6} precision damage to {@condition flat-footed} creatures."
 						],
 						"generic": {
 							"tag": "ability"

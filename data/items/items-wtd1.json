@@ -16,7 +16,7 @@
 			"bulk": 1,
 			"category": "Held",
 			"entries": [
-				"More often called by their nickname “screamswords,” the Nexian sealing blades were developed by the Arclords of Nex as special tools to ward off Gebbite infiltrators and assassins. Screamswords are {@runeItem longsword||+1 weapon potency||striking||disrupting||+1 striking disrupting silver longswords} with a couple of extra tricks. Each Nexian sealing blade can sense {@trait undead} within 60 feet and responds by screaming loudly until there are no longer {@trait undead} within that range. This same screaming can be unleashed as a sonic blast if needed.",
+				"More often called by their nickname \"screamswords,\" the Nexian sealing blades were developed by the Arclords of Nex as special tools to ward off Gebbite infiltrators and assassins. Screamswords are {@runeItem longsword||+1 weapon potency||striking||disrupting||+1 striking disrupting silver longswords} with a couple of extra tricks. Each Nexian sealing blade can sense {@trait undead} within 60 feet and responds by screaming loudly until there are no longer {@trait undead} within that range. This same screaming can be unleashed as a sonic blast if needed.",
 				{
 					"type": "ability",
 					"activity": {
@@ -136,8 +136,8 @@
 			},
 			"category": "Bomb",
 			"entries": [
-				"Filled with sharp silver filings and alchemical reagents, this glass sphere leaves behind a cloud of dangerous shards. A creature hit with the orb takes 1 slashing damage and is covered with silver filings, making weapons and unarmed attacks damaging them be treated as {@item silver} until they spend an {@action Interact} action to clean off.",
-				"Except on a critical miss, the filings linger airborne in a 5-foot burst around the target. The cloud lasts for 1 minute or until dispersed by a strong wind. Creatures inside the cloud are concealed to those outside. Each breathing creature who ends its turn in the cloud takes the listed slashing damage from a {@item silver} source, with a basic Fortitude save."
+				"Filled with sharp silver filings and alchemical reagents, this glass sphere leaves behind a cloud of dangerous shards. A creature hit with the orb takes 1 slashing damage and is covered with silver filings, making weapons and unarmed attacks damaging them be treated as {@item silver (generic)||silver} until they spend an {@action Interact} action to clean off.",
+				"Except on a critical miss, the filings linger airborne in a 5-foot burst around the target. The cloud lasts for 1 minute or until dispersed by a strong wind. Creatures inside the cloud are concealed to those outside. Each breathing creature who ends its turn in the cloud takes the listed slashing damage from a {@item silver (generic)||silver} source, with a basic Fortitude save."
 			],
 			"generic": "G",
 			"variants": [

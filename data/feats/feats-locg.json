@@ -85,7 +85,7 @@
 			]
 		},
 		{
-			"name": "Aegis Of Arnisant",
+			"name": "Aegis of Arnisant",
 			"source": "LOCG",
 			"page": 94,
 			"activity": {
@@ -189,7 +189,7 @@
 			]
 		},
 		{
-			"name": "Avenge In Glory",
+			"name": "Avenge in Glory",
 			"source": "LOCG",
 			"page": 20,
 			"activity": {
@@ -253,7 +253,7 @@
 			]
 		},
 		{
-			"name": "Blade Of Law",
+			"name": "Blade of Law",
 			"source": "LOCG",
 			"page": 84,
 			"activity": {
@@ -275,7 +275,7 @@
 			]
 		},
 		{
-			"name": "Blade Of The Crimson Oath",
+			"name": "Blade of the Crimson Oath",
 			"source": "LOCG",
 			"page": 95,
 			"activity": {
@@ -335,7 +335,7 @@
 				"You have a particular elasticity that makes it easy for you to bounce and squish. You gain the trained proficiency rank in {@skill Acrobatics} (or another skill of your choice, if you were already trained in {@skill Acrobatics}). You also gain a +2 circumstance bonus to {@skill Acrobatics} checks to {@action Tumble Through} a foe's space."
 			],
 			"leadsTo": [
-				"Roll With It|LOCG"
+				"Roll with It|LOCG"
 			]
 		},
 		{
@@ -460,7 +460,7 @@
 			]
 		},
 		{
-			"name": "Chosen Of Lamashtu",
+			"name": "Chosen of Lamashtu",
 			"source": "LOCG",
 			"page": 38,
 			"level": 5,
@@ -1133,7 +1133,7 @@
 			]
 		},
 		{
-			"name": "Font Of Knowledge",
+			"name": "Font of Knowledge",
 			"source": "LOCG",
 			"page": 113,
 			"level": 10,
@@ -1296,7 +1296,7 @@
 			]
 		},
 		{
-			"name": "Gaze Of Veracity",
+			"name": "Gaze of Veracity",
 			"source": "LOCG",
 			"page": 85,
 			"level": 10,
@@ -1571,7 +1571,7 @@
 			]
 		},
 		{
-			"name": "Heir Of The Saoc",
+			"name": "Heir of the Saoc",
 			"source": "LOCG",
 			"page": 14,
 			"level": 9,
@@ -1627,7 +1627,7 @@
 			],
 			"leadsTo": [
 				"Advanced Order Training|LOCG",
-				"Blade Of Law|LOCG",
+				"Blade of Law|LOCG",
 				"Hell's Armaments|LOCG",
 				"Hellknight Order Cross-training|LOCG",
 				"Sense Chaos|LOCG"
@@ -1682,7 +1682,7 @@
 			],
 			"leadsTo": [
 				"Advanced Order Training|LOCG",
-				"Gaze Of Veracity|LOCG",
+				"Gaze of Veracity|LOCG",
 				"Hellknight Order Cross-training|LOCG",
 				"Masked Casting|LOCG",
 				"Signifer Armor Expertise|LOCG",
@@ -1884,7 +1884,7 @@
 			]
 		},
 		{
-			"name": "Invoke The Crimson Oath",
+			"name": "Invoke the Crimson Oath",
 			"source": "LOCG",
 			"page": 95,
 			"level": 8,
@@ -1946,7 +1946,7 @@
 			]
 		},
 		{
-			"name": "Kneel For No God",
+			"name": "Kneel for No God",
 			"source": "LOCG",
 			"page": 21,
 			"level": 9,
@@ -1960,7 +1960,7 @@
 			]
 		},
 		{
-			"name": "Knight In Shining Armor",
+			"name": "Knight in Shining Armor",
 			"source": "LOCG",
 			"page": 94,
 			"level": 12,
@@ -2001,10 +2001,10 @@
 				"You cannot select another dedication feat until you have gained two other feats from the Knight Reclaimant archetype."
 			],
 			"leadsTo": [
-				"Blade Of The Crimson Oath|LOCG",
-				"Invoke The Crimson Oath|LOCG",
-				"Reaper Of Repose|LOCG",
-				"Survivor Of Desolation|LOCG",
+				"Blade of the Crimson Oath|LOCG",
+				"Invoke the Crimson Oath|LOCG",
+				"Reaper of Repose|LOCG",
+				"Survivor of Desolation|LOCG",
 				"Shepherd of Desolation|LOKL",
 				"Shall Not Falter, Shall Not Rout|LOL",
 				"Ashen Veil|LOKL",
@@ -2039,9 +2039,9 @@
 				"You cannot select another dedication feat until you have gained two other feats from the Knight Vigilant archetype."
 			],
 			"leadsTo": [
-				"Aegis Of Arnisant|LOCG",
+				"Aegis of Arnisant|LOCG",
 				"Endure Death's Touch|LOCG",
-				"Knight In Shining Armor|LOCG",
+				"Knight in Shining Armor|LOCG",
 				"Unshakable Idealism|LOCG",
 				"Divine Healing|LOKL",
 				"Interrupt Charge|LOKL",
@@ -2164,7 +2164,7 @@
 			]
 		},
 		{
-			"name": "Light Of Revelation",
+			"name": "Light of Revelation",
 			"source": "LOCG",
 			"page": 90,
 			"level": 4,
@@ -2441,7 +2441,7 @@
 			]
 		},
 		{
-			"name": "Pride In Arms",
+			"name": "Pride in Arms",
 			"source": "LOCG",
 			"page": 51,
 			"activity": {
@@ -2603,7 +2603,7 @@
 			]
 		},
 		{
-			"name": "Reaper Of Repose",
+			"name": "Reaper of Repose",
 			"source": "LOCG",
 			"page": 95,
 			"level": 12,
@@ -2690,7 +2690,7 @@
 			]
 		},
 		{
-			"name": "Roll With It",
+			"name": "Roll with It",
 			"source": "LOCG",
 			"page": 39,
 			"activity": {
@@ -2748,7 +2748,7 @@
 				"The ancient Saoc Brethren were the masters of astrology, and while your knowledge may be but a pale shadow of their wisdom, it still comes in handy. You recall the stars' predictions about your current situation. If your next action requires you to attempt one or more skill checks, roll {@dice 1d8}. On a result of 6, 7, or 8, you gain a +2 circumstance bonus to the first such skill check you attempt. On a 3, 4, or 5, you gain a +1 circumstance bonus. On a 2, you gain nothing. On a 1, you take a \u20131 circumstance penalty to the skill check."
 			],
 			"leadsTo": [
-				"Heir Of The Saoc|LOCG"
+				"Heir of the Saoc|LOCG"
 			]
 		},
 		{
@@ -2788,7 +2788,7 @@
 				"You cannot select another dedication feat until you have gained two other feats from the Scrollmaster archetype."
 			],
 			"leadsTo": [
-				"Font Of Knowledge|LOCG",
+				"Font of Knowledge|LOCG",
 				"Lore Seeker|LOCG",
 				"Determined Lore Seeker|LOPSG",
 				"Unravel Mysteries|LOCG",
@@ -2850,7 +2850,7 @@
 			]
 		},
 		{
-			"name": "Shadow Of The Wilds",
+			"name": "Shadow of the Wilds",
 			"source": "LOCG",
 			"page": 54,
 			"level": 1,
@@ -3097,7 +3097,7 @@
 			]
 		},
 		{
-			"name": "Speak With Kindred",
+			"name": "Speak with Kindred",
 			"source": "LOCG",
 			"page": 55,
 			"level": 5,
@@ -3214,7 +3214,7 @@
 			]
 		},
 		{
-			"name": "Survivor Of Desolation",
+			"name": "Survivor of Desolation",
 			"source": "LOCG",
 			"page": 95,
 			"level": 8,

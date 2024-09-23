@@ -175,9 +175,18 @@ class AncestriesPage extends BaseComponent {
 		let isAddedAnyAncestry = false;
 		let isAddedAnyHeritage = false;
 
-		if (data.ancestry && data.ancestry.length) (isAddedAnyAncestry = true) && this._addData_addAncestryData(data.ancestry)
-		if (data.heritage && data.heritage.length) (isAddedAnyHeritage = true) && this._addData_addHeritageData(data.heritage)
-		if (data.versatileHeritage && data.versatileHeritage.length) (isAddedAnyHeritage = true) && this._addData_addVeHeritageData(data.versatileHeritage)
+		if (data.ancestry && data.ancestry.length) {
+			isAddedAnyAncestry = true;
+			this._addData_addAncestryData(data.ancestry);
+		}
+		if (data.heritage && data.heritage.length) {
+			isAddedAnyHeritage = true;
+			this._addData_addHeritageData(data.heritage);
+		}
+		if (data.versatileHeritage && data.versatileHeritage.length) {
+			isAddedAnyHeritage = true;
+			this._addData_addVeHeritageData(data.versatileHeritage);
+		}
 
 		if (isAddedAnyAncestry || isAddedAnyHeritage) {
 			this._list.update();
@@ -404,7 +413,7 @@ class AncestriesPage extends BaseComponent {
 		let [[ancH, ...subs], [ftH, ...ftSubs]] = Hist.getDoubleHashParts();
 		if (ancH === "" && !subs.length) return;
 		subs = this.filterBox.setFromSubHashes(subs);
-		ftSubs = this.featFilterBox.setFromSubHashes(ftSubs);
+		ftSubs = this.featFilterBox.setFromSubHashes(ftSubs); // eslint-disable-line
 
 		const target = isInitialLoad ? this.__state : this._state;
 
@@ -423,7 +432,7 @@ class AncestriesPage extends BaseComponent {
 		subs.forEach(sub => {
 			const unpacked = UrlUtil.unpackSubHash(sub);
 			if (!unpacked.state) return;
-			unpacked.state.map(it => {
+			unpacked.state.forEach(it => {
 				let [k, v] = it.split("=");
 				k = k.toLowerCase();
 				v = UrlUtil.mini.decompress(v);

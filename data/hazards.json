@@ -1,6 +1,4190 @@
 {
 	"hazard": [
 		{
+			"name": "Puncturing Spire",
+			"source": "WoW2",
+			"page": 55,
+			"level": 9,
+			"traits": [
+				"uncommon",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 23,
+				"minProf": "trained"
+			},
+			"description": [
+				"A metal spire bursts from the ground, skewering the target and knocking aside other creatures."
+			],
+			"disable": {
+				"entries": [
+					"DC 30 {@skill Arcana} or {@skill Occultism} (expert) to seal the planar breach, or DC 28 {@skill Nature} (master) to magically reinforce the ground and prevent a spire's emergence"
+				]
+			},
+			"actions": [
+				{
+					"name": "Pierce Realm",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A living creature enters the area",
+					"entries": [
+						"A 60-foot-tall metal spire rises from the ground, puncturing the triggering creature and dealing {@damage 4d10+26} piercing damage (DC 32 basic Reflex save). On a critical failure, the creature is additionally impaled, becoming {@condition grabbed} until it Escapes (DC 30). A creature that Escapes is 60 feet in the air. Additionally, all creatures within 10- feet of the spire take {@damage 2d10+13} bludgeoning damage (DC 32 basic Reflex save). On a failure, they're knocked {@condition prone}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Shadow Roil",
+			"source": "WoW2",
+			"page": 52,
+			"level": 10,
+			"traits": [
+				"rare",
+				"complex",
+				"magical",
+				"shadow",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 15,
+				"minProf": "expert"
+			},
+			"description": [
+				"A cyclone of living shadows and planar magic surges around the area, attracted to living creatures."
+			],
+			"disable": {
+				"entries": [
+					"DC 32 {@skill Arcana} or {@skill Occultism} (expert) to weaken the tornado; three successes in any combination are required to disable the trap."
+				]
+			},
+			"actions": [
+				{
+					"name": "Touch Down",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "Two or more living creatures enter the area",
+					"entries": [
+						"A spiraling column of shadows and crackling planar magic gathers 20 feet away, becoming a whirling cyclone of darkness 15 feet wide and 100 feet tall. The trap then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(3 actions) The cyclone uses 3 actions to move, traveling up to 30 feet with each action and dealing {@damage 2d12+13} slashing damage to each creature in its path (DC 33 basic Reflex save). A creature needs to attempt only one save during the cyclone's movement, even if the cyclone moves over its space more than once. On a critical failure, a creature is swept up into the cyclone, becoming {@condition grabbed} ({@action Escape} DC 33). A creature {@condition grabbed} by the cyclone moves along with the cyclone and takes {@dice 1d12+7} additional slashing damage at the beginning of its turn, and it must attempt the basic Reflex save against the cyclone on the cyclone's turn, no matter where the cyclone moves. A creature that successfully {@action Escape||Escapes} from the cyclone falls from a height of {@dice 1d20} × 5 feet."
+			],
+			"reset": [
+				"The cyclone disperses after 1 minute and resets after 1 day."
+			]
+		},
+		{
+			"name": "Punish the Impertinent",
+			"source": "WoW2",
+			"page": 46,
+			"level": 10,
+			"traits": [
+				"unique",
+				"complex",
+				"magical",
+				"shadow",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 15,
+				"minProf": "expert"
+			},
+			"description": [
+				"Three shadow tendrils emerge from the ground and seize trespassers."
+			],
+			"disable": {
+				"entries": [
+					"DC 32 {@skill Arcana} or {@skill Occultism} (expert) to banish one of the three the shadow tendrils or DC 34 {@skill Thievery} (master) twice to confound the bowl's magical sensors; {@b Bypass} A creature who places an offering worth at least 10 gp into the bowl doesn't trigger the trap and isn't targeted by the trap."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 22
+					}
+				},
+				"hardness": {
+					"Shadow Tendril ": 15
+				},
+				"hp": {
+					"Shadow Tendril ": 30
+				},
+				"bt": {
+					"Shadow Tendril ": 15
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Shadow Tendrils",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A living creature passes by the statue without placing an offering worth at least 10 gp in the bowl",
+					"entries": [
+						"Shadow tendrils rise from the ground and make a lash {@action Strike} against the triggering creature. The trap then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(2 actions per shadow tendril) On its turn, each shadow tendril uses 1 action to make a lash {@action Strike} against a creature in the area, then uses 1 action to Constrict a creature it has {@condition grabbed}. The shadow tendrils don't apply the trap's multiple attack penalty.",
+				{
+					"type": "attack",
+					"range": "Melee",
+					"traits": [
+						"reach <15 feet>"
+					],
+					"name": "lash",
+					"attack": 23,
+					"damage": "{@damage 2d12+13} bludgeoning plus {@ability Improved Grab} ({@action Escape} DC 33)"
+				},
+				{
+					"type": "ability",
+					"name": "Constrict",
+					"activity": {
+						"number": 1,
+						"unit": "action"
+					},
+					"entries": [
+						"{@damage 2d12} bludgeoning, DC 33"
+					],
+					"generic": {
+						"tag": "ability"
+					}
+				}
+			],
+			"reset": [
+				"The trap resets after 10 minutes."
+			]
+		},
+		{
+			"name": "Corazal Aflame",
+			"source": "WoW2",
+			"page": 35,
+			"level": 10,
+			"traits": [
+				"complex",
+				"environmental",
+				"fire"
+			],
+			"stealth": {
+				"bonus": -10
+			},
+			"description": [
+				"Fire burns Corazal and threatens to spread to the surrounding forest."
+			],
+			"disable": {
+				"entries": [
+					"DC 30 {@skill Nature} or {@skill Survival} (expert) to douse flames or DC 32 {@skill Athletics} (expert) to smother flames; on the sixth successful check, the flames go out. Casting a non-cantrip {@trait water} spell on the flames counts as one success."
+				]
+			},
+			"actions": [
+				{
+					"name": "Blaze",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A living creature approaches Corazal",
+					"entries": [
+						"The flames blaze higher, dealing {@damage 2d12+13} fire damage to the triggering creature (DC 29 basic Reflex save). The hazard then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait fire}) On its turn, the fire deals {@damage 2d8+13} fire damage to creatures in the grove, plus an additional 6 fire damage to Corazal and any creature within 15 feet of them (DC 29 basic Reflex save)."
+			]
+		},
+		{
+			"name": "Poisonous Pollen Trap",
+			"source": "WoW2",
+			"page": 26,
+			"level": 8,
+			"traits": [
+				"rare",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 28,
+				"minProf": "expert"
+			},
+			"description": [
+				"Flowers carved into the door emit colorful pollen when the door is touched."
+			],
+			"disable": {
+				"entries": [
+					"DC 26 {@skill Thievery} (expert) to deface the flower carvings, DC 25 {@skill Nature} (expert) to neutralize the pollen, or {@spell dispel magic|PC1} (4th rank; counteract DC 26) to counteract the conjuration"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 13
+					}
+				},
+				"hardness": {
+					"std": 15
+				},
+				"hp": {
+					"std": 62
+				},
+				"bt": {
+					"std": 31
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Pollinate",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"mental",
+						"poison",
+						"primal"
+					],
+					"trigger": "The door is touched, or the lock is opened",
+					"entries": [
+						"The flowers spray poisonous pollen in a 30-foot cone. A creature in the area must attempt a DC 24 Fortitude save, with the following effect.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature is unaffected."
+								],
+								"Success": [
+									"The creature takes {@damage 2d10+11} poison damage and becomes {@condition enfeebled||enfeebled 2}."
+								],
+								"Failure": [
+									"The creature takes {@damage 3d10+16} poison damage and {@damage 1d10} {@condition persistent damage||persistent poison damage}, becomes {@condition enfeebled||enfeebled 2}, and takes a \u20132 status penalty to {@skill Perception} checks for {@dice 1d4} hours."
+								],
+								"Critical Failure": [
+									"The creature takes {@damage 4d10+22} poison damage and {@damage 1d10} {@condition persistent damage||persistent poison damage}, becomes {@condition enfeebled||enfeebled 4}, and takes a \u20132 status penalty to {@skill Perception} checks and saves against poison for 24 hours."
+								]
+							}
+						}
+					]
+				}
+			],
+			"reset": [
+				"The trap resets after 1 hour."
+			]
+		},
+		{
+			"name": "Battering Door",
+			"source": "WoW2",
+			"page": 33,
+			"level": 9,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 33,
+				"minProf": "expert"
+			},
+			"description": [
+				"Animated door slams into trespassers."
+			],
+			"disable": {
+				"entries": [
+					"DC 30 {@skill Diplomacy} or {@skill Occultism} (master) to soothe the psychic impressions or DC 28 {@skill Thievery} (expert) to jam the door open"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 15
+					}
+				},
+				"hardness": {
+					"std": 16
+				},
+				"hp": {
+					"std": 70
+				},
+				"bt": {
+					"std": 35
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Batter Trespasser",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A living creature passes through the door",
+					"entries": [
+						"The door slams into the triggering creature, dealing {@damage 4d10+26} bludgeoning damage (DC 28 basic Reflex save)."
+					]
+				}
+			],
+			"reset": [
+				"The trap resets automatically."
+			]
+		},
+		{
+			"name": "Consuming Cabinet",
+			"source": "WoW2",
+			"page": 33,
+			"level": 9,
+			"traits": [
+				"complex",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 20,
+				"minProf": "expert"
+			},
+			"description": [
+				"Animated cabinet imprisons intruders. The cabinet has two compartments; each can hold a single Medium creature or two Small-sized creatures or smaller."
+			],
+			"disable": {
+				"entries": [
+					"DC 30 {@skill Thievery} (expert) twice on cabinet; DC 28 {@skill Crafting} or {@skill Thievery} (expert) to remove each or two doors"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 15
+					}
+				},
+				"hardness": {
+					"Cabinet ": 16,
+					"Door ": 10
+				},
+				"hp": {
+					"Cabinet ": 70,
+					"Door ": 40
+				},
+				"bt": {
+					"Cabinet ": 35,
+					"Door ": 20
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "It's Alive!",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"attack"
+					],
+					"trigger": "A living creature moves adjacent to the cabinet",
+					"entries": [
+						"The cabinet animates and makes a door {@action Strike} against one adjacent creature. The hazard then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(3 actions) The trap uses its first action to move directly toward the nearest living creature, its second action to make a door {@action Strike} against each adjacent creature, and its third action to Batter. This trap doesn't take a multiple attack penalty.",
+				{
+					"type": "item",
+					"name": "Speed",
+					"entries": [
+						"15 feet"
+					]
+				},
+				{
+					"type": "attack",
+					"range": "Melee",
+					"name": "door",
+					"attack": 21,
+					"damage": "{@damage 2d10+13} bludgeoning plus Capture"
+				},
+				{
+					"type": "item",
+					"name": "Capture",
+					"entries": [
+						"The target is trapped inside the cabinet's interior, gaining the {@condition grabbed} condition until it {@action Escape||Escapes} (DC 32), another creature {@action Force Open||Forces Open} the cabinet door (DC 32), or that cabinet door is destroyed. Each of the two cabinet interiors can contain one Medium creature, or two Small-sized creatures or smaller."
+					]
+				},
+				{
+					"name": "Batter",
+					"activity": {
+						"number": 1,
+						"unit": "action"
+					},
+					"traits": [
+						"attack"
+					],
+					"entries": [
+						"The cabinet shakes, dealing {@damage 2d10+13} bludgeoning damage to all creatures it has {@condition grabbed}."
+					]
+				}
+			],
+			"reset": [
+				"The trap resets after 1 hour."
+			]
+		},
+		{
+			"name": "Flinging Tools",
+			"source": "WoW2",
+			"page": 34,
+			"level": 9,
+			"traits": [
+				"complex",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 19,
+				"minProf": "expert"
+			},
+			"description": [
+				"Animated awls, hammers, nails, and other tools hurl themselves off the tool bench at intruders."
+			],
+			"disable": {
+				"entries": [
+					"DC 33 {@skill Diplomacy} (master) to soothe the psychic echoes, DC 32 {@skill Religion} (expert) to overwhelm the area's energy, or DC 32 {@skill Occultism} (expert) to counter the psychic echoes; on the third successful check, the psychic echoes are disrupted, and the trap is destroyed."
+				]
+			},
+			"actions": [
+				{
+					"name": "Tool Volley",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"attack"
+					],
+					"trigger": "A living creature comes within 15 feet of the trap",
+					"entries": [
+						"The trap makes a tool {@action Strike} against the triggering creature. The trap then rolls initiative."
+					]
+				},
+				{
+					"name": "Continuous Barrage",
+					"activity": {
+						"number": 1,
+						"unit": "free"
+					},
+					"trigger": "A creature within 15 feet finishes an action",
+					"entries": [
+						"The trap makes a tool {@action Strike} against the triggering creature."
+					]
+				}
+			],
+			"routine": [
+				"(1 action) The trap launches one tool against every living creature within 15 feet as 1 action. Because it flings tools continuously, the trap can also use the Continuous Barrage free action to fling tools at each creature during that creature's turn."
+			],
+			"attacks": [
+				{
+					"range": "Ranged",
+					"name": "tool",
+					"attack": 21,
+					"noMAP": true,
+					"damage": "{@damage 2d10+13} bludgeoning"
+				}
+			],
+			"reset": [
+				"The trap resets after 1 hour."
+			]
+		},
+		{
+			"name": "Spitting Daffodil",
+			"source": "WoW2",
+			"page": 25,
+			"level": 6,
+			"traits": [
+				"rare",
+				"environmental",
+				"plant"
+			],
+			"stealth": {
+				"dc": 21,
+				"minProf": "expert"
+			},
+			"description": [
+				"Daffodils spit acidic nectar at non-plant creatures in the area."
+			],
+			"disable": {
+				"entries": [
+					"DC 25 {@skill Thievery} (expert) or DC 25 {@skill Survival} (trained) to remove the plant's motion sensing filaments"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 17
+					}
+				},
+				"hp": {
+					"std": 54
+				},
+				"bt": {
+					"std": 27
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "fire",
+						"amount": 5
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Spit Nectar",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"acid",
+						"primal"
+					],
+					"trigger": "A non-plant creature comes within 10 feet",
+					"entries": [
+						"The daffodils spit nectar at all non-plant creatures within 10 feet, dealing {@damage 4d8+18} acid damage (DC 27 basic Reflex save)."
+					]
+				}
+			],
+			"reset": [
+				"The daffodils replenish their nectar and filaments after 24 hours."
+			]
+		},
+		{
+			"name": "Unwelcome Guests",
+			"source": "WoW2",
+			"page": 20,
+			"level": 8,
+			"traits": [
+				"uncommon",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 28,
+				"minProf": "expert"
+			},
+			"description": [
+				"Unwelcome guests who touch this hatch are cursed."
+			],
+			"disable": {
+				"entries": [
+					"DC 28 {@skill Occultism} (expert) to drain the magic from the curse, DC 31 {@skill Thievery} (master) to unweave the curse's bindings, or {@spell dispel magic|PC1} (4th rank, counteract DC 28) to counteract the curse"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 13
+					}
+				}
+			},
+			"actions": [
+				{
+					"name": "Curse Trespassers",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"curse",
+						"necromancy",
+						"occult"
+					],
+					"trigger": "A creature touches the hatch",
+					"entries": [
+						"The triggering creature takes {@damage 3d10+22} force damage and is knocked back 10 feet. A creature that succeeds at a DC 30 Will save takes half damage and isn't moved. On a failure, the creature is additionally cursed. A cursed creature takes a \u20132 penalty to Will saves, and whenever the cursed creature becomes affected by a spell, the creature takes {@damage 1d10} force damage. The curse remains until removed by {@spell cleanse affliction|PC1} or similar magic."
+					]
+				}
+			],
+			"reset": [
+				"The trap resets when the hatch is shut."
+			]
+		},
+		{
+			"name": "Bloodletting Snare",
+			"source": "WoW2",
+			"page": 20,
+			"level": 6,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 28,
+				"minProf": "expert"
+			},
+			"description": [
+				"Slender razor wire snags a creature, hauling them up into the air while causing deep, bloody wounds."
+			],
+			"disable": {
+				"entries": [
+					"DC 25 {@skill Survival} (expert) or {@skill Thievery} (expert) to snip the wire without getting snared"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 11
+					}
+				},
+				"hardness": {
+					"std": 12
+				},
+				"hp": {
+					"std": 48
+				},
+				"bt": {
+					"std": 24
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Snare",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature steps into the square with the snare tripwire",
+					"entries": [
+						"The bloodletting snare makes a snare {@action Strike} against the triggering creature."
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"traits": [
+						"deadly d10"
+					],
+					"name": "snare",
+					"attack": 20,
+					"damage": "{@damage 4d8+12} slashing plus {@damage 1d6} {@condition persistent damage||persistent bleed}, and the target is {@condition grabbed} and pulled off the ground ({@action Escape} DC 26). The {@condition persistent damage||persistent bleed} can't be stopped while the creature is {@condition grabbed}."
+				}
+			]
+		},
+		{
+			"name": "Razor Snare",
+			"source": "WoW2",
+			"page": 10,
+			"level": 4,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 25
+			},
+			"description": [
+				"Slender razor wire snags a creature, yanking its feet to knock it down."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Survival} or {@skill Thievery} (trained) to snip the wire without getting snared"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 8
+					}
+				},
+				"hardness": {
+					"std": 10
+				},
+				"hp": {
+					"std": 40
+				},
+				"bt": {
+					"std": 20
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Snag",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature steps into the square with the snare tripwire",
+					"entries": [
+						"The snare makes a snare {@action Strike} against the triggering creature."
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "snare",
+					"attack": 15,
+					"damage": "{@damage 4d6+10} slashing plus {@damage 1d6} {@condition persistent damage||persistent bleed}, and the target is {@condition grabbed} ({@action Escape} DC 23). On a critical hit, the target is also knocked {@condition prone}."
+				}
+			]
+		},
+		{
+			"name": "Sarracenia's Ire",
+			"source": "WoW1",
+			"page": 42,
+			"level": 5,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 13,
+				"minProf": "expert",
+				"notes": "to recognize that the scene before them is an illusion."
+			},
+			"description": [
+				"As {@hazard Myristica's Despair|WoW1}."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Nature} (trained) to tame the primal energy, DC 24 {@skill Religion} (trained) to suppress the haunt, DC 25 {@skill Diplomacy} (trained) to console the dryad; three successes are required to disable the haunt."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 23
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hardness": {
+					"std": 12
+				},
+				"hp": {
+					"std": 50
+				},
+				"bt": {
+					"std": 25
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "vitality",
+						"amount": 8
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Awaken",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"fear",
+						"mental",
+						"primal"
+					],
+					"trigger": "At least two creatures enter the grove",
+					"entries": [
+						"The illusion fades, and a sorrowful chill emanates from the giant tree. The haunt rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait emotion}, {@trait mental}, {@trait primal}) Sarracenia's rage overwhelms up to two living creatures in the grove, each of which must attempt a DC 23 Will save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The creature is unaffected."
+						],
+						"Success": [
+							"The creature is unaffected."
+						],
+						"Failure": [
+							"The creature is {@condition confused} for 1 round."
+						],
+						"Critical Failure": [
+							"For 1 round, the creature is {@condition confused}, is {@condition stupefied||stupefied 1}, and gains a +4 status bonus to damage rolls."
+						]
+					}
+				}
+			],
+			"reset": [
+				"Unless {@creature Silene|WoW1} is destroyed, this {@trait haunt} can recharge itself after 1 hour."
+			]
+		},
+		{
+			"name": "Myristica's Despair",
+			"source": "WoW1",
+			"page": 42,
+			"level": 5,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 13,
+				"minProf": "expert",
+				"notes": "to recognize that the scene before them is an illusion."
+			},
+			"description": [
+				"The illusion shatters, revealing the grove to be a lifeless scar and the seemingly peaceful loggers to be crawling aimlessly about the clearing, consumed by rage and lashing out at anything that comes near."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Nature} (trained) to tame the primal energy, DC 23 {@skill Diplomacy} (trained) to console the dryad, DC 24 {@skill Occultism} (trained) to identify and heal the emotional wounds; three successes are required to disable the haunt."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 23
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hardness": {
+					"std": 12
+				},
+				"hp": {
+					"std": 50
+				},
+				"bt": {
+					"std": 25
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "vitality",
+						"amount": 8
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Awaken",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"fear",
+						"mental",
+						"primal"
+					],
+					"trigger": "At least two creatures enter the grove",
+					"entries": [
+						"The illusion fades, and a sorrowful chill emanates from the giant tree. The haunt rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait emotion}, {@trait mental}, {@trait primal}) Myristica bemoans her grove's fate, overwhelming foes with sorrow. Each creature in the grove must attempt a DC 23 Will save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The creature is unaffected."
+						],
+						"Success": [
+							"The creature is unaffected."
+						],
+						"Failure": [
+							"The creature is {@condition dazzled} for 1 round and takes {@damage 2d6} mental damage."
+						],
+						"Critical Failure": [
+							"The creature takes {@damage 2d6} mental damage, plus {@damage 2d6} {@condition persistent damage||persistent mental damage}. While taking this {@condition persistent damage}, they are {@condition dazzled}."
+						]
+					}
+				}
+			],
+			"reset": [
+				"Unless {@creature Silene|WoW1} is destroyed, this {@trait haunt} can recharge itself after 1 hour."
+			]
+		},
+		{
+			"name": "Bee-Induced Panic",
+			"source": "WoW1",
+			"page": 15,
+			"level": 5,
+			"traits": [
+				"unique",
+				"complex"
+			],
+			"description": [
+				"Enraged bees spread panic, causing the crowd to trample each other in a desperate attempt to escape."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Diplomacy} (expert) to calm the panicked crowd and guide them to safety, DC 20 {@skill Medicine} (trained) to attend to victims' injuries, or DC 21 {@skill Nature} (expert) to instruct the crowd on how best to protect themselves from bees. Alternatively, a PC able to communicate with insects can instead attempt a DC 18 {@skill Diplomacy} (trained) check to calm and redirect the bees. Three successful checks are required to completely disable the hazard. The hazard is automatically disabled after 5 rounds or once both swarms are defeated."
+				]
+			},
+			"routine": [
+				"{@as 3} Panicked attendees suffer stings and accidentally injure one another in their fear and confusion. Increase the Casualties score by 1. This increases to {@dice 1d3} if one swarm is stinging the crowd, and it increases to {@dice 1d3+1} if both swarms are stinging the crowd."
+			]
+		},
+		{
+			"name": "Rusty Floor Spikes",
+			"source": "Rust",
+			"page": 21,
+			"level": 2,
+			"traits": [
+				"uncommon",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 18,
+				"minProf": "trained"
+			},
+			"description": [
+				"Pressure plates on the floor near the north door cause rusty spikes to lance up out of the floor in area {@b C3}."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} {@dc 18} (trained) to disable the pressure plates."
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"attack"
+					],
+					"trigger": "A creature steps on the pressure plate",
+					"entries": [
+						"The spikes spring up, Striking all creatures in the hallway. The floor becomes greater difficult terrain."
+					],
+					"name": "Spring Up"
+				}
+			],
+			"reset": [
+				"Turn the resetting wheel in the eastern Inner Guard Station (area {@b C8b})."
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "rusty spike",
+					"attack": 11,
+					"damage": "{@damage 1d10+4} piercing plus {@affliction tetanus|GMG}",
+					"types": [
+						"piercing"
+					],
+					"noMAP": true,
+					"type": "attack"
+				}
+			]
+		},
+		{
+			"name": "Rusted Door",
+			"source": "Rust",
+			"page": 32,
+			"level": 2,
+			"traits": [
+				"uncommon",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 18,
+				"minProf": "trained"
+			},
+			"description": [
+				"Shards of rust extend from the door and crumble away to cling to the flesh and clothes of anyone who attempts to open or damage the door."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 18} {@skill Thievery} to deface the hidden runes that allow the trap to activate, or {@dc 21} {@skill Religion} to offer prayers to a non-evil deity to override the ancient influence of Xar-Azmak."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 5
+					}
+				},
+				"hardness": {
+					"std": 8
+				},
+				"hp": {
+					"std": 30
+				},
+				"bt": {
+					"std": 15
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A non-worshipper of Xar-Azmak attempts to open the door or causes damage to it with a melee {@action Strike}",
+					"entries": [
+						"The triggering creature is exposed to {@disease rust creep|Rust} as tendrils of rust-red energy seem to slither out of the rusty patches on the door to rasp strangely gently against exposed skin."
+					],
+					"name": "Inflict Rust Creep"
+				}
+			],
+			"reset": [
+				"The rusted door resets automatically after 1 round."
+			]
+		},
+		{
+			"name": "Ancient Apparatus",
+			"source": "Rust",
+			"page": 34,
+			"level": 2,
+			"traits": [
+				"unique",
+				"complex",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 18,
+				"minProf": "trained"
+			},
+			"description": [
+				"A complex device made of multicolored metal that resembles a combination of grinding gears, spider-like legs, and twitching blades, from which emits a constant soft ticking sound. All of the metal in the device appears to be rusted or corroded."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 18} {@skill Thievery}  to adjust the device's workings so they seize up and no longer function, or {@dc 21} {@skill Religion} to focus prayers to a non-evil deity into the device to disrupt its ability to channel ambient faith."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 11
+					}
+				},
+				"hardness": {
+					"std": 8
+				},
+				"hp": {
+					"std": 30
+				},
+				"bt": {
+					"std": 15
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "The ancient apparatus takes damage or an attempt to disable it fails",
+					"entries": [
+						"The ancient apparatus begins to grind and churn faster. Its soft ticking whirs up to a discordant buzzing sound, and the entire thing begins to glow with an unsettling rustcolored light. All living creatures in area {@b D3} experience the unsettling taste of rust in their mouths and must succeed on a {@dc 18} Fortitude save to avoid becoming {@condition sickened 1}. The ancient apparatus then rolls initiative."
+					],
+					"name": "Spin Up"
+				}
+			],
+			"routine": [
+				"(3 actions) The ancient apparatus emits beams of rust-colored light, spending an action to make ranged {@action Strike||Strikes} against three targets in area {@b D3}. The apparatus can target creatures as if it possessed darkvision, but has no ability to discern between friend or foe. It can't target a creature more than once, and if there are more than three targets, it selects its targets from those it can see in the room randomly. The ancient apparatus has only 1 action as long as its Hit Points are below its BT.",
+				{
+					"type": "attack",
+					"range": "Ranged",
+					"name": "rusty light beam",
+					"bonus": 11,
+					"traits": [
+						"divine",
+						"necromancy"
+					],
+					"damage": "{@damage 2d6+5} negative plus {@disease rust creep|Rust}",
+					"types": [
+						"negative"
+					],
+					"noMAP": false
+				}
+			],
+			"reset": [
+				"The ancient apparatus reverts to its non-active mode and resets automatically at the end of any round in which there are no obvious targets to attack."
+			]
+		},
+		{
+			"name": "Rusted Cage Trap",
+			"source": "Rust",
+			"page": 38,
+			"level": 1,
+			"traits": [
+				"uncommon",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 17,
+				"minProf": "trained"
+			},
+			"description": [
+				"A rusty cage embedded in the ceiling drops down with a clang to try to entrap a creature that steps onto the pressure plate in the middle of the room."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 13} {@skill Thievery} to harmlessly trigger the trap by nudging the pressure plate, or {@dc 20} {@skill Thievery} to stabilize the pressure plate so it doesn't trigger, {@dc 20} {@skill Athletics} to {@action Escape} from the cage or {@action Force Open} the cage once it falls."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 10
+					},
+					"ref": {
+						"std": 4
+					}
+				},
+				"hardness": {
+					"std": 5
+				},
+				"hp": {
+					"std": 24
+				},
+				"bt": {
+					"std": 12
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature walks under the cage and steps on the pressure plate",
+					"entries": [
+						"The cage drops from the ceiling to trap the triggering creature, who must attempt a {@dc 17} Reflex save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature avoids the trap, and returns to the space it just left rather than entering the trap's space."
+								],
+								"Success": [
+									"As Critical Success, but the falling trap delivers a glancing blow and {@damage 1d6+3} bludgeoning damage to the creature as it stumbles back."
+								],
+								"Failure": [
+									"The falling trap lands on the triggering creature. A Medium or smaller creature becomes trapped inside the cage (Escape {@dc 20}). A Large or larger creature takes {@damage 2d6+5} bludgeoning damage and is knocked prone as the cage bounces off the creature's body, becoming destroyed in the process."
+								],
+								"Critical Failure": [
+									"As Failure, but a Medium or smaller creature is also struck by the cage, knocked prone, and then takes {@damage 2d6+5} bludgeoning damage and is immobilized by the cage as it lands on a limb."
+								]
+							}
+						}
+					]
+				}
+			],
+			"reset": [
+				"The mechanism to manually reset this trap is located in area {@b D15}."
+			]
+		},
+		{
+			"name": "Rusty Spike Launcher",
+			"source": "Rust",
+			"page": 48,
+			"level": 3,
+			"traits": [
+				"uncommon",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 20,
+				"minProf": "trained"
+			},
+			"description": [
+				"As the large rusty door swings open, a mass of rusty spikes appear out of nowhere in the open doorway and launch violently into the room."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} {@dc 20} to decouple the triggering rods that cause the spikes to extend, or {@spell dispel magic} (2nd level; counteract {@dc 18}) to counteract the trap."
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"attack"
+					],
+					"trigger": "A creature opens the door without uttering a prayer to Xar-Azmak first",
+					"entries": [
+						"A mass of rusty spikes appears in the open doorway and then fire into area {@b E1}. The rusty spikes curve through the air to seek targets\u2014all creatures in area {@b E1} must attempt a {@dc 20} Reflex save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature avoids the spikes and takes no damage."
+								],
+								"Success": [
+									"A spike grazes the creature, inflicting {@damage 2d10} piercing damage."
+								],
+								"Failure": [
+									"A spike impales the creature, inflicting {@damage 2d10+13} piercing damage."
+								],
+								"Critical Failure": [
+									"As failure, but the spike also exposes the creature to {@disease tetanus|GMG}."
+								]
+							}
+						}
+					],
+					"name": "Launch Spikes"
+				}
+			],
+			"reset": [
+				"The trap automatically resets once the door is closed."
+			]
+		},
+		{
+			"name": "Rushing Waters",
+			"source": "Rust",
+			"page": 49,
+			"level": 3,
+			"traits": [
+				"uncommon",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 20,
+				"minProf": "trained"
+			},
+			"description": [
+				"Rivulets of water begin to run from the circle of stones to gather in a growing puddle at the center."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} {@dc 20} (expert) to rub out the hidden runes on the ceiling, or {@spell dispel magic} (2nd level; counteract {@dc 18}) to counteract the trap."
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"arcane",
+						"conjuration",
+						"water"
+					],
+					"trigger": "A creature enters the area south of the ring of stones marked on the map",
+					"entries": [
+						"A deluge of water rises up from the ring of stones, then flows forcefully down the passageway to drain into the pit at area {@b F1b}. Large and smaller creatures in the water's path must attempt a {@dc 20} Fortitude save. The rushing waters vanish instantly upon striking the pit floor, but do leave everything down there sopping wet.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature withstands the force of the rushing waters and is unaffected."
+								],
+								"Success": [
+									"The creature takes {@damage 1d10} bludgeoning damage as the rushing waters slam them into a cave wall."
+								],
+								"Failure": [
+									"The creature is knocked prone by the rushing waters, takes {@dc 1d10+6} bludgeoning damage, and is pushed by the water to the spiky pit trap and triggers the trap."
+								],
+								"Critical Failure": [
+									"As failure, but the creature can't attempt to {@action Grab an Edge} if they fall into the spiky pit trap."
+								]
+							}
+						}
+					],
+					"name": "Spherical Deluge"
+				}
+			],
+			"reset": [
+				"The magic rejuvenates over 10 minutes, after which it is recharged and ready to activate again."
+			]
+		},
+		{
+			"name": "Spiky Pit Trap",
+			"source": "Rust",
+			"page": 49,
+			"level": 4,
+			"traits": [
+				"uncommon",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 18,
+				"minProf": "trained"
+			},
+			"description": [
+				"A piece of hide covered with a layer of dirt and gravel is suspended over a 20-foot pit filled with spikes."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 18} {@skill Thievery} (trained) to manually trigger the trap without falling in, or {@dc 25} {@skill Thievery} (trained) to secure the hide so the trap doesn't activate"
+				]
+			},
+			"actions": [
+				{
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature or other large weight (such as the rushing waters of the previous trap) moves onto the gravel-covered hide",
+					"entries": [
+						"The triggering creature or object falls in and takes falling damage (10 bludgeoning damage) and is targeted by a spike's {@action Strike}. A falling creature can attempt to {@action Grab an Edge} with a {@dc 20} Reflex save (this becomes a {@dc 22} Reflex save if rushing waters are pouring into the pit)."
+					],
+					"name": "Pitfall"
+				}
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "spike",
+					"attack": 14,
+					"damage": "{@damage 4d8} piercing",
+					"types": [
+						"piercing"
+					],
+					"type": "attack"
+				}
+			],
+			"reset": [
+				"Creatures can still fall into the trap, but the hide that covers it must be reset manually (a 10-minute activity) for the trap to become hidden again."
+			]
+		},
+		{
+			"name": "Test of the God Caller",
+			"source": "GW2",
+			"page": 63,
+			"level": 7,
+			"traits": [
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 12,
+				"minProf": "expert"
+			},
+			"description": [
+				"An incorporeal Sarkorian deity manifests before the party and challenges their resolve. Only aspirants whose motives are pure and whose hearts are in tune with the natural world can hope to overcome this \"test of the god caller.\""
+			],
+			"disable": {
+				"entries": [
+					"Three DC 27 {@skill Nature} or {@skill Occultism} (trained) checks can disable the haunt"
+				]
+			},
+			"actions": [
+				{
+					"name": "Manifest",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "Sakuachi makes an offering at the well shrine",
+					"entries": [
+						"The Sarkorian deity inhabiting the well surges to life, manifesting as a large, ghostly beast surrounded by throngs of smaller animals. The rush of spiritual energy washes over everyone in the well, dealing {@damage 8d6} force damage (DC 25 basic Will save)."
+					]
+				}
+			],
+			"routine": [
+				"(3 actions) The Sarkorian divinity commands a swarm of ghostly animals to overwhelm creatures in a 10-foot burst in the well. The haunt can select up to three different points to target, spending 1 action per burst. Creatures in an affected take {@damage 4d6} force damage and must attempt a DC 25 Will save. The haunt loses 1 action for each successful check to disable the haunt.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The target is unaffected."
+						],
+						"Success": [
+							"The target takes half damage."
+						],
+						"Failure": [
+							"The target takes full damage and is {@condition flat-footed} until the beginning of the haunt's next turn."
+						],
+						"Critical Failure": [
+							"The target takes double damage, is {@condition flat-footed} until the beginning of the haunt's next turn, and is {@condition slowed||slowed 1} for 1 round."
+						]
+					}
+				}
+			],
+			"reset": [
+				"8 hours"
+			]
+		},
+		{
+			"name": "Toppling Shelves",
+			"source": "GW2",
+			"page": 58,
+			"level": 4,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 18,
+				"minProf": "trained",
+				"notes": "to notice the shelf's precarious instability"
+			},
+			"description": [
+				"This stone bookshelf is badly compromised. It's just one push away from toppling over."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Thievery} (expert) or {@skill Lore||Engineering Lore} (trained) to shore up the shelf"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 8
+					}
+				},
+				"hardness": {
+					"std": 8
+				},
+				"hp": {
+					"std": 30,
+					"notes": {
+						"std": "any attack that fails to destroy the shelf triggers its Topple reaction"
+					}
+				},
+				"bt": {
+					"std": 15
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Topple",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "The shelf is attacked or touched forcefully (such as by a creature Shoved into it)",
+					"entries": [
+						"The shelf tumbles over in the direction opposite its triggering creature, crashing onto the ground in a 10-foot-by-10-foot area. Creatures in the area take {@damage 4d8+10} bludgeoning damage (DC 25 basic Reflex save). A creature that critically fails its save falls {@condition prone}. The affected area becomes difficult terrain.",
+						"If the toppling shelf crashes into a space occupied by another toppling shelf, it triggers that shelf's Topple reaction. This can result in a chain reaction that causes multiple shelves to Topple, one after the other."
+					]
+				}
+			]
+		},
+		{
+			"name": "Freezing Floor",
+			"source": "GW2",
+			"page": 50,
+			"level": 8,
+			"traits": [
+				"complex",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 16,
+				"minProf": "expert",
+				"notes": "or DC 31 (master) to notice the cold fog rising from the floor"
+			},
+			"description": [
+				"The white brick floor radiates ice-cold air."
+			],
+			"disable": {
+				"entries": [
+					"DC 24 {@skill Thievery} (expert) to erase a rune, or {@spell dispel magic} (3rd level; counteract DC 24) to dispel a rune; all three runes must be erased or dispelled to disable the trap."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 17
+					}
+				},
+				"hardness": {
+					"std": 14
+				},
+				"hp": {
+					"std": 56,
+					"notes": {
+						"std": "to destroy the bricks and disable the trap"
+					}
+				},
+				"bt": {
+					"std": 28
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Cold Snap",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature steps on the white bricks",
+					"entries": [
+						"The trap makes a frost jet {@action Strike} against the triggering creature and rolls initiative."
+					]
+				},
+				{
+					"name": "Frostbite",
+					"entries": [
+						"A creature that takes {@condition persistent damage||persistent cold damage} from the trap's frost jet {@action Strike} must attempt a DC 18 Fortitude save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature isn't affected and is immune to this frostbite effect for 24 hours."
+								],
+								"Success": [
+									"The creature isn't affected."
+								],
+								"Failure": [
+									"The creature can't stop shivering and becomes {@condition clumsy||clumsy 1}."
+								],
+								"Critical Failure": [
+									"As failure, and the creature becomes {@condition fatigued}."
+								]
+							}
+						}
+					]
+				}
+			],
+			"routine": [
+				"(3 actions) With each action, the trap attempts a frost jet {@action Strike} against any creature standing on the white bricks. The trap loses 1 action per disabled or dispelled rune."
+			],
+			"attacks": [
+				{
+					"range": "Ranged",
+					"name": "frost jet",
+					"attack": 20,
+					"damage": "{@damage 2d6} cold plus {@damage 1d4} {@condition persistent damage||persistent cold}",
+					"noMAP": true
+				}
+			],
+			"reset": [
+				"The trap deactivates and resets after 1 minute."
+			]
+		},
+		{
+			"name": "Valmar's Pit Trap",
+			"source": "GW2",
+			"page": 49,
+			"level": 4,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 25,
+				"minProf": "expert"
+			},
+			"description": [
+				"The ground here is made of loosely packed soil that, when stepped upon, collapses."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Survival} (trained) to reinforce the dirt so it's safe to walk on, or DC 18 {@skill Thievery} (trained) to collapse the trap from a safe distance"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 10
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 2
+					},
+					"ref": {
+						"std": 3
+					}
+				},
+				"hardness": {
+					"std": 1
+				},
+				"hp": {
+					"std": 6
+				},
+				"bt": {
+					"std": 3
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Collapse",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature steps onto any space in the dotted area on the map, or at least 30 pounds of pressure is put on the area",
+					"entries": [
+						"The ground gives way. The triggering creature falls 20 feet down the hole, taking 10 bludgeoning damage and landing {@condition prone} in area {@b E10}. A creature can {@action Grab an Edge} to avoid falling."
+					]
+				}
+			],
+			"reset": [
+				"Creatures can still fall into the pit, but the soil must be replaced for the trap to become {@condition hidden} again."
+			]
+		},
+		{
+			"name": "Memory of Osoyo",
+			"source": "GW2",
+			"page": 34,
+			"level": 5,
+			"traits": [
+				"unique",
+				"complex",
+				"environmental",
+				"magical"
+			],
+			"stealth": {
+				"bonus": 12,
+				"minProf": "expert"
+			},
+			"description": [
+				"The party's memories of Osoyo coalesce into a titanic mirage in the storm clouds above."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Occultism} (trained) or DC 24 {@skill Arcana} (trained) to divert the memory's rage; three total successful checks are required to disable the hazard"
+				]
+			},
+			"actions": [
+				{
+					"name": "Glacial Gust",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "The characters' shared vision during Event 15 subsides",
+					"entries": [
+						"The memory of Osoyo unleashes a tremendous sigh of freezing wind, coating the deck of the {@i Mermaid's Tears} in ice in a 60-foot cone. (The hazard can choose any point for the cone to originate.) The area becomes difficult terrain. Creatures in the area must succeed at a DC 26 Fortitude save or take {@damage 1d6} {@condition persistent damage||persistent cold damage} as the freezing wind cuts to the bone. The hazard then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action) The memory of Osoyo gives a keening scream that shatters the layer of ice coating the deck of the {@i Mermaid's Tears}. Any creature on difficult terrain created by the memory's Glacial Gust takes {@damage 2d8+7} cold damage (DC 26 basic Reflex save) from the icy shrapnel."
+			]
+		},
+		{
+			"name": "Shroud of Silence",
+			"source": "GW2",
+			"page": 10,
+			"level": 4,
+			"traits": [
+				"environmental",
+				"magical"
+			],
+			"stealth": {
+				"dc": 25,
+				"minProf": "expert"
+			},
+			"description": [
+				"Sounds become muted in a 20-foot-wide, 100-foot-long segment of this street corridor."
+			],
+			"disable": {
+				"entries": [
+					"DC 25 {@skill Occultism} (expert) to twist the magic of the ley line around you, disabling the hazard for only you; or {@spell dispel magic} (4th level; counteract DC 23) to disable the hazard permanently"
+				]
+			},
+			"actions": [
+				{
+					"name": "Hush",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"illusion",
+						"occult"
+					],
+					"trigger": "A creature reaches the street's halfway point",
+					"entries": [
+						"Each creature in the affected area must succeed at a DC 23 Will saving throw or be silenced as long as it remains in the area. A silenced creature makes no sound and can't use abilities with the {@trait sonic} or {@trait auditory} traits, including spells with verbal components."
+					]
+				}
+			]
+		},
+		{
+			"name": "Unwelcome Facade",
+			"level": 10,
+			"source": "SoG4",
+			"page": 9,
+			"traits": [
+				"unique",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 32,
+				"minProf": "master"
+			},
+			"description": [
+				"An unsettling wave of malice and sinister energy ripples invisibly out from the manor, causing those who view the building to see a leering, evil face glaring at them from the structure's architecture."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 32} {@skill Occultism} or {@skill Religion} to exorcise the haunt, {@dc 35} {@skill Society} to approach the manor in a proper way that defers to its occupant's symbolic standing in the community; displaying an official pass that legally grants permission to enter the building reduces both of these DCs by 5 (provided the PCs approach the front door and not from another direction)."
+				]
+			},
+			"actions": [
+				{
+					"name": "Horrifying Vision",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"enchantment",
+						"fear",
+						"mental",
+						"occult"
+					],
+					"trigger": "A {@trait Small} or larger creature approaches within 30 feet of the house's exterior",
+					"entries": [
+						"A wave of malice fills the minds of all living creatures outside of the manor within 60 feet with overwhelming fear; each creature must attempt a {@dc 29} Will save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": "The creature is unaffected and is temporarily immune to Horrifying Vision for 24 hours. In addition to this temporary immunity, the creature can attempt a {@dc 23} {@skill Occultism} or {@skill Religion} check as a free action to notice that despite there being only one face in the facade, several spiritual echoes seem to infuse the building. On a critical success, the creature realizes that only the most powerful force infusing the manor is evil and that the other elements are non-hostile spirits who are overwhelmed and trapped by that singular force.",
+								"Success": "The creature experiences a brief vision of the manor's facade twisting into an immense, horrific face and becomes {@condition frightened 1}. The creature can attempt the same {@skill Occultism} or {@skill Religion} check as above, but the DC increases to 33.",
+								"Failure": "As failure, but the creature becomes {@condition frightened 2} and is {@condition fleeing} for as long as it remains frightened. The creature can attempt the {@skill Occultism} or {@skill Religion} check to Recall Knowledge normally ({@dc 33}).",
+								"Critical Failure": "As failure, but the creature can't reduce its {@condition frightened} condition below 1 for 1 minute. In addition, the overwhelming fear causes the creature to become {@condition stupefied 1}; this condition persists until it's cured magically or the hazard is disabled."
+							}
+						}
+					]
+				}
+			],
+			"reset": [
+				"The unwelcoming facade resets immediately if not disabled and can be triggered again the very next round."
+			]
+		},
+		{
+			"name": "Weakened Floor",
+			"level": 11,
+			"source": "SoG4",
+			"page": 11,
+			"traits": [
+				"unique",
+				"complex",
+				"environmental"
+			],
+			"stealth": {
+				"bonus": 23,
+				"minProf": "master"
+			},
+			"description": [
+				"The weakened floor gives way with a tremendous crash, dropping everything in the room into a muddy morass of toxic mold."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 33} {@skill Crafting} (master) three times to knock holes in the floor without triggering the spore cloud while simultaneously lightening the strain on the floor so it can be walked upon, {@dc 36} {@skill Stealth} (expert) to move carefully through the room for the remainder of your turn without triggering the hazard, or {@dc 36} {@skill Nature} (expert) twice once the trap is triggered to knock enough holes into the nearby walls to cause the spores to disperse"
+				]
+			},
+			"actions": [
+				{
+					"name": "Collapse Floor",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A round begins with a Small or larger creature standing on the floor in area A4",
+					"entries": [
+						"The floor of the entire room collapses in a thunderous crash, dropping all creatures in the room 5 feet into a soupy morass of mud, mold, and toxic fungus while a cloud of spores spews up into the air above. The room becomes greater difficult terrain. All creatures who were standing on the floor in the room fall {@condition prone} in the mess below unless they succeed at a {@dc 24} Reflex save, in which case they land on their feet. The hazard then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action) Every round on its turn, the spores that now fill area A4 inflict {@damage 8d6} poison damage to all creatures in the room ({@dc 30} basic Fortitude save) as the cloud burns at exposed flesh; a creature that holds its breath gains a +4 circumstance bonus to this saving throw."
+			],
+			"reset": [
+				"One minute after nothing moves in the room, the spores settle down. The floor remains obvious and won't collapse further, but any creature that moves through the mold causes the spores to plume up again, re-triggering the trap."
+			]
+		},
+		{
+			"name": "Witherweird Runes",
+			"level": 13,
+			"source": "SoG4",
+			"page": 43,
+			"traits": [
+				"rare",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 27,
+				"minProf": "master"
+			},
+			"description": [
+				"Necromantic magic stored in runes painted in powdered bone and banshees' tears lash out at anyone other than {@creature Heh Shan-Bao|SoG3} who opens the secondary compartment."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 37} {@action Disable a Device} to scratch out the runes and dissipate their magic harmlessly, {@dc 40} {@skill Arcana} to sabotage the spell and cause the runes to dry up and blow away as inert powder, or {@spell dispel magic} (7th level; {@quickref counteract|CRB|3|counteracting|0} DC 31) to counteract the runes"
+				]
+			},
+			"actions": [
+				{
+					"name": "Withering Wail",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"arcane",
+						"curse",
+						"necromancy"
+					],
+					"trigger": "Someone other than {@creature Heh Shan-Bao|SoG3} opens the secondary compartment",
+					"entries": [
+						"A howling, spectral face manifests out of the chest and screeches, causing all within area C4 to attempt a {@dc 33} Fortitude save; the sound also alerts the {@creature provincial jiang-shi|BotD|jiang-shi} in areas C3a and C6, who quickly come to investigate the sound.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": "The creature is unaffected.",
+								"Success": "The creature takes {@damage 7d6} negative damage.",
+								"Failure": "The creature takes {@damage 15d6} negative damage. In addition, their flesh withers and weakens, leaving them to appear old and decrepit\u2014the creature becomes {@condition clumsy 1} and {@condition enfeebled 1} until the curse is removed.",
+								"Critical Failure": "The creature takes {@damage 30d6} negative damage and becomes cursed as failure, but becomes {@condition clumsy 2} and {@condition enfeebled 2}."
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Paradox Engine",
+			"source": "SaS",
+			"page": 45,
+			"level": 14,
+			"traits": [
+				"unique",
+				"complex",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 0
+			},
+			"description": [
+				"All six sides of this adamantine-reinforced box are covered with Thassilonian runes. Touching a rune allows one to exchange its position with another."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} DC 41 (expert) to feel the subtle vibrations when moving a rune to shift into the right position, or"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 36
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 22
+					}
+				},
+				"hardness": {
+					"std": 24
+				},
+				"hp": {
+					"std": 90
+				},
+				"bt": {
+					"std": 45
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Thassilon Lore DC",
+					"entries": [
+						"33 (expert) or {@skill Society} DC 38 (master) while being able to read Thassilonian to work out the anagram puzzle using traditional means, or dispel magic (7th level; counteract DC 34)"
+					]
+				},
+				{
+					"name": "Slicing Shadows",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"arcane",
+						"conjuration"
+					],
+					"trigger": "The paradox engine is damaged, or a creature fails a check to disable it",
+					"entries": [
+						"Slats on the sides of the box open to release beams of razor-sharp freezing darkness that swipe throughout area C5 and extend 10 feet south into area C4; all creatures in this area who lack the {@trait Shadow} trait take {@damage 5d6} slashing damage and {@damage 5d6} cold damage (DC 34 basic Reflex save)."
+					]
+				}
+			],
+			"routine": [
+				"{@as 3} ({@trait arcane}, {@trait conjuration}) The slicing shadows congeal into the form of what appears to be the upper half of a skeletal, cowled humanoid: an {@creature owb prophet|B3}. This {@creature owb prophet|B3} is a creation of the paradox engine and does not have a forsaken patron. While the {@creature owb prophet|B3} is active, the paradox engine no longer uses its Slicing Shadows reaction; instead, the {@creature owb prophet|B3} focuses its attacks on creatures that attempt to damage or deactivate the engine. If the {@creature owb prophet|B3} is destroyed, the paradox engine's disable DCs and Hardness are reduced by 5. It thereafter functions as a simple hazard with the Slicing Shadows reaction, and resets after 1 round."
+			],
+			"reset": [
+				"The paradox engine deactivates 1 minute, and its {@creature owb prophet|B3} returns to its interior after all creatures leave the area, but resets immediately thereafter."
+			]
+		},
+		{
+			"name": "Brooding Fvalthahalia",
+			"source": "SaS",
+			"page": 42,
+			"level": 13,
+			"traits": [
+				"unique",
+				"magical"
+			],
+			"stealth": {
+				"minProf": "expert",
+				"notes": "check avoids triggering the hazard, but this does not disable it."
+			},
+			"description": [
+				"Tiny black flames mirror living creatures' movements in the city above as scraps of shadow patrol the streets\u2014flames that notice intruders in their \"sky\" below and reach out to the intruders \"above\" with a deafening violence that incidentally alerts several of the vault's denizens to the intruders' presence."
+			],
+			"disable": {
+				"entries": [
+					"DC 40 {@skill Thievery} (master) to adjust the model so its attention is focused inward, DC 37 {@skill Occultism} (expert) to cause the accumulated psychic energy to discharge harmlessly, or dispel magic (7th level; counteract DC 32). A character who sneaks through the room with a DC 32"
+				]
+			},
+			"actions": [
+				{
+					"name": "Call of Fvalthahalia",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"abjuration",
+						"occult"
+					],
+					"trigger": "A creature without supernatural ties to the Shadow Plane enters the room (creatures like fetchlings or divine spellcasters who worship {@deity Zon-Kuthon} represent two examples of creatures who won't trigger this hazard)",
+					"entries": [
+						"The flickering dark flames on the city's streets flare up and the sound of an entire city populace screaming an alarm fills the room. All creatures in area C1 take {@damage 18d6} sonic damage (DC 33 basic Fortitude save), and all strigoi from Aliriel's Vault immediately know intruders have been spotted in this room. Any strigoi in area C2 quickly investigate and attack the PCs on sight."
+					]
+				}
+			],
+			"reset": [
+				"1 hour"
+			]
+		},
+		{
+			"name": "Ileosa's Sixth Manifestation",
+			"source": "SaS",
+			"page": 38,
+			"level": 13,
+			"traits": [
+				"rare",
+				"haunt"
+			],
+			"stealth": {
+				"dc": 37,
+				"minProf": "expert"
+			},
+			"description": [
+				"Ileosa manifests as a crimson ghost and reaches out as if to receive a gift from the ritual's primary caster."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Religion} DC 37 (expert) or DC 40 Occult (trained) to reverse the ritual's power."
+				]
+			},
+			"actions": [
+				{
+					"name": "Queen's Laugh",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"divine",
+						"emotion",
+						"enchantment",
+						"mental"
+					],
+					"trigger": "Someone attempts to contact Ileosa with call spirit and achieves any result other than a critical success to cast the ritual",
+					"entries": [
+						"Ileosa closes her fingers and attempts to pull the primary caster's heart from their chest. The primary caster must attempt a DC 33 Fortitude save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature takes no damage."
+								],
+								"Success": [
+									"The creature feels Ileosa's hand grip and tug at their heart; they take 25 negative damage, and then the manifestation vanishes."
+								],
+								"Failure": [
+									"As success, but the creature takes 50 negative damage and becomes {@condition drained||drained 1} as they momentarily see their heart appear in Ileosa's hand before the manifestation vanishes."
+								],
+								"Critical Failure": [
+									"The creature takes 75 negative damage and becomes {@condition drained||drained 2}. If this reduces the target to 0 Hit Points, the target dies instantly. For a brief moment, the victim's heart appears in Ileosa's hand before the manifestation vanishes. If the victim is slain by this hazard, their heart drops to the ground with a splat, pulsing its final beats after the manifestation vanishes."
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ileosa's Fifth Manifestation",
+			"source": "SaS",
+			"page": 14,
+			"level": 11,
+			"traits": [
+				"rare",
+				"haunt"
+			],
+			"stealth": {
+				"dc": 33,
+				"minProf": "master"
+			},
+			"description": [
+				"Mist coils from the ground, perhaps through a sewer grate or from cracks along a basement foundation, quickly forming into the ghostly image of Queen Ileosa."
+			],
+			"disable": {
+				"entries": [
+					"DC 33 {@skill Religion} (expert) to exorcise the manifestation, or DC 36 {@skill Intimidation} (trained) to stand one's ground without showing fear."
+				]
+			},
+			"actions": [
+				{
+					"name": "Queen's Laugh",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"divine",
+						"emotion",
+						"enchantment",
+						"mental"
+					],
+					"trigger": "A living creature moves within 10 feet of where the manifestation will appear",
+					"entries": [
+						"Ileosa laughs, becoming more substantial as bloody, spectral bodies appear to pile under her feet. Each living creature within 30 feet of the area must attempt a DC 30 Will save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature takes no damage."
+								],
+								"Success": [
+									"The creature takes {@damage 5d10} mental damage as false memories of being tormented and persecuted under Ileosa's rule tear through their mind."
+								],
+								"Failure": [
+									"As above, but the creature takes {@damage 10d10} mental damage and becomes {@condition stupefied||stupefied 1} until the next sunrise from the overwhelming nature of the false memories."
+								],
+								"Critical Failure": [
+									"As failure, but the creature becomes {@condition stupefied||stupefied 2} instead. In addition, the creature continues to see dead, bloody bodies crawling from the ground during times of stress, causing them to treat all ground as difficult terrain during combat. This hallucination persists as long as the character remains {@condition stupefied} from the hazard."
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "The Enmity Cycle",
+			"source": "TEC",
+			"page": 51,
+			"level": 6,
+			"traits": [
+				"rare",
+				"complex",
+				"curse",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 16,
+				"minProf": "expert",
+				"notes": "or {@spell detect magic}"
+			},
+			"description": [
+				"Discordant music, dance, and poetry combine to build a deep suspicion and distrust of strangers."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Performance} DC 26 to counteract the performance or {@skill Religion} or Occult DC 27 to disrupt the spiritual energy. Three total successes are needed to disable the trap."
+				]
+			},
+			"actions": [
+				{
+					"name": "Discordant Performance",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"mental",
+						"occult"
+					],
+					"trigger": "Zridi spends an action to activate The Enmity Cycle while in area F2",
+					"entries": [
+						"All creatures other than Zridi in F2 take {@damage 2d8+9} mental damage (DC 25 basic Will save). The trap then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action) The performance continues to sow seeds of enmity, discord, and distrust on those in its area. All creatures in attendance other than Zridi must attempt a DC 25 Will save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The target is unaffected and is immune to the effects for 1 day."
+						],
+						"Success": [
+							"The target is {@condition frightened||frightened 1} for 2 rounds."
+						],
+						"Failure": [
+							"The target is {@condition frightened||frightened 2} for 1 minute and is certain the source of this fear is their fellow citizens, especially those from places other than their hometown. For 1 week the target suffers a \u20132 penalty to all {@skill Diplomacy} skill checks against people from other Thuvian cities and regains the {@condition frightened||frightened 2} condition whenever they are in one of those cities."
+						],
+						"Critical Failure": [
+							"As failure, but the target becomes a carrier for The Enmity Cycle for the next week. The target is compelled to travel to a city other than where they were exposed and recite as many lines from the anbarit as they can recall. Those who hear or witness the performance are treated as if they had attended a performance of The Enmity Cycle, but the Will save DC is 23."
+						]
+					}
+				}
+			],
+			"reset": [
+				"A new production of The Enmity Cycle must be arranged; this process usually takes at least 1 week."
+			]
+		},
+		{
+			"name": "Clockwork Dancers",
+			"source": "TEC",
+			"page": 45,
+			"level": 7,
+			"traits": [
+				"unique",
+				"complex",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 16,
+				"minProf": "expert"
+			},
+			"description": [
+				"Several clockwork humanoid figures armed with spinning blades move throughout the area."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} DC 25 (expert) to deactivate the clockworks from the control panel. Two successes are needed to deactivate the trap."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hardness": {
+					"std": 15
+				},
+				"hp": {
+					"std": 58
+				},
+				"bt": {
+					"std": 29
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "sonic",
+						"amount": 10
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Spring Attack",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature ends its turn in F2",
+					"entries": [
+						"Clockwork figures spring out from the pillars and attack anyone on the stage with a spinning blade {@action Strike}.",
+						"The trap then rolls initiative."
+					]
+				},
+				{
+					"name": "Spinning Blade",
+					"activity": {
+						"number": 1,
+						"unit": "action"
+					},
+					"components": [
+						"blade +18",
+						"Damage {@damage 2d8+9} slashing"
+					],
+					"entries": []
+				}
+			],
+			"routine": [
+				"(1 action) The clockwork dancers target each creature on the stage within 10 feet of a pillar by a spinning blade {@action Strike}."
+			],
+			"reset": [
+				"The trap deactivates after 4 rounds and resets after 1 minute."
+			]
+		},
+		{
+			"name": "Corrupted Draft",
+			"source": "TEC",
+			"page": 38,
+			"level": 8,
+			"traits": [
+				"unique",
+				"complex",
+				"curse",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 16,
+				"minProf": "expert",
+				"notes": "or {@spell detect magic}"
+			},
+			"description": [
+				"Discordant music, dance, and poetry combine to build a deep suspicion and distrust of strangers."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Performance} DC 28 to counteract the performance or {@skill Religion} or Occult DC 28 to disrupt the spiritual energy. Two total successes are needed to disable the trap. The mechanical head can automatically disable the trap with two uses of Inspired Recitation."
+				]
+			},
+			"actions": [
+				{
+					"name": "Sickening Performance",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"mental",
+						"occult"
+					],
+					"trigger": "Two or more characters enter area {@b E3} and make any sound at all",
+					"entries": [
+						"Sounds or speech are amplified and garbled into a terrible, shrieking cry. All creatures in the area take {@damage 2d10+11} mental damage (DC 28 basic Will save). The trap then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait emotion}, {@trait fear}, {@trait mental}, {@trait occult}) The echoes continue to reverberate, tearing at those in the area and filling them with distrust of others. All creatures in the area take {@damage 2d10+11} mental damage and must attempt a DC 28 Will save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The target is unaffected and is immune to the effects for 1 minute."
+						],
+						"Success": [
+							"The target takes half damage."
+						],
+						"Failure": [
+							"The target takes full damage and is {@condition sickened||sickened 1} by feelings of distrust and anxiety."
+						],
+						"Critical Failure": [
+							"The target takes double damage and is {@condition sickened||sickened 2}."
+						]
+					}
+				}
+			],
+			"reset": [
+				"The hazard stops when there are no conscious creatures in area E3 and resets after 1 minute."
+			]
+		},
+		{
+			"name": "Deadly Workshop",
+			"source": "TEC",
+			"page": 26,
+			"level": 5,
+			"traits": [
+				"uncommon",
+				"complex",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 16,
+				"minProf": "expert",
+				"notes": "to notice the blades embedded in the chains and the complex system of pulleys connecting them"
+			},
+			"description": [
+				"Swinging bladed chains whip through the entire workshop."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} DC 20 (expert) on the control panel on the raised platform deactivates the trap."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 14
+					}
+				},
+				"hardness": {
+					"std": 14
+				},
+				"hp": {
+					"std": 50,
+					"notes": {
+						"std": "to destroy the chains and disable the trap"
+					}
+				},
+				"bt": {
+					"std": 25
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Swinging Blades",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"attack"
+					],
+					"trigger": "Two or more creatures enter the workshop or end their turn in the workshop",
+					"entries": [
+						"The trap makes a slashing blade {@action Strike} against the triggering creatures, then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action) The trap swings one slashing blade against every creature in the workshop as 1 action. The entire workshop is treated as difficult terrain because of the sheer number of slashing chains. This trap doesn't take a multiple attack penalty."
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "slashing blade",
+					"attack": 15,
+					"damage": "{@damage 2d8+7} slashing"
+				}
+			],
+			"reset": [
+				"The trap deactivates and resets after 1 minute."
+			]
+		},
+		{
+			"name": "Entangling Shredder Trap",
+			"source": "TEC",
+			"page": 24,
+			"level": 6,
+			"traits": [
+				"simple",
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 25,
+				"minProf": "expert",
+				"notes": "to notice the pressure plates under the rugs"
+			},
+			"description": [
+				"Dozens of ropes embedded with steel barbs spring out from the walls when at least two creatures step on the rugs."
+			],
+			"disable": {
+				"entries": [
+					"{@skill Thievery} DC 24 (expert) on the pressure plates."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 16
+					}
+				},
+				"hardness": {
+					"std": 13
+				},
+				"hp": {
+					"std": 54,
+					"notes": {
+						"std": "to cut the barbed ropes and disable the trap"
+					}
+				},
+				"bt": {
+					"std": 27
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Entangling Ropes",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"attack"
+					],
+					"trigger": "Two creatures enter the hallway or end their turn in the hallway",
+					"entries": [
+						"The trap makes a barbed rope {@action Strike} against the triggering creatures. This trap doesn't take a multiple attack penalty."
+					]
+				},
+				{
+					"name": "Grasping Ropes",
+					"entries": [
+						"The ropes whip around the limbs of the target. The target must attempt a DC 25 Reflex save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Success": [
+									"The target is unaffected."
+								],
+								"Failure": [
+									"The target is {@condition flat-footed} until it cuts the ropes or {@action Escape||Escapes} (DC 25)."
+								],
+								"Critical Failure": [
+									"As failure, but the target is also {@condition immobilized}."
+								]
+							}
+						}
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "barbed rope",
+					"attack": 20,
+					"damage": "{@damage 4d8+14} slashing plus grasping ropes"
+				}
+			],
+			"reset": [
+				"manual"
+			]
+		},
+		{
+			"name": "Mouth of Tchekuth",
+			"source": "Mal",
+			"page": 46,
+			"level": 6,
+			"traits": [
+				"unique",
+				"haunt"
+			],
+			"stealth": {
+				"dc": 25
+			},
+			"description": [
+				"The chasm below shifts and ripples, transforming into a vast, gaping mouth filled with countless sharp fangs. A puckered, rasping tongue lances up from the noxious gulping depths below to lash and taste. Two words boom up from the vast throat below: \"Iä Tchekuth!\""
+			],
+			"disable": {
+				"entries": [
+					"DC 28 {@skill Occultism} or {@skill Religion} (to exorcise the startling phantasm)"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hardness": {
+					"std": 14
+				},
+				"hp": {
+					"std": 56
+				},
+				"bt": {
+					"std": 28
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "positive",
+						"amount": 5
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Hungry Tongue",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"enchantment",
+						"fear",
+						"mental",
+						"occult"
+					],
+					"trigger": "a creature crosses the chasm",
+					"entries": [
+						"A vast, fanged maw appears to open below, and a long rasping tongue lurches up to attack the triggering creature, who must attempt a DC 24 Will save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature realizes the haunt is a frightening phantasm that can't actually hurt them and is unharmed."
+								],
+								"Success": [
+									"The creature dodges the rasping tongue but falls from the bridge as a result, taking 10 damage from the fall (the creature can {@action Grab an Edge} with a successful DC 24 Reflex save)."
+								],
+								"Failure": [
+									"For a brief moment, the creature feels the awful touch of the rasping tongue as it brushes against them, licking away memories and causing the creature to become {@condition stupefied||stupefied 1} for 24 hours. The creature then falls (as success above)."
+								],
+								"Critical Failure": [
+									"The creature feels the tongue wrap around them and then experiences the awfulness of being pulled downward for what seems like days, but in fact, only an instant passes. The creature becomes {@condition stupefied||stupefied 2} for 24 hours, during which time they can't remember their name. The creature also increases the value of their {@condition malevolence|Mal} condition by 1 and then falls (as success above)."
+								]
+							}
+						}
+					]
+				}
+			],
+			"reset": [
+				"The haunt resets after 24 hours and is destroyed permanently if Ioseff's ghost is put to rest."
+			]
+		},
+		{
+			"name": "Carrion Vortex",
+			"source": "Mal",
+			"page": 39,
+			"level": 6,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 15,
+				"minProf": "expert"
+			},
+			"description": [
+				"The countless bones and feathers on the floor churn into the air in a clattering swarm of partially reconstructed skeletal birds, whose mournful song fills the area as surely as do their slashing beaks and talons."
+			],
+			"disable": {
+				"entries": [
+					"DC 23 {@skill Nature} to convince the carrion vortex that the PCs pose no ill intent or DC 20 {@skill Religion} to exorcise the haunt"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hardness": {
+					"std": 10
+				},
+				"hp": {
+					"std": 58
+				},
+				"bt": {
+					"std": 29
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"amount": 7,
+						"name": "positive"
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Psychopomp Dirge",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"auditory",
+						"emotion",
+						"fear",
+						"mental",
+						"occult"
+					],
+					"trigger": "Three or more creatures enter area {@b D2}, or anyone attempts to gather or destroy the bird remains",
+					"entries": [
+						"The carrion vortex fills area {@b D2} with the overwhelming cries of what sounds like thousands of whippoorwills, but this cacophony can't be heard beyond this room. Creatures in area {@b D2} must attempt a DC 21Will save (worshipers of {@deity Pharasma} or those with ties to psychopomps gain a +4 circumstance bonus to this save). The haunt then rolls initiative.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature understands the dirge is also intended as a warning and a desperate request for absolution. The creature can sense the presence of the corrupted psychopomps in areas {@b D5} and {@b E4}, as if under the effects of a {@spell locate|PC1} spell, for 24 hours. As long as this effect persists, the character gains a +1 status bonus to attack rolls, saving throws, and skill checks made against the corrupted psychopomps in these areas."
+								],
+								"Success": [
+									"As critical success, but the locate effect only lasts 10 minutes. The creature takes {@damage 2d8} mental damage from overwhelming feelings of sadness and despair."
+								],
+								"Failure": [
+									"The creature takes {@damage 4d8} mental damage from overwhelming feelings of sadness and despair."
+								],
+								"Critical Failure": [
+									"The creature takes {@damage 6d8} mental damage from overwhelming feelings of sadness and despair, and as long as the haunt remains active and they remain in area {@b D2}, the character is {@condition slowed||slowed 1} as they're forced to do nothing but sob for one action every round."
+								]
+							}
+						}
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait evocation}, {@trait occult}) The churning vortex of beaks and bones takes its action through area {@b D2}, clawing and pecking at any creature in the area. All creatures in area {@b D2} take {@damage 2d8+9} slashing damage (DC 24 basic Reflex save)."
+			],
+			"reset": [
+				"24 hours; defeating the corrupted psychopomps in areas {@b D5} and {@b E4} destroys this haunt forever."
+			]
+		},
+		{
+			"name": "Architect and Hunter",
+			"source": "Mal",
+			"page": 36,
+			"level": 6,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 15,
+				"minProf": "expert"
+			},
+			"description": [
+				"A ghostly pair of teenagers\u2014the Xarwin twins\u2014 cry out in pain as their brains are replaced into their heads. As if their trauma reverses, the initial pain fades and they express the desire to play."
+			],
+			"disable": {
+				"entries": [
+					"DC 21 {@skill Performance} (trained) to distract the haunt and entertain it until it becomes soothed or DC 25 Religion (trained) to exorcise the haunt"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": {
+					"std": 54
+				},
+				"bt": {
+					"std": 27
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "positive",
+						"amount": 9
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Brain Pain",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"mental",
+						"necromancy"
+					],
+					"trigger": "One round passes after a living creature opens the door to either of the children's rooms",
+					"entries": [
+						"Both doors to the rooms open violently as the PCs experience visions of the twins having the tops of their heads cut away by unseen blades, followed by the ghastly sight of brains being placed into the empty skulls within. All creatures in either {@b C14a}, {@b C14b}, or in the hallway outside the rooms must attempt a DC 24 Will save. The haunt then rolls initiative.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature is unaffected."
+								],
+								"Success": [
+									"The creature is {@condition sickened||sickened 1} by the pain."
+								],
+								"Failure": [
+									"The creature takes {@damage 2d8+9} mental damage and increases their {@condition malevolence|Mal} value by 1."
+								],
+								"Critical Failure": [
+									"The creature takes {@damage 4d8+9} mental damage, is {@condition stunned||stunned 1} by the pain, and increases their {@condition malevolence|Mal} value by 2."
+								]
+							}
+						}
+					]
+				}
+			],
+			"routine": [
+				"(2 actions) The architect (Mira Xarwin) uses Shackled Memories to cause a strange, house-like cage of solid ectoplasm to spring up around a randomly determined target. This house bears an uncanny resemblance to the home the target grew up in. The hunter (Marney Xarwin) then attempts a hunting shot {@action Strike} at that target.",
+				{
+					"type": "ability",
+					"name": "Shackled Memories",
+					"activity": {
+						"number": 1,
+						"unit": "action"
+					},
+					"traits": [
+						"emotion",
+						"incapacitation",
+						"mental"
+					],
+					"entries": [
+						"The target believes a miniature version of their childhood home has built up around them, locking them in place. The target must attempt a DC 24 Will save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The target is unaffected and is temporarily immune to Shackled Memories for 24 hours."
+								],
+								"Success": [
+									"The target is {@condition flat-footed} until the end of their next turn."
+								],
+								"Failure": [
+									"The target is {@condition flat-footed} and {@condition immobilized} until the end of their next turn."
+								],
+								"Critical Failure": [
+									"The target is {@condition restrained} for 1 minute or until they {@action Escape}."
+								]
+							}
+						}
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Ranged",
+					"name": "hunting shot",
+					"attack": 17,
+					"damage": "{@damage 3d8} piercing and {@damage 1d8} {@condition persistent damage||persistent mental} as the target imagines they're bleeding to death"
+				}
+			],
+			"reset": [
+				"The haunt resets automatically 1 hour after it's defeated or after no living creatures remain in the area to play with. Removing Marney's and Mira's brains from the brain collector statue in area {@b E9} destroys the haunt."
+			]
+		},
+		{
+			"name": "Wrathful Hatchet",
+			"source": "Mal",
+			"page": 34,
+			"level": 7,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 17,
+				"minProf": "expert",
+				"notes": "darkvision"
+			},
+			"description": [
+				"The hatchet embedded atop the desk wiggles, vibrates, and then flies into the air, accompanied by a rage-filled cry of a woman."
+			],
+			"disable": {
+				"entries": [
+					"DC 27 {@skill Diplomacy} to soothe the haunt's wrath or"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 16
+					}
+				},
+				"hardness": {
+					"Hatchet ": 14
+				},
+				"hp": {
+					"std": 60
+				},
+				"bt": {
+					"std": 30
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"amount": 7,
+						"name": "positive"
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "DC 25",
+					"entries": [
+						"{@skill Religion} to exorcise the haunt"
+					]
+				},
+				{
+					"name": "Furious Shriek",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"auditory",
+						"emotion",
+						"fear",
+						"mental",
+						"occult"
+					],
+					"trigger": "A creature approaches within 5 feet of the hatchet or more than 3 creatures enter area {@b C10}",
+					"entries": [
+						"The furious shriek of Asethanna's rage resonates throughout the room, and all creatures within 25 feet of the hatchet must attempt a DC 25 Will save. The haunt then rolls initiative.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature is unaffected."
+								],
+								"Success": [
+									"The creature becomes {@condition frightened||frightened 1}."
+								],
+								"Failure": [
+									"The creature becomes {@condition frightened||frightened 2}."
+								],
+								"Critical Failure": [
+									"The creature feels as if the wrathful haunt is particularly enraged at them. The creature becomes {@condition frightened||frightened 2}; their {@condition frightened} condition doesn't decrease automatically as long as the haunt remains active, and the hatchet gains a +2 circumstance bonus to all wrathful hatchet {@action Strike||Strikes} it attempts against the creature."
+								]
+							}
+						}
+					]
+				}
+			],
+			"routine": [
+				"(3 actions; {@trait evocation}, {@trait occult}) The haunted hatchet uses an action to move to a square adjacent to a creature within 25 feet, attempts a wrathful hatchet {@action Strike} against an adjacent creature, or attempts to {@action Escape} from being {@condition immobilized} or {@condition restrained}. If there are no creatures within 25 feet, the hatchet moves in a random direction. If it ends its turn and there are no creatures within 25 feet, the hatchet falls to the ground, and the haunt ends."
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "wrathful hatchet",
+					"attack": 18,
+					"damage": "{@damage 1d6+6} slashing plus {@damage 2d6} mental and {@damage 1d6} bleed"
+				}
+			],
+			"reset": [
+				"24 hours; putting Xarwin's ghost to rest destroys this haunt forever."
+			]
+		},
+		{
+			"name": "Xarwin Portraits",
+			"source": "Mal",
+			"page": 28,
+			"level": 6,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 18,
+				"minProf": "expert"
+			},
+			"description": [
+				"The paintings suddenly start to bleed\u2014Ioseff Xarwin from the left wrist and the other three Xarwins in a line cutting across their brows\u2014as the viewers receive glimpses of the traumas the family endured."
+			],
+			"disable": {
+				"entries": [
+					"DC 25 {@skill Religion} to exorcise one of the paintings (a critical success exorcises all of the paintings at once) or DC 21 {@skill Thievery} to quickly cover a painting with a cloak or remove it and turn it to face the wall"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": {
+					"Painting ": 56
+				},
+				"bt": {
+					"Painting ": 28
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "positive"
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Inflict Agony",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"necromancy",
+						"occult"
+					],
+					"trigger": "At least four characters are in area {@b B22}, or someone touches or attempts to damage a painting",
+					"entries": [
+						"All characters in area {@b B22} must attempt a DC 27 Will save to resist sudden, agonizing pain (the PC with the highest Intelligence feels this pain in the left wrist, while the others feel it in their heads). On a failure, a PC becomes {@condition sickened||sickened 1} from the agony ({@condition sickened||sickened 2} on a critical failure). The haunt then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(4 actions; {@trait emotion}, {@trait fear}, {@trait mental}, {@trait necromancy}, {@trait occult}) The haunt uses up to 4 actions to afflict bleeding wounds on different creatures in area {@b B22}. These bloody wounds manifest where the target would have felt pain from Inflict Agony, regardless of whether they succeeded in resisting that effect or not. A creature can't be targeted more than once by this routine. Each creature affected must attempt a DC 24 Fortitude save.",
+				"The haunt loses 1 action for each painting that's disabled or destroyed.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The creature is unaffected."
+						],
+						"Success": [
+							"The creature takes {@damage 1d8+3} slashing damage and is {@condition frightened||frightened 1} by the conviction that these wounds were caused by a loved one."
+						],
+						"Failure": [
+							"As success, but {@damage 2d8+6} slashing damage, {@damage 1d6} {@condition persistent damage||persistent bleed damage}, and {@condition frightened||frightened 2}."
+						],
+						"Critical Failure": [
+							"As failure, but {@damage 4d8+12} slashing damage, {@damage 2d6} {@condition persistent damage||persistent bleed damage}, and {@condition frightened||frightened 3}. Increase the value of the character's {@condition malevolence|Mal} condition by 1."
+						]
+					}
+				}
+			],
+			"reset": [
+				"1 hour; putting Xarwin's ghost to rest destroys this haunt forever."
+			]
+		},
+		{
+			"name": "Lured to Ashes",
+			"source": "Mal",
+			"page": 24,
+			"level": 5,
+			"traits": [
+				"unique",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 13,
+				"minProf": "expert"
+			},
+			"description": [
+				"The illusory scene of a furnished study covers the room's actual appearance. It flickers and fades, revealing a scorched and burnt chamber. A moment later, the screams of burning victims fill the room, and blazing skeletal arms reach from the ashes and charred walls to scrape and claw."
+			],
+			"disable": {
+				"entries": [
+					"DC 26 {@skill Intimidation} to command the spirits haunting this room to be silent or DC 23 {@skill Religion} to exorcise the haunt"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hardness": {
+					"std": 12
+				},
+				"hp": {
+					"std": 50
+				},
+				"bt": {
+					"std": 25
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "positive",
+						"amount": 5
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Lure",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"auditory",
+						"enchantment",
+						"linguistic",
+						"mental",
+						"occult"
+					],
+					"trigger": "A creature moves more than 5 feet into the room",
+					"entries": [
+						"All creatures in area {@b B18} and all creatures within 10 feet of an open door or window adjacent to area {@b B18} hear a compelling voice inviting them into the room to discuss a future move back to central Cheliax. Each creature must attempt a DC 22 Will save (creatures outside of area {@b B18} gain a +2 circumstance bonus to this save). On a failure, the creature is compelled to move into area {@b B18} and be seated on one of the sofas. Creatures who succeed at the save aren't compelled and see the room as the burnt ruin that it is. The haunt then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait fire}, {@trait necromancy}, {@trait occult}) If there are no targets within area {@b B18} when the haunt takes its action, it can use its Lure reaction to try to get nearby victims back inside. The haunt manifests several burning skeletal arms that reach up from the ruined floors or out of the burnt walls to claw at every creature in area {@b B18}. These creatures must attempt a DC 22 Reflex save (creatures seated on a sofa take a \u20132 circumstance penalty to this saving throw).",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": [
+							"The creature takes no damage."
+						],
+						"Success": [
+							"The creature takes {@damage 1d8} fire damage."
+						],
+						"Failure": [
+							"The creature takes {@damage 2d8} fire damage and gains weakness 5 to fire. This weakness persists until the creature is fully healed."
+						],
+						"Critical Failure": [
+							"As failure, but {@damage 4d8} fire damage and weakness 10 to fire."
+						]
+					}
+				}
+			],
+			"reset": [
+				"8 hours; destroying the {@creature tanglebones|Mal} in area {@b E3} destroys this haunt forever."
+			]
+		},
+		{
+			"name": "Xarwin Caul",
+			"source": "Mal",
+			"page": 11,
+			"level": 10,
+			"traits": [
+				"unique",
+				"haunt"
+			],
+			"stealth": {
+				"dc": 35,
+				"minProf": "master"
+			},
+			"description": [
+				"The Caul is a thin layer of transparent, moist webbing clinging to the manor's exterior surfaces. The stuff feels slippery and unnaturally cold to the touch, and it clings and stretches when a finger or other object used to touch the Caul is pulled away."
+			],
+			"disable": {
+				"entries": [
+					"DC 32 {@skill Occultism} (master) or DC 34 {@skill Religion} (expert) to exorcise the caul"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 24
+					}
+				},
+				"hardness": {
+					"std": 18
+				},
+				"hp": {
+					"std": 70
+				},
+				"bt": {
+					"std": 35
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "positive",
+						"amount": 10
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Burst of Hatred",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"mental"
+					],
+					"trigger": "A creature opens any door or window into Xarwin Manor, or any creature or object passes through the caul from outside into the manor",
+					"entries": [
+						"The caul immediately bursts like an oily bubble, vanishing in an instant of foul-smelling smoke. A wave of susurration creeps through the area, and all sapient creatures experience a sudden sensation of utter hatred toward birdlife for the span of a single heartbeat. All natural avians within a 300-foot emanation from Xarwin Manor (but not those within the manor or underground) take {@damage 15d6} mental damage (DC 33 basic Fortitude save)."
+					]
+				}
+			],
+			"reset": [
+				"1 week; putting Xarwin's ghost to rest permanently destroys the haunt."
+			]
+		},
+		{
+			"name": "Xarwin Manor Phantasm",
+			"source": "Mal",
+			"level": -1,
+			"page": 11,
+			"traits": [
+				"uncommon",
+				"haunt"
+			],
+			"stealth": {
+				"dc": 15
+			},
+			"description": [
+				"The malevolence manifests a disturbing illusion meant to unsettle and erode intruders' resistances to the manor's dangers. Roll {@dice 1d12} on the {@table Xarwin Manor Phantasms|Mal} table to determine what sort of illusion occurs; alternatively, pick an appropriate one from the table or create one of your own using the listed results as examples or inspiration."
+			],
+			"disable": {
+				"entries": [
+					"DC 15 {@skill Occultism} or {@skill Religion} (to exorcise the disquieting phantasm)"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 12
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 2
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hardness": {
+					"std": 2
+				},
+				"hp": {
+					"std": 12
+				},
+				"bt": {
+					"std": 6
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"name": "positive",
+						"amount": 2
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Haunting Vision",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"emotion",
+						"enchantment",
+						"fear",
+						"mental",
+						"occult"
+					],
+					"trigger": "A creature comes within 5 feet of the phantasm",
+					"entries": [
+						"The disquieting phantasm creates a haunting vision. The triggering creature must attempt a DC 19 Will save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature is unaffected."
+								],
+								"Success": [
+									"The creature is unaffected."
+								],
+								"Failure": [
+									"If the creature doesn't have the {@condition malevolence|Mal} condition, the value of its {@condition malevolence|Mal} condition increases by 1."
+								],
+								"Critical Failure": [
+									"The creature increases its {@condition malevolence|Mal} condition by 1."
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ghostly Choir",
+			"source": "MotM",
+			"page": 21,
+			"level": 6,
+			"traits": [
+				"haunt"
+			],
+			"stealth": {
+				"dc": 20,
+				"minProf": "expert"
+			},
+			"description": [
+				"A choir of righteous {@deity Iomedae||Iomedaean} souls rises out of the floor to reclaim this space, singing an eerie chant that terrifies listeners and buffets their bodies with walls of sound."
+			],
+			"disable": {
+				"entries": [
+					"DC 28 {@skill Performance} (trained) to disrupt the song's resonance with another tune or DC 28 {@skill Religion} (trained) to ritually silence the spirits"
+				]
+			},
+			"actions": [
+				{
+					"name": "Profane Chant",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"traits": [
+						"auditory",
+						"emotion",
+						"enchantment",
+						"fear",
+						"mental",
+						"occult"
+					],
+					"trigger": "A creature enters the haunted room",
+					"entries": [
+						"The choir rises, and its song deals {@damage 4d8+18} mental damage to evil creatures within 30 feet of the souls' spectral forms. Affected creatures must each attempt a DC 24 Will save.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": [
+									"The creature is unaffected."
+								],
+								"Success": [
+									"The creature takes half damage and becomes {@condition frightened||frightened 1}."
+								],
+								"Failure": [
+									"The creature takes full damage and becomes {@condition frightened||frightened 2}."
+								],
+								"Critical Failure": [
+									"The creature takes double damage. It also becomes {@condition frightened||frightened 3} and is {@condition fleeing} for 1 round."
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hail of Darts",
+			"source": "MotM",
+			"page": 15,
+			"level": 6,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 22,
+				"minProf": "expert"
+			},
+			"description": [
+				"An array of spring-loaded, ceiling-mounted darts are primed to fire down into the hallway when triggered by a pressure plate."
+			],
+			"disable": {
+				"entries": [
+					"DC 25 {@skill Thievery} (expert) on the floor tile or wall socket"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 11
+					}
+				},
+				"hardness": {
+					"std": 14
+				},
+				"hp": {
+					"std": 55
+				},
+				"bt": {
+					"std": 27
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Darts",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "Pressure is applied to the floor tile",
+					"entries": [
+						"The trap shoots darts, making an attack against each creature in a 30-foot line centered on the floor tile."
+					]
+				},
+				{
+					"type": "affliction",
+					"name": "Old Giant Wasp Venom",
+					"traits": [
+						"poison"
+					],
+					"DC": 22,
+					"savingThrow": "Fortitude",
+					"maxDuration": "6 rounds",
+					"stages": [
+						{
+							"stage": 1,
+							"entry": "{@damage 2d6} poison damage and {@condition clumsy||clumsy 1}",
+							"duration": "1 round"
+						},
+						{
+							"stage": 2,
+							"entry": "{@damage 3d6} poison damage and {@condition clumsy||clumsy 2}",
+							"duration": "1 round"
+						},
+						{
+							"stage": 3,
+							"entry": "{@damage 4d6} poison damage and {@condition clumsy||clumsy 2}",
+							"duration": "1 round"
+						}
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Ranged",
+					"name": "dart",
+					"attack": 20,
+					"damage": "{@damage 4d6+12} piercing plus old giant wasp venom"
+				}
+			]
+		},
+		{
+			"name": "Boreal Rage Trap",
+			"source": "MotM",
+			"page": 13,
+			"level": 6,
+			"traits": [
+				"cold",
+				"evocation",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 25,
+				"minProf": "expert"
+			},
+			"description": [
+				"A stuffed {@creature owlbear} twists toward intruders and breathes a gust of frigid air."
+			],
+			"disable": {
+				"entries": [
+					"DC 22 {@skill Thievery} (expert) on the owlbear's base"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 11
+					}
+				},
+				"hardness": {
+					"std": 10
+				},
+				"hp": {
+					"std": 60
+				},
+				"bt": {
+					"std": 30
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Exhale",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature enters either of the marked areas, or a creature remains in the room for 1 minute",
+					"entries": [
+						"The trap breathes cold that envelops a 15-foot burst centered on the triggering creature's square. This deals {@damage 4d8+18} cold damage (DC 24 basic Reflex save), and a creature that critically fails the save becomes {@condition clumsy||clumsy 1} for 10 minutes due to frostbite."
+					]
+				}
+			],
+			"reset": [
+				"10 minutes"
+			]
+		},
+		{
+			"name": "Poisoned Lock",
+			"source": "DaLl",
+			"page": 11,
+			"level": 5,
+			"traits": [
+				"mechanical",
+				"trap"
+			],
+			"stealth": {
+				"dc": 23,
+				"minProf": "expert"
+			},
+			"description": [
+				"A spring-loaded, poisoned needle is {@condition hidden} near the drawer's keyhole. Disabling or breaking the trap does not disable or break the lock."
+			],
+			"disable": {
+				"entries": [
+					"DC 23 {@skill Thievery} (expert) on the spring mechanism"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 9
+					}
+				},
+				"hardness": {
+					"std": 12
+				},
+				"hp": {
+					"std": 50
+				},
+				"bt": {
+					"std": 25
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Spring",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature tries to unlock or {@action Pick a Lock||Pick the Lock}",
+					"entries": [
+						"The needle extends to attack the triggering creature."
+					]
+				},
+				{
+					"type": "affliction",
+					"name": "Hunting Spider Venom",
+					"traits": [
+						"poison"
+					],
+					"DC": 23,
+					"savingThrow": "Fortitude",
+					"maxDuration": "6 rounds",
+					"notes": [
+						"The {@condition clumsy} condition caused by this venom persists for 24 hours before fading."
+					],
+					"stages": [
+						{
+							"stage": 1,
+							"entry": "{@damage 1d10} poison damage and {@condition flat-footed}",
+							"duration": "1 round"
+						},
+						{
+							"stage": 2,
+							"entry": "{@damage 1d12} poison damage, {@condition clumsy||clumsy 1}, and {@condition flat-footed}",
+							"duration": "1 round"
+						},
+						{
+							"stage": 3,
+							"entry": "{@damage 2d6} poison damage, {@condition clumsy||clumsy 2}, and {@condition flat-footed}",
+							"duration": "1 round"
+						}
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "needle",
+					"attack": 19,
+					"damage": "1 piercing plus enhanced hunting spider venom"
+				}
+			]
+		},
+		{
+			"name": "Spiritual Disruptor",
+			"level": 5,
+			"source": "SoG3",
+			"page": 10,
+			"traits": [
+				"rare",
+				"complex",
+				"haunt"
+			],
+			"stealth": {
+				"bonus": 21,
+				"minProf": "expert"
+			},
+			"description": [
+				"A flickering humanoid shape with four gold eyes, clad in red robes with black sleeves and wielding a torch that burns with red fire and smoke, strides purposefully across the ground, creating distortions in reality around it that cause wood to twist and decay and send agonizing pain through the flesh."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 23} (expert) {@skill Intimidation} to disrupt the haunt's concentration in the living world and break the link to the mindscape, {@skill Religion} {@dc 27} (expert) to banish the energy from the mindscape, or {@skill Occultism} {@dc 30} (expert) to turn the haunt's energy back against itself to cancel it out."
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": {
+					"std": 60
+				},
+				"bt": {
+					"std": 30
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "mental"
+					}
+				]
+			},
+			"actions": [
+				{
+					"name": "Manifest",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "The PCs enter or otherwise interact with the building and its contents",
+					"entries": [
+						"A spiritual disruptor manifests at both locations marked {@b A4}. Both hazards then roll initiative."
+					]
+				}
+			],
+			"routine": [
+				"(3 actions) The spiritual disruptor's first action each round is always to create a pulse of rippling energy in a 10-foot emanation that causes the surrounding structure to appear to age rapidly and become distorted, causing the ground in this area to become {@quickref difficult terrain||3|terrain}. If the spiritual disruptor is adjacent to a living target, it attempts to disrupt that target's life energy by making a {@action Strike} with its smoking torch. If the spiritual disruptor isn't adjacent to a living target, it {@action stride||Strides} toward the closest target. If it has multiple adjacent targets, the spiritual disruptor favors higher-level targets, selecting randomly from multiple adjacent equal-level targets.",
+				{
+					"type": "ability",
+					"name": "Speed",
+					"entries": [
+						"20 feet"
+					]
+				}
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "smoking torch",
+					"attack": 17,
+					"damage": "{@damage 2d10+9} negative",
+					"types": [
+						"negative"
+					],
+					"type": "attack"
+				}
+			],
+			"reset": [
+				"If both hazards are disabled or destroyed, a new one forms adjacent to a randomly determined character still inside the crumbling building after {@dice 1d4+2} rounds. Once all three NPCs are rescued or exorcised, these hazards don't reset."
+			]
+		},
+		{
+			"name": "Manor Wards",
+			"level": 10,
+			"source": "SoG3",
+			"page": 18,
+			"traits": [
+				"unique",
+				"environmental",
+				"magical"
+			],
+			"stealth": {
+				"bonus": 5
+			},
+			"description": [
+				"Layers of fulus and strips of prayer-printed ribbons are plastered over the walls and entrances to the manor, demarcating a boundary around the mansion where no ghosts or spirits can pass."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 35} {@skill Arcana}, {@skill Occultism}, or {@skill Thievery} (master) to compromise the magic to allow entry into the manor, {@dc 32} {@skill Athletics} to force your way through the barrier and enter the manor (this doesn't allow other PCs to enter behind you, though!), or {@spell dispel magic} (5th level; counteract {@dc 28}) to {@quickref counteract|CRB|3|counteracting|0} the wards"
+				]
+			},
+			"actions": [
+				{
+					"name": "Denied!",
+					"activity": {
+						"number": 1,
+						"unit": "free"
+					},
+					"trigger": "A creature without a nullifying seal script on their hand approaches within 5 feet of the manor or attempts to damage the manor",
+					"entries": [
+						"An explosive blast of magic violently slams against the intruder, who must attempt a {@dc 33} Reflex save. If the triggering creature isn't adjacent to the manor, it adjusts the result of this save up by one degree of success.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": "The creature takes {@damage 1d12} force damage and is pushed 5 feet away from the manor.",
+								"Success": "The creature takes {@damage 2d12+13} force damage and is pushed 5 feet away from the manor",
+								"Failure": "The creature takes {@damage 4d12+16} force damage and is thrown 20 feet back and knocked {@condition prone}, taking 10 bludgeoning damage from the fall.",
+								"Critical Failure": "As failure, but 100 feet back and knocked {@condition prone}, taking 50 bludgeoning damage from the fall."
+							}
+						}
+					]
+				}
+			],
+			"reset": [
+				"The wards reset automatically, continuing to prevent entry and damaging those attempting to bypass until they're disabled."
+			]
+		},
+		{
+			"name": "Nosoi's Vengeance",
+			"level": 11,
+			"source": "SoG3",
+			"page": 53,
+			"traits": [
+				"complex",
+				"magical",
+				"trap"
+			],
+			"stealth": {
+				"bonus": 23,
+				"minProf": "master"
+			},
+			"description": [
+				"The sparrow on the scroll animates, speaking to the PCs in Noguchi's voice (one of the {@creature nosoi||nosois} from Event 11: Nosois' Brunch): \"They're the ones! They're the blasphemers who can't even properly serve tea! Send them along to the Lady!\""
+			],
+			"disable": {
+				"entries": [
+					"{@dc 36} {@skill Thievery} (to quickly destroy the scroll without triggering the hazard), {@dc 33} {@skill Religion} (to apologize to {@deity Pharasma} and the {@creature nosoi||nosois} for the previous insult), or {@spell dispel magic} (6th level; {@quickref counteract|CRB|3|counteracting|0} {@dc 29})."
+				]
+			},
+			"actions": [
+				{
+					"name": "Summon Vanths",
+					"traits": [
+						"conjuration",
+						"divine",
+						"summon"
+					],
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "One of the PCs enters the room and is noticed by the hazard",
+					"entries": [
+						"The trap summons four {@creature vanth|B2|vanths}, who then roll initiative and remain for up to 1 minute before the spell ends and the vanths disappear. The {@trait summoned} vanths can use 3 actions each round and can use reactions, unlike most {@trait summoned} creatures."
+					]
+				}
+			]
+		},
+		{
+			"name": "Warding Bell",
+			"level": 11,
+			"source": "SoG3",
+			"page": 55,
+			"traits": [
+				"complex",
+				"magical"
+			],
+			"stealth": {
+				"bonus": 0
+			},
+			"description": [
+				"At the heart of the shrine hangs a massive bronze temple bell."
+			],
+			"disable": {
+				"entries": [
+					"Ringing the bell as an {@action Interact} action eight times in succession with the ceremonial ringer (carried by {@creature Mago Kai|SoG3}) over the course of three consecutive rounds automatically deactivates the hazard, {@dc 36} {@skill Thievery} to extinguish the flame within the bell, {@dc 36} {@skill Religion} to appeal to {@deity Pharasma} to extinguish the flame, or {@spell dispel magic} or a {@creature shimmerthief|SoG3}'s Drain Light (6th level; {@quickref counteract|CRB|3|counteracting|0} {@dc 29})"
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 31
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 18
+					}
+				},
+				"hardness": {
+					"std": 20
+				},
+				"hp": {
+					"std": 80
+				},
+				"bt": {
+					"std": 40
+				},
+				"immunities": [
+					"critical hits",
+					"object immunities",
+					"precision damage"
+				]
+			},
+			"actions": [
+				{
+					"name": "Flare Up",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"entries": [
+						"The warding bell's light increases from a faint flickering to luminous enough that the whole room is brightly lit. The hazard then rolls initiative."
+					]
+				}
+			],
+			"routine": [
+				"(1 action; {@trait divine}, {@trait emotion}, {@trait enchantment}, {@trait fear}, {@trait mental}) The warding bell emits a harrowing ring that can be heard only by {@trait undead} or {@ritual transmigrate|SoG3|transmigrated} PCs in area {@b C11}; affected characters must attempt a {@dc 30} Will save.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The creature is unaffected and is temporarily immune to the warding bell's routine for 24 hours.",
+						"Success": "The creature is unaffected.",
+						"Failure": "The creature becomes {@condition frightened 1} and takes {@damage 6d6} mental damage.",
+						"Critical Failure": "The creature becomes {@condition frightened 2}, takes {@damage 12d6} mental damage, and is {@condition fleeing} as long as it remains frightened."
+					}
+				}
+			],
+			"reset": [
+				"Reactivating the warding bell requires a complicated rite taking several days."
+			]
+		},
+		{
+			"name": "Explosive Manifestation",
+			"level": 7,
+			"source": "SoG3",
+			"page": 71,
+			"traits": [
+				"uncommon",
+				"environmental"
+			],
+			"stealth": {
+				"bonus": 27,
+				"minProf": "expert"
+			},
+			"description": [
+				"Reality suddenly and violently transforms, shifting from a harmless patch of terrain into something truly deadly as the mindscape draws from memories of pain and agony, revisiting old wounds."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 27} {@skill Occultism} to cause the hazard to fade away without triggering it, or {@dc 30} {@skill Survival} to sense what parts of reality are in flux and to avoid the area"
+				]
+			},
+			"actions": [
+				{
+					"name": "Reaction",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "A creature {@action interact||Interacts} with the hazardous object, or steps into the hazardous area",
+					"entries": [
+						"A sudden blast detonates, centered on the triggering creature's square. This blast fills a 20-foot burst and inflicts {@damage 4d10+18} damage to all creatures in the area ({@dc 25} basic Reflex save). The type of damage is chosen by the GM from physical (bludgeoning or piercing), or from acid, cold, electricity, fire, or sonic. The description of how this explosion manifests should vary to match the type of damage inflicted, but should also draw from the triggering creature's past, as if memories of old wounds had suddenly come back with a vengeance. An explosive manifestation that deals piercing damage might be conveyed as a sudden blast of spikes radiating up out of the ground (stemming from a creature's memory of the time it fell into a spiked pit and almost died). One that deals fire damage might involve the sound of a dragon's roar as the air erupts into flames (coming from a creature's memory of being nearly incinerated by a dragon). A moment later, all evidence of the hazard's manifestation (save for the damage it causes to the creatures in its area) vanish."
+					]
+				}
+			]
+		},
+		{
+			"name": "Temporal Warp",
+			"level": 7,
+			"source": "SoG3",
+			"page": 72,
+			"traits": [
+				"uncommon",
+				"environmental",
+				"incapacitation"
+			],
+			"stealth": {
+				"bonus": 27,
+				"minProf": "expert"
+			},
+			"description": [
+				"Just as a fight begins, time suddenly seems to break in the area, causing some elements to freeze in place and others to slow down or speed up, imparting a disjointed and nightmarish sensation upon those present."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 27} {@skill Occultism} to cause the hazard to fade away and release all those affected by it from the hazard's effects, or {@dc 30} {@skill Intimidation} to shock a single adjacent creature out of the distortion and free them from the hazard's effects."
+				]
+			},
+			"actions": [
+				{
+					"name": "Reaction",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "Initiative is rolled at the start of a combat where the PCs face a type of foe they have fought before",
+					"entries": [
+						"As the combat begins, everything suddenly feels distorted and dreamlike. Just as in dreams, time itself seems to stretch or compress in ways that transform everything into a nightmare. All creatures within a 30-foot-burst from the first creature to act in combat must attempt a Will saving throw as, for a brief moment, time appears to stand still.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": "The creature is {@condition quickened 1} for 1 minute; it can only use the extra action each round for actions with the {@trait move} trait.",
+								"Success": "The creature is unaffected.",
+								"Failure": "The creature is {@condition slowed 1} for 1 minute.",
+								"Critical Failure": "The creature is {@condition stunned 3} as it perceives time to have stopped entirely for it. When it recovers from the stun, it is {@condition slowed 1} for 1 minute."
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "False Victory",
+			"level": 7,
+			"source": "SoG3",
+			"page": 72,
+			"traits": [
+				"rare",
+				"environmental"
+			],
+			"stealth": {
+				"bonus": 27,
+				"minProf": "expert"
+			},
+			"description": [
+				"After a battle concludes, the battlefield shimmers strangely as dead bodies twitch, destroyed objects shake, and feelings of déjà vu grow overwhelmingly strong."
+			],
+			"disable": {
+				"entries": [
+					"{@dc 27} {@skill Occultism} to cause the hazard to fade away before it manifests, or {@dc 30} {@skill Deception} to pretend to ignore the growing continuity break and proceed without fear, causing it to collapse in on itself."
+				]
+			},
+			"actions": [
+				{
+					"name": "Reaction",
+					"activity": {
+						"number": 1,
+						"unit": "reaction"
+					},
+					"trigger": "The PCs conclude an encounter in which a battle took place",
+					"entries": [
+						"The mindscape starts to revert the results of the battle, shifting things back to the way they were at the start of the encounter. The reversion takes 1 round to complete, during which the PCs can attempt to disable the hazard or take any other actions to prepare for facing the same encounter over again. At the end of the round, the encounter resets and initiative is rolled again; all foes and environmental elements return to the condition they were in just before the fight began, but the PCs themselves do not."
+					]
+				}
+			]
+		},
+		{
 			"name": "Writhing Hair",
 			"source": "SoG2",
 			"page": 17,
@@ -127,7 +4311,7 @@
 				}
 			],
 			"routine": [
-				"(2 actions; emotion, enchantment, fear, incapacitation, mental, occult) The haunt uses its first action to {@action grapple} with Goh and attempts to pull him underwater. Goh has a Fortitude DC of 19. In order to pull Goh underwater, the haunt must critically succeed at its grapple check against him with a result of 29 or higher to successfully {@condition restrained||restrain} Goh. Goh is overwhelmed by terror and makes no attempt to escape, so it falls to the PCs to get him free from the haunt. If Goh is restrained and pulled underwater, the haunt must continue to grapple him in following rounds. If the haunt manages to critically succeed at grappling Goh while he's restrained, the man dies from a combination of fright and drowning, at which point the haunt immediately ends.",
+				"(2 actions; {@trait emotion}, {@trait enchantment}, {@trait fear}, {@trait incapacitation}, {@trait mental}, {@trait occult}) The haunt uses its first action to {@action grapple} with Goh and attempts to pull him underwater. Goh has a Fortitude DC of 19. In order to pull Goh underwater, the haunt must critically succeed at its grapple check against him with a result of 29 or higher to successfully {@condition restrained||restrain} Goh. Goh is overwhelmed by terror and makes no attempt to escape, so it falls to the PCs to get him free from the haunt. If Goh is restrained and pulled underwater, the haunt must continue to grapple him in following rounds. If the haunt manages to critically succeed at grappling Goh while he's restrained, the man dies from a combination of fright and drowning, at which point the haunt immediately ends.",
 				"If Goh is pulled free and taken out of the water, the haunt loses one action and no longer attempts to grapple him. The haunt uses its second action to manifest the image of a frightening watery drowned ghost, causing one creature it targets within 30 feet to attempt a {@dc 22} Will save (the haunt always targets a creature who attempted to free Goh from its grip if possible).",
 				{
 					"type": "successDegree",
@@ -171,7 +4355,7 @@
 			],
 			"disable": {
 				"entries": [
-					"{@dc 23} {@skill Nature} or {@skill Religion} to offer prayers against the evil to reduce Kugaptee's Anger's actions during its routine to 1 (see below) for 1 round; Placing Sui-Jing's heart into her corpse at area A2 is the only way to disable this hazard"
+					"{@dc 23} {@skill Nature} or {@skill Religion} to offer prayers against the evil to reduce Kugaptee's Anger's actions during its routine to 1 (see below) for 1 round; Placing Sui-Jing's heart into her corpse at area {@b A2} is the only way to disable this hazard"
 				]
 			},
 			"actions": [
@@ -420,7 +4604,7 @@
 				}
 			],
 			"routine": [
-				"(3 actions) Kugaptee's tree lashes out with its branches, using its three actions to attempt branch {@action strike||Strikes} against any creature in reach. Targets that are within reach but are outside of area E3 have {@quickref cover|CRB|3|cover|0} from the surrounding archways. The haunt favors targets in area E3 but otherwise selects its targets randomly."
+				"(3 actions) Kugaptee's tree lashes out with its branches, using its three actions to attempt branch {@action strike||Strikes} against any creature in reach. Targets that are within reach but are outside of area {@b E3} have {@quickref cover|CRB|3|cover|0} from the surrounding archways. The haunt favors targets in area {@b E3} but otherwise selects its targets randomly."
 			],
 			"attacks": [
 				{
@@ -948,10 +5132,7 @@
 					"std": 7
 				},
 				"hp": {
-					"std": 25,
-					"notes": {
-						"std": ""
-					}
+					"std": 25
 				}
 			},
 			"actions": [
@@ -1051,8 +5232,8 @@
 					},
 					"trigger": "A Medium or larger creature steps onto the middle of the bridge (any of the squares marked \"T\" on the map)",
 					"entries": [
-						"The ropes on both sides of the bridge snap simultaneously, causing the bridge to collapse. Any creature on the bridge falls to the forest floor 50 feet below and takes 25 bludgeoning damage. A creature within 10 feet of one end of the bridge can attempt a DC 18 Reflex saving throw to Grab a Ledge along the side of either A8 or A13.",
-						"If one side of the bridge has been disabled by resecuring the ropes, a character on any section of the bridge can attempt a DC 18 Reflex save to hang onto the bridge as one side of it falls. The dangling bridge thereafter functions as a ladder connecting either area A8 or A13, whichever was secured to the forest floor."
+						"The ropes on both sides of the bridge snap simultaneously, causing the bridge to collapse. Any creature on the bridge falls to the forest floor 50 feet below and takes 25 bludgeoning damage. A creature within 10 feet of one end of the bridge can attempt a DC 18 Reflex saving throw to Grab a Ledge along the side of either {@b A8} or {@b A13}.",
+						"If one side of the bridge has been disabled by resecuring the ropes, a character on any section of the bridge can attempt a DC 18 Reflex save to hang onto the bridge as one side of it falls. The dangling bridge thereafter functions as a ladder connecting either area {@b A8} or {@b A13}, whichever was secured to the forest floor."
 					]
 				}
 			]
@@ -1390,7 +5571,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; illusion, mental, occult) The atmosphere continues to affect all creatures in the area, requiring a new Fortitude save each round against its Poisonous Atmosphere (above). A creature holding its breath gains a +2 circumstance bonus to the save."
+				"(1 action; {@trait illusion}, {@trait mental}, {@trait occult}) The atmosphere continues to affect all creatures in the area, requiring a new Fortitude save each round against its Poisonous Atmosphere (above). A creature holding its breath gains a +2 circumstance bonus to the save."
 			]
 		},
 		{
@@ -1604,7 +5785,7 @@
 				}
 			],
 			"routine": [
-				"(3 actions; conjuration, divine, teleportation) With spectral claws, the aiudara wraiths hurl trespassers through time and space. Each of the three wraiths has 1 action which it can use to make a forceful hand {@action Strike} against a creature within 60 feet. The haunt loses 1 action for each successful check to disable the haunt.",
+				"(3 actions; {@trait conjuration}, {@trait divine}, {@trait teleportation}) With spectral claws, the aiudara wraiths hurl trespassers through time and space. Each of the three wraiths has 1 action which it can use to make a forceful hand {@action Strike} against a creature within 60 feet. The haunt loses 1 action for each successful check to disable the haunt.",
 				"When the haunt rolls a critical hit to {@action Strike} a creature, the creature is instantly shunted to an empty space within 30 feet. The haunt chooses which space the creature is transported to."
 			],
 			"attacks": [
@@ -1710,7 +5891,7 @@
 			],
 			"disable": {
 				"entries": [
-					"DC 28 {@skill Thievery} (expert) to crimp shut the primary feeding tube for the gas, or DC 31 {@skill Perception} (expert) to discover the {@condition hidden} bypass switch next to the door to area A3 that shuts the trap off"
+					"DC 28 {@skill Thievery} (expert) to crimp shut the primary feeding tube for the gas, or DC 31 {@skill Perception} (expert) to discover the {@condition hidden} bypass switch next to the door to area {@b A3} that shuts the trap off"
 				]
 			},
 			"actions": [
@@ -1789,7 +5970,7 @@
 					],
 					"trigger": "A creature lies down on the bed, or a living creature spends more than 3 rounds inside this room",
 					"entries": [
-						"Incense swiftly fills the room (even if the incense burners have been removed or were destroyed). All creatures in area A12 must attempt a DC 32 Fortitude save. The haunt then rolls initiative.",
+						"Incense swiftly fills the room (even if the incense burners have been removed or were destroyed). All creatures in area {@b A12} must attempt a DC 32 Fortitude save. The haunt then rolls initiative.",
 						{
 							"type": "successDegree",
 							"entries": {
@@ -1811,7 +5992,7 @@
 				}
 			],
 			"routine": [
-				"(2 actions; cold, enchantment, mental, occult) The haunt uses its first action to light incense burners again, forcing any creature that isn't already {@condition unconscious} to save against that effect once more. Its second action is to cause any {@condition unconscious} creatures in the room to experience horrific, vivid dreams about being lost in the arctic during a blizzard, while enormous furred figures\u2014saumen kar\u2014lunge at them through the snow to attack repeatedly. Each {@condition unconscious} creature must attempt a DC 28 Fortitude saving throw. If at the end of the round there are no {@condition unconscious} creatures in the room, Etward's nightmare ends and the trap deactivates.",
+				"(2 actions; {@trait cold}, {@trait enchantment}, {@trait mental}, {@trait occult}) The haunt uses its first action to light incense burners again, forcing any creature that isn't already {@condition unconscious} to save against that effect once more. Its second action is to cause any {@condition unconscious} creatures in the room to experience horrific, vivid dreams about being lost in the arctic during a blizzard, while enormous furred figures\u2014saumen kar\u2014lunge at them through the snow to attack repeatedly. Each {@condition unconscious} creature must attempt a DC 28 Fortitude saving throw. If at the end of the round there are no {@condition unconscious} creatures in the room, Etward's nightmare ends and the trap deactivates.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -2224,7 +6405,7 @@
 					},
 					"trigger": "A creature moves into the unstable tunnel",
 					"entries": [
-						"The tunnel collapses in a cave-in that deals {@damage 4d8+10} bludgeoning damage to the triggering creature and all creatures in area A2 (DC 21 basic Reflex save). On a failed save, the triggering creature is {@condition immobilized} ({@action Escape} DC 21). This collapse fully blocks the tunnel (area A2), making it impassable."
+						"The tunnel collapses in a cave-in that deals {@damage 4d8+10} bludgeoning damage to the triggering creature and all creatures in area {@b A2} (DC 21 basic Reflex save). On a failed save, the triggering creature is {@condition immobilized} ({@action Escape} DC 21). This collapse fully blocks the tunnel (area {@b A2}), making it impassable."
 					]
 				}
 			]
@@ -2277,7 +6458,7 @@
 					},
 					"trigger": "An open flame is brought into area A4",
 					"entries": [
-						"The oil on the walls explodes, dealing {@damage 4d8+10} fire damage to all creatures and objects in areas A4 and A3 (DC 21 basic Reflex save)."
+						"The oil on the walls explodes, dealing {@damage 4d8+10} fire damage to all creatures and objects in areas {@b A4} and {@b A3} (DC 21 basic Reflex save)."
 					]
 				}
 			]
@@ -2339,7 +6520,7 @@
 					},
 					"trigger": "A creature holding the rope pulley pulls it",
 					"entries": [
-						"The net releases, dropping rocks on all creatures and objects in the lower half of area A15, dealing {@damage 4d8+14} bludgeoning damage (DC 26 basic Reflex save). The area then becomes difficult terrain."
+						"The net releases, dropping rocks on all creatures and objects in the lower half of area {@b A15}, dealing {@damage 4d8+14} bludgeoning damage (DC 26 basic Reflex save). The area then becomes difficult terrain."
 					]
 				}
 			]
@@ -2360,7 +6541,7 @@
 				"notes": "to determine the trees can move"
 			},
 			"description": [
-				"A forest of fiendish trees swing their branches and shift their roots to bludgeon and trip creatures in the tainted grove (area A21)."
+				"A forest of fiendish trees swing their branches and shift their roots to bludgeon and trip creatures in the tainted grove (area {@b A21})."
 			],
 			"disable": {
 				"entries": [
@@ -2836,7 +7017,7 @@
 						"number": 1,
 						"unit": "reaction"
 					},
-					"trigger": "A creature attacks the graveknights in area G1 or enters the castle",
+					"trigger": "A creature attacks the graveknights in area {@b G1} or enters the castle",
 					"entries": [
 						"The haunt makes a spectral bolt {@action Strike} against the triggering creature, then rolls initiative."
 					]
@@ -3007,7 +7188,7 @@
 						"number": 1,
 						"unit": "reaction"
 					},
-					"trigger": "A creature Ebeshra can see begins to use a {@trait teleportation} effect or an effect that would move any number of targets to a different plane;",
+					"trigger": "A creature Ebeshra can see begins to use a {@trait teleportation} effect or an effect that would move any number of targets to a different plane",
 					"entries": [
 						"Ebeshra hurls a crystal at the triggering creature. The triggering creature and all creatures within 50 feet of the creature take {@damage 16d8} piercing damage (DC 45 basic Reflex save) and additional effects based on the result of their save.",
 						{
@@ -3172,14 +7353,14 @@
 						"number": 1,
 						"unit": "reaction"
 					},
-					"trigger": "A creature takes a {@quickref hostile action||2|hostile actions} against Ebeshra, produces a visible area effect, or flies within 120 feet of Ebeshra;",
+					"trigger": "A creature takes a {@quickref hostile action||2|hostile actions} against Ebeshra, produces a visible area effect, or flies within 120 feet of Ebeshra",
 					"entries": [
 						"Ebeshra unleashes a 240-foot line of electricity toward the triggering creature. Creatures in the line take {@damage 16d8} electricity damage (DC 42 basic Reflex save). The electricity creates a static field in all squares that the line passed through and all adjacent squares. For 1 round, any creatures that enter a space in the static field take {@damage 4d8} electricity damage (DC 38 basic Reflex save)."
 					]
 				}
 			],
 			"reset": [
-				"Ebeshra waits 1d4 rounds before another blast."
+				"Ebeshra waits {@dice 1d4} rounds before another blast."
 			]
 		},
 		{
@@ -3386,7 +7567,7 @@
 					],
 					"trigger": "A creature touches the window",
 					"entries": [
-						"The triggering creature takes {@damage 8d10+44} negative damage (DC 42 basic Will save) as the window attempts to steal their soul. If this damage would kill the target, its soul is trapped inside the window with the effects of bind soul."
+						"The triggering creature takes {@damage 8d10+44} negative damage (DC 42 basic Will save) as the window attempts to steal their soul. If this damage would kill the target, its soul is trapped inside the window with the effects of {@spell bind soul}."
 					]
 				}
 			],
@@ -3662,9 +7843,16 @@
 				"hp": {
 					"std": 60,
 					"notes": {
-						"std": "per hound; Resistance all damage 10 (except force, {@item ghost touch}, or positive; double resistance to non-magical)"
+						"std": "per hound"
 					}
-				}
+				},
+				"resistances": [
+					{
+						"name": "all damage",
+						"amount": 10,
+						"note": "except force, {@item ghost touch}, or positive; double resistance to non-magical"
+					}
+				]
 			},
 			"actions": [
 				{
@@ -3726,11 +7914,15 @@
 					}
 				},
 				"hp": {
-					"Spirit": 230,
-					"notes": {
-						"Spirit": "Resistance all damage 20 (except force, {@item ghost touch}, or positive; double resistance to non-magical)"
+					"Spirit": 230
+				},
+				"resistances": [
+					{
+						"name": "all damage",
+						"amount": 20,
+						"note": "except force, {@item ghost touch}, or positive; double resistance to non-magical"
 					}
-				}
+				]
 			},
 			"actions": [
 				{
@@ -4491,9 +8683,17 @@
 					]
 				},
 				{
-					"name": "Belch",
+					"name": "Belch Smoke",
+					"activity": {
+						"number": 2,
+						"unit": "action"
+					},
+					"traits": [
+						"air",
+						"fire"
+					],
 					"entries": [
-						"Smoke{@as 2} (air, fire) The airship's engine issues forth a cloud of alchemical smoke in a 30-foot cone. Creatures within the cone must attempt a DC 20 Fortitude save.",
+						"The airship's engine issues forth a cloud of alchemical smoke in a 30-foot cone. Creatures within the cone must attempt a DC 20 Fortitude save.",
 						{
 							"type": "successDegree",
 							"entries": {
@@ -4921,7 +9121,7 @@
 			],
 			"disable": {
 				"entries": [
-					"DC 20 {@skill Thievery} (Expert) or {@skill Crafting} (Trained) to disengage the reloading mechanism; the trap can also be disabled by the switch in area F2"
+					"DC 20 {@skill Thievery} (Expert) or {@skill Crafting} (Trained) to disengage the reloading mechanism; the trap can also be disabled by the switch in area {@b F2}"
 				]
 			},
 			"defenses": {
@@ -5565,7 +9765,7 @@
 				}
 			],
 			"routine": [
-				"(3 actions; misfortune) The gremlin horde hurls one tinkering curse with each action, targeting an item within 60 feet wielded or worn by a creature. The creature must attempt a DC 27 Will save. The gremlin horde loses 1 action for each gremlin gang that's scattered.",
+				"(3 actions; {@trait misfortune}) The gremlin horde hurls one tinkering curse with each action, targeting an item within 60 feet wielded or worn by a creature. The creature must attempt a DC 27 Will save. The gremlin horde loses 1 action for each gremlin gang that's scattered.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -6197,7 +10397,7 @@
 						"earth",
 						"evocation"
 					],
-					"trigger": "A creature in area E1 casts an arcane spell or uses an arcane ability",
+					"trigger": "A creature in area {@b E1} casts an arcane spell or uses an arcane ability",
 					"entries": [
 						"The trap makes a stone spike attack against the triggering creature. For the next 1 minute thereafter, the ripples are stronger, giving the trap a +2 circumstance bonus on stone spike {@action Strike||Strikes} during this time."
 					],
@@ -6805,7 +11005,7 @@
 			]
 		},
 		{
-			"name": "Blood Of Belcorra",
+			"name": "Blood of Belcorra",
 			"source": "AV1",
 			"page": 13,
 			"level": 3,
@@ -6869,9 +11069,9 @@
 						"light",
 						"necromancy"
 					],
-					"trigger": "A living creature ends its turn in area A11 at night",
+					"trigger": "A living creature ends its turn in area {@b A11} at night",
 					"entries": [
-						"A ghastly image of Belcorra, seemingly composed of fresh blood, rises from the bloodstain on the floor and rotates in place like a lighthouse. Beams of cold blue light shine from Belcorra's eyes and open mouth, causing blisters and decay to spread across flesh. Living creatures within a 30-foot burst from the center of area A11 must attempt a DC 20 Fortitude save. The haunt then rolls initiative.",
+						"A ghastly image of Belcorra, seemingly composed of fresh blood, rises from the bloodstain on the floor and rotates in place like a lighthouse. Beams of cold blue light shine from Belcorra's eyes and open mouth, causing blisters and decay to spread across flesh. Living creatures within a 30-foot burst from the center of area {@b A11} must attempt a DC 20 Fortitude save. The haunt then rolls initiative.",
 						{
 							"type": "successDegree",
 							"entries": {
@@ -6886,7 +11086,7 @@
 				}
 			],
 			"routine": [
-				"(1 action) The bloody image opens its mouth and appears to inhale, drawing blood from the body of one creature in its line of sight within 90 feet from the center of area A11. The creature targeted must attempt a DC 20 Fortitude save.",
+				"(1 action) The bloody image opens its mouth and appears to inhale, drawing blood from the body of one creature in its line of sight within 90 feet from the center of area {@b A11}. The creature targeted must attempt a DC 20 Fortitude save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -6906,7 +11106,7 @@
 				}
 			],
 			"reset": [
-				"If the haunt is disabled or destroyed through damage, the bloody phantom of Belcorra sprays upward in a spiral, dousing the trap door leading to area A25 before draining upward through the keyhole, which reduces the {@skill Thievery} DC to {@action Pick a Lock||Pick the Lock} to 20. At the next sunrise, the blood drains back down to this room and the haunt resets. The haunt is destroyed permanently once Lasda Venkervale is rescued from area D9."
+				"If the haunt is disabled or destroyed through damage, the bloody phantom of Belcorra sprays upward in a spiral, dousing the trap door leading to area {@b A25} before draining upward through the keyhole, which reduces the {@skill Thievery} DC to {@action Pick a Lock||Pick the Lock} to 20. At the next sunrise, the blood drains back down to this room and the haunt resets. The haunt is destroyed permanently once Lasda Venkervale is rescued from area {@b D9}."
 			]
 		},
 		{
@@ -7458,7 +11658,7 @@
 					},
 					"trigger": "Two or more creatures stand on the trapped spaces",
 					"entries": [
-						"One round after the trap is triggered, all creatures in the room fall 40 feet down the shaft to area E36, taking 20 bludgeoning damage from the fall plus {@damage 2d6} piercing damage as they land in the spiked pit. The creatures can {@action Grab an Edge} to snag the hammock or one of the hanging storage containers to avoid falling. The DC to {@action Climb} the walls or {@action Grab an Edge} is 20."
+						"One round after the trap is triggered, all creatures in the room fall 40 feet down the shaft to area {@b E36}, taking 20 bludgeoning damage from the fall plus {@damage 2d6} piercing damage as they land in the spiked pit. The creatures can {@action Grab an Edge} to snag the hammock or one of the hanging storage containers to avoid falling. The DC to {@action Climb} the walls or {@action Grab an Edge} is 20."
 					],
 					"name": "Flush"
 				}
@@ -7618,7 +11818,7 @@
 				}
 			],
 			"reset": [
-				"The trap deactivates and resets 1 minute after no creatures are in area C7."
+				"The trap deactivates and resets 1 minute after no creatures are in area {@b C7}."
 			]
 		},
 		{
@@ -7813,7 +12013,7 @@
 						"unit": "reaction"
 					},
 					"trigger": "The Rumormonger or the Inkmaster enters the room",
-					"effect": [
+					"entries": [
 						"The trap rolls initiative"
 					],
 					"name": "Arm Activation"
@@ -7844,7 +12044,7 @@
 						"unit": "action"
 					},
 					"entries": [
-						"The metal hatch opens and the arms deposit a {@condition grabbed} Medium or smaller creature into the hole. The creature becomes caught in the gears (see Caught in Gears on page 54) for 1 round before emerging in area K5."
+						"The metal hatch opens and the arms deposit a {@condition grabbed} Medium or smaller creature into the hole. The creature becomes caught in the gears (see Caught in Gears on page 54) for 1 round before emerging in area {@b K5}."
 					],
 					"type": "ability",
 					"name": "Open Hatch"
@@ -8524,7 +12724,7 @@
 						"conjuration",
 						"teleportation"
 					],
-					"trigger": "A non-evil creature is reflected in the mirror.",
+					"trigger": "A non-evil creature is reflected in the mirror",
 					"entries": [
 						"The mirror absorbs the creature into the mirror, replacing it with an evil mirror duplicate (DC 34 Reflex to avoid being absorbed into the mirror), and rolls initiative."
 					],
@@ -8695,7 +12895,7 @@
 			]
 		},
 		{
-			"name": "Doom Of Tomorrow",
+			"name": "Doom of Tomorrow",
 			"source": "AV1",
 			"page": 31,
 			"level": 3,
@@ -8874,7 +13074,7 @@
 							"items": [
 								{
 									"type": "item",
-									"name": "Black Eye Beam (area A5)",
+									"name": "Black Eye Beam (area {@b A5})",
 									"entries": [
 										"({@trait incapacitation}) DC 24 Fortitude save.",
 										{
@@ -8890,7 +13090,7 @@
 								},
 								{
 									"type": "item",
-									"name": "Blue Eye Beam (area A7)",
+									"name": "Blue Eye Beam (area {@b A7})",
 									"entries": [
 										"({@trait incapacitation}) DC 24 Fortitude save.",
 										{
@@ -8906,14 +13106,14 @@
 								},
 								{
 									"type": "item",
-									"name": "Green Eye Beam (area A8)",
+									"name": "Green Eye Beam (area {@b A8})",
 									"entries": [
 										"({@trait poison}) {@damage 6d6} poison damage (DC 24 basic Reflex save)."
 									]
 								},
 								{
 									"type": "item",
-									"name": "Indigo Eye Beam (area A9)",
+									"name": "Indigo Eye Beam (area {@b A9})",
 									"entries": [
 										"({@trait incapacitation}) DC 24 Will save.",
 										{
@@ -8929,28 +13129,28 @@
 								},
 								{
 									"type": "item",
-									"name": "Yellow Eye Beam (area A12)",
+									"name": "Yellow Eye Beam (area {@b A12})",
 									"entries": [
 										"({@trait electricity}) {@damage 6d6} electricity damage (DC 24 basic Reflex save)."
 									]
 								},
 								{
 									"type": "item",
-									"name": "Orange Eye Beam (area A15)",
+									"name": "Orange Eye Beam (area {@b A15})",
 									"entries": [
 										"({@trait acid}) {@damage 6d6} acid damage (DC 24 basic Reflex save)."
 									]
 								},
 								{
 									"type": "item",
-									"name": "Red Eye Beam (area A16)",
+									"name": "Red Eye Beam (area {@b A16})",
 									"entries": [
 										"({@trait fire}) {@damage 6d6} fire damage (DC 24 basic Reflex save)."
 									]
 								},
 								{
 									"type": "item",
-									"name": "Violet Eye Beam (area A9)",
+									"name": "Violet Eye Beam (area {@b A9})",
 									"entries": [
 										"({@trait incapacitation}) DC 24 Will save.",
 										{
@@ -9250,7 +13450,7 @@
 			]
 		},
 		{
-			"name": "Echoes Of Betrayal",
+			"name": "Echoes of Betrayal",
 			"source": "AoA4",
 			"page": 53,
 			"level": 16,
@@ -9318,7 +13518,7 @@
 			]
 		},
 		{
-			"name": "Echoes Of Faith",
+			"name": "Echoes of Faith",
 			"source": "EC2",
 			"page": 29,
 			"level": 6,
@@ -9387,6 +13587,11 @@
 		{
 			"name": "Electric Latch Rune",
 			"source": "CRB",
+			"otherSources": {
+				"Reprinted": [
+					"DaLl|7"
+				]
+			},
 			"page": 523,
 			"level": 3,
 			"traits": [
@@ -10142,7 +14347,7 @@
 			]
 		},
 		{
-			"name": "Field Of Opposition",
+			"name": "Field of Opposition",
 			"source": "AoE6",
 			"page": 53,
 			"level": 20,
@@ -10211,7 +14416,7 @@
 				{
 					"entries": [
 						"A mirror duplicate rolls initiative with a +45 modifier. It uses the same statistics as the original creature, but with a +2 status bonus to AC, attacks, and saving throws. The duplicate is evil, and any abilities reliant on alignment change accordingly. The duplicate is also aggressive, attacking and taking other {@condition hostile} actions available to it against anyone other than mirror duplicates. It has three actions and one reaction and can use any of the original creature's abilities. Any limited-use abilities (such as spell slots) are based on what the original had when duplicated and are used up separately from the original creature's. The duplicate also has duplicates of the creature's worn and held items, but not consumables.",
-						"A duplicate is destroyed when reduced to 0 HP, when the trap is disabled or destroyed, or when the duplicate leaves area E2. Its duplicated items disappear when they leave its grip, though they last long enough for ranged {@action Strike||Strikes}."
+						"A duplicate is destroyed when reduced to 0 HP, when the trap is disabled or destroyed, or when the duplicate leaves area {@b E2}. Its duplicated items disappear when they leave its grip, though they last long enough for ranged {@action Strike||Strikes}."
 					],
 					"name": "Mirror Duplicate"
 				}
@@ -10528,7 +14733,7 @@
 								"Critical Success": "The creature is unaffected.",
 								"Success": "The creature takes {@damage 3d10+5} cold damage.",
 								"Failure": "The creature takes {@damage 6d10+10} cold damage and is {@condition slowed|CRB|slowed 1} for {@dice 1d4} rounds.",
-								"Critical Failure": "The creature takes {@damage 12d10+20} cold damage and is {@condition slowed|CRB|slowed 1} for 1 minute. Additionally, the golems in area B10 become aware of the intruders. The golems activate and come to this room to attack, if they haven't been destroyed already."
+								"Critical Failure": "The creature takes {@damage 12d10+20} cold damage and is {@condition slowed|CRB|slowed 1} for 1 minute. Additionally, the golems in area {@b B10} become aware of the intruders. The golems activate and come to this room to attack, if they haven't been destroyed already."
 							}
 						}
 					],
@@ -10699,7 +14904,7 @@
 					},
 					"trigger": "A creature opens one of the drawers",
 					"entries": [
-						"The door to the room slams shut and locks and the trap rolls initiative. (The trap can also be triggered manually or disarmed from area E30.)"
+						"The door to the room slams shut and locks and the trap rolls initiative. (The trap can also be triggered manually or disarmed from area {@b E30}.)"
 					],
 					"name": "Toxic Gas"
 				}
@@ -10708,7 +14913,7 @@
 				"{@as 1} Each round on its initiative count, the trap pumps more toxic gas into the room. Any breathing creature in the room takes {@damage 4d6} poison damage (a successful DC 22 Fortitude save halves the damage taken). If a creature acts before the trap on the first round, it has the option of holding its breath to postpone taking damage from the trap\u2014holding one's breath after the trap's first action has no effect, since the air in the creature's lungs is already tainted. Locating and blocking one of the {@condition hidden} gas vents reduces the poison damage by {@dice 1d6}\u2014if all four are blocked, the trap is disabled, though the door remains locked. Otherwise, the trap functions for 1 minute before all the gas is expended and characters in the room cease taking damage, after which the trap ventilates the room for 1 additional minute."
 			],
 			"reset": [
-				"The trap must be manually rearmed by unblocking the vents or replacing the poison gas tank in area E30."
+				"The trap must be manually rearmed by unblocking the vents or replacing the poison gas tank in area {@b E30}."
 			]
 		},
 		{
@@ -11120,7 +15325,7 @@
 			]
 		},
 		{
-			"name": "Hammer Of Forbiddance",
+			"name": "Hammer of Forbiddance",
 			"source": "CRB",
 			"page": 525,
 			"level": 11,
@@ -11209,7 +15414,7 @@
 			]
 		},
 		{
-			"name": "Hands Of The Forgotten",
+			"name": "Hands of the Forgotten",
 			"source": "AoE2",
 			"page": 37,
 			"level": 8,
@@ -11307,7 +15512,7 @@
 					},
 					"trigger": "A creature walks onto the trapdoor",
 					"entries": [
-						"The triggering creature falls 30 feet down the shaft to area E33, taking 15 bludgeoning damage and landing {@condition prone} in the ochre jelly's pit. The creature can {@action Grab an Edge} to avoid falling. The DC to {@action Climb} the walls or {@action Grab an Edge} is 22."
+						"The triggering creature falls 30 feet down the shaft to area {@b E33}, taking 15 bludgeoning damage and landing {@condition prone} in the ochre jelly's pit. The creature can {@action Grab an Edge} to avoid falling. The DC to {@action Climb} the walls or {@action Grab an Edge} is 22."
 					],
 					"name": "Pitfall"
 				}
@@ -11379,7 +15584,7 @@
 			]
 		},
 		{
-			"name": "Host Of Spirits",
+			"name": "Host of Spirits",
 			"source": "EC5",
 			"page": 27,
 			"level": 18,
@@ -11509,7 +15714,7 @@
 			]
 		},
 		{
-			"name": "Images Of Failure",
+			"name": "Images of Failure",
 			"source": "AV3",
 			"page": 55,
 			"level": 12,
@@ -11554,7 +15759,7 @@
 			]
 		},
 		{
-			"name": "Images Of Powerlessness",
+			"name": "Images of Powerlessness",
 			"source": "AV3",
 			"page": 55,
 			"level": 12,
@@ -11686,7 +15891,7 @@
 				"minProf": "master"
 			},
 			"description": [
-				"Steel hatch doors automatically lock shut in each of the four vats labeled J2. Four ink spouts (one per vat) jut through a narrow aperture in the ceiling of each vat, 20 feet above."
+				"Steel hatch doors automatically lock shut in each of the four vats labeled {@b J2}. Four ink spouts (one per vat) jut through a narrow aperture in the ceiling of each vat, 20 feet above."
 			],
 			"disable": {
 				"entries": [
@@ -12035,7 +16240,7 @@
 				"minProf": "expert"
 			},
 			"description": [
-				"The haze conceals a rune that summons a krooth in front of the door to area B10."
+				"The haze conceals a rune that summons a krooth in front of the door to area {@b B10}."
 			],
 			"disable": {
 				"entries": [
@@ -12588,7 +16793,7 @@
 			]
 		},
 		{
-			"name": "Masks Of Aroden's Guises",
+			"name": "Masks of Aroden's Guises",
 			"source": "EC2",
 			"page": 37,
 			"level": 10,
@@ -12662,7 +16867,7 @@
 			]
 		},
 		{
-			"name": "Maze Of Mirrors",
+			"name": "Maze of Mirrors",
 			"source": "EC2",
 			"page": 56,
 			"level": 9,
@@ -12907,7 +17112,7 @@
 			],
 			"disable": {
 				"entries": [
-					"DC 33 {@skill Thievery} (master) on each stair to disable its spring, or deactivate the switch in area C8 to deactivate the whole trap. Cutting the wire on the topmost stair (DC 35 to the Device) that connects the staircase to the control switch prevents the control switch from turning the trap on or off."
+					"DC 33 {@skill Thievery} (master) on each stair to disable its spring, or deactivate the switch in area {@b C8} to deactivate the whole trap. Cutting the wire on the topmost stair (DC 35 to the Device) that connects the staircase to the control switch prevents the control switch from turning the trap on or off."
 				]
 			},
 			"defenses": {
@@ -12976,7 +17181,7 @@
 				}
 			],
 			"reset": [
-				"If deactivated via the switch, the trap can be reactivated with the switch in area C8."
+				"If deactivated via the switch, the trap can be reactivated with the switch in area {@b C8}."
 			]
 		},
 		{
@@ -13115,7 +17320,7 @@
 					],
 					"trigger": "A non-devil creature moves into the light",
 					"entries": [
-						"The light expands to fill the room, and each nondevil creature within the room must attempt a DC 26 Will save. A high-pitched chime sounds in the barracks (area D15), audible in this room as well. The trap then rolls initiative.",
+						"The light expands to fill the room, and each nondevil creature within the room must attempt a DC 26 Will save. A high-pitched chime sounds in the barracks (area {@b D15}), audible in this room as well. The trap then rolls initiative.",
 						{
 							"type": "successDegree",
 							"entries": {
@@ -13317,7 +17522,7 @@
 					},
 					"trigger": "A creature walks onto the trapdoor",
 					"entries": [
-						"Anyone within 10 feet of the room's northern wall falls 40 feet down the shaft to area E33, taking 20 bludgeoning damage and landing {@condition prone} in the ochre jelly's pit. The victims can {@action Grab an Edge} to avoid falling. The DC to {@action Grab an Edge} is 20; the DC to {@action Climb} the walls is 22."
+						"Anyone within 10 feet of the room's northern wall falls 40 feet down the shaft to area {@b E33}, taking 20 bludgeoning damage and landing {@condition prone} in the ochre jelly's pit. The victims can {@action Grab an Edge} to avoid falling. The DC to {@action Grab an Edge} is 20; the DC to {@action Climb} the walls is 22."
 					],
 					"name": "Pitfall and Plunger"
 				}
@@ -14164,7 +18369,7 @@
 						"mental",
 						"occult"
 					],
-					"trigger": "A creature remains in area B3 for longer than 1 round",
+					"trigger": "A creature remains in area {@b B3} for longer than 1 round",
 					"entries": [
 						"Each creature in the sealed room is targeted by nightmare (DC 30 Will save). The haunt counts as having met the targets. It then rolls initiative."
 					],
@@ -14172,10 +18377,10 @@
 				}
 			],
 			"routine": [
-				"{@as 2} The haunts casts phantasmal killer (DC 30 Will save) on a random creature who can see Currew's bed (it can even target creatures outside of area B3, so long as the target can see the bed). Everyone affected by the phantasmal killer sees the same image: a sickly old man lies in the bed, screaming and ranting about his guilt, shame, and eventual death."
+				"{@as 2} The haunts casts phantasmal killer (DC 30 Will save) on a random creature who can see Currew's bed (it can even target creatures outside of area {@b B3}, so long as the target can see the bed). Everyone affected by the phantasmal killer sees the same image: a sickly old man lies in the bed, screaming and ranting about his guilt, shame, and eventual death."
 			],
 			"reset": [
-				"The haunt grows quiet and resets 1 minute after no creatures are in area B3."
+				"The haunt grows quiet and resets 1 minute after no creatures are in area {@b B3}."
 			]
 		},
 		{
@@ -14743,10 +18948,10 @@
 					},
 					"entries": [
 						"The blades travel erratically throughout the hallway's branches, out of sight under the floors or behind the walls. For each blade, roll {@dice 1d4} to determine the region in which it next makes scythe {@action Strike||Strikes}. A creature can {@action Seek} (DC 22) to learn clues about blades in the region they're currently occupying. On a success, the creature knows how many blades are currently in its region.",
-						"1. Main intersection (the 15-foot-by-25-foot area where the hallways connect, as marked on area B20)",
-						"2. North branch (from the main intersection to the secret door to area B14)",
-						"3. Central hall (from the main intersection to the secret door to area B24)",
-						"4. South branch (from the main intersection to the wall shared with area B25)"
+						"1. Main intersection (the 15-foot-by-25-foot area where the hallways connect, as marked on area {@b B20})",
+						"2. North branch (from the main intersection to the secret door to area {@b B14})",
+						"3. Central hall (from the main intersection to the secret door to area {@b B24})",
+						"4. South branch (from the main intersection to the wall shared with area {@b B25})"
 					],
 					"name": "Scythe Shuffle"
 				}
@@ -14769,7 +18974,7 @@
 				}
 			],
 			"reset": [
-				"The trap resets when no creatures remain in area B20. Damaged or destroyed blades aren't repaired when the trap resets."
+				"The trap resets when no creatures remain in area {@b B20}. Damaged or destroyed blades aren't repaired when the trap resets."
 			]
 		},
 		{
@@ -15531,7 +19736,7 @@
 					],
 					"trigger": "A creature enters a square either fully or partially filled with rubble in the middle of the room",
 					"entries": [
-						"Six ghostly kobolds surge out of the rubble with eerie yowls. Each creature in area A7 must attempt a DC 18 Will save with the following results. The haunt then rolls initiative.",
+						"Six ghostly kobolds surge out of the rubble with eerie yowls. Each creature in area {@b A7} must attempt a DC 18 Will save with the following results. The haunt then rolls initiative.",
 						{
 							"type": "successDegree",
 							"entries": {
@@ -15546,10 +19751,10 @@
 				}
 			],
 			"routine": [
-				"(1 action) The spirits swoop together toward one creature in area A7 who's {@condition frightened}, instilling feelings of betrayal and confusion. The target takes {@damage 1d10+4} mental damage (DC 18 basic Will save)."
+				"(1 action) The spirits swoop together toward one creature in area {@b A7} who's {@condition frightened}, instilling feelings of betrayal and confusion. The target takes {@damage 1d10+4} mental damage (DC 18 basic Will save)."
 			],
 			"reset": [
-				"The haunt deactivates if there are no {@condition frightened} creatures in area A7 at the start of its turn. The ghostly kobolds return to the rubble pile. The haunt can't activate again for 1 hour."
+				"The haunt deactivates if there are no {@condition frightened} creatures in area {@b A7} at the start of its turn. The ghostly kobolds return to the rubble pile. The haunt can't activate again for 1 hour."
 			]
 		},
 		{
@@ -15605,7 +19810,7 @@
 					{
 						"amount": 20,
 						"name": "all damage",
-						"note": "except fire, force, {@item ghost touch}, or positive"
+						"note": "except {@trait fire}, force, {@item ghost touch}, or positive"
 					}
 				]
 			},
@@ -15797,7 +20002,7 @@
 			],
 			"disable": {
 				"entries": [
-					"DC 34 {@skill Thievery} (master) to disable a specific statue's rollers, or DC 39 {@skill Thievery} (master) on the control panel in A4 deactivates the whole trap. For each statue disabled, the trap loses 1 action from its routine and the DC for its predictive impediment ability decreases by 4. {@spell dispel magic} (7th level, counteract DC 32) doesn't harm the statues but removes the predictive impediment ability. Breaking the control panel prevents the trap from resetting."
+					"DC 34 {@skill Thievery} (master) to disable a specific statue's rollers, or DC 39 {@skill Thievery} (master) on the control panel in {@b A4} deactivates the whole trap. For each statue disabled, the trap loses 1 action from its routine and the DC for its predictive impediment ability decreases by 4. {@spell dispel magic} (7th level, counteract DC 32) doesn't harm the statues but removes the predictive impediment ability. Breaking the control panel prevents the trap from resetting."
 				]
 			},
 			"defenses": {
@@ -16218,7 +20423,7 @@
 			]
 		},
 		{
-			"name": "Tongues Of Flame",
+			"name": "Tongues of Flame",
 			"source": "TiO",
 			"page": 44,
 			"level": 5,
@@ -16404,7 +20609,7 @@
 			]
 		},
 		{
-			"name": "Tree Of Dreadful Dreams",
+			"name": "Tree of Dreadful Dreams",
 			"source": "AoA3",
 			"page": 11,
 			"level": 10,
@@ -17413,7 +21618,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; illusion, incapacitation, occult) The haunt continues to confound victims' senses and inspire them to commit violence against each other. Each creature in the haunt's area must attempt a DC 26 Will save.",
+				"(1 action; {@trait illusion}, {@trait incapacitation}, {@trait occult}) The haunt continues to confound victims' senses and inspire them to commit violence against each other. Each creature in the haunt's area must attempt a DC 26 Will save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -17659,7 +21864,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; auditory, enchantment, incapacitation, occult) The orchestra performs a raucous tune, compelling all creatures that can hear it to spend actions dancing.",
+				"(1 action; {@trait auditory}, {@trait enchantment}, {@trait incapacitation}, {@trait occult}) The orchestra performs a raucous tune, compelling all creatures that can hear it to spend actions dancing.",
 				"Each round, creature must attempt a DC 37 Will save; the results of this save modify the number of actions that the creature must spend dancing each round. If this would cause the creature to spend more actions dancing than it can use on its turn, the creature takes {@dice 10d6} damage (or double that on a critical failure) from moving faster than its body can manage.",
 				{
 					"type": "successDegree",
@@ -17887,7 +22092,7 @@
 			]
 		},
 		{
-			"name": "Vision Of Dahak",
+			"name": "Vision of Dahak",
 			"source": "AoA2",
 			"page": 10,
 			"level": 8,
@@ -18182,7 +22387,7 @@
 				]
 			},
 			"routine": [
-				"(1 action) The eye glances about, and those it can see (whether in area C4 or outside of it) take {@damage 4d6} mental damage (DC 21 basic Will save) as fears of being watched impart ripples of pain. A creature that takes mental damage from this effect doesn't reduce their {@condition frightened} value at the end of their next turn."
+				"(1 action) The eye glances about, and those it can see (whether in area {@b C4} or outside of it) take {@damage 4d6} mental damage (DC 21 basic Will save) as fears of being watched impart ripples of pain. A creature that takes mental damage from this effect doesn't reduce their {@condition frightened} value at the end of their next turn."
 			],
 			"reset": [
 				"The haunt becomes inert at the end of any round in which there are no {@condition frightened} creatures it can see.",
@@ -18458,7 +22663,7 @@
 			]
 		},
 		{
-			"name": "Wheel Of Misery",
+			"name": "Wheel of Misery",
 			"source": "CRB",
 			"page": 527,
 			"level": 6,
@@ -18571,7 +22776,7 @@
 			]
 		},
 		{
-			"name": "Wrath Of The Destroyer",
+			"name": "Wrath of the Destroyer",
 			"source": "AoA2",
 			"page": 57,
 			"level": 10,
@@ -19567,7 +23772,7 @@
 			]
 		},
 		{
-			"name": "Flood Of Spirits",
+			"name": "Flood of Spirits",
 			"source": "BotD",
 			"page": 67,
 			"level": 18,

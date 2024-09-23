@@ -498,10 +498,13 @@
 				],
 				"bot": [
 					{
-						"name": "Sneak Attack The",
+						"name": "Sneak Attack",
 						"entries": [
-							"Abendego priest deals an additional {@damage 2d6} precision damage to {@condition flat-footed} creatures."
-						]
+							"The Abendego priest deals an additional {@damage 2d6} precision damage to {@condition flat-footed} creatures."
+						],
+						"generic": {
+							"tag": "ability"
+						}
 					},
 					{
 						"name": "Steady Spellcasting",
@@ -712,7 +715,7 @@
 					}
 				]
 			},
-			"description": "male human gang leader",
+			"description": "male {@ancestry human} gang leader",
 			"defenses": {
 				"ac": {
 					"std": 34
@@ -893,34 +896,54 @@
 							"evocation"
 						],
 						"entries": [
-							"Bharlen unleashes crackling lightning in a 30-foot cone. Creatures in the area take {@damage 6d12} electricity damage ({@dc 30} basic Reflex save). Bharlen can use this ability once every {@dice 1d4} rounds.",
+							"Bharlen unleashes crackling lightning in a 30-foot cone. Creatures in the area take {@damage 6d12} electricity damage ({@dc 30} basic Reflex save). Bharlen can use this ability once every {@dice 1d4} rounds."
+						]
+					},
+					{
+						"name": "Sodden Strike",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
+						"traits": [
+							"conjuration",
+							"divine",
+							"water"
+						],
+						"entries": [
+							"Bharlen calls to the endless storm to lend murderous power to her blows. She makes a {@action Strike}; on a hit, seawater appears in the target's lungs and the target is {@condition sickened||sickened 1} ({@condition sickened||sickened 3} on a critical hit)."
+						]
+					},
+					{
+						"type": "affliction",
+						"name": "Graveknight's Curse",
+						"notes": [
+							"This curse affects anyone who wears a graveknight's armor for at least 1 hour"
+						],
+						"DC": 40,
+						"savingThrow": "Will",
+						"onset": "1 hour",
+						"stages": [
 							{
-								"type": "affliction",
-								"name": "Graveknight's Curse This curse affects anyone who wears a",
-								"notes": [
-									"Bharlen calls to the endless storm to lend murderous power to her blows. She makes a {@action Strike}; on a hit, seawater appears in the target's lungs and the target is {@condition sickened||sickened 1} ({@condition sickened||sickened 3} on a critical hit)."
-								],
-								"DC": 40,
-								"savingThrow": "Will",
-								"onset": "1 hour",
-								"stages": [
-									{
-										"stage": 1,
-										"entry": "{@condition doomed||doomed 1} and cannot remove the armor",
-										"duration": "1 day"
-									},
-									{
-										"stage": 2,
-										"entry": "{@condition doomed||doomed 2}, hampered 10, and cannot remove the armor",
-										"duration": "1 day"
-									},
-									{
-										"stage": 3,
-										"entry": "dies and transforms into the armor's graveknight. Ruinous Weapons Any weapons Bharlen wields gain the effects of the +1 striking and shock runes. Sodden {@action Strike} {@as 2}",
-										"duration": "conjuration, divine, water"
-									}
-								]
+								"stage": 1,
+								"entry": "{@condition doomed||doomed 1} and can't remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 2,
+								"entry": "{@condition doomed||doomed 2}, hampered 10, and can't remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 3,
+								"entry": "dies and transforms into the armor's graveknight"
 							}
+						]
+					},
+					{
+						"name": "Ruinous Weapons",
+						"entries": [
+							"Any weapon or unarmed attack Bharlen uses gains the effects of the +1 greater striking and greater shock weapon runes."
 						]
 					},
 					{
@@ -987,10 +1010,7 @@
 				},
 				{
 					"name": "tremorsense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -2273,10 +2293,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				}
 			],
@@ -2529,10 +2546,7 @@
 				},
 				{
 					"name": "poison sense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -2722,10 +2736,7 @@
 				},
 				{
 					"name": "poison sense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -3005,7 +3016,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Norgorberite spy Interacts to draw a weapon, then {@action Strike||Strikes} with that weapon."
+							"The Norgorberite spy {@action Interact||Interacts} to draw a weapon, then {@action Strike||Strikes} with that weapon."
 						],
 						"generic": {
 							"tag": "feat",
@@ -3013,10 +3024,13 @@
 						}
 					},
 					{
-						"name": "Sneak Attack The",
+						"name": "Sneak Attack",
 						"entries": [
-							"Norgorberite spy deals an additional {@damage 4d6} precision damage to {@condition flat-footed} creatures or creatures within reach of at least two of their allies."
-						]
+							"The Norgorberite spy deals an additional {@damage 4d6} precision damage to {@condition flat-footed} creatures or creatures within reach of at least two of their allies."
+						],
+						"generic": {
+							"tag": "ability"
+						}
 					},
 					{
 						"name": "Surprise Attack",
@@ -4346,7 +4360,7 @@
 					}
 				]
 			},
-			"description": "Male halfling treasure hunter",
+			"description": "Male {@ancestry halfling} treasure hunter",
 			"defenses": {
 				"ac": {
 					"std": 28

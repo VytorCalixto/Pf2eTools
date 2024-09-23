@@ -3204,10 +3204,7 @@
 						"entries": [
 							"30 feet. A swirling vortex of reflected color and light shimmers around the crystal dragon. Creatures in this aura's emanation are {@condition dazzled}. Each creature that ends its turn in the emanation must succeed at a {@dc 34} Will saving throw or be {@condition stunned 1} (or {@condition stunned 3} on a critical failure). Once a creature succeeds at this save, it is temporarily immune to the stunning effect for 1 minute. The crystal dragon can turn this aura on or off using a single action, which has the {@trait concentrate} trait, and it can choose not to affect allies."
 						],
-						"name": "Scintillating Aura",
-						"generic": {
-							"tag": "ability"
-						}
+						"name": "Scintillating Aura"
 					},
 					{
 						"activity": {
@@ -4141,7 +4138,13 @@
 				"languages": [
 					"aklo",
 					"common",
-					"sylvan (can't speak any"
+					"sylvan"
+				],
+				"abilities": [
+					"telepathy 100 feet"
+				],
+				"notes": [
+					"(can't speak any languages)"
 				]
 			},
 			"skills": {
@@ -5627,7 +5630,7 @@
 			"skills": {
 				"athletics": {
 					"std": 20,
-					"to Swim": 6
+					"to {@action Swim}": 6
 				},
 				"stealth": {
 					"std": 18
@@ -6760,7 +6763,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -8001,7 +8004,7 @@
 				},
 				"athletics": {
 					"std": 6,
-					"to Leap or Swim": 9
+					"to {@action Leap} or Swim": 9
 				},
 				"stealth": {
 					"std": 7
@@ -9028,7 +9031,7 @@
 							"necromancy",
 							"negative"
 						],
-						"note": "This affliction can't be reduced below stage 1, nor can the damage from it be healed, until it's successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by bog rot melts into a noxious sludge and can't be resurrected except by a 7th-level resurrect ritual or similar magic",
+						"note": "This affliction can't be reduced below stage 1, nor can the damage from it be healed, until it's successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by bog rot melts into a noxious sludge and can't be resurrected except by a 7th-level {@ritual resurrect} ritual or similar magic",
 						"DC": 21,
 						"savingThrow": "Fortitude",
 						"stages": [
@@ -9122,7 +9125,7 @@
 			"skills": {
 				"athletics": {
 					"std": 8,
-					"to Leap while Water {@action Stride||Striding} or Swimming": 10
+					"to {@action Leap} while Water Striding or {@action Swim||Swimming}": 10
 				},
 				"stealth": {
 					"std": 8
@@ -9677,7 +9680,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -12920,7 +12923,7 @@
 			"skills": {
 				"athletics": {
 					"std": 9,
-					"to Grapple": 11
+					"to {@action Grapple}": 11
 				},
 				"stealth": {
 					"std": 9
@@ -13045,7 +13048,7 @@
 			"skills": {
 				"acrobatics": {
 					"std": 9,
-					"to Leap": 11
+					"to {@action Leap}": 11
 				},
 				"stealth": {
 					"std": 9
@@ -13442,9 +13445,9 @@
 					},
 					{
 						"entries": [
-							"Coil spy's {@action Strike||Strikes} deal an extra {@damage 2d6} precision damage to {@condition flat-footed} creatures."
+							"The Coil spy's {@action Strike||Strikes} deal an extra {@damage 2d6} precision damage to {@condition flat-footed} creatures."
 						],
-						"name": "Sneak Attack The"
+						"name": "Sneak Attack"
 					}
 				]
 			},
@@ -14590,7 +14593,7 @@
 			}
 		},
 		{
-			"name": "Denizen Of Leng",
+			"name": "Denizen of Leng",
 			"source": "B2",
 			"page": 70,
 			"level": 8,
@@ -14613,7 +14616,7 @@
 					"aklo"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -20933,7 +20936,7 @@
 				},
 				"stealth": {
 					"std": 10,
-					"to Hide": 13
+					"to {@action Hide}": 13
 				}
 			},
 			"abilityMods": {
@@ -21364,7 +21367,7 @@
 			"skills": {
 				"acrobatics": {
 					"std": 10,
-					"to Maneuver in Flight": 12
+					"to {@action Maneuver in Flight}": 12
 				},
 				"athletics": {
 					"std": 12
@@ -21718,7 +21721,7 @@
 				},
 				"athletics": {
 					"std": 6,
-					"to High Jump or Long Jump": 10
+					"to {@action High Jump} or Long Jump": 10
 				},
 				"stealth": {
 					"std": 7
@@ -23066,7 +23069,7 @@
 			"skills": {
 				"athletics": {
 					"std": 9,
-					"to High Jump or Long Jump": 11
+					"to {@action High Jump} or Long Jump": 11
 				},
 				"stealth": {
 					"std": 6
@@ -26528,7 +26531,7 @@
 							"attack"
 						],
 						"entries": [
-							"The hippopotamus tries to capsize an adjacent aquatic vessel of its size or smaller. The hippopotamus must succeed at an {@skill Athletics} check with a DC of 25 (reduced by 5 for each size smaller the vessel is than the hippo) or the pilot's {@skill Lore|Sailing Lore} DC, whichever is higher."
+							"The hippopotamus tries to capsize an adjacent aquatic vessel of its size or smaller. The hippopotamus must succeed at an {@skill Athletics} check with a DC of 25 (reduced by 5 for each size smaller the vessel is than the hippo) or the pilot's {@skill Lore||Sailing Lore} DC, whichever is higher."
 						],
 						"name": "Capsize"
 					},
@@ -26755,7 +26758,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -26933,7 +26936,7 @@
 			}
 		},
 		{
-			"name": "Hound Of Tindalos",
+			"name": "Hound of Tindalos",
 			"source": "B2",
 			"page": 146,
 			"level": 7,
@@ -26972,7 +26975,7 @@
 				},
 				"survival": {
 					"std": 13,
-					"to Track": 17
+					"to {@action Track}": 17
 				}
 			},
 			"abilityMods": {
@@ -28253,7 +28256,7 @@
 					"protean"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -30047,36 +30050,27 @@
 								]
 							}
 						],
-						"name": "Burble",
-						"generic": {
-							"tag": "ability"
-						}
+						"name": "Burble"
 					},
 					{
 						"entries": [
 							"If the jabberwock makes a jaws attack and rolls a natural 19 on the d20 roll, the attack is a critical hit. This has no effect if the 19 would be a failure."
 						],
-						"name": "Jaws That Bite",
-						"generic": {
-							"tag": "ability"
-						}
+						"name": "Jaws That Bite"
 					},
 					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"trigger": "The jabberwock Flies or makes a wing {@action Strike};",
+						"trigger": "The jabberwock Flies or makes a wing {@action Strike}",
 						"entries": [
 							"The jabberwock's wings whiffle, creating severe winds within a 30-foot emanation. These winds move outward from the jabberwock, and they persist until the start of the jabberwock's next turn. During this time, flight of any kind in the emanation requires a successful {@dc 43} {@skill Acrobatics} check to {@action Maneuver in Flight}, and creatures flying toward the jabberwock are moving through greater difficult terrain. Creatures on the ground in the emanation must succeed at a {@dc 43} {@skill Athletics} check to approach the jabberwock."
 						],
 						"traits": [
 							"aura"
 						],
-						"name": "Whiffling",
-						"generic": {
-							"tag": "ability"
-						}
+						"name": "Whiffling"
 					}
 				]
 			},
@@ -31007,7 +31001,7 @@
 					"aklo"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -32590,7 +32584,7 @@
 			}
 		},
 		{
-			"name": "Lurker In Light",
+			"name": "Lurker in Light",
 			"source": "B2",
 			"page": 169,
 			"level": 5,
@@ -34485,7 +34479,7 @@
 			}
 		},
 		{
-			"name": "Melody On The Wind",
+			"name": "Melody on the Wind",
 			"foundIn": [
 				"Jalmeray",
 				"Nex"
@@ -34903,7 +34897,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"A living creature slain by a mohrg that had a lower level than the mohrg rises as a mohrg spawn after {@dice 1d4} rounds, on its turn. This mohrg spawn is under the command of the mohrg that created it. If the creator of the mohrg spawn is destroyed, the mohrg spawn is destroyed as well, immediately collapsing into a pile of decayed flesh and bones."
+							"A living creature slain by a mohrg that had a lower level than the mohrg rises as a {@creatureTemplate mohrg spawn|B2} after {@dice 1d4} rounds, on its turn. This {@creatureTemplate mohrg spawn|B2} is under the command of the mohrg that created it. If the creator of the {@creatureTemplate mohrg spawn|B2} is destroyed, the {@creatureTemplate mohrg spawn|B2} is destroyed as well, immediately collapsing into a pile of decayed flesh and bones."
 						],
 						"name": "Mohrg Spawn"
 					}
@@ -34991,7 +34985,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -35586,7 +35580,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -36910,7 +36904,7 @@
 			"skills": {
 				"athletics": {
 					"std": 12,
-					"to Swim": 18
+					"to {@action Swim}": 18
 				},
 				"deception": {
 					"std": 20
@@ -37229,7 +37223,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -40981,7 +40975,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -45816,7 +45810,7 @@
 			"skills": {
 				"athletics": {
 					"std": 2,
-					"to Swim": 6
+					"to {@action Swim}": 6
 				},
 				"stealth": {
 					"std": 5
@@ -46149,7 +46143,7 @@
 				},
 				"stealth": {
 					"std": 21,
-					"to Hide in dim light": 23
+					"to {@action Hide} in dim light": 23
 				}
 			},
 			"abilityMods": {
@@ -47681,7 +47675,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -48091,7 +48085,13 @@
 				"bot": [
 					{
 						"entries": [
-							"[(move, electricity, primal, transmutation) The spark bat transforms into lightning that arcs to a large piece of metal within 100 feet, such as a suit of metal armor or a metal weapon. The bat then returns to its normal form in a space adjacent to the metal. This movement doesn't trigger reactions."
+							"The spark bat transforms into lightning that arcs to a large piece of metal within 100 feet, such as a suit of metal armor or a metal weapon. The bat then returns to its normal form in a space adjacent to the metal. This movement doesn't trigger reactions."
+						],
+						"traits": [
+							"move",
+							"electricity",
+							"primal",
+							"transmutation"
 						],
 						"name": "Arc Lightning"
 					}
@@ -48433,7 +48433,7 @@
 				},
 				"athletics": {
 					"std": 23,
-					"to Swim": 25
+					"to {@action Swim}": 25
 				}
 			},
 			"abilityMods": {
@@ -49525,7 +49525,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -53507,7 +53507,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -55494,7 +55494,7 @@
 					"infernal"
 				],
 				"abilities": [
-					"speak with animals",
+					"{@spell speak with animals}",
 					"speak with"
 				]
 			},
@@ -56818,10 +56818,17 @@
 							"enchantment",
 							"mental"
 						],
+						"generic": {
+							"tag": "ability",
+							"source": "B1"
+						},
 						"name": "Children of the Night"
 					},
 					{
-						"name": "Swift Tracker"
+						"name": "Swift Tracker",
+						"entries": [
+							"The vrykolakas moves at full Speed while {@action Track||Tracking}."
+						]
 					}
 				],
 				"mid": [
@@ -56837,7 +56844,11 @@
 						"name": "Pestilential Aura"
 					},
 					{
-						"name": "Vrykolakas Vulnerabilities"
+						"name": "Vrykolakas Vulnerabilities",
+						"generic": {
+							"tag": "ability",
+							"source": "B2"
+						}
 					},
 					{
 						"activity": {
@@ -56880,6 +56891,10 @@
 							"downtime",
 							"necromancy"
 						],
+						"generic": {
+							"tag": "ability",
+							"source": "B1"
+						},
 						"name": "Create Spawn"
 					},
 					{
@@ -57077,10 +57092,17 @@
 							"enchantment",
 							"mental"
 						],
+						"generic": {
+							"tag": "ability",
+							"source": "B1"
+						},
 						"name": "Children of the Night"
 					},
 					{
-						"name": "Swift Tracker"
+						"name": "Swift Tracker",
+						"entries": [
+							"The vrykolakas moves at full Speed while {@action Track||Tracking}."
+						]
 					}
 				],
 				"mid": [
@@ -57096,7 +57118,11 @@
 						"name": "Pestilential Aura"
 					},
 					{
-						"name": "Vrykolakas Vulnerabilities"
+						"name": "Vrykolakas Vulnerabilities",
+						"generic": {
+							"tag": "ability",
+							"source": "B2"
+						}
 					},
 					{
 						"activity": {
@@ -57237,7 +57263,11 @@
 			"abilities": {
 				"mid": [
 					{
-						"name": "Vrykolakas Vulnerabilities"
+						"name": "Vrykolakas Vulnerabilities",
+						"generic": {
+							"tag": "ability",
+							"source": "B2"
+						}
 					},
 					{
 						"activity": {
@@ -57961,6 +57991,9 @@
 							"primal",
 							"transmutation"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Moon Frenzy"
 					}
 				]
@@ -58145,6 +58178,9 @@
 							"primal",
 							"transmutation"
 						],
+						"generic": {
+							"tag": "ability"
+						},
 						"name": "Moon Frenzy"
 					},
 					{
@@ -58497,7 +58533,7 @@
 					"one or more planar languages"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -58869,7 +58905,7 @@
 					"sylvan"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {

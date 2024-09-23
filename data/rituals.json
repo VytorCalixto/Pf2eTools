@@ -1,6 +1,809 @@
 {
 	"ritual": [
 		{
+			"name": "Drain Planar connection",
+			"source": "WoW2",
+			"page": 60,
+			"level": 5,
+			"traits": [
+				"unique"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "six sets of rare herbs, each worth a total of 50 gp",
+			"secondaryCasters": {
+				"number": 5
+			},
+			"primaryCheck": {
+				"skills": [
+					"Nature"
+				],
+				"prof": "master",
+				"entry": " DC 31 Nature (master)"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Diplomacy",
+					"Nature",
+					"Occultism"
+				],
+				"entry": "DC 26 {@skill Diplomacy} or {@skill Nature} or {@skill Occultism}"
+			},
+			"entries": [
+				"You draw the planar energy from Idyllis, through the ley lines, and into the six latticework spheres.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You sever Idyllis's connection to the {@plane Plane of Wood|RoE} permanently.",
+						"Success": "You sever Idyllis's connection to the {@plane Plane of Wood|RoE} for 10 years.",
+						"Failure": "You sever Idyllis's connection to the {@plane Plane of Wood|RoE} for 1 year, but the ritual backfires, dealing {@damage 4d12+26} force damage to all secondary casters (DC 26 basic Reflex save)\u2014this damage kills Madge.",
+						"Critical Failure": "The ritual backfires as a failure but doesn't sever Idyllis's connection."
+					}
+				}
+			]
+		},
+		{
+			"name": "Commune with Corazal",
+			"source": "WoW1",
+			"page": 31,
+			"level": 4,
+			"traits": [
+				"unique"
+			],
+			"cast": {
+				"number": 4,
+				"unit": "hour"
+			},
+			"secondaryCasters": {
+				"number": 3
+			},
+			"primaryCheck": {
+				"skills": [
+					"Nature"
+				],
+				"prof": "expert",
+				"entry": "DC 24 {@skill Nature} (master) or DC 29 {@skill Nature} (expert)"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Forest Lore",
+					"Perception",
+					"Survival"
+				],
+				"entry": "DC 24 {@skill Lore||Forest Lore}, {@skill Perception}, or {@skill Survival}"
+			},
+			"entries": [
+				"You tap into Corazal's innumerable senses to identify disturbances throughout the Verduran Forest.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You and Corazal successfully identify a flashpoint: an imminent event that could stoke distrust and unrest. You experience a sensory premonition of the event, can cast {@spell know the way|PC1} as a 7th-rank cantrip to point toward the location, and know which Elder Oak is closest to it.",
+						"Success": "As success, but the ritual heavily taxes your mind and body. You are {@condition drained||drained 1}, and until the {@condition drained} condition ends, you are also {@condition stupefied||stupefied 1}.",
+						"Failure": "The ritual has no effect.",
+						"Critical Failure": "The ritual has no effect beyond burning your mind with conflicting information. You are {@condition drained||drained 2}, and until the {@condition drained} condition ends, you are also {@condition stupefied||stupefied 1} and have the {@feat Dubious Knowledge} skill feat. Whenever you would decrease this {@condition drained} value, the value does not decrease unless you succeed at a DC 11 flat check."
+					}
+				}
+			]
+		},
+		{
+			"name": "Phantom Ship",
+			"page": 81,
+			"source": "GW2",
+			"level": 2,
+			"traits": [
+				"uncommon",
+				"conjuration",
+				"teleportation"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "hour"
+			},
+			"cost": "pearls or other gems worth a total value of 50 gp",
+			"secondaryCasters": {
+				"number": 2
+			},
+			"primaryCheck": {
+				"skills": [
+					"Occultism"
+				],
+				"prof": "expert"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Sailing Lore",
+					"Survival"
+				],
+				"entry": "{@skill Lore||Sailing Lore} or {@skill Survival}"
+			},
+			"range": {
+				"distance": {
+					"amount": 10,
+					"type": "feet"
+				}
+			},
+			"targets": "1 ship no more than 175 feet long",
+			"entries": [
+				"You create a link between a ship and an {@trait undead} member of its crew to temporarily make the ship, and its passengers and crew, as {@trait incorporeal} as {@trait ghost||ghosts}. The targeted ship must be intact and on or near the surface of some water, and an {@trait undead} who was a member of the ship's crew in life must be present for the entire ritual.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The ship and all creatures aboard it become {@trait incorporeal} for 1 hour. During this time, the ship can sail at its top speed in any heading chosen by the primary caster, regardless of the winds. The ship can pass through any corporeal obstacles in its path (such as rocks or other vessels), but it must remain in contact with water or the ritual's effects end prematurely. Any skill checks required to sail the ship through rough weather gain a +2 status bonus. A creature that disembarks the ship while the ritual is in effect becomes corporeal again.",
+						"Success": "As critical success, but the status bonus to skill checks is only +1.",
+						"Failure": "The ritual has no effect.",
+						"Critical Failure": "The ship, but not its passengers or crew, becomes {@trait incorporeal} for 10 minutes, usually resulting in the passengers and crew falling through the ship into the waters below. If the ship was already sailing, it continues in its current direction at its current speed."
+					}
+				}
+			]
+		},
+		{
+			"name": "Harrowing",
+			"level": 2,
+			"source": "SF0",
+			"page": 12,
+			"traits": [
+				"uncommon",
+				"divination",
+				"fortune"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "hour"
+			},
+			"cost": "rare pigments and inks worth a total value of 20 gp × the target's level",
+			"primaryCheck": {
+				"skills": [
+					"Fortune-Telling Lore",
+					"Occultism"
+				],
+				"prof": "trained",
+				"entry": "{@skill lore||Fortune-Telling Lore} (trained) or {@skill Occultism} (expert)"
+			},
+			"range": {
+				"entry": "touch",
+				"distance": {
+					"type": "touch",
+					"amount": 1
+				}
+			},
+			"targets": "1 willing creature",
+			"duration": {
+				"unit": "special",
+				"entry": "1 month or until fulfilled"
+			},
+			"entries": [
+				"The typical harrow reading does not magically manipulate fate, but when you perform a {@i harrowing} ritual to infuse a reading with occult power, you can impart real magical benefits to the target of the reading that give them agency and control over a task or goal in their immediate future. The first 50 minutes of this ritual's casting are spent preparing the target creature for the reading by meditating, concentrating on the task or goal to be focused on, and allowing you to paint or ink occult symbols from the harrow onto the target's body to link them to the upcoming reading. The final 10 minutes of the ritual comprise the reading itself, during which the symbols placed on the target fade away while infusing their fate.",
+				"The target of {@i harrowing} must describe a set of events or course of action they intend to attempt in the near future\u2014something like \"hunting down a specific wanted criminal\" or \"traveling to Varisia to investigate the Storval Stairs.\" You can roleplay out the actual harrow reading if you wish, using any spread to perform the reading, but at the ritual's completion, a single potential opportunity for the target to manipulate fate bonds to their destiny, depending on the result of your primary skill check to perform this ritual.",
+				"As long as this ritual's duration persists, the creature is temporarily immune to further {@i harrowing} rituals.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The target gains agency over fate and chance while in the pursuit of their goal, gaining a \"wild card.\" Randomly determine a harrow suit, either by rolling {@dice 1d6} or by drawing a card from a full harrow deck, and then consult the Associated Suit Checks table below. At any point during harrowing's duration, the creature can expend this wild card to immediately reroll any associated check they just made, gaining a +4 status bonus to the reroll. They must use the second result. Once this reroll is taken and the wild card is spent, the {@i harrowing} ritual's effects end.",
+						"Success": "As critical success, but the wild card does not grant a status bonus to the reroll.",
+						"Failure": "As success, but the wild card instead grants a \u20134 status penalty to the reroll.",
+						"Critical Failure": "The target's destiny is beyond their capability to manipulate. The wild card has no effect, and further {@i harrowing} rituals cast on the target for one month automatically result in critical failures."
+					}
+				},
+				{
+					"type": "table",
+					"name": "Associated Suit Checks",
+					"labelRowIdx": [
+						0
+					],
+					"colStyles": [
+						"text-left",
+						"text-left"
+					],
+					"rollable": true,
+					"rows": [
+						[
+							"{@dice 1d6|Suit}",
+							"Failure"
+						],
+						[
+							"1\u2014Hammers (Str)",
+							"{@action strike||Strikes} (both melee and ranged)"
+						],
+						[
+							"2\u2014Keys (Dex)",
+							"Reflex saving throws"
+						],
+						[
+							"3\u2014Shields (Con)",
+							"Fortitude saving throws"
+						],
+						[
+							"4\u2014Books (Int)",
+							"Skill checks"
+						],
+						[
+							"5\u2014Stars (Wis)",
+							"Will saving throws"
+						],
+						[
+							"6\u2014Crowns (Cha)",
+							"All other checks (including flat checks)"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Amity Cycle",
+			"level": 4,
+			"source": "TEC",
+			"page": 61,
+			"traits": [
+				"rare",
+				"emotion",
+				"transmutation"
+			],
+			"cast": {
+				"number": 2,
+				"unit": "hour"
+			},
+			"secondaryCasters": {
+				"number": 3,
+				"note": "or more"
+			},
+			"primaryCheck": {
+				"skills": [
+					"Performance"
+				],
+				"prof": "expert"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Crafting",
+					"Performance",
+					"Society"
+				]
+			},
+			"range": {
+				"distance": {
+					"amount": 100,
+					"type": "feet"
+				}
+			},
+			"targets": "audience of up to 200 people",
+			"entries": [
+				"You perform an anbarit, which involves poetry reading, singing, music, and dancing. The primary caster can either act as a narrator throughout the performance or be one of the lead performers. The secondary casters can be dancers, musicians, or orators who participate in the anbarit.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "For 1 week, all audience and cast members gain a +2 status bonus to {@skill Diplomacy} checks to {@action Make an Impression} on other citizens of Thuvia and 10 temporary Hit Points, their minds filled with feelings of unity and camaraderie with the people from other cities in their nation. If they travel to a Thuvian city other than the one they are from and share part of the anbarit with others while under the ritual's effects, the listeners gain a +1 status bonus to {@skill Diplomacy} checks to {@action Make an Impression} on other Thuvian citizens for 24 hours.",
+						"Success": "The audience members are filled with feelings of unity and camaraderie for the people from other cities in their nation; they gain a +1 status bonus to {@skill Diplomacy} checks to {@action Make an Impression} on other citizens of Thuvia for 24 hours.",
+						"Failure": "The audience enjoys the performance but gains no benefit.",
+						"Critical Failure": "The audience is disturbed by the performance and can receive no bonuses from {@trait emotion} effects for one week."
+					}
+				}
+			]
+		},
+		{
+			"name": "Extract Brain",
+			"level": 4,
+			"source": "Mal",
+			"page": 67,
+			"traits": [
+				"rare",
+				"necromancy"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "hour"
+			},
+			"cost": "fine surgical tools and rare preservative salts and fluids worth a total value of 100 gp",
+			"primaryCheck": {
+				"skills": [
+					"Occultism"
+				],
+				"prof": "expert",
+				"entry": "{@skill Occultism} (expert)"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Medicine"
+				],
+				"entry": "{@skill Medicine}"
+			},
+			"range": {
+				"entry": "touch",
+				"distance": {
+					"type": "touch",
+					"amount": 1
+				}
+			},
+			"targets": "1 Large or smaller creature or corpse",
+			"entries": [
+				"You perform a complex magical operation on a willing or restrained creature or a corpse, delicately cutting into the skull and removing the creature's brain without damaging the organ. If you have an empty {@item brain cylinder|Mal} on hand, you can place the extracted brain into the {@item brain cylinder|Mal} as part of this ritual (this includes preparing the {@item brain cylinder|Mal} for use, such as removing a previous brain and filling the cylinder with the preservative fluids required to make it function). Or at the GM's discretion, if you have a nearly completed {@creature carrion golem|B2} at hand, you can place the extracted brain into the golem. The body of a living creature subjected to this ritual dies, regardless of the ritual's result, as does the extracted brain if it is not placed into a golem or cylinder (or otherwise preserved) within 3 rounds.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The ritual succeeds on a living creature, or on a corpse that has been dead no longer than 8 hours before the ritual began. If you place the brain into a golem, the golem retains the brain's memories, along with its mental ability scores, alignment, and related skills.",
+						"Success": "The ritual succeeds on a living creature or on a corpse that has been dead no longer than 1 hour before the ritual began.",
+						"Failure": "The ritual fails and the brain dies.",
+						"Critical Failure": "The ritual seems to succeed but warps the brain unrecognizably into a hostile entity, potentially allowing an alien intelligence to seep into it."
+					}
+				}
+			],
+			"heightened": {
+				"X": {
+					"8": [
+						"You can place the extracted brain into an inactive {@creature flesh golem} on a critical success."
+					],
+					"9": [
+						"You can place the extracted brain into an inactive {@creature alchemical golem} on a critical success."
+					]
+				}
+			}
+		},
+		{
+			"name": "Destroy Mindscape",
+			"level": 10,
+			"source": "SoG3",
+			"page": 70,
+			"traits": [
+				"rare",
+				"abjuration"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "the mindscape's anchors",
+			"secondaryCasters": {
+				"number": 2
+			},
+			"primaryCheck": {
+				"skills": [
+					"Arcana",
+					"Occultism"
+				],
+				"prof": "legendary",
+				"entry": "{@skill Arcana} or {@skill Occultism} (legendary)"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Arcana",
+					"Crafting",
+					"Occultism"
+				],
+				"entry": "{@skill Arcana} or {@skill Occultism}, {@skill Crafting}"
+			},
+			"targets": "the mindscape",
+			"entries": [
+				"After you gather the anchors that make up the mindscape's structure, or in the case of anchors too immense to move, when you gain control over the region surrounding the anchors, you can perform this ritual to tear the mindscape apart from within. The ritual takes but a day to attempt, so those who would oppose such a destructive doom would do well to challenge the enemy by doing what they can to protect their mindscape's anchors. At the GM's discretion, the most powerful of mindscapes, such as those created by a deity, might be immune to this ritual's effects.",
+				"Over the course of this ritual's casting, you and the secondary casters unravel the basic and fundamental ideas of the mindscape's anchors. As you do so, flashes of memory tied to the anchor you target flood your mind, before the anchor itself dissipates. The mindscape might react with hostility to this process, manifesting creatures or swaying primary inhabitants to stop you. Regardless of how many anchors in all must be dismantled, it always takes a day to perform this ritual.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The mindscape is destroyed, and you and the secondary casters are returned to the plane from which you hailed before entering the mindscape.",
+						"Success": "The mindscape is destroyed, but you and the secondary casters are scattered randomly to locations on other planes.",
+						"Failure": "The mindscape is not destroyed, and you and the secondary casters are scattered randomly to locations on other planes.",
+						"Critical Failure": "The mindscape is not destroyed, and you and the secondary casters become {@condition drained 3} and are then each plunged into separate mindscapes. You remain trapped therein until you engineer each of your own escapes. You forget the {@i destroy mindscape} ritual and must discover it again if you wish to pursue this goal once more."
+					}
+				}
+			]
+		},
+		{
+			"name": "Mindscape Shift",
+			"level": 3,
+			"source": "SoG3",
+			"page": 75,
+			"traits": [
+				"rare",
+				"conjuration",
+				"teleportation"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "hour"
+			},
+			"cost": "focusing diagrams and incense worth 28 gp",
+			"secondaryCasters": {
+				"number": 3
+			},
+			"primaryCheck": {
+				"skills": [
+					"Arcana",
+					"Occultism",
+					"Willowshore Lore"
+				],
+				"entry": "{@skill Arcana} or {@skill Occultism} (expert) or {@skill lore||Willowshore Lore}"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Arcana",
+					"Deception",
+					"Diplomacy",
+					"Occultism",
+					"Perception",
+					"Willowshore Lore"
+				],
+				"entry": "{@skill Arcana}, {@skill Deception}, {@skill Diplomacy}, {@skill Occultism}, {@skill Perception}, or {@skill lore||Willowshore Lore}"
+			},
+			"range": {
+				"entry": "touch",
+				"distance": {
+					"type": "touch",
+					"amount": 1
+				}
+			},
+			"targets": "yourself and the secondary casters",
+			"entries": [
+				"You attempt to transport the targets from a mindscape they're currently within into an adjacent, nearly identical mindscape, such as to or from the Willowshore mindscape into Heh Shan-Bao's mindscape\u2014the mindscape in which Governor Heh Shan-Bao is trapped. Unlike the use of {@ritual mindscape door|DA}, which projects the mind into a mindscape and leaves the physical body behind, {@i mindscape shift} teleports its targets entirely into the new mindscape. If the mindscape's creator wants to prevent anyone from entering or exiting it, the DC of the primary check is the creator's Will DC if that would be higher than the ritual's normal DC (note that in this adventure, Heh Shan-Bao doesn't seek to take this action against the PCs visiting his mindscape, as he has his own plans for them). When you successfully travel to the other mindscape, you and the targets appear in the same corresponding location you occupied in the previous mindscape, and if no such corresponding location exists in the target mindscape, the ritual automatically hasa critical failure result.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "You transport the targets as intended and can leave a portal back to the previous mindscape that lasts for up to 24 hours. It typically looks like an ordinary door or passage appropriate to the mindscape. Any target of the spell can enter or exit through this portal as they would an ordinary door. If you wish, you can make this door passable by anyone.",
+						"Success": "You transport the targets as intended.",
+						"Failure": "You fail to transport the targets.",
+						"Critical Failure": "Not only do you fail to transport the targets, you also cause mental feedback to inflict {@damage 9d6} mental damage to all ritual casters ({@dc 26} basic Will save)."
+					}
+				}
+			],
+			"heightened": {
+				"X": {
+					"8": [
+						"You can transport the targets to any mindscape you have visited before or have detailed knowledge of. Your arrival point within the target mindscape is somewhere you've visited, or somewhere chosen by the GM."
+					]
+				}
+			}
+		},
+		{
+			"name": "Transmigrate",
+			"level": 4,
+			"source": "SoG3",
+			"page": 75,
+			"traits": [
+				"unique",
+				"healing",
+				"necromancy"
+			],
+			"cast": {
+				"number": 4,
+				"unit": "hour"
+			},
+			"cost": "heron feathers, incense, and specially prepared sakaki wood",
+			"secondaryCasters": {
+				"number": 2
+			},
+			"primaryCheck": {
+				"skills": [
+					"Occultism",
+					"Religion"
+				],
+				"entry": "{@skill Occultism} or {@skill Religion}"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Crafting",
+					"Nature",
+					"Society",
+					"Willowshore Lore"
+				],
+				"entry": "{@skill Crafting}, {@skill Nature}, {@skill Society}, or {@skill lore||Willowshore Lore}"
+			},
+			"range": {
+				"entry": "20 feet",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"targets": "the PCs",
+			"duration": {
+				"number": 1,
+				"unit": "month"
+			},
+			"entries": [
+				"A slain creature whose soul became trapped between life and death in the Willowshore mindscape can't escape either back to life or into the afterlife. With the use of this ritual, you can temporarily transmigrate out of the mindscape to appear in the living world in a solid body made of ectoplasm, where you can exist for a short time in a hazy area between life and undeath.",
+				"Before casting this ritual, the PCs must construct a kiln made of earth and stone that is large enough for all of them to lie down inside of. Once the kiln is complete, the PCs must prepare beds of clay for themselves in the kiln, surrounding each one with heron feathers placed upright in the clay around the bed. When the four-hour casting of the ritual is completed, the PCs become infused with spiritual energy and must lie down on the still-wet clay beds, after which assistants come in to encase them in a three-inch-thick layer of additional clay. Short lengths of bamboo held in the mouth allow the clay-encased PCs to continue breathing. The incense and sakaki wood is then placed atop each encased PC, the kiln is closed, and the fires lit. Each PC is baked alive within their clay shells, but if the ritual is successful, they're sent into the living world as ectoplasmic apparitions.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "The clay cracks open and the PCs transmigrate into the border between life and death, a small mindscape in which they face a challenge they must overcome if they're to transmigrate into the living world. This encounter is presented on page 45 of this book. During this encounter, the PCs gain a +1 status bonus to all {@action strike||Strikes}, saving throws, and skill checks. If they defeat the encounter, they fully transmigrate into the living world for up to 1 month, and retain a +1 status bonus to all skill checks for the first week of this month.",
+						"Success": "As critical success, but without the status bonus to skill checks.",
+						"Failure": "As a critical success, but extra energy is sapped from the PCs. They gain a \u20131 status penalty to all {@action strike||Strikes}, saving throws, and skill checks made in the border between life and death, and if they transmigrate to the living world, they also take a \u20131 status penalty to all skill checks for the first week of the ritual's month-long duration.",
+						"Critical Failure": "The ritual fails, and the PCs do not enter the border between life and death. Instead, they each take {@damage 9d6} fire damage as they each bake in their clay shells ({@dc 24} basic Fortitude save) before the failed ritual snuffs out the flames and cracks open their partially fired clay casings. The ritual can be attempted again after 24 hours have passed."
+					}
+				}
+			],
+			"heightened": {
+				"X": {
+					"5": [
+						"As long as the Tan Sugi stands tall above Kugaptee's grave (as it does, after the climax of the previous adventure) and Willowshore's Eternal Lantern is lit in both the mindscape and the living world, you can draw upon the artifact's power to transmigrate the entire Willowshore mindscape. This more complex version of the ritual has a cast time of 5 days and affects the entire mindscape. Furthermore, this ritual can only be attempted after the first day of the new year in the mindscape (the 72nd day of this adventure), as it also draws upon that milestone societal event to work its magic. Any attempt to cast this version of {@i transmigrate} before either of those two requirements are fulfilled causes the casting to fail as it begins, before any checks are attempted or its costs are paid.",
+						"This version of the ritual must be cast near Willowshore's Eternal Lantern, which is located on the southern side of Dawnstep Bridge. As with the 4th-level version of {@i transmigrate}, this ritual requires the creation of a kiln within 30 feet of the Eternal Lantern, within which a scale model of the town of Willowshore must be crafted from clay. On the first day of casting, the kiln itself is prepared and anointed with aromatic oils. On the second day, a platform of sakaki wood slats is built in the kiln and then anointed with additional oils. On the third day, the town of Willowshore is sculpted on the platform from clay. On the fourth day, heron feathers and sticks of incense are placed in the sculpture's still drying clay; the sticks of incense are lit and continually replaced through the day as they burn. Finally, on the fifth day, the kiln is lit and the sculpture is fired. The next day, as the people of Willowshore awaken from the ritual, its effects become apparent. See \"Concluding the Adventure\" on page 61 and Chapter 1 of the next adventure for more details.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": "The Willowshore mindscape transmigrates wholly into the living world. The full extent of what transmigrates depends on how many Preparation Points remain unspent at the end of this adventure, but the Critical Success at this ritual grants the party an additional 12 Preparation Points to determine this success, as detailed at the start of the next adventure.",
+								"Success": "As critical success, without bonus Preparation Points.",
+								"Failure": "The ritual fails, but a new attempt can be made after 24 hours have passed.",
+								"Critical Failure": "As failure, but the failed ritual also spreads waves of despair through town, causing food stores to rot away and buildings to take damage as if affected by years of neglect. The party loses 12 of their remaining Preparation Points, deducted as they see fit from Hope Points, Food Points, and Security Points. If the party can't deduct the full 12 points from their remaining Preparation Points, reduce all points to 0. Their next attempt to cast the ritual at 5th-level takes a \u20132 status penalty to its checks."
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "Perfection of Essence",
+			"level": 10,
+			"source": "LOTXWG",
+			"remaster": true,
+			"page": 50,
+			"traits": [
+				"rare",
+				"trial|LOTXWG"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "special foods, herbs, and minerals worth a total value of 45,000 gp",
+			"secondaryCasters": {
+				"number": 1
+			},
+			"primaryCheck": {
+				"skills": [
+					"Crafting"
+				],
+				"prof": "expert"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Medicine",
+					"Religion"
+				],
+				"entry": "{@skill Medicine} or {@skill Religion}"
+			},
+			"duration": {
+				"unit": "special",
+				"entry": "see text"
+			},
+			"entries": [
+				"Many have pursued alchemical means to immortality, and most haven't survived the attempt. The most common manner of purifying one's essence requires ingesting the following {@trait poison}, and surviving the effects unassisted for at least a day.",
+				{
+					"type": "affliction",
+					"DC": 43,
+					"savingThrow": "Fortitude",
+					"onset": "1 hour",
+					"maxDuration": "5 days",
+					"stages": [
+						{
+							"stage": 1,
+							"entry": "{@damage 7d12} spirit damage plus {@condition doomed 1}",
+							"duration": "1 hour"
+						},
+						{
+							"stage": 2,
+							"entry": "{@damage 9d12} spirit damage and {@condition confused} for 1 minute once every {@dice 1d4} minutes, plus {@condition doomed 2}",
+							"duration": "1 hour"
+						},
+						{
+							"stage": 3,
+							"entry": "{@damage 9d12} spirit damage and {@condition doomed 3}",
+							"duration": "1 day"
+						},
+						{
+							"stage": 4,
+							"entry": "death"
+						}
+					]
+				},
+				"Anathema for this ritual is determined at the time of the ritual. You choose 1 anathema, and the GM chooses 2 anathema. You're aware of all of your anathema. Appropriate anathema might include avoiding physical contact with a certain creature or substance (such as members of your bloodline or jade), eating certain foods (such as meat or grains), or wearing certain items or materials (such as silk or cotton). If the ritual is ended in this way, you must conduct an {@ritual atone|PC1} ritual before attempting this ritual again.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, except you choose 1 anathema and your GM chooses 1 anathema.",
+						"Success": "You've purified your body enough to attempt to attain immortality. You're bound by the ritual's anathema and must ingest the final potion to complete your apotheosis. Once you've withstood the effects of the poison for 1 day or completely recovered from the poison's effects without outside assistance, you gain immortality as follows: you don't age unless you wish to. You can't die except due to old age; if your {@condition dying} or {@condition doomed} condition would increase to a high enough value to kill you, it doesn't increase, and any effect that would instantly kill you instead just reduces you to 0 Hit Points. If you ever truly die and aren't returned to life within 1 year, you descend from the {@plane heaven||Heavens} as an adult into a new mortal body somewhere in the world.",
+						"Failure": "Your actions don't achieve immortality, and you automatically fail the first save against the poison.",
+						"Critical Failure": "As failure, except the poison is also {@trait virulent}."
+					}
+				}
+			]
+		},
+		{
+			"name": "Power of the Beasts",
+			"level": 2,
+			"source": "LOTXWG",
+			"remaster": true,
+			"page": 50,
+			"traits": [
+				"rare",
+				"trial|LOTXWG"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "bones, teeth, or claws of beasts worth 150 gp",
+			"secondaryCasters": {
+				"number": 1
+			},
+			"primaryCheck": {
+				"skills": [
+					"Athletics"
+				],
+				"prof": "expert"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Cooking Lore",
+					"Crafting",
+					"Religion"
+				],
+				"entry": "{@skill lore||Cooking Lore}, {@skill Crafting}, or {@skill Religion}"
+			},
+			"duration": {
+				"unit": "special",
+				"entry": "see text"
+			},
+			"entries": [
+				"To simply kill the magical beasts who populate Tian Xia is needless and wasteful. The gods reward a hunter who seeks to truly understand their prey, approaching the creatures on their own level and seeking to gain their strength. Powdering the bones of strong beasts, for use in a soup or wine, is often the first step in the process of capturing part of their power.",
+				"Using weapons is anathema to this ritual and immediately ends its benefits. If the ritual is ended in this way, you must conduct an {@ritual atone|PC1} ritual before attempting this ritual again.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, except you can defeat three enemies that are only one size larger than you instead.",
+						"Success": "The power begins to take root. Once you've defeated an enemy two or more sizes larger than you in single combat, you gain the {@feat Titan Wrestler|PC1} feat.",
+						"Failure": "You drink the soup or wine, but the understanding eludes you.",
+						"Critical Failure": "The drink contains shards of bone you didn't grind down properly. You're {@condition sickened 2} for 1 week, during which the condition can't be reduced."
+					}
+				}
+			]
+		},
+		{
+			"name": "Seed of Mercy",
+			"level": 3,
+			"source": "LOTXWG",
+			"remaster": true,
+			"page": 50,
+			"traits": [
+				"rare",
+				"trial|LOTXWG"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "potent medicine valued at 200 gp",
+			"secondaryCasters": {
+				"number": 1
+			},
+			"primaryCheck": {
+				"skills": [
+					"Medicine"
+				],
+				"prof": "expert"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Nature",
+					"Religion"
+				],
+				"entry": "{@skill Nature} or {@skill Religion}"
+			},
+			"duration": {
+				"unit": "special",
+				"entry": "see text"
+			},
+			"entries": [
+				"The gods who value benevolence and the caretaking of small and vulnerable beings also value those qualities in the mortal adventurers who journey through the lands of Tian Xia. You demonstrate your willingness to aid even the most helpless of life by nursing a small, injured bird to health and allowing it to fly away to freedom, earning in return the protection of the natural world. If you're able to nurse the bird to health, it will return to you with a seed, which will grow into a sprout bearing a single flower.",
+				"The sprout withers if you don't personally water it with at least 1 Bulk of pure spring water a day or if it's left unattended in dangerous circumstances. It's anathema to this ritual to let the sprout wither, and doing so immediately ends its benefits. If the ritual is ended in this way, you must conduct an {@ritual atone|PC1} ritual before attempting this ritual again.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, except the sprout also grows a single fruit after you've cared for it for a week. Removing the fruit causes the sapling to wither, but the fruit can be eaten as a {@item moderate healing potion|GMC}.",
+						"Success": "You nurse the bird to health. It returns to you with a seed that, when planted and watered, grows into a sprout with a single flower. Once you've cared for it for a week, you gain the {@feat Toughness|PC1} feat. If you lose Toughness due to violating the ritual's anathema, you lose a number of Hit Points equal to the decrease in your maximum Hit Points.",
+						"Failure": "You aren't able to heal the bird, but you help its passing to be as painless as possible.",
+						"Critical Failure": "Your attempt to heal the bird causes greater suffering. Another bird brings you a seed that, if planted, will grow into a gourd that releases a small {@trait demon} to attack you."
+					}
+				}
+			]
+		},
+		{
+			"name": "The Unseeing Blade Master",
+			"level": 6,
+			"source": "LOTXWG",
+			"remaster": true,
+			"page": 51,
+			"traits": [
+				"rare",
+				"trial|LOTXWG"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "rare incense worth 1,500 gp",
+			"secondaryCasters": {
+				"number": 1
+			},
+			"primaryCheck": {
+				"skills": [
+					"Perception"
+				],
+				"prof": "master"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Religion",
+					"Warfare Lore"
+				],
+				"entry": "{@skill Religion} or {@skill lore||Warfare Lore}"
+			},
+			"duration": {
+				"unit": "special",
+				"entry": "see text"
+			},
+			"entries": [
+				"There are many legends of blade masters who, not wanting to rely on flawed mortal eyes, learned to fight through reliance on both their other keen senses and knowledge from the universe itself. Those who intentionally seek out the path often do so by running through forms in thick clouds of incense.",
+				"Making a {@action Strike} against an enemy you can see is anathema to this ritual and immediately ends its benefits. If the ritual is ended in this way, you must conduct an {@ritual atone} ritual before attempting this ritual again.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, except you can instead defeat an enemy in single combat that both uses a sword and is higher level than you.",
+						"Success": "You call a blessing into your sword to guide you on the path and are bound by the ritual's anathema. Once you've used that sword against 20 enemies, each significant enough to grant XP, you gain the {@feat Blind-Fight|PC1} feat.",
+						"Failure": "The incense is dispersed by a strange gust of wind and you learn nothing.",
+						"Critical Failure": "The sword you're intending to use for the ritual becomes {@condition broken}. If you aren't permanently blind, you're instead {@condition blinded} for 1 month and can't repeat this ritual during that time."
+					}
+				}
+			]
+		},
+		{
+			"name": "Seed of Mercy",
+			"level": 3,
+			"source": "LOTXWG",
+			"remaster": true,
+			"page": 51,
+			"traits": [
+				"rare",
+				"trial|LOTXWG"
+			],
+			"cast": {
+				"number": 1,
+				"unit": "day"
+			},
+			"cost": "animal food worth a total value of 150 gp",
+			"secondaryCasters": {
+				"number": 1
+			},
+			"primaryCheck": {
+				"skills": [
+					"Diplomacy"
+				],
+				"prof": "expert"
+			},
+			"secondaryCheck": {
+				"skills": [
+					"Nature",
+					"Religion"
+				],
+				"entry": "{@skill Nature} or {@skill Religion}"
+			},
+			"duration": {
+				"unit": "special",
+				"entry": "see text"
+			},
+			"entries": [
+				"To many, the animals of Tian Xia are simply beasts to be conquered or harvested, but this isn't how all of the gods intended it. You approach, feed, and commune with the most notably hostile beasts in an effort to forge a true friendship and allegiance with the natural world.",
+				"Wantonly attacking or killing {@trait animal||animals} is anathema to this ritual and immediately ends its benefits. If the ritual is ended in this way, you must conduct an {@ritual atone|PC1} ritual before attempting this ritual again.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, except you can instead resolve a conflict with one {@trait animal} of level 15 or higher.",
+						"Success": "You declare your allegiance to the wild and are bound by the ritual's anathema, but you still must prove yourself. Once you've nonviolently resolved conflicts with three different {@trait animal||animals} of a higher level than yours, you gain the {@feat Animal Empathy|PC1} feat.",
+						"Failure": "Your actions don't impress the gods of the wilds.",
+						"Critical Failure": "You deeply offend the gods you were trying to impress, and they send a sign of displeasure, often an animal attack. You must conduct an {@ritual atone|PC1} ritual before attempting this ritual again."
+					}
+				}
+			]
+		},
+		{
 			"name": "Unseen Heralds",
 			"source": "WtD2",
 			"page": 26,
@@ -50,10 +853,10 @@
 				{
 					"type": "successDegree",
 					"entries": {
-						"Critical Success": "The ritual creates six 'mouths', like {@spell magic mouth||magic mouths}, at places you select within the area. By spending a single action with the {@trait concentrate} trait, you can command the mouths to speak—they can say anything you like, and you can set them to repeat messages or announcements at any interval you choose. You can also choose to have only certain mouths speak. Any secondary casters you include in the ritual, even beyond the two required, can speak through the mouths in the same way you can.",
+						"Critical Success": "The ritual creates six 'mouths', like {@spell magic mouth||magic mouths}, at places you select within the area. By spending a single action with the {@trait concentrate} trait, you can command the mouths to speak\u2014they can say anything you like, and you can set them to repeat messages or announcements at any interval you choose. You can also choose to have only certain mouths speak. Any secondary casters you include in the ritual, even beyond the two required, can speak through the mouths in the same way you can.",
 						"Success": "As critical success, but the ritual creates three mouths.",
 						"Failure": "The ritual has no effect.",
-						"Critical Failure": "The mouths form, and promptly start screaming, gibbering, and/or swearing at passers by—it is impossible to get any rest or relaxation within hearing range of the mouths until their magic wears out in about a day."
+						"Critical Failure": "The mouths form, and promptly start screaming, gibbering, and/or swearing at passers by\u2014it is impossible to get any rest or relaxation within hearing range of the mouths until their magic wears out in about a day."
 					}
 				}
 			],
@@ -607,7 +1410,7 @@
 			},
 			"duration": {
 				"number": 8,
-				"unit": "hours"
+				"unit": "hour"
 			},
 			"entries": [
 				"You emblazon a message across the sky itself. Casting the ritual requires choosing a set of symbols for the message you want to send, which you can convey with an atmospheric phenomenon of your choice. Common choices include carefully shaped clouds during the day and auroras at night. Some cultures\u2014such as the many denizens of the {@plane Plane of Air|GMG} and star-gazing iruxis\u2014develop complex symbology to communicate clearly using sky signs.",
@@ -1659,7 +2462,7 @@
 			]
 		},
 		{
-			"name": "Bathe In Blood",
+			"name": "Bathe in Blood",
 			"source": "SoM",
 			"page": 148,
 			"level": 8,
@@ -2192,7 +2995,7 @@
 			]
 		},
 		{
-			"name": "Commune With Nature",
+			"name": "Commune with Nature",
 			"source": "CRB",
 			"page": 410,
 			"level": 6,
@@ -3330,7 +4133,7 @@
 			]
 		},
 		{
-			"name": "Garden Of Death",
+			"name": "Garden of Death",
 			"source": "SoM",
 			"page": 150,
 			"level": 4,
@@ -4048,7 +4851,8 @@
 				"skills": [
 					"Arcana",
 					"Occultism"
-				]
+				],
+				"prof": "expert"
 			},
 			"secondaryCheck": {
 				"entry": "{@skill Crafting} or {@skill Lore||Driving Lore}",
@@ -4455,7 +5259,7 @@
 			]
 		},
 		{
-			"name": "Portrait Of Spite",
+			"name": "Portrait of Spite",
 			"source": "SoM",
 			"page": 153,
 			"level": 5,

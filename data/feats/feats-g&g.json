@@ -532,7 +532,7 @@
 			],
 			"leadsTo": [
 				"Black Powder Blaze|G&G",
-				"Reach For The Stars|G&G"
+				"Reach for the Stars|G&G"
 			]
 		},
 		{
@@ -621,7 +621,7 @@
 			]
 		},
 		{
-			"name": "Blood In The Air",
+			"name": "Blood in the Air",
 			"source": "G&G",
 			"page": 116,
 			"activity": {
@@ -1308,11 +1308,11 @@
 				"gunslinger"
 			],
 			"entries": [
-				"You're exceptionally skilled with the crossbow. The first time each round that you {@action Interact} to reload a crossbow you are wielding, including {@action Interact} actions as part of your slinger's reload and similar effects, you increase the range increment for your next {@action Strike} with that weapon by 10 feet and deal 1 additional precision damage per weapon damage die with that {@action Strike}. If your crossbow has the {@trait backstabber} trait and you are attacking an {@condition flat-footed||off-guard} target, {@trait backstabber} deals 2 additional precision damage per weapon damage die instead of its normal effects."
+				"You're exceptionally skilled with the crossbow. The first time each round that you {@action Interact} to reload a crossbow you are wielding, including {@action Interact} actions as part of your slinger's reload and similar effects, you increase the range increment for your next {@action Strike} with that weapon by 10 feet and deal 1 additional precision damage per weapon damage die with that {@action Strike}. If your crossbow has the {@trait backstabber} trait and you are attacking an {@condition off-guard|PC1} target, {@trait backstabber} deals 2 additional precision damage per weapon damage die instead of its normal effects."
 			]
 		},
 		{
-			"name": "Dance Of Thunder",
+			"name": "Dance of Thunder",
 			"source": "G&G",
 			"page": 117,
 			"activity": {
@@ -1813,7 +1813,7 @@
 			]
 		},
 		{
-			"name": "Engine Of Destruction",
+			"name": "Engine of Destruction",
 			"source": "G&G",
 			"page": 31,
 			"activity": {
@@ -2671,7 +2671,7 @@
 			]
 		},
 		{
-			"name": "Hit The Dirt!",
+			"name": "Hit the Dirt!",
 			"source": "G&G",
 			"page": 111,
 			"activity": {
@@ -2721,7 +2721,7 @@
 			]
 		},
 		{
-			"name": "I Meant To Do That",
+			"name": "I Meant to Do That",
 			"source": "G&G",
 			"page": 143,
 			"activity": {
@@ -2891,7 +2891,7 @@
 			]
 		},
 		{
-			"name": "Just The Thing!",
+			"name": "Just the Thing!",
 			"source": "G&G",
 			"page": 31,
 			"level": 16,
@@ -3545,7 +3545,7 @@
 				"Gunpowder Gauntlet|G&G",
 				"Hot Foot|G&G",
 				"Phenom's Verve|G&G",
-				"Reach For The Sky|G&G",
+				"Reach for the Sky|G&G",
 				"Whirling Knockdown|G&G"
 			]
 		},
@@ -3756,7 +3756,7 @@
 			]
 		},
 		{
-			"name": "Rain Of Bolts",
+			"name": "Rain of Bolts",
 			"source": "G&G",
 			"page": 42,
 			"activity": {
@@ -3801,7 +3801,7 @@
 			]
 		},
 		{
-			"name": "Reach For The Sky",
+			"name": "Reach for the Sky",
 			"source": "G&G",
 			"page": 137,
 			"activity": {
@@ -3826,7 +3826,7 @@
 			]
 		},
 		{
-			"name": "Reach For The Stars",
+			"name": "Reach for the Stars",
 			"source": "G&G",
 			"page": 119,
 			"level": 18,
@@ -4607,7 +4607,7 @@
 			]
 		},
 		{
-			"name": "Take The Wheel",
+			"name": "Take the Wheel",
 			"source": "G&G",
 			"page": 55,
 			"activity": {
@@ -4680,7 +4680,7 @@
 			]
 		},
 		{
-			"name": "That Was A Close One, Huh?",
+			"name": "That Was a Close One, Huh?",
 			"source": "G&G",
 			"page": 142,
 			"activity": {
@@ -4811,7 +4811,7 @@
 				"Power Slide|G&G",
 				"Push It|G&G",
 				"Roadkill|G&G",
-				"Take The Wheel|G&G"
+				"Take the Wheel|G&G"
 			]
 		},
 		{
@@ -4997,10 +4997,10 @@
 			],
 			"leadsTo": [
 				"Chain Reaction|G&G",
-				"I Meant To Do That|G&G",
+				"I Meant to Do That|G&G",
 				"Lucky Escape|G&G",
 				"No Hard Feelings|G&G",
-				"That Was A Close One, Huh?|G&G",
+				"That Was a Close One, Huh?|G&G",
 				"Unbelievable Escape|G&G",
 				"Unbelievable Luck|G&G"
 			]
@@ -5184,7 +5184,7 @@
 			]
 		},
 		{
-			"name": "You Failed To Account For... This!",
+			"name": "You Failed to Account For... This!",
 			"source": "G&G",
 			"page": 31,
 			"activity": {

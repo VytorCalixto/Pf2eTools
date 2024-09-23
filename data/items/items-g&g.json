@@ -1396,7 +1396,7 @@
 			}
 		},
 		{
-			"name": "Blazons Of Shared Power",
+			"name": "Blazons of Shared Power",
 			"source": "G&G",
 			"page": 183,
 			"type": "Item",
@@ -4200,7 +4200,7 @@
 			],
 			"category": "Consumable",
 			"entries": [
-				"These cartridges are filled with sticky clear glue. When a glue bullet hits, a syrupy webbing coats the target and sticks to the ground or a nearby surface, hindering their movement. The target takes a \u201310-foot circumstance penalty to its Speeds for {@dice 2d4} rounds, or until it Escapes against a DC of 18. On a critical hit, the target is also {@condition immobilized} until it Escapes."
+				"These cartridges are filled with sticky clear glue. When a glue bullet hits, a syrupy webbing coats the target and sticks to the ground or a nearby surface, hindering their movement. The target takes a \u201310-foot circumstance penalty to its Speeds for {@dice 2d4} rounds, or until it {@action Escape||Escapes} against a DC of 18. On a critical hit, the target is also {@condition immobilized} until it {@action Escape||Escapes}."
 			]
 		},
 		{
@@ -5171,7 +5171,7 @@
 			]
 		},
 		{
-			"name": "Iris Of The Sky",
+			"name": "Iris of the Sky",
 			"source": "G&G",
 			"page": 165,
 			"type": "Item",
@@ -6270,7 +6270,7 @@
 			]
 		},
 		{
-			"name": "Pistol Of Wonder",
+			"name": "Pistol of Wonder",
 			"source": "G&G",
 			"page": 167,
 			"type": "Item",
@@ -6670,7 +6670,7 @@
 			]
 		},
 		{
-			"name": "Scope Of Limning",
+			"name": "Scope of Limning",
 			"source": "G&G",
 			"page": 182,
 			"type": "Item",
@@ -6713,7 +6713,7 @@
 			]
 		},
 		{
-			"name": "Scope Of Truth",
+			"name": "Scope of Truth",
 			"source": "G&G",
 			"page": 182,
 			"type": "Item",

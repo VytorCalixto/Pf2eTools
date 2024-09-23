@@ -2,6 +2,962 @@
 	"table": [
 		{
 			"type": "table",
+			"source": "LOHh",
+			"page": 108,
+			"name": "Clan Lore",
+			"labelRowIdx": [
+				0
+			],
+			"colStyles": [
+				"text-left",
+				"text-left",
+				"text-left"
+			],
+			"rows": [
+				[
+					"Clan",
+					"Skills",
+					"Lore"
+				],
+				[
+					"Clan Aringeld",
+					"{@skill Diplomacy} and {@skill Society}",
+					"{@skill lore||Mercantile Lore}"
+				],
+				[
+					"Clan Breakiron",
+					"{@skill Crafting} and {@skill Survival}",
+					"{@skill lore||Alchemy Lore}"
+				],
+				[
+					"Clan Firecask",
+					"{@skill Crafting} and {@skill Nature}",
+					"{@skill lore||Alcohol Lore}"
+				],
+				[
+					"Clan Gelderon",
+					"{@skill Athletics} and {@skill Nature}",
+					"{@skill lore||Farming Lore}"
+				],
+				[
+					"Clan Grimmark",
+					"{@skill Crafting} and {@skill Society}",
+					"{@skill lore||Architecture Lore}"
+				],
+				[
+					"Clan Ironfist",
+					"{@skill Crafting} and {@skill Medicine}",
+					"{@skill lore||Smelting Lore}"
+				],
+				[
+					"Clan Molgrade",
+					"{@skill Crafting} and {@skill Thievery}",
+					"{@skill lore||Smithing Lore}"
+				],
+				[
+					"Clan Oriddus",
+					"{@skill Religion} and {@skill Society}",
+					"{@skill lore||Dwarven Pantheon Lore}"
+				],
+				[
+					"Clan Runebinder",
+					"{@skill Arcana} and {@skill Occultism}",
+					"{@skill lore||Academia Lore}"
+				],
+				[
+					"Clan Stonefist",
+					"{@skill Athletics} and {@skill Intimidation}",
+					"{@skill lore||Warfare Lore}"
+				],
+				[
+					"Clan Tolorr",
+					"{@skill Diplomacy} and {@skill Society}",
+					"{@skill lore||Library Lore}"
+				],
+				[
+					"Clan Vanderholl",
+					"{@skill Athletics} and {@skill Crafting}",
+					"{@skill lore||Labor Lore}"
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "Rust",
+			"name": "Iron Harbor Rumors",
+			"page": 12,
+			"colSizes": [
+				1,
+				11
+			],
+			"labelRowIdx": [
+				0
+			],
+			"rollable": true,
+			"rows": [
+				[
+					"{@dice d8}",
+					"Rumor"
+				],
+				[
+					"1",
+					"Those jagged spires you see just to the south, sticking up from Thunderhead Isle? That's Rusthenge, but we don't go there. Some folks say that they've seen some weird lights flashing up there over the past few nights\u2014haven't seen them myself, though, so I can't confirm."
+				],
+				[
+					"2",
+					"That Thassilonian trireme is a merchant's personal craft; some important-looking man followed by an entire entourage got off when it landed a week ago. Word is he's a merchant from the east and is working out some sort of complicated trade agreement with Lord Ragnulf."
+				],
+				[
+					"3",
+					"Stonehome is the temple of {@deity Gorum} here, just down the road to the east. The priests there govern our village. They've shut the place up there since they've taken in the Thassilonian visitors and haven't let anyone in for worship since then."
+				],
+				[
+					"4",
+					"Elsie's, the building over on the west side with the red roof, is the closest thing we have in town to an inn. Although it's not the most comfortable place to sleep, it'll at least keep you dry if it rains."
+				],
+				[
+					"5",
+					"Those three abandoned manor houses to the west? We call 'em \"Gold's Ruin,\" on account that ten years ago, a bunch of southern nobles decided to build mansions there, then I guess they left because they weren't strong enough to endure life here. Some say they're haunted."
+				],
+				[
+					"6",
+					"I've seen a few crew on board that Thassilonian ship in the harbor there. They don't leave much, but sometimes they fish off the deck. Seems like they're waitin' for somethin', I think."
+				],
+				[
+					"7",
+					"You been to Fisher's Point? It's a little old shack out west on the road. Decent fishing from there, if you don't mind the waves soaking you. A hermit named Derrol Finnick lives there. I think. Maybe he's been shacking up at Gold's Ruin, though."
+				],
+				[
+					"8",
+					"Are you from {@place Osprey Cove|Rust}? Really?! You don't look nearly as spineless as they say! Why do they call it {@place Osprey Cove|Rust}? My mum says you talk to birds there. I'd rather talk to rams; they're strong! Sometimes I follow them up to the hills and watch the warriors fight on the roof of Stonehome."
+				]
+			]
+		},
+		{
+			"name": "Swordfish Discoveries",
+			"source": "Rust",
+			"page": 15,
+			"rollable": true,
+			"labelRowIdx": [
+				0
+			],
+			"colSizes": [
+				1,
+				11
+			],
+			"rows": [
+				[
+					"{@dice d20}",
+					"Discovery"
+				],
+				[
+					"1-6",
+					"A pouch of {@dice 3d6} sp."
+				],
+				[
+					"7-10",
+					"A bottle of \"Carpenden\"\u2014a mid-quality Taldan bubble wine worth 10 gp."
+				],
+				[
+					"11-14",
+					"The ship's payroll\u2014a wooden coffer containing 230 sp and 100 gp."
+				],
+				[
+					"15-17",
+					"Navigational logs and notes that reveal the {@i Swordfish} to be a mercenary ship that traditionally hires out to Thassilonian nobility, not a merchant's ship."
+				],
+				[
+					"18-19",
+					"A small coffer containing four {@item potency crystal|crb} talismans."
+				],
+				[
+					"20",
+					"The {@i Swordfish's} log (see Handout #1; note that this log is written in Thassilonian)."
+				]
+			],
+			"type": "table"
+		},
+		{
+			"type": "table",
+			"source": "GW2",
+			"name": "Domora's Deities",
+			"page": 56,
+			"colSizes": [
+				2,
+				10
+			],
+			"colStyles": [
+				"",
+				""
+			],
+			"labelRowIdx": [
+				0
+			],
+			"rows": [
+				[
+					"Total IP",
+					"Investigation Results"
+				],
+				[
+					"2",
+					"Domora's founder, Domora Hume, saved his people from violent raiders by summoning a powerful water spirit named Dyzad from the lake just outside town. Henceforth, the water was called Hume's Pool, and the people of Domora revered Dyzad and Domora Hume as goddess and god caller. Future generations of Domorans continued the tradition of god calling, summoning Dyzad and other spirits to guide and protect the city."
+				],
+				[
+					"4",
+					"Many of the deities summoned by Domora's god callers were spirit guides. Spirit guides are phantasmal creatures that represent various aspects of the natural world. They often manifest as chimeric beasts that combine features from multiple animals or elements of nature such as plants and weather phenomena."
+				],
+				[
+					"6",
+					"During the Worldwound, a demon called Malgamon took special pleasure in slaughtering spirit guides and the god callers who worked with them. Malgamon was known to lair in Domora's underground cistern, but no demon slayers ever managed to penetrate this dungeon\u2014the wells and tunnels that had once connected to the cistern were all destroyed during the demonic incursion. Still, Malgamon somehow managed to make forays to the surface, so a final entrance to the cistern must exist somewhere."
+				],
+				[
+					"8",
+					"Even after Abyssal magic dried Hume's Pool to a muddy pond at the center of a dry lakebed, it remained a sacred site. Knowing this, Malgamon lured his prey to Hume's Pool, then funneled them into his lair through a now-dry tunnel to the city's cistern system. Dyzad\u2014the first Domoran goddess\u2014and four powerful spirit guides were the last known deities to enter Malgamon's cistern lair."
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "GW2",
+			"page": 44,
+			"name": "Sarkoris Scar Travel Times",
+			"labelRowIdx": [
+				0,
+				1
+			],
+			"cellStyles": [
+				{
+					"row": 0,
+					"col": 1,
+					"style": "text-center"
+				}
+			],
+			"colStyles": [
+				"text-center",
+				"text-center",
+				"text-center",
+				"text-center",
+				"text-center"
+			],
+			"colSizes": [
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"spans": [
+				[
+					[
+						1,
+						2
+					],
+					[
+						2,
+						5
+					]
+				]
+			],
+			"rows": [
+				[
+					"",
+					"Days to..."
+				],
+				[
+					"Slowest Speed",
+					"Event 18 (~50 mi.)",
+					"Event 19 (~100 mi.)",
+					"Event 20 (~200 mi.)",
+					"Event 21 (~250 mi.)"
+				],
+				[
+					"20 feet",
+					"3",
+					"6",
+					"13",
+					"17"
+				],
+				[
+					"25 feet",
+					"3",
+					"5",
+					"10",
+					"13"
+				],
+				[
+					"30 feet",
+					"2",
+					"4",
+					"8",
+					"10"
+				],
+				[
+					"40 feet",
+					"2",
+					"3",
+					"6",
+					"8"
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "GW2",
+			"page": 44,
+			"name": "Sarkoris Scar Random Encounters",
+			"rollable": true,
+			"labelRowIdx": [
+				0
+			],
+			"colSizes": [
+				1,
+				7,
+				2
+			],
+			"colStyles": [
+				"",
+				"",
+				"text-center"
+			],
+			"rows": [
+				[
+					"{@dice d20}",
+					"Encounter",
+					"Threat"
+				],
+				[
+					"1\u20134",
+					"No encounter",
+					"\u2014"
+				],
+				[
+					"5\u201310",
+					"4 {@creature dretch|B3|dretches}",
+					"Trivial 6"
+				],
+				[
+					"11\u201313",
+					"4 elite {@creature quasit||quasits} and {@creature giant stag beetle}",
+					"Low 6"
+				],
+				[
+					"14\u201316",
+					"2 {@creature daeodon||daeodons} and elite {@creature ogre warrior}",
+					"Low 6"
+				],
+				[
+					"17\u201318",
+					"2 {@creature babau|B2|babaus}",
+					"Moderate 6"
+				],
+				[
+					"19\u201320",
+					"{@creature invidiak|B2} and {@creature shadow}",
+					"Moderate 6"
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "SF0",
+			"page": 3,
+			"name": "Rolling Harrow Card Draws",
+			"colSizes": [
+				1,
+				5,
+				1,
+				5
+			],
+			"colStyles": [
+				"text-center",
+				"text-center",
+				"text-center",
+				"text-center"
+			],
+			"labelRowIdx": [
+				0
+			],
+			"rows": [
+				[
+					"{@dice d6}",
+					"Suit",
+					"{@dice d10}",
+					"Alignment"
+				],
+				[
+					"1",
+					"Hammers (STR)",
+					"1",
+					"Lawful Good"
+				],
+				[
+					"2",
+					"Keys (DEX)",
+					"2",
+					"Lawful Neutral"
+				],
+				[
+					"3",
+					"Shields (CON)",
+					"3",
+					"Lawful Evil"
+				],
+				[
+					"4",
+					"Books (INT)",
+					"4",
+					"Neutral Good"
+				],
+				[
+					"5",
+					"Stars (WIS)",
+					"5",
+					"Neutral"
+				],
+				[
+					"6",
+					"Crowns (CHA)",
+					"6",
+					"Neutral Evil"
+				],
+				[
+					"",
+					"",
+					"7",
+					"Chaotic Good"
+				],
+				[
+					"",
+					"",
+					"8",
+					"Chaotic Neutral"
+				],
+				[
+					"",
+					"",
+					"9",
+					"Chaotic Evil"
+				],
+				[
+					"",
+					"",
+					"10",
+					"Roll Again"
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "GMG",
+			"page": 168,
+			"name": "Organization Statistics by Level",
+			"id": "3-3",
+			"otherSources": {
+				"Reprinted": [
+					"QFF0|10"
+				]
+			},
+			"colStyles": [
+				"",
+				"text-center",
+				"text-center",
+				"text-center",
+				"text-center"
+			],
+			"rows": [
+				[
+					"Level",
+					"Followers",
+					"Max Follower Level",
+					"Lieutenants",
+					"Lieutenants Levels"
+				],
+				[
+					"1",
+					"1\u20132",
+					"0",
+					"\u2014",
+					"\u2014"
+				],
+				[
+					"2",
+					"3\u20134",
+					"0",
+					"\u2014",
+					"\u2014"
+				],
+				[
+					"3",
+					"5\u20136",
+					"0",
+					"1",
+					"1"
+				],
+				[
+					"4",
+					"7\u20139",
+					"0",
+					"1",
+					"1"
+				],
+				[
+					"5",
+					"10\u201313",
+					"0",
+					"1",
+					"1"
+				],
+				[
+					"6",
+					"14\u201318",
+					"1",
+					"2",
+					"2"
+				],
+				[
+					"7",
+					"19\u201327",
+					"1",
+					"2",
+					"2"
+				],
+				[
+					"8",
+					"28\u201336",
+					"1",
+					"3",
+					"2\u20133"
+				],
+				[
+					"9",
+					"37\u201353",
+					"1",
+					"4\u20135",
+					"2\u20133"
+				],
+				[
+					"10",
+					"54\u201375",
+					"2",
+					"6\u20137",
+					"3\u20134"
+				],
+				[
+					"11",
+					"76\u201399",
+					"2",
+					"8\u201310",
+					"3\u20134"
+				],
+				[
+					"12",
+					"100\u2013150",
+					"2",
+					"11\u201315",
+					"3\u20135"
+				],
+				[
+					"13",
+					"151\u2013215",
+					"2",
+					"16\u201322",
+					"3\u20135"
+				],
+				[
+					"14",
+					"216\u2013300",
+					"3",
+					"23\u201330",
+					"4\u20136"
+				],
+				[
+					"15",
+					"301\u2013425",
+					"3",
+					"31\u201342",
+					"4\u20136"
+				],
+				[
+					"16",
+					"426\u2013600",
+					"3",
+					"43\u201360",
+					"4\u20137"
+				],
+				[
+					"17",
+					"601\u2013850",
+					"3",
+					"61\u201385",
+					"4\u20137"
+				],
+				[
+					"18",
+					"851\u20131,200",
+					"4",
+					"86\u2013120",
+					"5\u20138"
+				],
+				[
+					"19",
+					"1,201\u20131,700",
+					"4",
+					"121\u2013170",
+					"5\u20138"
+				],
+				[
+					"20",
+					"1,701\u20132,400",
+					"4",
+					"171\u2013240",
+					"5\u20139"
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "SaS",
+			"page": 8,
+			"name": "Shadows at Sundown Rumors",
+			"labelRowIdx": [
+				0
+			],
+			"colStyles": [
+				"text-left",
+				"text-left"
+			],
+			"colSizes": [
+				1,
+				15
+			],
+			"rollable": true,
+			"rows": [
+				[
+					"{@dice d10}",
+					"Rumor"
+				],
+				[
+					"1\u20132",
+					"\"Queen Ileosa escaped Hell, and she's come back to Korvosa as a ghost, but I heard someone from the Acadamae say what we really have to worry about are the devils that'll come looking for her!\" {@i (False.)}"
+				],
+				[
+					"3\u20135",
+					"\"Ileosa's gone. If she were really coming back, don't you think her ghost would have been more destructive and obvious? No, these ‘ghost sightings' are hoaxes or pranks.\" {@i (False, with a fairly equal distribution between placing blame on pranksters from the Acadamae and fearmongering about the manifestations being created by Queen Sorshen or one of her minions.)}"
+				],
+				[
+					"6",
+					"\"There's no way that Bishop Keppira is actually gone. I heard she faked her death when she learned that Ileosa was trying to come back, and now she's gone undercover to fight against the queen's ghost! That's why the church was closed for so long after she ‘died,' so the priests would have a chance to get their story straight while the high priestess gets to work protecting us all!\" {@i (False.)}"
+				],
+				[
+					"7",
+					"\"Have you seen them? Gray Maidens? I'm not buying the line that they're just people in costume from the Crimson Festival. The Maidens are coming back, and they must have something to do with Ileosa's ghost!\" {@i (Partially true\u2014there are Gray Maidens in town, but they have nothing to do with the cause of Ileosa's spirit manifesting in the city.)}"
+				],
+				[
+					"8",
+					"\"Ghost or not, you can't deny the fact that we've had more people going missing at night lately. The city guard is either unable or unwilling to help. I think the ghost is just a distraction while someone or some thing is at work!\" {@i (True.)}"
+				],
+				[
+					"9\u201310",
+					"Create a special rumor for the PCs that pushes them toward an area they haven't investigated yet. If they've exhausted all other sites and events in this part but haven't learned of the link to the Gray District, they should learn a rumor of your design that leads them here."
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "Mal",
+			"page": 11,
+			"name": "Xarwin Manor Phantasms",
+			"labelRowIdx": [
+				0
+			],
+			"colStyles": [
+				"text-left",
+				"text-left"
+			],
+			"colSizes": [
+				1,
+				15
+			],
+			"rollable": true,
+			"rows": [
+				[
+					"{@dice d12}",
+					"Result"
+				],
+				[
+					"1",
+					"A damp, ectoplasmic handprint appears on a window or wall, only to reach out of the surface briefly to try to choke a character. The hand vanishes a moment later, but the PC's left hand feels weirdly damp until it's wiped off."
+				],
+				[
+					"2",
+					"A painless, bloodless incision manifests across a PC's forehead, completely encircling their skull over a few seconds; when the incision completes its circuit, the PC experiences a momentarily excruciating headache before the incision vanishes."
+				],
+				[
+					"3",
+					"The PC catches a glimpse of a shadowy figure in a reflective surface; the figure raises an arm as if to point at them, yet the arm has no hand. When the PC turns to confront the image or blinks, the figure is gone."
+				],
+				[
+					"4",
+					"The PC stumbles then notices that loose objects in the room shake, curtains swing, and floorboards shift. If a window is visible, the trees outside sway even though it's a windless day. As everything grows still, the PC gets the feeling that something immense just shifted somewhere down below. No other PC experiences this sensation."
+				],
+				[
+					"5",
+					"The PC feels a sudden pain on their left wrist and is convinced that their hand has been cut off. Upon looking at the suspected wound, the pain vanishes and the hand looks fine."
+				],
+				[
+					"6",
+					"The sky through a window appears to be fully night during the day, or the ceiling above suddenly fades away to reveal the night sky. The PC feels something looking back at them from somewhere between the stars, but as soon as they blink, look away, or draw attention to the night sky, the image reverts to normal."
+				],
+				[
+					"7",
+					"The PC is suddenly overcome with the conviction that they've lived in this manor for decades and that the other PCs are trespassers, only for the feeling to vanish moments later."
+				],
+				[
+					"8",
+					"The PC suddenly feels an overwhelming sense of betrayal from one of the other PCs\u2014preferably the one with which they have the closest emotional ties. A heartbeat later, the feeling fades away."
+				],
+				[
+					"9",
+					"The PC can hear what sounds like a small bird trapped in a wall, struggling for escape; no other PC can hear it. A few moments later, the PC feels that they're the trapped bird, and then the phantasm fades away."
+				],
+				[
+					"10",
+					"The PC suddenly loses all senses and feels weightless for a split second. In the darkness, they get the creeping thought that something is about to give them the gift of sight, but they know that what they'll see will be awful. Then, everything returns to normal."
+				],
+				[
+					"11",
+					"The PC is, for a few frightening moments, suddenly convinced that someone else is thinking for them and that they've been tricked into thinking they're in their own body when they're not."
+				],
+				[
+					"12",
+					"The PC suddenly remembers an awful memory from their past or childhood, then feels a sense of relief as that memory is pulled from their minds. They can remember that something bad happened but not what it was."
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "SoG3",
+			"page": 14,
+			"name": "Ill Omens in Willowshore",
+			"labelRowIdx": [
+				0
+			],
+			"colStyles": [
+				"text-left",
+				"text-left"
+			],
+			"colSizes": [
+				2,
+				20
+			],
+			"rollable": true,
+			"rows": [
+				[
+					"{@dice 1d8|d8 Roll}",
+					"Result"
+				],
+				[
+					"1",
+					"Someone bites into a large, ripe persimmon. The torrent of juice that flows down their mouth and chin smells overwhelmingly sweet but looks exactly like blood; no amount of accusation or persuasion can make the person cognizant of this fact."
+				],
+				[
+					"2",
+					"A PC feels something like a taut strand of hair snap across their cheek while walking forward and takes 1 point of slashing damage. A razor thin cut appears on their face, as if the hair was sharp enough to draw blood."
+				],
+				[
+					"3",
+					"A PC feels something oddly soft brush their skin. A ball of silkworms has fallen from somewhere on high and struck the PC on the way down. The caterpillars writhe helplessly on the ground like maggots, as there are no mulberry trees in winter to feed them."
+				],
+				[
+					"4",
+					"A mysterious black shadow slowly appears on a building that a PC is standing near, as if the walls were being burnt from the inside. An investigation reveals no sign of any fire."
+				],
+				[
+					"5",
+					"A PC hears a sharp crunching noise beneath their feet. An investigation reveals the broken fragments of teeth embedded in their shoes or skin, leaving no lasting damage other than a sense of disquiet."
+				],
+				[
+					"6",
+					"A person minces river fish to prepare them for fermentation into fish paste. The fish have glassy human eyes and prominent human teeth in their mouths."
+				],
+				[
+					"7",
+					"A crimson butterfly emerges from an unexpected nearby location, such as from a cup of tea or out of a PC's mouth when they sneeze. The butterfly flutters around the party for a few rounds before it drops to the ground and melts into a bloodstain."
+				],
+				[
+					"8",
+					"A strangely cold breeze rustles through the area; as it blows across the party, one PC (determined randomly) hears threatening whispers promising death and doom\u2014the voice delivering the whispers seems to be that of a different PC."
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "SoG3",
+			"page": 28,
+			"name": "Unexpected Trouble",
+			"labelRowIdx": [
+				0
+			],
+			"colSizes": [
+				1,
+				3,
+				3
+			],
+			"colStyles": [
+				"text-center",
+				"text-left",
+				"text-left"
+			],
+			"rows": [
+				[
+					"{@dice 1d6|Roll}",
+					"Preparation Point Loss",
+					"Minimize with a DC 24 Skill Check"
+				],
+				[
+					"1\u20132",
+					"{@dice 1d4} Food Points",
+					"{@skill Nature} or {@skill Survival} check"
+				],
+				[
+					"3\u20134",
+					"{@dice 1d4+2} Hope Points",
+					"{@skill Diplomacy} or {@skill Performance} check"
+				],
+				[
+					"5\u20136",
+					"{@dice 1d4} Security Points",
+					"{@skill Athletics} or {@skill Crafting} check"
+				]
+			]
+		},
+		{
+			"type": "table",
+			"source": "SoG3",
+			"page": 29,
+			"name": "More of Yami's Gifts",
+			"labelRowIdx": [
+				0
+			],
+			"colStyles": [
+				"text-left",
+				"text-left"
+			],
+			"colSizes": [
+				1,
+				20
+			],
+			"rollable": true,
+			"rows": [
+				[
+					"{@dice 1d8|Roll}",
+					"Gift"
+				],
+				[
+					"1",
+					"A partially chewed origami crane."
+				],
+				[
+					"2",
+					"A partially eaten sparrow (possibly still alive)."
+				],
+				[
+					"3",
+					"A squished lemon."
+				],
+				[
+					"4",
+					"A fresh dumpling from Mama Bao's."
+				],
+				[
+					"5",
+					"A {@item grim trophy} talisman that appears to be a still-bloody human ear.*"
+				],
+				[
+					"6",
+					"A waterproof bag of saffron worth 100 gp.*"
+				],
+				[
+					"7",
+					"A {@item greater smokestick}.*"
+				],
+				[
+					"8",
+					"A {@item greater hat of disguise} currently taking the form of a zhanjiao putou (a black hat with two long, stiff, wing-like flaps).*"
+				]
+			],
+			"footnotes": [
+				"*This gift can only be rolled once; treat further rolls of this gift as 1 platinum coin."
+			]
+		},
+		{
+			"type": "table",
+			"source": "SoG3",
+			"page": 48,
+			"name": "A Summary of Terror",
+			"labelRowIdx": [
+				0
+			],
+			"colSizes": [
+				2,
+				2,
+				6
+			],
+			"colStyles": [
+				"text-center",
+				"text-center",
+				"text-left"
+			],
+			"rows": [
+				[
+					"Terror Threshold",
+					"NPC Fear",
+					"Fortress Response"
+				],
+				[
+					"1",
+					"\u2013",
+					"None."
+				],
+				[
+					"2",
+					"\u2013",
+					"The two {@creature exorcist|SoG3|exorcists} from area C1 leave to patrol the village. Villagers and cooks inside the fort retreat to the village."
+				],
+				[
+					"3",
+					"{@condition Frightened 1}",
+					"Earth Gate is locked. The Small Wood Gate is locked and guarded by {@creature warden|GMG|mercenaries} from area C6."
+				],
+				[
+					"4",
+					"{@condition Frightened 1}",
+					"The {@creature shrine maiden|SoG3|shrine maidens} from area C15 patrol the periphery hall."
+				],
+				[
+					"5",
+					"{@condition Frightened 1}",
+					"All exterior fortress gates (area C2) are closed and locked."
+				],
+				[
+					"6",
+					"{@condition Frightened 2}",
+					"Fenfang and two {@creature exorcist|SoG3|exorcists} retreat to area C16."
+				],
+				[
+					"7",
+					"{@condition Frightened 2}",
+					"The fortress's nine {@creature warden|GMG|mercenaries} barricade themselves into area C5. {@creature Mago Kai|SoG3} retreats to his quarters in area C20."
+				],
+				[
+					"8",
+					"{@condition Frightened 3}",
+					"{@creature Mago Kai|SoG3} has a {@creature shrine maiden|SoG3} cast {@spell sending} to report to allies back in the city of Sze about the situation and ask for reinforcements. Help won't arrive immediately, but within the next several days, {@creature exorcist|SoG3|exorcists}, {@creature warden|GMG|mercenaries}, and {@creature shrine maiden|SoG3|shrine maidens} the PCs might have defeated are replaced by new ones. Mago Kai can call for reinforcements up to three times."
+				]
+			]
+		},
+		{
+			"type": "table",
 			"source": "SoG2",
 			"page": 10,
 			"name": "Yami's Gifts",
@@ -65,6 +1021,11 @@
 			"source": "GMG",
 			"name": "Hexploration Activities per Day",
 			"id": "3-6",
+			"otherSources": {
+				"Reprinted": [
+					"QFF0|9"
+				]
+			},
 			"colStyles": [
 				"",
 				"text-center"
@@ -1465,7 +2426,7 @@
 				],
 				[
 					"11",
-					"{@b Desperate Swing:} {@i Play during your turn.} Make a {@action Strike}, ignoring the multiple attack penalty. If you roll a critical success, you get a normal success instead. If the attack fails, you {@action release} your weapon, or drop {@condition prone} if you were using an unarmed attack or otherwise can't {@action release} your weapon."
+					"{@b Desperate Swing:} {@i Play during your turn.} Make a {@action Strike}, ignoring the multiple attack penalty. If you roll a critical success, you get a normal success instead. If the attack fails, you {@action release} your weapon, or {@action drop prone} if you were using an unarmed attack or otherwise can't {@action release} your weapon."
 				],
 				[
 					"12",

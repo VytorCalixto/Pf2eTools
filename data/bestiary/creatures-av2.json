@@ -12,7 +12,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human scoundrel",
+			"description": "Male {@ancestry human} scoundrel",
 			"perception": {
 				"std": 12
 			},
@@ -528,7 +528,7 @@
 				},
 				"athletics": {
 					"std": 12,
-					"to Climb": 14
+					"to {@action Climb}": 14
 				},
 				"intimidation": {
 					"std": 10
@@ -694,7 +694,7 @@
 			"skills": {
 				"athletics": {
 					"std": 18,
-					"to High Jump or Long Jump": 22
+					"to {@action High Jump} or Long Jump": 22
 				},
 				"intimidation": {
 					"std": 15
@@ -853,7 +853,7 @@
 				},
 				"athletics": {
 					"std": 12,
-					"to High Jump or Long Jump": 16
+					"to {@action High Jump} or Long Jump": 16
 				},
 				"survival": {
 					"std": 11
@@ -916,14 +916,11 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"requirements": "The gibtas's last action was a",
-						"name": "Pinning Chomp"
-					},
-					{
+						"requirements": "The gibtas's last action was a Bouncing Slam and the gibtas successfully Shoved the target",
 						"entries": [
-							"Slam and the gibtas successfully Shoved the target; The gibtas attempts to {@action Trip} the target of its Bouncing Slam, then makes a jaws {@action Strike} against the target. The {@action Trip} and {@action Strike} both count against the gibtas's multiple attack penalty, but the penalty doesn't increase until after both attacks."
+							"The gibtas attempts to {@action Trip} the target of its Bouncing Slam, then makes a jaws {@action Strike} against the target. The {@action Trip} and {@action Strike} both count against the gibtas's multiple attack penalty, but the penalty doesn't increase until after both attacks."
 						],
-						"name": "Bouncing"
+						"name": "Pinning Chomp"
 					}
 				]
 			},
@@ -4020,7 +4017,7 @@
 				},
 				"athletics": {
 					"std": 17,
-					"to Grapple or Shove": 19
+					"to {@action Grapple} or Shove": 19
 				},
 				"intimidation": {
 					"std": 15

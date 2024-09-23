@@ -144,7 +144,7 @@
 			"skills": {
 				"athletics": {
 					"std": 10,
-					"to Disarm or Grapple": 12
+					"to {@action Disarm} or Grapple": 12
 				}
 			},
 			"abilityMods": {
@@ -244,7 +244,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 19}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -520,7 +524,7 @@
 					}
 				]
 			},
-			"description": "Male halfling porter"
+			"description": "Male {@ancestry halfling} porter"
 		},
 		{
 			"name": "Spellscar Sky Marauders",
@@ -772,10 +776,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -948,10 +949,7 @@
 				},
 				{
 					"name": "tremorsense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -1290,7 +1288,7 @@
 			],
 			"perception": {
 				"std": 11,
-				"to Seek creatures using hearing": 13
+				"to {@action Seek} creatures using hearing": 13
 			},
 			"senses": [
 				{
@@ -1475,10 +1473,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -1629,7 +1624,7 @@
 		{
 			"name": "The Claws of Time",
 			"source": "OoA2",
-			"page": 39,
+			"page": 41,
 			"level": 10,
 			"traits": [
 				"unique",
@@ -1646,11 +1641,8 @@
 					"name": "greater darkvision"
 				},
 				{
-					"name": "lamp vision ",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					}
+					"name": "lamp vision",
+					"range": 30
 				}
 			],
 			"languages": {
@@ -1676,7 +1668,7 @@
 				},
 				"survival": {
 					"std": 17,
-					"to Track": 23
+					"to {@action Track}": 23
 				}
 			},
 			"abilityMods": {
@@ -1795,15 +1787,9 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Lamp",
+						"name": "Lamp Vision",
 						"entries": [
-							"Vision The Claws of Time is specially attuned to the crystal lamps in the"
-						]
-					},
-					{
-						"name": "Cradle of Quartz.",
-						"entries": [
-							"It can sense creatures within 30 feet of any crystal lamp in the Cradle of Quartz. These lamps are marked as glowing blue dots on the map on page 42. This is a precise sense."
+							"The Claws of Time is specially attuned to the crystal lamps in the Cradle of Quartz. It can sense creatures within 30 feet of any crystal lamp in the Cradle of Quartz. These lamps are marked as glowing blue dots on the map on page 42. This is a precise sense."
 						]
 					}
 				],
@@ -1814,7 +1800,7 @@
 							"mental"
 						],
 						"entries": [
-							"As hound of Tindalos, but {@dc 29}."
+							"As {@creature hound of Tindalos|B2}, but {@dc 29}."
 						]
 					},
 					{
@@ -1826,13 +1812,13 @@
 							"visual"
 						],
 						"entries": [
-							"30 feet. As hound of Tindalos, but {@damage 6d6} slashing damage and {@dc 29}."
+							"30 feet. As {@creature hound of Tindalos|B2}, but {@damage 6d6} slashing damage and {@dc 29}."
 						]
 					},
 					{
 						"name": "Vulnerable to Curved Space",
 						"entries": [
-							"As hound of Tindalos."
+							"As {@creature hound of Tindalos|B2}."
 						]
 					}
 				],
@@ -1849,7 +1835,7 @@
 					}
 				]
 			},
-			"description": "Hound of Tindalos hunter (Pathfinder Bestiary 2 146)"
+			"description": "{@creature Hound of Tindalos|B2} hunter"
 		},
 		{
 			"name": "Gilded Gunner Assassins",
@@ -2120,7 +2106,7 @@
 			"skills": {
 				"athletics": {
 					"std": 16,
-					"to Disarm": 18
+					"to {@action Disarm}": 18
 				}
 			},
 			"abilityMods": {
@@ -2236,7 +2222,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 24}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -2371,7 +2361,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 20}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -2499,7 +2493,11 @@
 						"name": "Wind-Up",
 						"entries": [
 							"24 hours, {@dc 24}, standby"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"mid": [
@@ -2925,17 +2923,14 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
 			"skills": {
 				"athletics": {
 					"std": 10,
-					"to High Jump or Long Jump": 12
+					"to {@action High Jump} or Long Jump": 12
 				},
 				"stealth": {
 					"std": 7
@@ -3078,10 +3073,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -3253,10 +3245,7 @@
 				},
 				{
 					"name": "magic sense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -3497,7 +3486,7 @@
 				},
 				"athletics": {
 					"std": 6,
-					"to Trip and Tangle": 10
+					"to {@action Trip} and Tangle": 10
 				},
 				"stealth": {
 					"std": 13
@@ -3811,7 +3800,7 @@
 					}
 				]
 			},
-			"description": "Male halfling criminal mogul"
+			"description": "Male {@ancestry halfling} criminal mogul"
 		},
 		{
 			"name": "Sabora Sharkosa",

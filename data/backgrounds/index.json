@@ -28,5 +28,12 @@
 	"SoG0": "backgrounds-sog0.json",
 	"WtD1": "backgrounds-wtd1.json",
 	"WtD2": "backgrounds-wtd2.json",
-	"WtD5": "backgrounds-wtd5.json"
+	"WtD5": "backgrounds-wtd5.json",
+	"QFF0": "backgrounds-qff0.json",
+	"BL0": "backgrounds-bl0.json",
+	"SF0": "backgrounds-sf0.json",
+	"GW0": "backgrounds-gw0.json",
+	"Rust": "backgrounds-rust.json",
+	"CC0": "backgrounds-cc0.json",
+	"LOHh": "backgrounds-lohh.json"
 }

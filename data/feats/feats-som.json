@@ -180,7 +180,7 @@
 			]
 		},
 		{
-			"name": "Attack Of Opportunity",
+			"name": "Attack of Opportunity",
 			"source": "SoM",
 			"page": 45,
 			"activity": {
@@ -772,7 +772,7 @@
 			]
 		},
 		{
-			"name": "Disciple Of Shade",
+			"name": "Disciple of Shade",
 			"source": "SoM",
 			"page": 226,
 			"level": 6,
@@ -851,7 +851,7 @@
 			]
 		},
 		{
-			"name": "Draw From The Land",
+			"name": "Draw From the Land",
 			"source": "SoM",
 			"page": 213,
 			"activity": {
@@ -1459,9 +1459,9 @@
 			"leadsTo": [
 				"Attuned Stride|SoM",
 				"Attunement Shift|SoM",
-				"Draw From The Land|SoM",
+				"Draw From the Land|SoM",
 				"Quickened Attunement|SoM",
-				"Read The Land|SoM",
+				"Read the Land|SoM",
 				"Rough Terrain Stance|SoM",
 				"Shifting Terrain|SoM",
 				"Shared Attunement|SoM",
@@ -2222,7 +2222,7 @@
 			]
 		},
 		{
-			"name": "Raise A Tome",
+			"name": "Raise a Tome",
 			"source": "SoM",
 			"page": 42,
 			"activity": {
@@ -2320,7 +2320,7 @@
 			]
 		},
 		{
-			"name": "Read The Land",
+			"name": "Read the Land",
 			"source": "SoM",
 			"page": 213,
 			"level": 12,
@@ -2627,7 +2627,7 @@
 			]
 		},
 		{
-			"name": "Secrets Of Shadow",
+			"name": "Secrets of Shadow",
 			"source": "SoM",
 			"page": 226,
 			"level": 12,
@@ -2667,7 +2667,7 @@
 				"If you have more than one source of spells you can cast with spell slots, such as if you're a spellcaster with a multiclass archetype, choose one source of spells for your shadow reservoir."
 			],
 			"leadsTo": [
-				"Secrets Of Shadow|SoM"
+				"Secrets of Shadow|SoM"
 			]
 		},
 		{
@@ -2738,9 +2738,9 @@
 				"You can't select another dedication feat until you've gained two other feats from the shadowcaster archetype."
 			],
 			"leadsTo": [
-				"Disciple Of Shade|SoM",
+				"Disciple of Shade|SoM",
 				"Shadow Reservoir|SoM",
-				"Secrets Of Shadow|SoM",
+				"Secrets of Shadow|SoM",
 				"Shadow Spell|SoM",
 				"Shadow Spells|SoM",
 				"Unending Emptiness|SoM"
@@ -3222,7 +3222,7 @@
 			]
 		},
 		{
-			"name": "Student Of The Staff",
+			"name": "Student of the Staff",
 			"source": "SoM",
 			"page": 45,
 			"level": 4,

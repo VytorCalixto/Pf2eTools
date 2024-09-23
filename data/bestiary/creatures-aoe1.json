@@ -487,7 +487,7 @@
 			"hasImages": true
 		},
 		{
-			"name": "Bolar Of Stonemoor",
+			"name": "Bolar of Stonemoor",
 			"source": "AoE1",
 			"page": 8,
 			"level": -1,
@@ -903,9 +903,9 @@
 				"bot": [
 					{
 						"entries": [
-							"277."
+							"See Pathfinder Bestiary 277."
 						],
-						"name": "Cheek Pouches See Pathfinder Bestiary"
+						"name": "Cheek Pouches"
 					},
 					{
 						"entries": [
@@ -925,9 +925,9 @@
 					},
 					{
 						"entries": [
-							"277."
+							"See Pathfinder Bestiary 277."
 						],
-						"name": "Swarming See Pathfinder Bestiary"
+						"name": "Swarming"
 					}
 				]
 			},
@@ -1099,7 +1099,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human city guard commander",
+			"description": "Male {@ancestry human} city guard commander",
 			"perception": {
 				"std": 17
 			},
@@ -1495,9 +1495,9 @@
 				"bot": [
 					{
 						"entries": [
-							"277."
+							"The ratfolk has stretchy cheek pouches that can store up to 1 cubic foot of objects (though no more than 4 light items). The ratfolk can remove or store an item using the {@action Interact} action. As long as the ratfolk has at least one object in its cheek pouches, its speech is noticeably difficult to understand."
 						],
-						"name": "Cheek Pouches See Pathfinder Bestiary"
+						"name": "Cheek Pouches"
 					},
 					{
 						"entries": [
@@ -1700,7 +1700,7 @@
 				"gnome",
 				"humanoid"
 			],
-			"description": "Female gnome hunter",
+			"description": "Female {@ancestry gnome} hunter",
 			"perception": {
 				"std": 11
 			},
@@ -2552,37 +2552,18 @@
 			"abilities": {
 				"top": [
 					{
+						"name": "Distracting Shadows",
 						"entries": [
-							"Shadows Skebs can use creatures that are at least one size larger than themself as cover for the {@action Hide}."
-						],
-						"name": "Distracting"
-					},
-					{
-						"entries": [
-							"{@action Sneak} actions."
-						],
-						"name": "and"
+							"Skebs can use creatures that are at least one size larger than themself as cover for the {@action Hide} and {@action Sneak} actions."
+						]
 					}
 				],
 				"bot": [
 					{
-						"activity": {
-							"number": 1,
-							"unit": "action"
-						},
-						"entries": [
-							"{@damage 1d4} piercing Ranged dagger +8 (agile, finesse, thrown <10 feet>, versatile S), Damage {@damage 1d4} piercing."
-						],
-						"name": "S), Damage"
-					},
-					{
-						"traits": [
-							"precision"
-						],
-						"entries": [
-							"Skebs deals {@dice 1d6} extra precision damage to {@condition flat-footed} creatures."
-						],
 						"name": "Sneak Attack",
+						"entries": [
+							"(precision) Skebs deals {@dice 1d6} extra precision damage to {@condition flat-footed} creatures."
+						],
 						"generic": {
 							"tag": "ability"
 						}

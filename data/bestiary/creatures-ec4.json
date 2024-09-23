@@ -1,7 +1,7 @@
 {
 	"creature": [
 		{
-			"name": "Arskuva The Gnasher",
+			"name": "Arskuva the Gnasher",
 			"source": "EC4",
 			"page": 55,
 			"level": 12,
@@ -1346,7 +1346,7 @@
 			"skills": {
 				"acrobatics": {
 					"std": 26,
-					"to Squeeze": 30
+					"to {@action Squeeze}": 30
 				},
 				"arcana": {
 					"std": 29
@@ -1703,7 +1703,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human folk hero",
+			"description": "Male {@ancestry human} folk hero",
 			"perception": {
 				"std": 24,
 				"when using Perception for initiative": 26
@@ -1719,7 +1719,7 @@
 				},
 				"athletics": {
 					"std": 25,
-					"to Disarm": 27
+					"to {@action Disarm}": 27
 				},
 				"deception": {
 					"std": 23
@@ -2670,7 +2670,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human town protector",
+			"description": "Male {@ancestry human} town protector",
 			"perception": {
 				"std": 21
 			},
@@ -3113,7 +3113,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human town protector",
+			"description": "Male {@ancestry human} town protector",
 			"perception": {
 				"std": 20
 			},
@@ -4923,7 +4923,7 @@
 				},
 				"intimidation": {
 					"std": 25,
-					"to Demoralize": 27
+					"to {@action Demoralize}": 27
 				},
 				"religion": {
 					"std": 25

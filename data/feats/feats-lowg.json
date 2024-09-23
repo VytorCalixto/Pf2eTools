@@ -144,7 +144,7 @@
 			]
 		},
 		{
-			"name": "Attunement To Stone",
+			"name": "Attunement to Stone",
 			"source": "LOWG",
 			"page": 59,
 			"level": 10,
@@ -342,7 +342,7 @@
 			]
 		},
 		{
-			"name": "Eye Of Ozem",
+			"name": "Eye of Ozem",
 			"source": "LOWG",
 			"page": 47,
 			"level": 4,
@@ -360,7 +360,7 @@
 			]
 		},
 		{
-			"name": "Eye Of The Arclords",
+			"name": "Eye of the Arclords",
 			"source": "LOWG",
 			"page": 81,
 			"activity": {
@@ -518,12 +518,12 @@
 				"Mortification|LOWG",
 				"Advanced Order Training|LOCG",
 				"Hellknight Dedication|LOCG",
-				"Blade Of Law|LOCG",
+				"Blade of Law|LOCG",
 				"Hell's Armaments|LOCG",
 				"Hellknight Order Cross-training|LOCG",
 				"Sense Chaos|LOCG",
 				"Hellknight Signifer Dedication|LOCG",
-				"Gaze Of Veracity|LOCG",
+				"Gaze of Veracity|LOCG",
 				"Masked Casting|LOCG",
 				"Signifer Armor Expertise|LOCG",
 				"Signifer's Sight|LOCG",
@@ -531,7 +531,7 @@
 			]
 		},
 		{
-			"name": "Judgment Of The Monolith",
+			"name": "Judgment of the Monolith",
 			"source": "LOWG",
 			"page": 59,
 			"level": 12,
@@ -585,9 +585,9 @@
 				}
 			],
 			"leadsTo": [
-				"Attunement To Stone|LOWG",
+				"Attunement to Stone|LOWG",
 				"Fortified Flesh|LOWG",
-				"Judgment Of The Monolith|LOWG",
+				"Judgment of the Monolith|LOWG",
 				"Stone Blood|LOWG",
 				"Stone Communion|LOWG"
 			]
@@ -616,7 +616,7 @@
 				"You can't select another dedication feat until you have gained two other feats from the Lastwall sentry archetype."
 			],
 			"leadsTo": [
-				"Eye Of Ozem|LOWG",
+				"Eye of Ozem|LOWG",
 				"Grave Sense|LOWG",
 				"Lastwall Warden|LOWG",
 				"Necromantic Resistance|LOWG",
@@ -684,7 +684,7 @@
 			"leadsTo": [
 				"Expeditious Advance|LOWG",
 				"Flicker|LOWG",
-				"Lost In The Crowd|LOWG",
+				"Lost in the Crowd|LOWG",
 				"Crowd Mastery|LOWG",
 				"Spy's Countermeasures|LOWG"
 			]
@@ -714,9 +714,9 @@
 			],
 			"leadsTo": [
 				"Ka Stone Ritual|LOWG",
-				"Attunement To Stone|LOWG",
+				"Attunement to Stone|LOWG",
 				"Fortified Flesh|LOWG",
-				"Judgment Of The Monolith|LOWG",
+				"Judgment of the Monolith|LOWG",
 				"Stone Blood|LOWG",
 				"Stone Communion|LOWG"
 			]
@@ -740,7 +740,7 @@
 			]
 		},
 		{
-			"name": "Lost In The Crowd",
+			"name": "Lost in the Crowd",
 			"source": "LOWG",
 			"page": 131,
 			"level": 4,
@@ -964,7 +964,7 @@
 				"Environmental Explorer|LOPSG",
 				"Observant Explorer|LOPSG",
 				"Remember Your Training|LOPSG",
-				"Snap Out Of It!|LOPSG",
+				"Snap Out of It!|LOPSG",
 				"Spiritual Explorer|LOPSG",
 				"Swap Investment|LOPSG",
 				"Watch And Learn|LOPSG",

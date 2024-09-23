@@ -160,7 +160,7 @@
 				"coin": "gp"
 			},
 			"bulk": 2,
-			"hands": 2,
+			"hands": 1,
 			"category": "Weapon",
 			"subCategory": "Advanced",
 			"entries": [
@@ -1469,6 +1469,11 @@
 			"name": "Boarding Axe",
 			"source": "AAWS",
 			"page": 1,
+			"otherSources": {
+				"Reprinted": [
+					"LOACLO|391"
+				]
+			},
 			"type": "Item",
 			"traits": [
 				"agile",
@@ -3014,7 +3019,7 @@
 			"armorData": {
 				"ac": 2,
 				"dexCap": 2,
-				"checkPen": -1,
+				"checkPen": 1,
 				"speedPen": 0,
 				"str": 12,
 				"group": "Cloth"
@@ -3043,7 +3048,7 @@
 			"armorData": {
 				"ac": 3,
 				"dexCap": 2,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 14,
 				"group": "Plate"
@@ -3073,7 +3078,7 @@
 			"armorData": {
 				"ac": 5,
 				"dexCap": 1,
-				"checkPen": -3,
+				"checkPen": 3,
 				"speedPen": 10,
 				"str": 16,
 				"group": "Plate"
@@ -3149,7 +3154,7 @@
 			"armorData": {
 				"ac": 4,
 				"dexCap": 1,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 16,
 				"group": "Plate"
@@ -3178,7 +3183,7 @@
 			"armorData": {
 				"ac": 6,
 				"dexCap": 0,
-				"checkPen": -3,
+				"checkPen": 3,
 				"speedPen": 10,
 				"str": 18,
 				"group": "Plate"
@@ -3208,7 +3213,7 @@
 			"armorData": {
 				"ac": 6,
 				"dexCap": 0,
-				"checkPen": -3,
+				"checkPen": 3,
 				"speedPen": 10,
 				"str": 18,
 				"group": "Plate"
@@ -3238,7 +3243,7 @@
 			"armorData": {
 				"ac": 6,
 				"dexCap": 0,
-				"checkPen": -3,
+				"checkPen": 3,
 				"speedPen": 10,
 				"str": 18,
 				"group": "Plate"
@@ -3262,7 +3267,7 @@
 			"armorData": {
 				"ac": 3,
 				"dexCap": 2,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 14,
 				"group": "Wood"
@@ -3289,7 +3294,7 @@
 			"armorData": {
 				"ac": 3,
 				"dexCap": 2,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 14,
 				"group": "Skeletal"
@@ -3313,7 +3318,7 @@
 			"armorData": {
 				"ac": 4,
 				"dexCap": 1,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 16,
 				"group": "Chain"
@@ -3341,7 +3346,7 @@
 			"armorData": {
 				"ac": 4,
 				"dexCap": 1,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 16,
 				"group": "Composite"
@@ -3368,7 +3373,7 @@
 			"armorData": {
 				"ac": 3,
 				"dexCap": 2,
-				"checkPen": -2,
+				"checkPen": 2,
 				"speedPen": 5,
 				"str": 14,
 				"group": "Skeletal"
@@ -3395,7 +3400,7 @@
 			"armorData": {
 				"ac": 2,
 				"dexCap": 3,
-				"checkPen": -1,
+				"checkPen": 1,
 				"speedPen": 0,
 				"str": 12,
 				"group": "Wood"
@@ -3422,7 +3427,7 @@
 			"armorData": {
 				"ac": 1,
 				"dexCap": 4,
-				"checkPen": -1,
+				"checkPen": 1,
 				"speedPen": 0,
 				"str": 10,
 				"group": "Composite"
@@ -3449,7 +3454,7 @@
 			"armorData": {
 				"ac": 1,
 				"dexCap": 4,
-				"checkPen": -1,
+				"checkPen": 1,
 				"speedPen": 0,
 				"str": 10,
 				"group": "Wood"
@@ -3477,7 +3482,7 @@
 			"armorData": {
 				"ac": 2,
 				"dexCap": 3,
-				"checkPen": -1,
+				"checkPen": 1,
 				"speedPen": 0,
 				"str": 12,
 				"group": "Leather"
@@ -3506,7 +3511,7 @@
 			"armorData": {
 				"ac": 2,
 				"dexCap": 3,
-				"checkPen": -1,
+				"checkPen": 1,
 				"speedPen": 0,
 				"str": 12,
 				"group": "Skeletal"
@@ -4277,7 +4282,7 @@
 			"category": "Weapon",
 			"subCategory": "Advanced",
 			"entries": [
-				"These special poi are made from a rare, light metal or from fire-retardant fibers and can be ignited before being wielded. Igniting a pair of fire poi is an Interact action and requires 1 pint of oil for every 10 minutes the poi remain ignited. While lit, fire poi cast dim light in a 10-foot radius; in combat, they deal 1d4 bludgeoning plus {@damage 1d4} fire damage. On a critical hit with a lit fire poi, the target takes 1 {@condition persistent damage||persistent fire damage}. The fire can be extinguished using the {@action Interact} action. When unlit, the poi deal only the listed bludgeoning damage. Regardless of whether it is lit, the poi's {@damage 1d4} bludgeoning damage is the weapon damage dice, so striking runes and other effects don't affect the fire damage."
+				"These special poi are made from a rare, light metal or from fire-retardant fibers and can be ignited before being wielded. Igniting a pair of fire poi is an {@action Interact} action and requires 1 pint of oil for every 10 minutes the poi remain ignited. While lit, fire poi cast dim light in a 10-foot radius; in combat, they deal 1d4 bludgeoning plus {@damage 1d4} fire damage. On a critical hit with a lit fire poi, the target takes 1 {@condition persistent damage||persistent fire damage}. The fire can be extinguished using the {@action Interact} action. When unlit, the poi deal only the listed bludgeoning damage. Regardless of whether it is lit, the poi's {@damage 1d4} bludgeoning damage is the weapon damage dice, so striking runes and other effects don't affect the fire damage."
 			],
 			"weaponData": {
 				"damage": "1d4",
@@ -4527,6 +4532,11 @@
 		{
 			"name": "Gill Hook",
 			"source": "AAWS",
+			"otherSources": {
+				"Reprinted": [
+					"LOACLO|391"
+				]
+			},
 			"page": 1,
 			"type": "Item",
 			"traits": [

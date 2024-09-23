@@ -1,6 +1,526 @@
 {
 	"ability": [
 		{
+			"name": "Tap Planar Gate",
+			"page": 85,
+			"source": "WoW2",
+			"creature": [
+				"Woodblessed"
+			],
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"concentrate",
+				"primal"
+			],
+			"entries": [
+				"The woodblessed empowers themself or their next attack.",
+				"If the woodblessed's next action is to {@action Stride}, is launched off the ground by a suddenly sprouting tree and propelled forward. During this {@action Stride}, they have a fly Speed equal to their Speed. If they don't end their movement on a solid surface that can support their weight, they fall.",
+				"If the woodblessed's next action is a {@action Strike}, the attack sprouts thorns that deal an additional {@damage 1d4} {@condition persistent damage||persistent bleed damage} ({@damage 1d6} for levels 6\u201312, {@damage 1d10} for levels 13+)."
+			]
+		},
+		{
+			"name": "Reactive Flare",
+			"page": 85,
+			"source": "WoW2",
+			"creature": [
+				"Woodblessed"
+			],
+			"activity": {
+				"number": 1,
+				"unit": "reaction"
+			},
+			"trigger": "The woodblessed is damaged by a creature within their reach",
+			"entries": [
+				"Distracted by the pain, the woodblessed's concentration slips and splinters erupt from their body as they temporarily lose control of the planar energy within them. Both the triggering creature and the woodblessed take {@damage 1d6} piercing damage + {@damage 1d6} per 2 levels the woodblessed has, with a basic Reflex save against the woodblessed's spell DC."
+			]
+		},
+		{
+			"name": "Luminant Aura",
+			"page": 85,
+			"source": "WoW2",
+			"creature": [
+				"Woodblessed"
+			],
+			"traits": [
+				"aura",
+				"light"
+			],
+			"entries": [
+				"20 feet. The volatile planar energy coursing through a woodblessed's veins fills the area with dim light."
+			]
+		},
+		{
+			"name": "Explosive End",
+			"page": 85,
+			"source": "WoW2",
+			"creature": [
+				"Woodblessed"
+			],
+			"traits": [
+				"primal",
+				"wood"
+			],
+			"entries": [
+				"When the woodblessed dies, the planar portal inside of them collapses, causing them to explode in a 20-foot burst of vines that deal {@damage 1d6} bludgeoning damage per level to all creatures with a basic Reflex save against the woodblessed's spell DC. The woodblessed's body is completely consumed, though their root network and gear remain behind."
+			]
+		},
+		{
+			"name": "Wind-Up",
+			"page": 48,
+			"source": "B3",
+			"creature": [
+				"Clockwork"
+			],
+			"entries": [
+				"For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.",
+				"A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a \u20132 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).",
+				"A creature can attempt to {@action Disable a Device} to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode."
+			]
+		},
+		{
+			"name": "Breathsense",
+			"page": 156,
+			"source": "BotD",
+			"creature": [
+				"Vampire, Jiang-Shi"
+			],
+			"entries": [
+				"60 feet (precise). A jiang-shi can't perceive living creatures beyond 5 feet except with their breathsense. A living creature within the listed range who holds its breath is {@condition invisible} to the jiang-shi for as long as it holds its breath. To hold its breath in this way, a creature must have one hand free to fully plug its nose or cover its mouth. (Refer to {@quickref page 478 of the {@i Core Rulebook}|CRB|3|drowning and suffocating} for the full rules on holding breath.)"
+			]
+		},
+		{
+			"name": "Rigor Mortis",
+			"page": 157,
+			"source": "BotD",
+			"creature": [
+				"Vampire, Jiang-Shi"
+			],
+			"entries": [
+				"The jiang-shi ignores difficult terrain and effects that would render them {@condition prone}. A jiang-shi can't take the {@action Drop Prone} action. When they {@action Leap} they don't trigger reactions that are normally triggered by move actions, such as {@action attack of opportunity||Attacks of Opportunity}."
+			]
+		},
+		{
+			"name": "Drain Qi",
+			"page": 157,
+			"source": "BotD",
+			"creature": [
+				"Vampire, Jiang-Shi"
+			],
+			"traits": [
+				"divine",
+				"necromancy"
+			],
+			"requirements": "A {@condition grabbed}, {@condition paralyzed}, {@condition restrained}, {@condition unconscious}, or willing creature is within the jiang-shi's reach",
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"entries": [
+				"The jiang-shi drains the victim's life energy, or qi, through their breath. This requires an Athletics check against the victim's Fortitude DC if the victim is grabbed and is automatic for any of the other conditions. The victim is {@condition drained||drained 1} and the jiang-shi regains HP equal to 10% of its maximum HP, gaining any excess as temporary Hit Points. Draining qi from a creature that's already {@condition drained} doesn't restore any HP to the jiang-shi but increases the victim's {@condition drained} condition value by 1, killing the victim when it reaches {@condition drained||drained 5}. If the victim has the ability to cast ki spells, it can spend 1 Focus Point to avoid becoming {@condition drained}. This protects it only from the current attack, not from subsequent attempts to Drain Qi.",
+				"A victim's {@condition drained} condition value decreases by 1 every week. If the creature restricts their diet to glutinous rice for at least 1 day and spends 10 minutes dancing, jogging, or otherwise engaging in vigorous physical activity by succeeding at a DC 25 Athletics check, it reduces its {@condition drained} condition by 1."
+			]
+		},
+		{
+			"name": "One More Breath",
+			"page": 156,
+			"source": "BotD",
+			"creature": [
+				"Vampire, Jiang-Shi"
+			],
+			"traits": [
+				"divine",
+				"necromancy",
+				"negative"
+			],
+			"entries": [
+				"Unlike other {@trait undead}, a jiang-shi isn't destroyed at 0 HP. Instead, they fall {@condition unconscious} and awaken in 1 minute with 1 Hit Point. Scattering at least 1 Bulk of glutinous rice or hen eggs on an {@condition unconscious} jiang-shi destroys them permanently. If the jiang-shi was reduced to 0 HP by an attack from a weapon made of {@item darkwood weapon (generic)||darkwood}, they're destroyed immediately."
+			]
+		},
+		{
+			"name": "Imprisoning Grave",
+			"source": "SoG4",
+			"page": 86,
+			"creature": [
+				"Path Maiden"
+			],
+			"traits": [
+				"aura",
+				"divine",
+				"necromancy"
+			],
+			"entries": [
+				"30 feet. The soul of a creature that dies within the {@creature path maiden|SoG4}'s aura is trapped within its corpse until its body spends 1 minute outside the aura. While trapped, the soul can't move on to the afterlife but can still be brought back to life or transformed into an {@trait undead} creature."
+			]
+		},
+		{
+			"name": "Limited Flight",
+			"source": "SoG4",
+			"page": 86,
+			"creature": [
+				"Path Maiden"
+			],
+			"entries": [
+				"A {@creature path maiden|SoG4} has a fly Speed equal to her Speed but can't fly higher than 10 feet above the ground, and if she ends her turn above a nonsolid surface, she vanishes and rematerializes on the last space she occupied over solid ground and becomes {@condition stunned 1}."
+			]
+		},
+		{
+			"name": "Apostate's Shroud",
+			"source": "SoG4",
+			"page": 86,
+			"creature": [
+				"Path Maiden"
+			],
+			"entries": [
+				"All {@creature path maiden|SoG4|path maidens} have an apostate's shroud unarmed attack that deals mental damage. This attack, which manifests as a whipping lash from the path maiden's sleeves or hem, has the {@trait agile}, {@trait finesse}, and {@trait magical traits}. A creature damaged by this attack must succeed at a Fortitude save against the path maiden's spell DC. On a failure, the creature becomes cursed for 1 hour; if the creature dies while cursed, it immediately rises from death as a {@trait ghost}. If the creature is a lower level than the path maiden that cursed it, it treats that path maiden as an ally and loyally obeys her; otherwise, it manifests as a free-willed ghost. In either case, it becomes {@ability site bound} to the site of their death."
+			]
+		},
+		{
+			"name": "Blasphemous Aura",
+			"source": "SoG4",
+			"page": 87,
+			"creature": [
+				"Path Maiden"
+			],
+			"traits": [
+				"abjuration",
+				"aura",
+				"evil",
+				"occult"
+			],
+			"entries": [
+				"30 feet. When a creature in the aura uses a spell or ability with the {@trait healing} trait, it must succeed at a Will save against the {@creature path maiden|SoG4}'s spell DC \u2013 3. On a failure, the amount of Hit Points restored by the spell or ability is halved. On a critical failure, the positive energy becomes negative energy, harming a living target instead of healing it."
+			]
+		},
+		{
+			"name": "Corrupting Doubt",
+			"source": "SoG4",
+			"page": 87,
+			"creature": [
+				"Path Maiden"
+			],
+			"traits": [
+				"emotion",
+				"enchantment",
+				"mental",
+				"occult"
+			],
+			"entries": [
+				"A creature damaged by the {@creature path maiden|SoG4}'s hand {@action Strike} must succeed at a Will save to avoid becoming {@condition slowed 1} for 1 round (slowed 2 on a critical failure)."
+			]
+		},
+		{
+			"name": "Scorn Fate",
+			"source": "SoG4",
+			"page": 87,
+			"creature": [
+				"Path Maiden"
+			],
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"traits": [
+				"curse",
+				"divination",
+				"misfortune",
+				"occult"
+			],
+			"entries": [
+				"The {@creature path maiden|SoG4} targets a creature she can see. The creature must attempt a Will save against the path maiden's spell DC. On a failure, the creature's next roll is cursed. If the result of the roll is a critical success, it becomes a regular success. A success becomes a failure, and a failure becomes a critical failure. That creature is then temporarily immune to Scorn Fate for 24 hours."
+			]
+		},
+		{
+			"name": "Sour Victory",
+			"source": "SoG4",
+			"page": 87,
+			"creature": [
+				"Path Maiden"
+			],
+			"activity": {
+				"number": 1,
+				"unit": "reaction"
+			},
+			"traits": [
+				"curse",
+				"divination",
+				"misfortune",
+				"occult"
+			],
+			"trigger": "A creature scores a critical hit against the {@creature path maiden|SoG4}",
+			"entries": [
+				"The creature must attempt a Will save against the {@creature path maiden|SoG4}'s spell DC. On a failure, its next roll to attack the path maiden must be rolled twice, and it takes the worse result. That creature is then temporarily immune to Sour Victory for 24 hours."
+			]
+		},
+		{
+			"name": "Vengeful Frenzy",
+			"source": "SoG4",
+			"page": 87,
+			"creature": [
+				"Path Maiden"
+			],
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"traits": [
+				"emotion",
+				"enchantment",
+				"mental",
+				"occult"
+			],
+			"entries": [
+				"The {@creature path maiden|SoG4} targets a creature within 60 feet that she can see. The target must attempt a Will save against the path maiden's spell DC. On a failure, the target is {@condition confused} until the end of its next turn, but it can't attack path maidens or itself as the result of this confusion."
+			]
+		},
+		{
+			"name": "Drink Blood",
+			"source": "B1",
+			"page": 319,
+			"add_hash": "True Vampire",
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"creature": [
+				"True Vampire"
+			],
+			"traits": [
+				"divine",
+				"necromancy"
+			],
+			"requirements": "A {@condition grabbed}, {@condition paralyzed}, {@condition restrained}, {@condition unconscious}, or willing creature is within the vampire's reach.",
+			"entries": [
+				"The vampire sinks its fangs into that creature to drink its blood. This requires an {@skill Athletics} check against the victim's Fortitude DC if the victim is {@condition grabbed} and is automatic for any of the other conditions. The victim is {@condition drained||drained 2} and the vampire regains HP equal to 10% of its maximum HP, gaining any excess HP as temporary Hit Points. Drinking Blood from a creature that's already {@condition drained} doesn't restore any HP to the vampire but increases the victim's {@condition drained||drain} value by 1. A vampire can also consume blood that's been emptied into a vessel for sustenance, but it gains no HP from doing so.",
+				"A victim's {@condition drained} condition decreases by 1 per week. A blood transfusion, which requires a DC 20 {@skill Medicine} check and sufficient blood or a blood donor, reduces the {@condition drained||drain} by 1 after 10 minutes."
+			]
+		},
+		{
+			"name": "Drink Blood",
+			"source": "B1",
+			"page": 319,
+			"add_hash": "Vampire",
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"creature": [
+				"Vampire"
+			],
+			"traits": [
+				"divine",
+				"necromancy"
+			],
+			"requirements": "A {@condition grabbed}, {@condition paralyzed}, {@condition restrained}, {@condition unconscious}, or willing creature is within the vampire's reach.",
+			"entries": [
+				"The vampire sinks its fangs into that creature to drink its blood. This requires an {@skill Athletics} check against the victim's Fortitude DC if the victim is {@condition grabbed} and is automatic for any of the other conditions. The victim is {@condition drained||drained 1} and the vampire regains HP equal to 10% of its maximum HP, gaining any excess HP as temporary Hit Points. Drinking Blood from a creature that's already {@condition drained} doesn't restore any HP to the vampire but increases the victim's {@condition drained||drain} value by 1. A vampire can also consume blood that's been emptied into a vessel for sustenance, but it gains no HP from doing so.",
+				"A victim's {@condition drained} condition decreases by 1 per week. A blood transfusion, which requires a DC 20 {@skill Medicine} check and sufficient blood or a blood donor, reduces the {@condition drained||drain} by 1 after 10 minutes."
+			]
+		},
+		{
+			"name": "Dominate",
+			"source": "B1",
+			"page": 319,
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"creature": [
+				"True Vampire"
+			],
+			"traits": [
+				"divine",
+				"enchantment",
+				"incapacitation",
+				"mental",
+				"visual"
+			],
+			"entries": [
+				"The vampire can cast {@spell dominate} at will as a {@trait divine} innate spell. Casting it requires staring into the target's eyes, giving the spell the {@trait visual} trait. The save DC uses the {@table DCs by Level|CRB|DC of the vampire's level}, and a creature that succeeds is temporarily immune to that vampire's Dominate for 24 hours. Fully destroying the vampire ends the domination, but merely reducing the vampire to 0 HP is insufficient to break the spell."
+			]
+		},
+		{
+			"name": "Drink Essence",
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"add_hash": "Strigoi Progenitor",
+			"source": "SaS",
+			"page": 59,
+			"traits": [
+				"divine",
+				"necromancy"
+			],
+			"creature": [
+				"Strigoi Progenitor"
+			],
+			"requirements": "A {@condition grabbed}, {@condition paralyzed}, {@condition restrained}, {@condition unconscious}, or willing creature is within the strigoi's reach",
+			"entries": [
+				"The strigoi sinks their fangs into the targeted creature to drink its blood and draw out its vital essence. This requires an {@skill Athletics} check against the creature's Fortitude DC if the creature is {@condition grabbed} and is automatic for any of the other conditions. The creature becomes {@condition drained||drained 2} and {@condition stupefied||stupefied 2}, and the strigoi regains HP equal to 10% of their maximum HP, gaining any excess HP as temporary Hit Points. Drinking Essence from a creature that's already {@condition drained} or {@condition stupefied} doesn't restore any HP, but increases either the creature's {@condition drained} condition value or its {@condition stupefied} condition value by 1 (whichever value is lesser is increased; if both values are equal, then the strigoi chooses which condition to increase the value of).",
+				"A victim's {@condition drained} condition decreases by 1 per week. A blood transfusion, which requires a successful DC 20 {@skill Medicine} check and sufficient blood or a blood donor, reduces the {@condition drained} value by 1 after 10 minutes.",
+				"A victim's {@condition stupefied} condition decreases by 1 per day after performing daily preparations. If the daily preparations are done in full sunlight, the {@condition stupefied} condition is removed entirely."
+			]
+		},
+		{
+			"name": "Domain of Dusk",
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"creature": [
+				"Strigoi Progenitor"
+			],
+			"source": "SaS",
+			"page": 60,
+			"traits": [
+				"conjuration",
+				"divine",
+				"shadow"
+			],
+			"entries": [
+				"With a wave of its hand, the strigoi calls fourth vile ruination from the surrounding shadows, causing coils of darkness and shadowy bats, rats, and wolves to lash out at living targets in a 30-foot emanation. Living creatures in this area take {@damage 1d6} negative damage +{@damage 1d6} per 2 levels possessed by the strigoi (basic Fortitude save against the {@table DCs by Level|CRB|DC of the strigoi's level}). A creature that fails this save is also {@condition dazzled} for 1 round (or {@condition blinded} for 1 round and then {@condition dazzled} for 1 round) by the darkness. The strigoi progenitor can't use Domain of Dusk for 1 minute."
+			]
+		},
+		{
+			"name": "Shadow Escape",
+			"activity": {
+				"number": 1,
+				"unit": "free"
+			},
+			"creature": [
+				"Strigoi Progenitor"
+			],
+			"source": "SaS",
+			"page": 60,
+			"trigger": "The strigoi is reduced to 0 HP",
+			"entries": [
+				"The strigoi uses {@ability Shadow Form|SaS}. It can take {@trait move} actions to move toward its coffin even though it's at 0 HP. While at 0 HP in this form, the strigoi is unaffected by further damage. Once the strigoi reaches its coffin, or if it hasn't done so within 2 hours, it automatically returns to its physical form, {@condition unconscious}."
+			]
+		},
+		{
+			"name": "Create Spawn",
+			"source": "SaS",
+			"page": 60,
+			"creature": [
+				"Strigoi Progenitor"
+			],
+			"traits": [
+				"divine",
+				"downtime",
+				"necromancy"
+			],
+			"entries": [
+				"As {@ability create spawn|B1|true vampire}, but the victim must have been slain either by Domain of Dusk or Drink Essence. A victim that is 8th level or higher becomes a {@creatureTemplate strigoi servant|SaS}, while a lower-level victim instead becomes a {@creatureTemplate vampire|B1|moroi vampire}."
+			]
+		},
+		{
+			"name": "Shadow Form",
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"source": "SaS",
+			"page": 60,
+			"creature": [
+				"Strigoi",
+				"Strigoi Progenitor"
+			],
+			"traits": [
+				"concentrate",
+				"divine",
+				"shadow",
+				"transmutation"
+			],
+			"entries": [
+				"The strigoi reverts to pure shadow and absorbs its body and its gear into the darkness, or it shifts back to its physical form. In shadow form, the strigoi gains a climb Speed equal to its land Speed and can move through any gap that isn't airtight. However, it can only move along solid surfaces that aren't highly reflective, not liquid or mirrored surfaces. If the surface it's on is destroyed, the strigoi returns to physical form and is {@condition stunned||stunned 1}. The strigoi loses {@ability fast healing} while in shadow form but can remain in shadow form indefinitely.",
+				"A strigoi that is exposed to sunlight while in shadow form becomes {@condition slowed||slowed 2} and must attempt a DC {@flatDC 16} flat check at the end of each of its turns. If it fails this flat check, it is destroyed, the shadow vanishing with a blood-curdling wail."
+			]
+		},
+		{
+			"name": "Drink Essence",
+			"add_hash": "Strigoi",
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"source": "SaS",
+			"page": 59,
+			"creature": [
+				"Strigoi"
+			],
+			"traits": [
+				"divine",
+				"necromancy"
+			],
+			"requirements": "A {@condition grabbed}, {@condition paralyzed}, {@condition restrained}, {@condition unconscious}, or willing creature is within the strigoi's reach",
+			"entries": [
+				"The strigoi sinks their fangs into the targeted creature to drink its blood and draw out its vital essence. This requires an {@skill Athletics} check against the creature's Fortitude DC if the creature is {@condition grabbed} and is automatic for any of the other conditions. The creature becomes {@condition drained||drained 1} and {@condition stupefied||stupefied 1}, and the strigoi regains HP equal to 10% of their maximum HP, gaining any excess HP as temporary Hit Points. Drinking Essence from a creature that's already {@condition drained} or {@condition stupefied} doesn't restore any HP, but increases either the creature's {@condition drained} condition value or its {@condition stupefied} condition value by 1 (whichever value is lesser is increased; if both values are equal, then the strigoi chooses which condition to increase the value of).",
+				"A victim's {@condition drained} condition decreases by 1 per week. A blood transfusion, which requires a successful DC 20 {@skill Medicine} check and sufficient blood or a blood donor, reduces the {@condition drained} value by 1 after 10 minutes.",
+				"A victim's {@condition stupefied} condition decreases by 1 per day after performing daily preparations. If the daily preparations are done in full sunlight, the {@condition stupefied} condition is removed entirely."
+			]
+		},
+		{
+			"name": "Levitation",
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"creature": [
+				"Strigoi",
+				"Strigoi Progenitor"
+			],
+			"source": "SaS",
+			"page": 59,
+			"traits": [
+				"divine",
+				"evocation",
+				"shadow"
+			],
+			"entries": [
+				"Strigoi can cast {@spell levitate} at will as a {@trait divine} innate spell; when they do so, they appear to ascend or descend on a coiling mass of shadows."
+			]
+		},
+		{
+			"source": "SaS",
+			"name": "Strigoi Weaknesses",
+			"page": 59,
+			"creature": [
+				"Strigoi",
+				"Strigoi Progenitor"
+			],
+			"entries": [
+				"All strigoi possess the following weaknesses:",
+				{
+					"type": "list",
+					"items": [
+						"{@b Revulsion} Strigoi are uncomfortable near mirrors or sources of bright light. Only a strigoi's shadow reflects in a mirror, and this often compels them to cover or destroy mirrors in their presence rather than risk their true nature being displayed. A strigoi can't voluntarily come within 10 feet of a brandished mirror or source of bright light. To brandish a mirror or light source, a creature must {@action Interact} to do so for 1 round (similar to {@action Raise a Shield||Raising a Shield}). If the strigoi involuntarily comes within 10 feet of a brandished mirror or light source, it gains the {@condition fleeing} condition, running from the brandished object until it ends an action beyond 10 feet. After 1 round of being exposed to the subject of its revulsion, a strigoi can attempt a DC 25 Will save as a single action, which has the {@trait concentrate} trait. On a success, it overcomes its revulsions for {@dice 1d6} rounds (or 1 hour on a critical success). A strigoi can move normally around mirrors or bright light sources that are not brandished, although doing so causes them discomfort that can be noticed with a successful {@skill Perception} check to {@action Sense Motive}.",
+						"{@b Sunlight} When exposed to direct sunlight, a strigoi immediately becomes {@condition unconscious} and falls to the ground. It appears to be dead: it doesn't breathe, its body temperature matches its surroundings, and it doesn't react to pain or other stimuli. A successful {@skill Perception} check against the strigoi's Reflex DC is enough to note one anomaly: the shadow cast by its \"dead\" body shifts and moves slightly, its edges twisting and active. Spells like {@spell detect alignment||detect evil}, senses like {@ability lifesense}, and the \"corpse\" taking damage from positive energy still function normally, and could reveal the truth without needing a successful {@skill Perception} check. Viewing the \"corpse\" in a mirror's reflection can also reveal the truth, for only the body's shadow reflects. While in sunlight and {@condition unconscious}, the strigoi loses its resistance to physical damage. If the strigoi takes enough damage that it would be reduced to 0 Hit Points, its body quickly decomposes, and the strigoi is destroyed.",
+						"{@b Water Revulsion} A strigoi cannot cross a significant source of running water (such as a creek, river, or waves on a seashore). A strigoi capable of flight can cross running water provided it approaches no closer than 10 feet to the liquid's surface. If forced into running water against its will, the strigoi becomes {@condition slowed||slowed 2} and gains the {@condition fleeing} condition as long as it remains in the water. At the end of any turn in which the strigoi remains in running water, it must succeed at a DC {@flatDC 5} flat check or be destroyed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Coffin Restoration",
+			"source": "SaS",
+			"page": 59,
+			"creature": [
+				"Strigoi",
+				"Strigoi Progenitor"
+			],
+			"traits": [
+				"divine",
+				"necromancy",
+				"negative"
+			],
+			"entries": [
+				"As with moroi vampires, a strigoi isn't destroyed at 0 HP. Instead, it falls {@condition unconscious} and loses fast healing. If its body rests in its coffin for 1 hour, the strigoi gains 1 HP, after which its {@ability fast healing} begins to function normally."
+			]
+		},
+		{
 			"name": "Keen Eyes",
 			"source": "GMG",
 			"page": 204,
@@ -22,6 +542,14 @@
 			"page": 306,
 			"entries": [
 				"Troops are composed of many individuals, and over the course of enough attacks and downed comrades, troops shrink in size. Most troops start with 16 squares (4 by 4), and their Hit Points have two listed thresholds, typically the first is at 2/3 their maximum Hit Points and the second is at 1/3 their maximum Hit Points. Once the troop drops below the first threshold, it loses 4 squares, leaving 12 squares remaining, and the first threshold becomes the troop's new maximum Hit Points. Once the troop falls below the second threshold, it loses another 4 squares, leaving 8 squares remaining, and the second threshold becomes the troop's new maximum Hit Points. In order to restore its size and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen. At 0 Hit Points, the troop is reduced down to 4 squares, which is too few to sustain the troop, so it disperses entirely, with the few remaining members surrendering, {@condition fleeing}, or easily dispatched, depending on their nature. A damaging single-target effect, such as a {@action Strike}, can't force a troop to pass through more than one threshold at once. For instance, if a troop had 60 Hit Points, with thresholds at 40 and 20, a {@action Strike} for 50 damage would leave the troop at 21 Hit Points, just above the second threshold. A damaging area effect or multi-target effect can cross multiple thresholds at once and could potentially destroy the entire troop in one shot. Non-damaging effects with an area or that target all creatures in a certain proximity affect a troop normally if they affect the entire area occupied by the troop. If an effect has a smaller area or numbers of targets, it typically has no effect on the troop. However, if the effect can target at least four creatures or cover at least four squares in the troop, and if it would prevent its targets from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more, the troop loses a number of Hit Points equal to the amount required to bring it to the next threshold, removing 4 squares. If an effect would both deal damage and automatically cross a threshold due to incapacitating some of the creatures in the troop, apply the damage first. If the damage wasn't enough to cross a threshold on its own, then reduce the Hit Points to cross the threshold for the incapacitating effect."
+			]
+		},
+		{
+			"name": "Form Up",
+			"source": "B3",
+			"page": 304,
+			"entries": [
+				"The troop chooses one of the squares it currently occupies and redistributes its squares to any configuration in which all squares are contiguous and within 15 feet of the chosen square. The troop can't share its space with other creatures."
 			]
 		},
 		{
@@ -1014,6 +1542,358 @@
 			},
 			"entries": [
 				"The ghost cries out in pain and anguish as small objects and debris fly about in a 30-foot emanation. Creatures in this area take {@damage 1d6} bludgeoning damage + {@damage 1d6} per 2 levels, subject to a basic Reflex save."
+			]
+		},
+		{
+			"name": "Inspiration",
+			"source": "B1",
+			"page": 246,
+			"traits": [
+				"emotion",
+				"enchantment",
+				"mental",
+				"primal"
+			],
+			"creature": [
+				"Nymph Queen"
+			],
+			"activity": {
+				"unit": "action",
+				"number": 3
+			},
+			"entries": [
+				"A nymph queen can inspire a single intelligent creature by giving that creature a token of her favor, typically a lock of her hair. As long as the creature carries her token and remains in good standing with the nymph queen, the creature gains a +1 status bonus to all Crafting checks, Performance checks, and Will saves.",
+				"If a nymph queen grants her Inspiration to a bard and the nymph queen is that bard's muse, the bard gains an additional benefit depending on their muse theme: for lore muse, the bard also gains a +1 status bonus to all Lore checks; for maestro muse, the status bonus to Performance checks increases to +2 for the purpose of determining the effects of compositions; for polymath muse, the bard gains a +4 status bonus to untrained skill checks; and for all other muses, the Will save bonus increases to +2 against fey."
+			]
+		},
+		{
+			"name": "Focus Beauty",
+			"source": "B1",
+			"page": 246,
+			"traits": [
+				"emotion",
+				"enchantment",
+				"mental",
+				"primal",
+				"visual"
+			],
+			"creature": [
+				"Nymph Queen"
+			],
+			"activity": {
+				"unit": "action",
+				"number": 1
+			},
+			"entries": [
+				"The nymph queen focuses her beauty upon a target within her aura. The creature must attempt a Will save. On a failure, it is affected as if by the nymph queen's nymph's beauty aura; if it was already affected by the aura, it suffers a greater effect described in the nymph queen's entry. A nymph queen can Focus Beauty on a given creature only once per turn."
+			]
+		},
+		{
+			"name": "Change Shape",
+			"source": "B1",
+			"page": 246,
+			"traits": [
+				"polymorph",
+				"primal",
+				"transmutation"
+			],
+			"creature": [
+				"Nymph Queen"
+			],
+			"activity": {
+				"unit": "action",
+				"number": 1
+			},
+			"entries": [
+				"Nymph queens can transform between their original form, which looks much like a typical nymph of their kind, and any Small or Medium humanoid form, typically choosing a more humanoid-looking version of their natural form."
+			],
+			"add_hash": "Nymph Queen"
+		},
+		{
+			"name": "Nymph's Beauty",
+			"source": "B1",
+			"page": 246,
+			"creature": [
+				"Nymph Queen"
+			],
+			"traits": [
+				"emotion",
+				"enchantment",
+				"mental",
+				"primal",
+				"visual"
+			],
+			"entries": [
+				"30 feet.",
+				"Creatures that start their turn in the aura must succeed at a Will save or suffer an effect described in the nymph queen's entry."
+			]
+		},
+		{
+			"name": "Tied to the Land",
+			"source": "B1",
+			"page": 246,
+			"creature": [
+				"Nymph Queen"
+			],
+			"entries": [
+				"A nymph queen is intrinsically tied to a specific region, such as a forest for a dryad queen. As long as the queen is healthy, the environment is exceptionally resilient, allowing the nymph queen to automatically attempt to counteract spells and rituals such as blight that would harm the environment, using her Spell DC with a counteract level equal to the highest-level druid spell she can cast. When the nymph queen becomes physically or psychologically unhealthy, however, her warded region eventually becomes twisted or unhealthy as well. In that case, restoring the nymph queen swiftly heals the entire region."
+			]
+		},
+		{
+			"name": "Jiang-shi Vulnerabilities",
+			"source": "BotD",
+			"page": 157,
+			"creature": [
+				"Vampire, Jiang-Shi"
+			],
+			"entries": [
+				"All jiang-shi possess the following vulnerabilities.",
+				{
+					"type": "ability",
+					"name": "Revulsion",
+					"entries": [
+						"A jiang-shi can't voluntarily come within 10 feet of a brandished mirror or the sound of ringing handbells. A creature can Interact with a mirror or handbell to brandish or ring that item for 1 round (similar to {@action Raise a Shield||Raising a Shield}). If the jiang-shi involuntarily comes within 10 feet of an object of their revulsion, they gain the {@condition fleeing} condition, running from the object of their revulsion until they are 10 feet or farther from the object. After 1 round of being exposed to the object of their revulsion, a jiang-shi can attempt a {@dc 25} Will save as a single action, which has the {@trait concentrate} trait. On a success, they overcome their revulsions for {@dice 1d6} rounds (or 1 hour on a critical success)."
+					]
+				},
+				{
+					"type": "ability",
+					"name": "Bitter Epiphany",
+					"entries": [
+						"A jiang-shi is afflicted by severe melancholia when reminded of their debased nature and the truth of their existential disconnection from living beings. When a jiang-shi sees an altar with at least 1 Bulk of food offerings to ancestor spirits, they must attempt a {@dc 25} Will save. They are then temporarily immune to bitter epiphany for 1 minute.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Critical Success": "The jiang-shi is unaffected.",
+								"Success": "The jiang-shi is {@condition stupefied 1} for 1 round.",
+								"Failure": "The jiang-shi is {@condition stupefied 2} for 1 minute.",
+								"Critical Failure": "The jiang-shi is {@condition stupefied 2} and {@condition confused} for 1 minute."
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Warped Fulu",
+			"source": "BotD",
+			"page": 158,
+			"creature": [
+				"Vampire, Jiang-Shi"
+			],
+			"entries": [
+				"The jiang-shi has corrupted the fulu attached to their brow. The jiang-shi is immune to spells cast from a magic item without expending a spell slot, such as from a scroll or wand. A creature can {@action Steal} a jiang-shi's fulu to remove it, rolling against the jiang-shi's Perception DC. This immediately ends the jiang-shi's immunity to these effects. If a creature then destroys a jiang-shi's removed fulu with an {@action Interact} action, the jiang-shi also loses their {@ability fast healing} ability. A jiang-shi can create a replacement fulu by spending 1 uninterrupted hour inscribing a strip of paper (or similar) with a writing instrument."
+			]
+		},
+		{
+			"name": "Nosferatu Vulnerabilities",
+			"source": "B3",
+			"page": 282,
+			"creature": [
+				"Vampire, Nosferatu"
+			],
+			"entries": [
+				{
+					"type": "ability",
+					"name": "Revulsion",
+					"entries": [
+						"A nosferatu can't voluntarily come within 10 feet of brandished garlic or a brandished religious symbol of a non-evil deity. To brandish garlic or a religious symbol, a creature must Interact to do so for 1 round (similar to {@action Raise a Shield}). If the nosferatu involuntarily comes within 10 feet of an object of their revulsion, they gain the {@condition fleeing} condition, running from the object of their revulsion until they end an action beyond 10 feet. After 1 round of being exposed to the subject of their revulsion, a nosferatu can attempt a {@dc 25} 25 Will save as a single action, which has the {@trait concentrate} trait. On a success, they overcome their revulsions for {@dice 1d6} rounds (or 1 hour on a critical success)."
+					]
+				},
+				{
+					"type": "ability",
+					"name": "Stake",
+					"entries": [
+						"A magical wooden stake (such as one affected by a {@item weapon potency (generic)||weapon potency rune}, {@spell magic weapon}, or similar magic) driven through the nosferatu's heart drops the nosferatu to 0 HP and prevents them from healing above 0 HP, even in their coffin. Staking a nosferatu requires 3 actions and works only if the nosferatu is {@condition unconscious}. If the stake is removed, the nosferatu can heal above 0 HP again, and if they're in their coffin, the 1-hour rest period begins once the stake is removed. If the nosferatu's head is severed and anointed with holy water while the stake is in place, the nosferatu is destroyed."
+					]
+				},
+				{
+					"type": "ability",
+					"name": "Sunlight",
+					"entries": [
+						"If exposed to direct sunlight, a nosferatu immediately becomes {@condition slowed 1}. The slowed value increases by 1 each time the nosferatu ends their turn in sunlight, and the condition ends when they're no longer in sunlight. If the nosferatu loses all their actions in this way, they're destroyed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Command Thrall",
+			"source": "B3",
+			"page": 282,
+			"traits": [
+				"auditory",
+				"divine",
+				"mental"
+			],
+			"creature": [
+				"Vampire, Nosferatu"
+			],
+			"activity": {
+				"unit": "free",
+				"number": 1
+			},
+			"requirements": "One of the nosferatu's thralls is present and can hear the nosferatu",
+			"entries": [
+				"The nosferatu gives a single command to one of their thralls, which the thrall follows to the best of its ability during its next turn."
+			]
+		},
+		{
+			"name": "Mindbound",
+			"source": "B3",
+			"page": 282,
+			"traits": [
+				"divine",
+				"enchantment"
+			],
+			"creature": [
+				"Nosferatu Thrall"
+			],
+			"entries": [
+				"A nosferatu master exerts a fierce hold over their thrall's mind. If any creature other than the thrall's master targets them with an effect that would give them the {@condition controlled} condition, the thrall's master rolls a counteract check against it using their Dominate DC - 10 as the counteract check modifier."
+			]
+		},
+		{
+			"name": "Rally",
+			"source": "B3",
+			"page": 282,
+			"trigger": "The thrall ends their turn more than 30 feet away from their master",
+			"creature": [
+				"Nosferatu Thrall"
+			],
+			"activity": {
+				"unit": "reaction",
+				"number": 1
+			},
+			"entries": [
+				"The thrall Strides up to their Speed toward their master."
+			]
+		},
+		{
+			"name": "Mortal Shield",
+			"source": "B3",
+			"page": 282,
+			"trigger": "The thrall's master would take damage from a Strike or spell attack and is in an adjacent square",
+			"creature": [
+				"Nosferatu Thrall"
+			],
+			"activity": {
+				"unit": "reaction",
+				"number": 1
+			},
+			"entries": [
+				"The thrall throws themself in front of their master, taking half the damage of the attack (before applying any weaknesses or resistances). The thrall's master takes the remaining damage, applying any weaknesses or resistances as normal."
+			]
+		},
+		{
+			"name": "Mist Escape",
+			"source": "B1",
+			"page": 318,
+			"creature": [
+				"Vampire"
+			],
+			"activity": {
+				"unit": "free",
+				"number": 1
+			},
+			"trigger": "The vampire is reduced to 0 HP.",
+			"entries": [
+				"The vampire uses Turn to Mist. It can take move actions to move toward its coffin even though it's at 0 HP. While at 0 HP in this form, the vampire is unaffected by further damage. It automatically returns to its corporeal form, unconscious, if it reaches its coffin or after 2 hours, whichever comes first."
+			]
+		},
+		{
+			"name": "Create Spawn",
+			"source": "B1",
+			"page": 318,
+			"creature": [
+				"Vampire"
+			],
+			"traits": [
+				"divine",
+				"downtime",
+				"necromancy"
+			],
+			"entries": [
+				"If a creature dies after being reduced to 0 HP by Drink Blood, the vampire can turn this victim into a vampire by donating some of its own blood to the victim and burying the victim in earth for 3 nights. If the new vampire is lower level than its creator, it is under the creator's control. If a vampire controls too many spawn at once (as determined by the GM), strong-willed spawn can free themselves by succeeding at a Will saving throw against the vampire's Will DC."
+			]
+		},
+		{
+			"name": "Children of the Night",
+			"source": "B1",
+			"page": 318,
+			"creature": [
+				"Vampire"
+			],
+			"traits": [
+				"divine",
+				"enchantment",
+				"mental"
+			],
+			"entries": [
+				"The vampire's presence brings forth creatures of the night to do the master's bidding. These typically include rat swarms, bat swarms, and wolves, but can include other creatures. The vampire can give telepathic orders to these creatures as long as they are within 100 feet, but they can't communicate back."
+			]
+		},
+		{
+			"name": "Turn to Mist",
+			"source": "B1",
+			"page": 318,
+			"creature": [
+				"Vampire"
+			],
+			"traits": [
+				"concentrate",
+				"divine",
+				"transmutation"
+			],
+			"entries": [
+				"The vampire turns into a cloud of vapor, as the {@spell gaseous form} spell, or back to its normal form. The vampire loses fast healing while in gaseous form. The vampire can remain in this form indefinitely."
+			]
+		},
+		{
+			"name": "Vrykolakas Vulnerabilities",
+			"source": "B2",
+			"page": 275,
+			"creature": [
+				"Vampire, Vrykolakas"
+			],
+			"entries": [
+				"Vrykolakas all have the following vulnerabilities",
+				{
+					"type": "ability",
+					"name": "Burial Site Bound",
+					"entries": [
+						" A vrykolakas is bound to the place of its death or interment. It must return to this location once per week and bury itself in the earth for 24 hours, during which time it is paralyzed and can be beheaded. If it is unable to return to this site, it is reduced to 0 Hit Points and attempts to use Feral Corruption; if this host animal can't return to the burial site before the possession effect ends, the vrykolakas is destroyed and the animal host returns to normal. "
+					]
+				},
+				{
+					"type": "ability",
+					"name": "Vulnerable to Decapitation",
+					"entries": [
+						"A vrykolakas that is beheaded can't use its Feral Possession, and a beheaded corpse cannot rise as a vrykolakas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Control Comatose",
+			"source": "BotD",
+			"page": 160,
+			"creature": [
+				"Vampire, Vetalarana"
+			],
+			"traits": [
+				"exploration",
+				"incapacitation",
+				"mental",
+				"necromancy",
+				"occult",
+				"possession"
+			],
+			"frequency": {
+				"unit": "day",
+				"number": 1
+			},
+			"entries": [
+				"The vetalarana manipulator spends 10 minutes to take psychic control of the creatures they've rendered comatose with Drain Thoughts. This has the effects of the {@spell possession} spell, but lasts for up to 6 hours, has a range of 1 mile, and the vetalarana can control a number of comatose victims at a time equal to half the vetalarana's level. A comatose victim can't resist this possession and automatically gets a critical failure on its saving throw against Control Comatose.",
+				"As long as a comatose victim is controlled by a vetalarana manipulator in this way, the victim's stupefied and unconscious conditions are temporarily suppressed."
 			]
 		}
 	]

@@ -5,7 +5,7 @@ if (typeof module !== "undefined") require("./parser.js");
 
 // in deployment, `IS_DEPLOYED = "<version number>";` should be set below.
 IS_DEPLOYED = undefined;
-VERSION_NUMBER = /* PF2ETOOLS_VERSION__OPEN */"0.8.10"/* PF2ETOOLS_VERSION__CLOSE */;
+VERSION_NUMBER = /* PF2ETOOLS_VERSION__OPEN */"0.8.13"/* PF2ETOOLS_VERSION__CLOSE */;
 DEPLOYED_STATIC_ROOT = ""; // ""; // FIXME re-enable this when we have a CDN again
 IS_VTT = false;
 
@@ -3139,7 +3139,7 @@ DataUtil = {
 
 		async expandVariants (item) {
 			if (!item.variants) return [item];
-			const expanded = await Promise.all(item.variants.filter(x => { if (x.exists !== true) return x }).map(v => DataUtil.item._expandVariant(item, v)));
+			const expanded = await Promise.all(item.variants.filter((x) => !x.exists).map((v) => DataUtil.item._expandVariant(item, v)));
 			return [item, ...expanded];
 		},
 

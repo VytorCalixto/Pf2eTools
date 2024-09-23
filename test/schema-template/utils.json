@@ -45,6 +45,10 @@
 								"items": {
 									"type": "string"
 								}
+							},
+							"starred": {
+								"const": true,
+								"description": "Appends a star \"*\" after the spell (expected to be used with the `footer` property in the spellcasting block)."
 							}
 						},
 						"additionalProperties": false,
@@ -1852,6 +1856,11 @@
 					],
 					"additionalItems": false,
 					"uniqueItems": true
+				},
+				"endnote": {
+					"type": "string",
+					"minLength": 1,
+					"description": "Some text that gets appended after all the stages."
 				}
 			},
 			"additionalProperties": false

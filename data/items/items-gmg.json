@@ -117,7 +117,7 @@
 			]
 		},
 		{
-			"name": "Axe Of The Dwarven Lords",
+			"name": "Axe of the Dwarven Lords",
 			"source": "GMG",
 			"page": 106,
 			"type": "Item",
@@ -177,7 +177,7 @@
 			]
 		},
 		{
-			"name": "Bag Of Devouring",
+			"name": "Bag of Devouring",
 			"source": "GMG",
 			"page": 90,
 			"type": "Item",
@@ -197,7 +197,7 @@
 			]
 		},
 		{
-			"name": "Bag Of Weasels",
+			"name": "Bag of Weasels",
 			"source": "GMG",
 			"page": 90,
 			"type": "Item",
@@ -350,7 +350,7 @@
 			]
 		},
 		{
-			"name": "Boots Of Dancing",
+			"name": "Boots of Dancing",
 			"source": "GMG",
 			"page": 90,
 			"type": "Item",
@@ -371,7 +371,7 @@
 			]
 		},
 		{
-			"name": "Cloak Of Immolation",
+			"name": "Cloak of Immolation",
 			"source": "GMG",
 			"page": 91,
 			"type": "Item",
@@ -444,7 +444,7 @@
 			]
 		},
 		{
-			"name": "Deck Of Many Things",
+			"name": "Deck of Many Things",
 			"source": "GMG",
 			"page": 107,
 			"type": "Item",
@@ -824,7 +824,7 @@
 						"unit": "minute"
 					},
 					"components": [
-						"({@action Interact})"
+						"{@action Interact}"
 					],
 					"requirements": "The prism has two input streams, and a creature is encased in magic in each of the input streams",
 					"entries": [
@@ -1063,7 +1063,7 @@
 			]
 		},
 		{
-			"name": "Gloves Of Carelessness",
+			"name": "Gloves of Carelessness",
 			"source": "GMG",
 			"page": 91,
 			"type": "Item",
@@ -1106,7 +1106,7 @@
 			]
 		},
 		{
-			"name": "Horns Of Naraga",
+			"name": "Horns of Naraga",
 			"source": "GMG",
 			"page": 109,
 			"type": "Item",
@@ -1153,12 +1153,12 @@
 						"number": 1
 					},
 					"entries": [
-						"The Horns of Naraga transform into Naraga, an ancient black dragon (Bestiary 106). Naraga appears in an adjacent appropriate space, and if no such space is available, she does not appear. Naraga follows your commands without question. She remains for up to 1 hour or until you use an {@action Interact} action to dismiss her, after which she reverts back to the helm. If Naraga is slain, she immediately reverts back to the helm and can't be summoned for 1 week. You don't receive any of the helm's other benefits while it is transformed."
+						"The Horns of Naraga transform into Naraga, an {@creature ancient black dragon}. Naraga appears in an adjacent appropriate space, and if no such space is available, she does not appear. Naraga follows your commands without question. She remains for up to 1 hour or until you use an {@action Interact} action to dismiss her, after which she reverts back to the helm. If Naraga is slain, she immediately reverts back to the helm and can't be summoned for 1 week. You don't receive any of the helm's other benefits while it is transformed."
 					]
 				}
 			],
 			"destruction": [
-				"The helm is utterly obliterated if crushed between the jaws of an ancient black dragon's skull located in a desert while the sun is at its zenith."
+				"The helm is utterly obliterated if crushed between the jaws of an {@creature ancient black dragon||ancient black dragon's} skull located in a desert while the sun is at its zenith."
 			]
 		},
 		{
@@ -1238,7 +1238,7 @@
 			]
 		},
 		{
-			"name": "Mirror Of Sorshen",
+			"name": "Mirror of Sorshen",
 			"source": "GMG",
 			"page": 110,
 			"type": "Item",
@@ -1323,7 +1323,7 @@
 			]
 		},
 		{
-			"name": "Necklace Of Strangulation",
+			"name": "Necklace of Strangulation",
 			"source": "GMG",
 			"page": 91,
 			"type": "Item",
@@ -1344,7 +1344,7 @@
 			]
 		},
 		{
-			"name": "Orb Of Dragonkind",
+			"name": "Orb of Dragonkind",
 			"source": "GMG",
 			"page": 110,
 			"type": "Item",
@@ -1468,7 +1468,7 @@
 						"unit": "hour"
 					},
 					"components": [
-						"({@action Interact})"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You take a sizable portion of a creature (at least two-thirds of its original mass) and filter it through the mechanisms of the extractor. After the end of the process, the philosopher's extractor creates a transmogrifying mutagen that imparts the essence of the creature to the drinker. The extractor can make several transmogrifying mutagens simultaneously using the same activation if enough mass is provided at once, up to a maximum of 10 concurrent mutagens. Drinking a transmogrifying mutagen imparts you with one of the creature's unique abilities for 1 hour. This could grant one of several abilities such as a dragon's Breath Weapon, {@ability darkvision}, flight, {@ability frightful presence}, or immunity to sleep. The ability functions as it did for the original creature, except it uses your class DC or your spell DC (whichever is higher) instead of the creature's DC.",
@@ -1605,7 +1605,7 @@
 			]
 		},
 		{
-			"name": "Ring Of Truth",
+			"name": "Ring of Truth",
 			"source": "GMG",
 			"page": 91,
 			"type": "Item",
@@ -1814,7 +1814,7 @@
 			]
 		},
 		{
-			"name": "Shot Of The First Vault",
+			"name": "Shot of the First Vault",
 			"source": "GMG",
 			"page": 112,
 			"type": "Item",
@@ -1984,7 +1984,7 @@
 			]
 		},
 		{
-			"name": "Sphere Of Annihilation",
+			"name": "Sphere of Annihilation",
 			"source": "GMG",
 			"page": 113,
 			"type": "Item",
@@ -2043,7 +2043,7 @@
 			]
 		},
 		{
-			"name": "Stone Of Weight",
+			"name": "Stone of Weight",
 			"source": "GMG",
 			"page": 92,
 			"type": "Item",
@@ -2063,7 +2063,7 @@
 			]
 		},
 		{
-			"name": "Talisman Of The Sphere",
+			"name": "Talisman of the Sphere",
 			"source": "GMG",
 			"page": 113,
 			"type": "Item",

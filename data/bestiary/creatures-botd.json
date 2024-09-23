@@ -1128,10 +1128,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -1193,9 +1190,6 @@
 				"bot": [
 					{
 						"name": "Grab",
-						"traits": [
-							"page 212"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -1317,17 +1311,11 @@
 			"senses": [
 				{
 					"name": "darkvision ",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					}
+					"range": 60
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise",
 					"note": "page 213"
 				}
@@ -1540,7 +1528,7 @@
 			"skills": {
 				"acrobatics": {
 					"std": 7,
-					"to Maneuver in Flight": 9
+					"to {@action Maneuver in Flight}": 9
 				}
 			},
 			"abilityMods": {
@@ -1672,11 +1660,11 @@
 			"skills": {
 				"acrobatics": {
 					"std": 12,
-					"to Maneuver in Flight": 14
+					"to {@action Maneuver in Flight}": 14
 				},
 				"intimidation": {
 					"std": 12,
-					"to Demoralize": 14
+					"to {@action Demoralize}": 14
 				}
 			},
 			"abilityMods": {
@@ -1816,14 +1804,14 @@
 			"skills": {
 				"acrobatics": {
 					"std": 17,
-					"to Maneuver in Flight": 21
+					"to {@action Maneuver in Flight}": 21
 				},
 				"athletics": {
 					"std": 21
 				},
 				"survival": {
 					"std": 17,
-					"to track anyone involved in the desecration that created them": 21
+					"to {@action track} anyone involved in the desecration that created them": 21
 				}
 			},
 			"abilityMods": {
@@ -1991,7 +1979,7 @@
 					"necril"
 				],
 				"abilities": [
-					"speak with animals"
+					"{@spell speak with animals}"
 				]
 			},
 			"skills": {
@@ -2155,10 +2143,13 @@
 						}
 					},
 					{
-						"name": "Possess Animal[two-actions]",
+						"name": "Possess Animal",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"entries": [
-							"The bhuta attempts to possess an adjacent animal.",
-							"They cast 9th-level heightened possession with the following changes: since the bhuta has no physical body, they're unaffected by that restriction. On a critical failure, the duration extends to 1 full day. While possessed by a bhuta, the animal casts no shadow."
+							"The bhuta attempts to possess an adjacent animal. They cast 9th-level heightened {@spell possession} with the following changes: since the bhuta has no physical body, they're unaffected by that restriction. On a critical failure, the duration extends to 1 full day. While possessed by a bhuta, the animal casts no shadow."
 						]
 					},
 					{
@@ -2448,7 +2439,7 @@
 				},
 				"athletics": {
 					"std": 19,
-					"to Disarm": 21
+					"to {@action Disarm}": 21
 				},
 				"deception": {
 					"std": 16
@@ -3072,9 +3063,6 @@
 				"bot": [
 					{
 						"name": "Grab",
-						"traits": [
-							"page 212"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3173,10 +3161,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				}
 			],
@@ -3433,10 +3418,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				}
 			],
@@ -3726,10 +3708,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				}
 			],
@@ -4019,10 +3998,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				}
 			],
@@ -4261,10 +4237,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				}
 			],
@@ -6214,7 +6187,8 @@
 							"The ghost is typically bound to a vessel, even one damaged beyond repair. They can't venture more than 120 feet away from the ship or site of its wreckage."
 						],
 						"generic": {
-							"tag": "ability"
+							"tag": "ability",
+							"name": "Site Bound"
 						}
 					}
 				],
@@ -6352,7 +6326,7 @@
 				},
 				"athletics": {
 					"std": 9,
-					"to Swim": 11
+					"to {@action Swim}": 11
 				},
 				"stealth": {
 					"std": 8
@@ -7089,13 +7063,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"When a graveknight is destroyed, their armor rebuilds their body over the course of {@dice 1d10} days\u2014or more quickly if the armor is worn by a living host (Graveknight Armor, Bestiary 191). If the body is destroyed before then, the process restarts. A graveknight can only be permanently destroyed by obliterating their armor (such as with disintegrate), transporting it to the Positive"
-						]
-					},
-					{
-						"name": "Energy",
-						"entries": [
-							"Plane, or throwing it into the heart of a volcano."
+							"When a graveknight is destroyed, their armor rebuilds their body over the course of {@dice 1d10} days\u2014or more quickly if the armor is worn by a living host (Graveknight Armor, Bestiary 191). If the body is destroyed before then, the process restarts. A graveknight can only be permanently destroyed by obliterating their armor (such as with disintegrate), transporting it to the Positive Energy Plane, or throwing it into the heart of a volcano"
 						]
 					},
 					{
@@ -7116,9 +7084,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"traits": [
-							"page 212"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -7141,43 +7106,60 @@
 						]
 					},
 					{
-						"name": "Exemplar of Violence[two-actions]",
+						"name": "Exemplar of Violence",
 						"traits": [
 							"visual"
 						],
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"frequency": {
 							"number": 1,
 							"unit": "round"
 						},
 						"entries": [
-							"The graveknight attempts a {@action Strike} as their armor flashes with sinister power that spurs allies to violence. After the {@action Strike}, allies who can see the graveknight can use a reaction to {@action Step} or {@action Stride}, but they must end this movement in a space adjacent to an enemy. One ally of the graveknight's choice can instead use a reaction to {@action Strike}.",
+							"The graveknight attempts a {@action Strike} as their armor flashes with sinister power that spurs allies to violence. After the {@action Strike}, allies who can see the graveknight can use a reaction to {@action Step} or {@action Stride}, but they must end this movement in a space adjacent to an enemy. One ally of the graveknight's choice can instead use a reaction to {@action Strike}."
+						]
+					},
+					{
+						"type": "affliction",
+						"name": "Graveknight's Curse",
+						"notes": [
+							"This curse affects anyone who wears a graveknight's armor for at least 1 hour"
+						],
+						"DC": 39,
+						"savingThrow": "Will",
+						"onset": "1 hour",
+						"stages": [
 							{
-								"type": "affliction",
-								"name": "Graveknight's Curse This curse affects anyone who",
-								"notes": [
-									"The graveknight summons a supernatural mount as per phantom steed, heightened to 7th level. The steed has AC 34,"
-								],
-								"DC": 39,
-								"savingThrow": "Will",
-								"onset": "1 hour",
-								"stages": [
-									{
-										"stage": 1,
-										"entry": "{@condition doomed||doomed 1} and can't remove the armor",
-										"duration": "1 day"
-									},
-									{
-										"stage": 2,
-										"entry": "{@condition doomed||doomed 2}, hampered 10, and can't remove the armor",
-										"duration": "1 day"
-									},
-									{
-										"stage": 3,
-										"entry": "dies and transforms into the armor's graveknight Phantom {@action Mount} {@as 3}",
-										"duration": "arcane, conjuration"
-									}
-								]
+								"stage": 1,
+								"entry": "{@condition doomed||doomed 1} and can't remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 2,
+								"entry": "{@condition doomed||doomed 2}, hampered 10, and can't remove the armor",
+								"duration": "1 day"
+							},
+							{
+								"stage": 3,
+								"entry": "dies and transforms into the armor's graveknight"
 							}
+						]
+					},
+					{
+						"name": "Phantom Mount",
+						"traits": [
+							"arcane",
+							"conjuration"
+						],
+						"activity": {
+							"unit": "action",
+							"number": 3
+						},
+						"entries": [
+							"The graveknight summons a supernatural mount as per {@spell phantom steed}, heightened to 7th level. The steed has AC 34, Fort +23, Ref +20, Will +20, and 85 Hit Points. If the steed is destroyed, the graveknight must wait 1 hour before using this ability again."
 						]
 					},
 					{
@@ -7207,11 +7189,7 @@
 					},
 					"will": {
 						"std": 20
-					},
-					"abilities": [
-						"and 85 Hit Points. If the steed is destroyed",
-						"the graveknight must wait 1 hour before using this ability again."
-					]
+					}
 				},
 				"hp": [
 					{
@@ -7620,9 +7598,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"traits": [
-							"page 212"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -7633,9 +7608,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"traits": [
-							"page 213"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -7731,18 +7703,12 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				}
 			],
@@ -8116,10 +8082,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"note": "page 213"
 				}
 			],
@@ -8215,7 +8178,11 @@
 						]
 					},
 					{
-						"name": "Totems of the Past[two-actions]",
+						"name": "Totems of the Past",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"traits": [
 							"enchantment",
 							"mental",
@@ -8292,10 +8259,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					}
+					"range": 60
 				}
 			],
 			"languages": {
@@ -8356,9 +8320,10 @@
 					},
 					{
 						"name": "Troop Defenses",
-						"traits": [
-							"page 214"
-						]
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					}
 				],
 				"bot": [
@@ -8368,10 +8333,10 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"entries": [
-							"The troop chooses one of the squares it currently occupies and redistributes its squares to any configuration in which all squares are contiguous and within 15 feet of the chosen square.",
-							"The troop can't share its space with other creatures."
-						]
+						"generic": {
+							"tag": "ability",
+							"source": "B3"
+						}
 					},
 					{
 						"name": "Frightful Battle Cry",
@@ -8522,7 +8487,10 @@
 					"common",
 					"draconic",
 					"dwarven",
-					"infernal"
+					"infernal",
+					"jotun",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
@@ -8535,6 +8503,21 @@
 				"crafting": {
 					"std": 29,
 					"note": "can craft magic items"
+				},
+				"deception": {
+					"std": 27
+				},
+				"intimidation": {
+					"std": 27
+				},
+				"religion": {
+					"std": 25
+				},
+				"stealth": {
+					"std": 27
+				},
+				"thievery": {
+					"std": 27
 				}
 			},
 			"abilityMods": {
@@ -8718,17 +8701,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"name": "Jotun, Necril, Undercommon"
-					},
-					{
-						"name": "Deception+27,",
-						"entries": [
-							"{@skill Intimidation} +27, {@skill Religion} +25, {@skill Stealth} +27, {@skill Thievery} +27"
-						]
-					}
-				],
 				"mid": [
 					{
 						"name": "Rejuvenation",
@@ -9303,7 +9275,7 @@
 				},
 				"athletics": {
 					"std": 14,
-					"to Grapple": 16
+					"to {@action Grapple}": 16
 				},
 				"deception": {
 					"std": 14
@@ -9493,7 +9465,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"When a llorona is destroyed, they re-form after {@dice 1d6} days at the site of their death. Resolving the injustice that led to a llorona's death puts them to rest permanently. Alternatively, successfully performing a consecrate ritual at the site prevents them from re-forming."
+							"When a llorona is destroyed, they re-form after {@dice 1d6} days at the site of their death. Resolving the injustice that led to a llorona's death puts them to rest permanently. Alternatively, successfully performing a {@ritual consecrate} ritual at the site prevents them from re-forming."
 						]
 					}
 				],
@@ -10128,10 +10100,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				}
 			],
@@ -10350,7 +10319,7 @@
 							"negative"
 						],
 						"entries": [
-							"The damage from this disease can't be healed while a creature still has the disease. A creature killed by lesser mummy rot turns to dust and can't be resurrected except by a 7th-level resurrect ritual or similar magic;",
+							"The damage from this disease can't be healed while a creature still has the disease. A creature killed by lesser mummy rot turns to dust and can't be resurrected except by a 7th-level {@ritual resurrect} ritual or similar magic;",
 							{
 								"type": "affliction",
 								"DC": 16,
@@ -10554,10 +10523,11 @@
 							"necromancy"
 						],
 						"entries": [
-							"This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with remove curse or a similar effect. The affliction can then be removed as normal for a disease. A creature killed by cold rot turns to ice crystals and can't be resurrected except by a 7th-level resurrect ritual or similar magic; Saving",
+							"This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with remove curse or a similar effect. The affliction can then be removed as normal for a disease. A creature killed by cold rot turns to ice crystals and can't be resurrected except by a 7th-level {@ritual resurrect} ritual or similar magic",
 							{
 								"type": "affliction",
-								"name": "Throw {@dc 24} Fortitude;",
+								"savingThrow": "Fortitude",
+								"DC": 24,
 								"stages": [
 									{
 										"stage": 1,
@@ -11153,7 +11123,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by sand rot turns to sand and can't be resurrected except by a 7th-level resurrect ritual or similar magic;",
+							"This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by sand rot turns to sand and can't be resurrected except by a 7th-level {@ritual resurrect} ritual or similar magic;",
 							{
 								"type": "affliction",
 								"DC": 31,
@@ -11174,7 +11144,11 @@
 						]
 					},
 					{
-						"name": "Sandstorm[three-actions]",
+						"name": "Sandstorm",
+						"activity": {
+							"number": 3,
+							"unit": "action"
+						},
 						"traits": [
 							"conjuration",
 							"divine",
@@ -11262,7 +11236,7 @@
 			"skills": {
 				"athletics": {
 					"std": 26,
-					"to Swim": 28
+					"to {@action Swim}": 28
 				},
 				"deception": {
 					"std": 27
@@ -11527,7 +11501,11 @@
 						]
 					},
 					{
-						"name": "Vengeful Suffocation[two-actions]",
+						"name": "Vengeful Suffocation",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"traits": [
 							"incapacitation",
 							"occult",
@@ -11625,10 +11603,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"note": "page 213"
 				}
 			],
@@ -11730,9 +11705,6 @@
 						"components": [
 							"scythe claw"
 						],
-						"traits": [
-							"page 213"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -11805,10 +11777,7 @@
 				},
 				{
 					"name": "thoughtsense ",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					}
+					"range": 60
 				}
 			],
 			"languages": {},
@@ -12055,13 +12024,13 @@
 					{
 						"name": "Self-Loathing",
 						"entries": [
-							"As pale stranger, but {@dc 33}."
+							"As {@creature pale stranger|BotD}, but {@dc 33}."
 						]
 					},
 					{
 						"name": "Undying Vendetta",
 						"entries": [
-							"As pale stranger."
+							"As {@creature pale stranger|BotD}."
 						]
 					}
 				],
@@ -12080,9 +12049,13 @@
 						}
 					},
 					{
-						"name": "Implacable Advance[two-actions]",
+						"name": "Implacable Advance",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"entries": [
-							"The silent stalker Strides twice and makes a claw {@action Strike}; they can ignore {@quickref difficult terrain||3|terrain} during these Strides if they advance toward their murderer. If they {@action Strike} and Grab their murderer this turn, they can Constrict as a free action immediately after the Grab."
+							"The silent stalker {@action Stride||Strides} twice and makes a claw {@action Strike}; they can ignore {@quickref difficult terrain||3|terrain} during these {@action Stride||Strides} if they advance toward their murderer. If they {@action Strike} and {@ability Grab} their murderer this turn, they can {@ability Constrict} as a free action immediately after the {@ability Grab}."
 						]
 					}
 				]
@@ -12270,10 +12243,7 @@
 				},
 				{
 					"name": "scent",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"type": "precise"
 				},
 				{
@@ -12400,10 +12370,7 @@
 				},
 				{
 					"name": "tremorsense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				}
 			],
@@ -12644,7 +12611,10 @@
 				],
 				"bot": [
 					{
-						"name": "Blight Mastery"
+						"name": "Blight Mastery",
+						"entries": [
+							"Any of the siabrae's spells or effects that would normally be restricted to affecting animal can also affect undead animals. Furthermore, any animals the siabrae takes the form of or summons appear to be diseased, malnourished, or even dead and rotting. (This doesn't affect their statistics.)"
+						]
 					},
 					{
 						"name": "Steady Spellcasting",
@@ -13357,7 +13327,11 @@
 				],
 				"bot": [
 					{
-						"name": "Draconic Frenzy[two-actions]",
+						"name": "Draconic Frenzy",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"entries": [
 							"The skeletal drake makes two Fangs {@action Strike||Strikes} and one Tail {@action Strike} in any order."
 						]
@@ -13623,10 +13597,7 @@
 				},
 				{
 					"name": "soulscent",
-					"range": {
-						"unit": "feet",
-						"number": 100
-					},
+					"range": 100,
 					"type": "precise"
 				}
 			],
@@ -13750,7 +13721,11 @@
 						}
 					},
 					{
-						"name": "Steal Soul[two-actions]",
+						"name": "Steal Soul",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
 						"traits": [
 							"necromancy",
 							"occult"
@@ -13822,10 +13797,7 @@
 				},
 				{
 					"name": "soulscent",
-					"range": {
-						"unit": "feet",
-						"number": 200
-					},
+					"range": 200,
 					"type": "precise"
 				}
 			],
@@ -14117,10 +14089,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"note": "page 213"
 				}
 			],
@@ -14332,10 +14301,7 @@
 				},
 				{
 					"name": "lifesense",
-					"range": {
-						"unit": "feet",
-						"number": 30
-					},
+					"range": 30,
 					"note": "page 213"
 				}
 			],
@@ -14511,10 +14477,7 @@
 			"senses": [
 				{
 					"name": "breathsense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				},
 				{
@@ -14601,10 +14564,12 @@
 						"4": {
 							"spells": [
 								{
-									"name": "enervation"
+									"name": "enervation",
+									"source": "APG"
 								},
 								{
 									"name": "ghostly tragedy",
+									"source": "APG",
 									"amount": 2
 								}
 							]
@@ -14636,10 +14601,18 @@
 			"abilities": {
 				"mid": [
 					{
-						"name": "Jiang-Shi Vulnerabilities"
+						"name": "Jiang-Shi Vulnerabilities",
+						"generic": {
+							"tag": "ability",
+							"source": "BotD"
+						}
 					},
 					{
-						"name": "Warped Fulu"
+						"name": "Warped Fulu",
+						"generic": {
+							"tag": "ability",
+							"source": "BotD"
+						}
 					}
 				],
 				"bot": [
@@ -14719,10 +14692,7 @@
 			"senses": [
 				{
 					"name": "breathsense",
-					"range": {
-						"unit": "feet",
-						"number": 60
-					},
+					"range": 60,
 					"type": "precise"
 				},
 				{
@@ -14812,10 +14782,18 @@
 			"abilities": {
 				"mid": [
 					{
-						"name": "Jiang-Shi Vulnerabilities"
+						"name": "Jiang-Shi Vulnerabilities",
+						"generic": {
+							"tag": "ability",
+							"source": "BotD"
+						}
 					},
 					{
-						"name": "Warped Fulu"
+						"name": "Warped Fulu",
+						"generic": {
+							"tag": "ability",
+							"source": "BotD"
+						}
 					}
 				],
 				"bot": [
@@ -14950,10 +14928,7 @@
 				},
 				{
 					"name": "thoughtsense",
-					"range": {
-						"unit": "feet",
-						"number": 100
-					},
+					"range": 100,
 					"type": "precise"
 				}
 			],
@@ -15022,11 +14997,8 @@
 					{
 						"name": "Anticipatory Attack",
 						"entries": [
-							"The vetalarana emergent uses consumed memories to anticipate their prey's movements. The vetalarana emergent's {@action Strike||Strikes} deal an additional {@damage 1d8} precision damage to creatures {@condition stupefied} due to the vetalarana's"
+							"The vetalarana emergent uses consumed memories to anticipate their prey's movements. The vetalarana emergent's {@action Strike||Strikes} deal an additional {@damage 1d8} precision damage to creatures {@condition stupefied} due to the vetalarana's Drain Thoughts."
 						]
-					},
-					{
-						"name": "Drain Thoughts."
 					},
 					{
 						"name": "Drain Thoughts",
@@ -15125,10 +15097,7 @@
 				},
 				{
 					"name": "thoughtsense",
-					"range": {
-						"unit": "feet",
-						"number": 100
-					},
+					"range": 100,
 					"type": "precise"
 				}
 			],
@@ -15354,7 +15323,11 @@
 							"necromancy",
 							"occult",
 							"possession"
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"source": "BotD"
+						}
 					},
 					{
 						"name": "Drain Thoughts",
@@ -15673,10 +15646,7 @@
 				},
 				{
 					"name": "wavesense",
-					"range": {
-						"unit": "feet",
-						"number": 100
-					},
+					"range": 100,
 					"type": "precise",
 					"note": "page 214"
 				}
@@ -15978,7 +15948,7 @@
 				},
 				"deception": {
 					"std": 18,
-					"to Feint": 20
+					"to {@action Feint}": 20
 				},
 				"stealth": {
 					"std": 20
@@ -16141,7 +16111,7 @@
 					"necril"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -16220,9 +16190,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"traits": [
-							"page 212"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -16249,9 +16216,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"traits": [
-							"page 213"
-						],
 						"generic": {
 							"tag": "ability"
 						}
@@ -17257,9 +17221,6 @@
 				"bot": [
 					{
 						"name": "Improved Grab",
-						"traits": [
-							"page 213"
-						],
 						"generic": {
 							"tag": "ability"
 						}

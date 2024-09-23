@@ -525,7 +525,7 @@
 			],
 			"leadsTo": [
 				"Assassin Dedication|APG",
-				"Angel Of Death|APG",
+				"Angel of Death|APG",
 				"Assassinate|APG",
 				"Expert Backstabber|APG",
 				"Surprise Attack|APG",
@@ -845,7 +845,7 @@
 				"Your study of magic allows you to instinctively sense its presence. You can cast 1st-level {@spell detect magic} at will as an arcane innate spell. If you're a master in {@skill Arcana}, the spell is heightened to 3rd level; if you're legendary, it is heightened to 4th level."
 			],
 			"leadsTo": [
-				"Eye Of The Arclords|LOWG"
+				"Eye of the Arclords|LOWG"
 			]
 		},
 		{
@@ -929,7 +929,7 @@
 			]
 		},
 		{
-			"name": "Attack Of Opportunity",
+			"name": "Attack of Opportunity",
 			"source": "CRB",
 			"page": 90,
 			"add_hash": "Barbarian",
@@ -947,7 +947,7 @@
 			]
 		},
 		{
-			"name": "Attack Of Opportunity",
+			"name": "Attack of Opportunity",
 			"source": "CRB",
 			"page": 111,
 			"add_hash": "Champion",
@@ -965,7 +965,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Courage",
+			"name": "Aura of Courage",
 			"source": "CRB",
 			"page": 111,
 			"level": 4,
@@ -978,7 +978,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Faith",
+			"name": "Aura of Faith",
 			"source": "CRB",
 			"page": 113,
 			"level": 12,
@@ -991,7 +991,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Life",
+			"name": "Aura of Life",
 			"source": "CRB",
 			"page": 114,
 			"level": 14,
@@ -1004,7 +1004,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Righteousness",
+			"name": "Aura of Righteousness",
 			"source": "CRB",
 			"page": 114,
 			"level": 14,
@@ -1017,7 +1017,7 @@
 			]
 		},
 		{
-			"name": "Aura Of Vengeance",
+			"name": "Aura of Vengeance",
 			"source": "CRB",
 			"page": 114,
 			"level": 14,
@@ -1741,7 +1741,7 @@
 			]
 		},
 		{
-			"name": "Blade Of Justice",
+			"name": "Blade of Justice",
 			"source": "CRB",
 			"page": 113,
 			"activity": {
@@ -2142,7 +2142,7 @@
 			]
 		},
 		{
-			"name": "Call Of The Wild",
+			"name": "Call of the Wild",
 			"source": "CRB",
 			"page": 134,
 			"level": 2,
@@ -3466,7 +3466,7 @@
 				"It takes more to kill you than most. You die from the {@condition dying} condition at {@condition dying 5}, rather than {@condition dying 4}."
 			],
 			"leadsTo": [
-				"Numb To Death|LOGM"
+				"Numb to Death|LOGM"
 			]
 		},
 		{
@@ -3497,7 +3497,7 @@
 			]
 		},
 		{
-			"name": "Dirge Of Doom",
+			"name": "Dirge of Doom",
 			"source": "CRB",
 			"page": 101,
 			"level": 6,
@@ -3877,7 +3877,7 @@
 			"leadsTo": [
 				"Advanced Domain",
 				"Deity's Protection",
-				"Shield Of Faith|APG",
+				"Shield of Faith|APG",
 				"Expanded Domain Initiate|LOGM"
 			]
 		},
@@ -5556,7 +5556,7 @@
 			]
 		},
 		{
-			"name": "Flurry Of Maneuvers",
+			"name": "Flurry of Maneuvers",
 			"source": "CRB",
 			"page": 160,
 			"level": 4,
@@ -6371,7 +6371,7 @@
 			]
 		},
 		{
-			"name": "Hand Of The Apprentice",
+			"name": "Hand of the Apprentice",
 			"source": "CRB",
 			"page": 209,
 			"level": 1,
@@ -6419,7 +6419,7 @@
 				"You can perform multiple compositions simultaneously. If your next action is to cast a composition, it becomes a harmonized composition. Unlike a normal composition, a harmonized composition doesn't end if you cast another composition, and you can cast another composition on the same turn as a harmonized one. Casting another harmonized composition ends any harmonized composition you have in effect."
 			],
 			"leadsTo": [
-				"Symphony Of The Muse"
+				"Symphony of the Muse"
 			]
 		},
 		{
@@ -6611,7 +6611,7 @@
 			]
 		},
 		{
-			"name": "House Of Imaginary Walls",
+			"name": "House of Imaginary Walls",
 			"source": "CRB",
 			"page": 102,
 			"level": 10,
@@ -6870,7 +6870,7 @@
 				"Gladiator Dedication|APG",
 				"Fancy Moves|APG",
 				"Performative Weapons Training|APG",
-				"Play To The Crowd|APG",
+				"Play To the Crowd|APG",
 				"Call Your Shot|APG",
 				"Stage Fighting|APG"
 			]
@@ -7297,7 +7297,7 @@
 			]
 		},
 		{
-			"name": "Instrument Of Zeal",
+			"name": "Instrument of Zeal",
 			"source": "CRB",
 			"page": 115,
 			"level": 16,
@@ -7893,7 +7893,7 @@
 			]
 		},
 		{
-			"name": "Lie To Me",
+			"name": "Lie to Me",
 			"source": "CRB",
 			"page": 263,
 			"level": 1,
@@ -7988,7 +7988,7 @@
 			]
 		},
 		{
-			"name": "Litany Of Righteousness",
+			"name": "Litany of Righteousness",
 			"source": "CRB",
 			"page": 115,
 			"level": 14,
@@ -8145,7 +8145,7 @@
 			]
 		},
 		{
-			"name": "Maker Of Miracles",
+			"name": "Maker of Miracles",
 			"source": "CRB",
 			"page": 127,
 			"level": 20,
@@ -8259,7 +8259,7 @@
 			]
 		},
 		{
-			"name": "Master Of Many Styles",
+			"name": "Master of Many Styles",
 			"source": "CRB",
 			"page": 165,
 			"activity": {
@@ -8579,6 +8579,7 @@
 			"frequency": {
 				"recurs": true,
 				"number": 1,
+				"interval": 10,
 				"unit": "minute"
 			},
 			"entries": [
@@ -8653,7 +8654,7 @@
 			]
 		},
 		{
-			"name": "Moment Of Clarity",
+			"name": "Moment of Clarity",
 			"source": "CRB",
 			"page": 88,
 			"activity": {
@@ -8817,7 +8818,7 @@
 				"You can transform into a powerful magical creature. Add the purple worm and sea serpent forms listed in {@spell monstrosity form} to your wild shape list. If you have {@feat Soaring Shape}, add the phoenix form listed in {@spell aerial form} to your wild shape list."
 			],
 			"leadsTo": [
-				"Heart Of The Kaiju|FRP3"
+				"Heart of the Kaiju|FRP3"
 			]
 		},
 		{
@@ -10819,7 +10820,7 @@
 			]
 		},
 		{
-			"name": "Replenishment Of War",
+			"name": "Replenishment of War",
 			"source": "CRB",
 			"page": 125,
 			"level": 10,
@@ -11043,7 +11044,7 @@
 			]
 		},
 		{
-			"name": "Scare To Death",
+			"name": "Scare to Death",
 			"source": "CRB",
 			"page": 266,
 			"activity": {
@@ -11197,7 +11198,7 @@
 			]
 		},
 		{
-			"name": "Sense The Unseen",
+			"name": "Sense the Unseen",
 			"source": "CRB",
 			"page": 175,
 			"add_hash": "Ranger",
@@ -11215,7 +11216,7 @@
 			]
 		},
 		{
-			"name": "Sense The Unseen",
+			"name": "Sense the Unseen",
 			"source": "CRB",
 			"page": 188,
 			"add_hash": "Rogue",
@@ -11390,7 +11391,7 @@
 				"Shield Salvation|APG",
 				"Drive Back|LOKL",
 				"Lastwall Sentry Dedication|LOWG",
-				"Eye Of Ozem|LOWG",
+				"Eye of Ozem|LOWG",
 				"Grave Sense|LOWG",
 				"Lastwall Warden|LOWG",
 				"Necromantic Resistance|LOWG",
@@ -11411,13 +11412,14 @@
 				"Resolute Defender|LOKL",
 				"Thwart Evil|LOKL",
 				"Withstand Death|LOKL",
-				"Aegis Of Arnisant|LOCG",
+				"Aegis of Arnisant|LOCG",
 				"Vigil's Walls Rise Anew!|LOL",
-				"Fortify Shield|LOAG"
+				"Fortify Shield|LOAG",
+				"Tunnel Wall|LOHh"
 			]
 		},
 		{
-			"name": "Shield Of Grace",
+			"name": "Shield of Grace",
 			"source": "CRB",
 			"page": 115,
 			"level": 16,
@@ -11430,7 +11432,7 @@
 			]
 		},
 		{
-			"name": "Shield Of Reckoning",
+			"name": "Shield of Reckoning",
 			"source": "CRB",
 			"page": 113,
 			"activity": {
@@ -11475,8 +11477,8 @@
 				"You use your shield to protect your allies as well as yourself. When you have a {@action raise a shield||shield raised}, you can use your {@feat Shield Block} reaction when an attack is made against an ally adjacent to you. If you do, the shield prevents that ally from taking damage instead of preventing you from taking damage, following the normal rules for {@feat Shield Block}."
 			],
 			"leadsTo": [
-				"Shield Of Grace",
-				"Shield Of Reckoning"
+				"Shield of Grace",
+				"Shield of Reckoning"
 			]
 		},
 		{
@@ -11521,11 +11523,11 @@
 				"You don't consider undead to be legitimate authorities, even in nations ruled by undead."
 			],
 			"leadsTo": [
-				"Aura Of Life"
+				"Aura of Life"
 			]
 		},
 		{
-			"name": "Side By Side",
+			"name": "Side by Side",
 			"source": "CRB",
 			"page": 138,
 			"add_hash": "Druid",
@@ -11539,7 +11541,7 @@
 			]
 		},
 		{
-			"name": "Side By Side",
+			"name": "Side by Side",
 			"source": "CRB",
 			"page": 175,
 			"add_hash": "Ranger",
@@ -12193,7 +12195,7 @@
 			]
 		},
 		{
-			"name": "Spring From The Shadows",
+			"name": "Spring From the Shadows",
 			"source": "CRB",
 			"page": 187,
 			"activity": {
@@ -12456,7 +12458,7 @@
 			]
 		},
 		{
-			"name": "Student Of The Canon",
+			"name": "Student of the Canon",
 			"source": "CRB",
 			"page": 267,
 			"level": 1,
@@ -12750,7 +12752,7 @@
 			]
 		},
 		{
-			"name": "Symphony Of The Muse",
+			"name": "Symphony of the Muse",
 			"source": "CRB",
 			"page": 103,
 			"level": 20,
@@ -13063,7 +13065,7 @@
 			]
 		},
 		{
-			"name": "To The Ends Of The Earth",
+			"name": "To the Ends of the Earth",
 			"source": "CRB",
 			"page": 177,
 			"level": 20,
@@ -13076,7 +13078,7 @@
 			]
 		},
 		{
-			"name": "Tongue Of Sun And Moon",
+			"name": "Tongue of Sun And Moon",
 			"source": "CRB",
 			"page": 165,
 			"level": 14,
@@ -13428,7 +13430,7 @@
 			]
 		},
 		{
-			"name": "Twist The Knife",
+			"name": "Twist the Knife",
 			"source": "CRB",
 			"page": 186,
 			"activity": {
@@ -13769,7 +13771,7 @@
 				"You can use {@spell lay on hands} to damage a creature you witness harming an innocent or a good ally as if it were undead; in this case, lay on hands deals good damage instead of positive damage and gains the {@trait good} trait. This good damage can affect non-evil creatures. This doesn't prevent you from healing such a creature with lay on hands; you choose whether to heal or harm."
 			],
 			"leadsTo": [
-				"Aura Of Vengeance"
+				"Aura of Vengeance"
 			]
 		},
 		{
@@ -14169,7 +14171,7 @@
 			]
 		},
 		{
-			"name": "Weight Of Guilt",
+			"name": "Weight of Guilt",
 			"source": "CRB",
 			"page": 110,
 			"level": 1,
@@ -14247,7 +14249,7 @@
 			]
 		},
 		{
-			"name": "Wholeness Of Body",
+			"name": "Wholeness of Body",
 			"source": "CRB",
 			"page": 160,
 			"level": 4,
@@ -14259,7 +14261,7 @@
 				"You can restore your health by tapping into your ki. You gain the {@spell wholeness of body} ki spell. Increase the number of Focus Points in your focus pool by 1."
 			],
 			"leadsTo": [
-				"Endurance Of The Rooted Tree|EC6"
+				"Endurance of the Rooted Tree|EC6"
 			]
 		},
 		{
@@ -14351,7 +14353,7 @@
 				"Perfect Form Control",
 				"Insect Shape",
 				"Monstrosity Shape",
-				"Heart Of The Kaiju|FRP3",
+				"Heart of the Kaiju|FRP3",
 				"Plant Shape",
 				"Soaring Shape",
 				"Dragon Shape",

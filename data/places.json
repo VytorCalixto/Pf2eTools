@@ -1,6 +1,929 @@
 {
 	"place": [
 		{
+			"name": "Wispil",
+			"level": 5,
+			"category": "Settlement",
+			"source": "WoW1",
+			"page": 49,
+			"traits": [
+				"city"
+			],
+			"description": "This small city of gnomes oversees Taldor's lumber industry.",
+			"settlementData": {
+				"government": "council",
+				"population": {
+					"total": 8813,
+					"ancestries": {
+						"gnomes": 98,
+						"other": 2
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Gnomish}"
+				]
+			},
+			"residents": [
+				{
+					"name": "Marquess Tanasha Starborne",
+					"gender": "f",
+					"ancestry": "gnome",
+					"bond": "marquess of Wispil and senator of Taldor"
+				},
+				{
+					"name": "Dougal Greenbelt",
+					"gender": "m",
+					"ancestry": "gnome",
+					"bond": "mayor of Wispil"
+				},
+				{
+					"name": "Dervin Feld",
+					"gender": "m",
+					"ancestry": "human",
+					"bond": "Wispil city councilman, logging operations overseer, and local representative of Imperial Naval Shipyards"
+				}
+			]
+		},
+		{
+			"name": "Amberhill",
+			"source": "WoW1",
+			"page": 44,
+			"category": "Settlement",
+			"traits": [
+				"town"
+			],
+			"description": "This rustic community specializes in the beekeeping and honey production that's made the region famous.",
+			"settlementData": {
+				"government": "council",
+				"population": {
+					"total": 302,
+					"ancestries": {
+						"humans": 96,
+						"other": 4
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Gnomish}"
+				]
+			},
+			"residents": [
+				{
+					"name": "Adeline Moretta",
+					"gender": "f",
+					"ancestry": "human",
+					"bond": "elected municipal leader"
+				},
+				{
+					"name": "Evandio Birchwood",
+					"gender": "nb",
+					"ancestry": "gnome",
+					"position": "druid",
+					"bond": "doctor and apothecary"
+				}
+			]
+		},
+		{
+			"name": "Kintargo",
+			"category": "Settlement",
+			"level": 12,
+			"source": "CC0",
+			"page": 16,
+			"traits": [
+				"city"
+			],
+			"description": "Avant-garde, recently Cheliax-emancipated trade hub and capital of Ravounel",
+			"settlementData": {
+				"government": "Mayor (elected leader)",
+				"population": {
+					"total": 15960,
+					"ancestries": {
+						"humans": 80,
+						"halflings": 6,
+						"hellspawn nephilim": 5,
+						"aiuvarin": 1,
+						"other": 8
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Diabolic}",
+					"{@language Elven}",
+					"{@language Halfling}"
+				],
+				"religions": [
+					"{@deity Calistria}",
+					"{@deity Cayden Cailean}",
+					"{@deity Irori}",
+					"{@deity Milani|LOGM}",
+					"{@deity Sarenrae}",
+					"{@deity Shelyn}",
+					"{@deity Zon-Kuthon}"
+				],
+				"threats": [
+					"competitive artists",
+					"criminal activity",
+					"lingering diabolic elements",
+					"political treachery"
+				],
+				"features": [
+					{
+						"name": "Trade Port",
+						"entries": [
+							"Kintargo is an important trade port. {@filter Common items of level 14 or lower|items||source=|Level=[0;14]|rarity=common} are available for purchase, and items above that level can be ordered and will arrive in the city after {@dice 1d4+2} days (or on the same day, if the shopper pays an extra 500 gp to have the item shipped via {@trait teleportation})."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Jilia Bainilus",
+					"descriptor": "inspiring",
+					"gender": "f",
+					"ancestry": "human",
+					"position": "politician",
+					"level": 11,
+					"bond": "mayor of Kintargo"
+				}
+			]
+		},
+		{
+			"name": "Osprey Cove",
+			"source": "Rust",
+			"page": 7,
+			"category": "Settlement",
+			"level": 2,
+			"traits": [
+				"cg",
+				"village"
+			],
+			"description": "Isolated fishing commune",
+			"settlementData": {
+				"government": "Elders (communal)",
+				"population": {
+					"total": 120,
+					"ancestries": {
+						"humans": 85,
+						"other": 15
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Varisian}"
+				],
+				"religions": [
+					"{@deity Desna}",
+					"{@deity Cayden Cailean}"
+				],
+				"threats": [
+					"feuds with {@settlement Iron Harbor|Rust}",
+					"meddling from New Thassilon",
+					"seasonal storms"
+				],
+				"features": [
+					{
+						"name": "Friendly Commune",
+						"entries": [
+							"While Osprey Cove's citizens look to a council of elders for advice, the citizens govern themselves in a cooperative communal style. The villagers are eager to help out each other, as success for one is success for all. While {@action Earn Income} checks are limited to 2nd-level or lower tasks, any attempt to {@action Earn Income} in Osprey Cove gains a +1 circumstance bonus as a result of this neighborly help."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Elder Anlorgog",
+					"alignment": "ng",
+					"gender": "nb",
+					"ancestry": "undine",
+					"position": "ranger",
+					"level": 2,
+					"bond": "helps direct village fishing efforts"
+				},
+				{
+					"name": "Elder Bo-Mel",
+					"alignment": "cg",
+					"gender": "m",
+					"ancestry": "dwarf",
+					"position": "farmer",
+					"level": 3,
+					"bond": "helps direct village farming and construction efforts"
+				},
+				{
+					"name": "Elder Johedia",
+					"alignment": "cg",
+					"gender": "f",
+					"ancestry": "half-elf",
+					"position": "oracle",
+					"level": 3,
+					"bond": "serves as the primary healer of Osprey Cove"
+				},
+				{
+					"name": "Elder Ordwi",
+					"alignment": "cg",
+					"gender": "f",
+					"ancestry": "human",
+					"position": "cleric",
+					"level": 2,
+					"bond": "is the youngest elder, still settling into her new role"
+				},
+				{
+					"name": "Elder Vandous",
+					"alignment": "cn",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "fisher",
+					"level": 3,
+					"bond": "is the oldest of the village elders, a record keeper and historian"
+				}
+			]
+		},
+		{
+			"name": "Iron Harbor",
+			"source": "Rust",
+			"page": 11,
+			"category": "Settlement",
+			"level": 2,
+			"traits": [
+				"cn",
+				"village"
+			],
+			"description": "Remote Gorumite settlement",
+			"settlementData": {
+				"government": "High priest (religious leadership)",
+				"population": {
+					"total": 80,
+					"ancestries": {
+						"humans": 90,
+						"other": 10
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Varisian}"
+				],
+				"religions": [
+					"{@deity Gorum}"
+				],
+				"threats": [
+					"cult of Xar-Azmak",
+					"seasonal storms"
+				],
+				"features": [
+					{
+						"name": "Gorumite Village",
+						"entries": [
+							"As one would expect from a village led by worshippers of {@deity Gorum}, weapons and armor are easier to come by here. Treat Iron Harbor as a 3rd-level settlement for the purposes of purchasing weapons, armor, ammunition, and associated items."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Knurr Ragnulf",
+					"alignment": "cn",
+					"gender": "m",
+					"ancestry": "dwarf",
+					"position": "ex-cleric of {@deity Gorum}",
+					"level": 2,
+					"bond": "leader of Iron Harbor, currently corrupted by the cult of Xar-Azmak"
+				},
+				{
+					"name": "Elsie",
+					"alignment": "cn",
+					"gender": "f",
+					"ancestry": "halfling",
+					"position": "alchemist",
+					"level": 3,
+					"bond": "local alchemist, baker, and potential ally"
+				}
+			]
+		},
+		{
+			"name": "Egede",
+			"category": "Settlement",
+			"source": "GW2",
+			"page": 37,
+			"level": 6,
+			"traits": [
+				"lg",
+				"city"
+			],
+			"description": "Insular, war-scarred trading hub whose glory days ended with the closure of the Worldwound.",
+			"settlementData": {
+				"government": "Delegate (elected leader)",
+				"population": {
+					"ancestries": {
+						"humans": 77,
+						"mixed-ancestry tieflings": 10,
+						"halflings": 8,
+						"other": 5
+					},
+					"total": 28590
+				},
+				"languages": [
+					"{@language Abyssal}",
+					"{@language Common}",
+					"{@language Hallit}"
+				],
+				"religions": [
+					"{@deity Gorum}",
+					"{@deity Iomedae}",
+					"{@deity Nocticula|LOGM} (as the Redeemer Queen)"
+				],
+				"threats": [
+					"fanatical zealots",
+					"religious infighting",
+					"stray elemetns of {@trait demon||demonic} warfare"
+				],
+				"features": [
+					{
+						"name": "End of the Road",
+						"entries": [
+							"With the end of the war to the west, Egede's heyday is over, resulting in a poor local economy and inflated costs across the board. The Price of any item or service is 150% the usual amount. Characters can convince a vendor to lower their Prices by improving the vendor's attitude to {@condition helpful}."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Becka Rossum",
+					"alignment": "ln",
+					"gender": "f",
+					"ancestry": "human",
+					"position": "shopkeeper",
+					"level": 7,
+					"bond": "popular general store owner"
+				},
+				{
+					"name": "Gaar Steelflare",
+					"alignment": "ln",
+					"gender": "m",
+					"ancestry": "dwarf",
+					"position": "ex-crusader",
+					"level": 5,
+					"bond": "zealous war veteran"
+				},
+				{
+					"name": "Zolivelli Suth",
+					"alignment": "le",
+					"gender": "f",
+					"ancestry": "half-elf",
+					"position": "priest of {@deity Iomedae}",
+					"level": 6,
+					"bond": "high-ranking local church official"
+				}
+			]
+		},
+		{
+			"name": "Korvosa",
+			"source": "SaS",
+			"page": 55,
+			"category": "Settlement",
+			"level": 9,
+			"traits": [
+				"ln",
+				"city"
+			],
+			"description": "A gateway for trade that bears scars of a bloody past.",
+			"settlementData": {
+				"government": "Queen (constitutional monarchy)",
+				"population": {
+					"total": 15250,
+					"ancestries": {
+						"humans": 79,
+						"dwarves": 6,
+						"elves": 4,
+						"halflings": 3,
+						"half-elves": 3,
+						"gnomes": 2,
+						"other": 3
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Shoanti}",
+					"{@language Varisian}"
+				],
+				"religions": [
+					"{@deity Abadar}",
+					"{@deity Asmodeus}",
+					"{@deity Pharasma}",
+					"{@deity Sarenrae}",
+					"{@deity Shelyn}"
+				],
+				"threats": [
+					"crime family violence",
+					"Ileoa loyalists",
+					"Lorthact's machinations",
+					"underground dangers"
+				],
+				"features": [
+					{
+						"name": "Arcane Learning",
+						"entries": [
+							"Although Acadamae is the most notable college in Korvosa, smaller schools also teach arcane arts. Many graduates remain in the city, leading to a thriving trade in {@trait arcane} items and information. {@trait Arcane} scrolls and wands of up to level 13 are often available in shops, along with many other components and ritual ingredients."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Cressida Kroft",
+					"alignment": "ln",
+					"gender": "f",
+					"ancestry": "human",
+					"position": "soldier",
+					"level": 9,
+					"bond": "former guard field mashal and reluctant queen"
+				},
+				{
+					"name": "Toff Ornelos",
+					"alignment": "ln",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "wizard",
+					"level": 17,
+					"bond": "calculating headmaster of the Acadamae"
+				}
+			]
+		},
+		{
+			"name": "Duwwor",
+			"source": "TEC",
+			"page": 59,
+			"category": "Settlement",
+			"level": 6,
+			"traits": [
+				"n",
+				"city"
+			],
+			"settlementData": {
+				"government": "Democracy",
+				"population": {
+					"total": 8300,
+					"ancestries": {
+						"humans": 60,
+						"dwarves": 15,
+						"elves": 10,
+						"gnomes": 10,
+						"other": 5
+					}
+				},
+				"languages": [
+					"{@language Dwarven}",
+					"{@language Mwangi}",
+					"{@language Osiriani}",
+					"{@language Taldane}"
+				],
+				"religions": [
+					"{@deity Abadar}",
+					"{@deity Brigh|LOGM}",
+					"{@deity Gozreh}",
+					"{@deity Sarenrae}"
+				],
+				"threats": [
+					"harsh environment",
+					"raiders from the mountains",
+					"out-of-control clockworks"
+				],
+				"features": [
+					{
+						"name": "Quality Resources",
+						"entries": [
+							"Few can deny the fine quality of ore from Duwwor. Ingots of steel, {@item silver ingot||silver}, and {@item adamantine ingot||adamantine} up to high quality are always available, although all these materials cost 10% more than normal. Their purity makes them easy to work with; the {@action Craft} activity done with these materials takes 1 fewer day (minimum 1)."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Gamplix Noraneanithar",
+					"alignment": "cg",
+					"gender": "m",
+					"ancestry": "gnome",
+					"position": "inventor",
+					"level": 12,
+					"bond": "Erratic creator of clockwork miners"
+				},
+				{
+					"name": "Kharane",
+					"alignment": "n",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "fighter",
+					"level": 12,
+					"bond": "Defender of Duwwor"
+				},
+				{
+					"name": "Saadia",
+					"alignment": "n",
+					"gender": "f",
+					"ancestry": "half-elf",
+					"position": "druid",
+					"level": 16,
+					"bond": "Archdruid of the House of Resurgent Life"
+				}
+			]
+		},
+		{
+			"name": "Pashow",
+			"source": "TEC",
+			"page": 58,
+			"category": "Settlement",
+			"level": 8,
+			"traits": [
+				"n",
+				"city"
+			],
+			"settlementData": {
+				"government": "Democratic collective",
+				"population": {
+					"total": 5932,
+					"ancestries": {
+						"humans": 65,
+						"dwarves": 15,
+						"elves": 10,
+						"other": 10
+					}
+				},
+				"languages": [
+					"{@language Dwarven}",
+					"{@language Kelish}",
+					"{@language Osiriani}",
+					"{@language Taldane}"
+				],
+				"religions": [
+					"{@deity Abadar}",
+					"{@deity Gozreh}",
+					"{@deity Nethys}",
+					"{@deity Sarenrae}"
+				],
+				"threats": [
+					"Water Lords",
+					"spies trying to get to the Citadel of the Alchemist",
+					"harsh environment"
+				],
+				"features": [
+					{
+						"name": "Elemental Education",
+						"entries": [
+							"Those wishing to learn elemental magic will find the Scrollspire well-stocked and its teachers welcoming. Spells with {@trait elemental} traits up to level 12 are available."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Emir Guldis",
+					"alignment": "n",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "councilor",
+					"level": 8,
+					"bond": "Former leader of Pashow and current city councilor"
+				},
+				{
+					"name": "Lumi",
+					"alignment": "n",
+					"gender": "nb",
+					"ancestry": "elf",
+					"position": "elementalist",
+					"level": 12,
+					"bond": "High Priest of {@deity Nethys}"
+				},
+				{
+					"name": "Shanouri al-Quaddam",
+					"alignment": "ng",
+					"gender": "f",
+					"ancestry": "dwarf",
+					"position": "wizard",
+					"level": 11,
+					"bond": "Protector of the shields"
+				},
+				{
+					"name": "Ziralia",
+					"alignment": "ng",
+					"gender": "f",
+					"ancestry": "human",
+					"position": "arcanist",
+					"level": 12,
+					"bond": "Leader of Pashow, daughter of Prince Zinlo"
+				}
+			]
+		},
+		{
+			"name": "Lamasara",
+			"source": "TEC",
+			"page": 57,
+			"category": "Settlement",
+			"level": 8,
+			"traits": [
+				"cg",
+				"city"
+			],
+			"settlementData": {
+				"government": "Monarchy",
+				"population": {
+					"total": 11450,
+					"ancestries": {
+						"humans": 50,
+						"elves": 25,
+						"gnomes": 10,
+						"halflings": 5,
+						"catfolk": 5,
+						"other": 7
+					}
+				},
+				"languages": [
+					"{@language Elven}",
+					"{@language Kelish}",
+					"{@language Osiriani}",
+					"{@language Taldane}"
+				],
+				"religions": [
+					"{@deity Abadar}",
+					"{@deity Brigh|LOGM}",
+					"{@deity Nethys}",
+					"{@deity Pharasma}",
+					"{@deity Sarenrae}",
+					"{@deity Shelyn}"
+				],
+				"threats": [
+					"Water Lords",
+					"thieves' guilds",
+					"{@trait div||divs}"
+				],
+				"features": [
+					{
+						"name": "Artistically Inclined",
+						"entries": [
+							"The incredible art scene in Lamasara means there are more opportunities for those interested in creative work. {@action Earn Income} tasks up to level 15 are available for any {@skill Craft} related to the arts, as well as {@skill Performance}."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Djamila bint Nacera",
+					"alignment": "ng",
+					"gender": "f",
+					"ancestry": "half-elf",
+					"position": "cleric",
+					"level": 10,
+					"bond": "High priestess of {@deity Shelyn} at the Larksong Temple"
+				},
+				{
+					"name": "Queen Zamere",
+					"alignment": "ng",
+					"gender": "f",
+					"ancestry": "human",
+					"position": "queen",
+					"level": 10,
+					"bond": "Queen of Lamasara, famed orator"
+				},
+				{
+					"name": "Quinten Murrey",
+					"alignment": "cg",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "bard",
+					"level": 12,
+					"bond": "Skilled performer with tales of his plane-hopping adventures"
+				},
+				{
+					"name": "Silue Starbow",
+					"alignment": "cn",
+					"gender": "f",
+					"ancestry": "elf",
+					"position": "guide",
+					"level": 8,
+					"bond": "Proprietor of Starbow's Tours, offering expeditions into the desert"
+				}
+			]
+		},
+		{
+			"name": "Aspenthar",
+			"source": "TEC",
+			"page": 56,
+			"category": "Settlement",
+			"level": 10,
+			"traits": [
+				"LN",
+				"metropolis"
+			],
+			"settlementData": {
+				"government": "Monarchy",
+				"population": {
+					"total": 25680,
+					"ancestries": {
+						"humans": 60,
+						"half-orc": 15,
+						"dwarf": 10,
+						"gnoll": 5,
+						"other": 10
+					}
+				},
+				"languages": [
+					"{@language Kelish}",
+					"{@language Orcish}",
+					"{@language Osiriani}",
+					"{@language Taldane}"
+				],
+				"religions": [
+					"{@deity Abadar}",
+					"{@deity Gorum}",
+					"{@deity Iomedae}",
+					"{@deity Sarenrae}"
+				],
+				"threats": [
+					"Osirion border raids",
+					"Water Lords",
+					"civil unrest"
+				],
+				"features": [
+					{
+						"name": "Well-Armed",
+						"entries": [
+							"Due to the military focus and a well-armed population, weapons, armor, and runes for each are available up to level 14."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Izaith Sandborn",
+					"alignment": "ng",
+					"gender": "nb",
+					"ancestry": "half-orc",
+					"position": "cameleer",
+					"level": 13,
+					"bond": "Dean of the camelry program at the Royal Military Academy"
+				},
+				{
+					"name": "Jhuniri",
+					"alignment": "ln",
+					"gender": "f",
+					"ancestry": "dwarf",
+					"position": "general",
+					"level": 12,
+					"bond": "Military leader of Aspenthar's forces"
+				},
+				{
+					"name": "Prince Zinlo",
+					"alignment": "ln",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "ruler",
+					"level": 14,
+					"bond": "Supreme leader of Aspenthar"
+				},
+				{
+					"name": "Vhuthir",
+					"alignment": "le",
+					"gender": "m",
+					"ancestry": "half-orc",
+					"position": "bandit lord",
+					"level": 13,
+					"bond": "Water Lord of the Shining Sands Oasis"
+				}
+			]
+		},
+		{
+			"name": "Merab",
+			"source": "TEC",
+			"page": 55,
+			"category": "Settlement",
+			"level": 12,
+			"traits": [
+				"LN",
+				"metropolis"
+			],
+			"settlementData": {
+				"government": "elected leader (mayor)",
+				"population": {
+					"total": 56870,
+					"ancestries": {
+						"humans": 65,
+						"dwarves": 15,
+						"elves": 8,
+						"halflings": 5,
+						"other": 7
+					}
+				},
+				"languages": [
+					"{@language Kelish}",
+					"{@language Osiriani}",
+					"{@language Taldane}"
+				],
+				"religions": [
+					"{@deity Abadar}",
+					"{@deity Gozreh}",
+					"{@deity Nethys}",
+					"{@deity Pharasma}",
+					"{@deity Sarenrae}"
+				],
+				"threats": [
+					"Water Lords",
+					"Inner Sea pirates",
+					"{@trait div||divs}"
+				],
+				"features": [
+					{
+						"name": "Alchemical Oasis",
+						"entries": [
+							"As the home to many important schools of alchemy, Merab's markets have much greater access to {@trait alchemical} items. {@trait Alchemical} formulae and items up to level 20 can be purchased there."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Iledopus",
+					"alignment": "ln",
+					"gender": "m",
+					"ancestry": "human",
+					"position": "prince",
+					"level": 12,
+					"bond": "Patron of Merab"
+				},
+				{
+					"name": "Maisa el-Aarfa",
+					"alignment": "ne",
+					"gender": "f",
+					"ancestry": "elf",
+					"position": "merchant",
+					"level": 9,
+					"bond": "Ringleader of a smuggling operation"
+				},
+				{
+					"name": "Ulthiir",
+					"alignment": "lg",
+					"gender": "m",
+					"ancestry": "half-elf",
+					"position": "champion",
+					"level": 12,
+					"bond": "Leader of the Blessed Orchid"
+				},
+				{
+					"name": "Yulinix",
+					"alignment": "n",
+					"gender": "m",
+					"ancestry": "gnome",
+					"position": "alchemist",
+					"level": 16,
+					"bond": "High Alchemist of Merab, leader of the Alchemists' Guild"
+				}
+			]
+		},
+		{
+			"name": "Dreaming of Another Life",
+			"category": "Mindscape",
+			"source": "SoG3",
+			"page": 73,
+			"traits": [
+				"rare",
+				"finite",
+				"metamorphic"
+			],
+			"keyAnchor": "A buried pickaxe found deep in the mine",
+			"mindscapeEntry": "While exploring an old mine, the PCs step through an invisible, one-way door and enter the mindscape.",
+			"entries": [
+				"Humming, singing, and the unmistakable rhythmic clang of steel striking steel echo constantly through this mindscape. Those who have known the labor of a worksite feel the tune and recognize their heart beating in time to its rhythm. No one remembers what these workers are building; they simply know that they must continue to do so, so that their children may live free from their burdens. This mindscape was shaped by the collective anguish of a thousand workers, trapping them in the cycle of work forevermore, doomed only to dream of a better life. To escape this mindscape, the PCs must navigate a mazelike mine whose tunnels constantly open and collapse and are populated by {@trait undead} miners."
+			]
+		},
+		{
+			"name": "The Final Room",
+			"category": "Mindscape",
+			"source": "SoG3",
+			"page": 73,
+			"traits": [
+				"rare",
+				"finite"
+			],
+			"keyAnchor": "A blank Harrow card",
+			"mindscapeEntry": "Willingly participating in a Harrowing performed by a fortune-teller capable of creating a Final Room.",
+			"entries": [
+				"A rare few fortune-tellers have the ability to form a mindscape as part of the process of performing a Harrow reading. Each of these mindscapes are known as the Final Room\u2014for each participant's revelations in these rooms are believed to be their final destinies. A Final Room is a {@trait finite|GMG} mindscape that takes place in a single room, although the size of the room can be anything from a cozy parlor to a vast cathedral. It is thought that the unconscious mind is more closely attuned to the planes of the Outer Sphere and that tapping into it can provide powerful visions. Whether this is true or simply superstition is difficult to discern. These mindscapes almost always have permanent doors that allow free entry and exit, but beware the unscrupulous fortune-teller who seeks to use a Final Room as an ambush, potentially forcing parties who step into them to face manifestations of Harrow cards in battle (you can use harrowkin from the third volume of the Stolen Fate Adventure Path for these encounters)."
+			]
+		},
+		{
+			"name": "The Forsaken Utopia",
+			"category": "Mindscape",
+			"source": "SoG3",
+			"page": 73,
+			"traits": [
+				"rare",
+				"finite",
+				"flowing"
+			],
+			"keyAnchor": "A gemstone that shines like brilliant moonlight",
+			"mindscapeEntry": "After exploring an ancient ruin that once was part of a lost empire, the PC and their allies are drawn into the Forsaken Utopia the next time they sleep and dream.",
+			"entries": [
+				"This mindscape is a beautiful recreation of a lost kingdom from the ancient past. The architect is a single, powerful spellcaster who faced the destruction of their lost kingdom and attempted to capture what they could to preserve their way of life in the face of an apocalypse. But now, those who once dwelt within the city have degraded to vague shadows, and sinister extraplanar forces may have infiltrated the utopia. What has become of the architect themself is unknown, although it's likely that their death will cause the Forsaken Utopia to collapse. The ruins themselves are alluring, and the city draws visitors in, compelling them to explore, to learn what has been left behind, and to know that its people once lived. Whether or not one can escape the Forsaken Utopia without destroying it (or using a ritual like {@ritual mindscape door|DA}) is left to you to decide, but no matter how long one remains in the Forsaken Utopia, upon escaping the travelers find that only a single night's sleep has passed in the real world."
+			]
+		},
+		{
 			"name": "Willowshore",
 			"source": "SoG0",
 			"otherSources": {
@@ -13,7 +936,7 @@
 			"category": "Settlement",
 			"level": 4,
 			"traits": [
-				"N",
+				"n",
 				"town"
 			],
 			"description": "Isolated lumber town",
@@ -236,6 +1159,105 @@
 		},
 		{
 			"name": "Highhelm",
+			"category": "Settlement",
+			"level": 14,
+			"source": "LOHh",
+			"page": 8,
+			"traits": [
+				"ln",
+				"metropolis"
+			],
+			"description": "Ancient dwarven city embodying the essence of dwarven culture while gradually becoming more cosmopolitan.",
+			"settlementData": {
+				"government": "Monarchy with a council",
+				"population": {
+					"total": 41527,
+					"ancestries": {
+						"dwarves": 83,
+						"humans": 7,
+						"elves": 5,
+						"other": 5
+					}
+				},
+				"languages": [
+					"{@language Common}",
+					"{@language Dwarven}",
+					"{@language Elven}",
+					"{@language Terran}"
+				],
+				"religions": [
+					"{@deity Torag}",
+					"{@deity Folgrit|LOGM}",
+					"{@deity Grundinnar|LOGM}",
+					"{@deity Kols|LOGM}",
+					"other deities of the {@deity dwarven pantheon|LOGM}",
+					"the {@deity dwarven pantheon|LOGM|pantheon} as a whole",
+					"{@deity Abadar}",
+					"{@deity Pharasma}"
+				],
+				"threats": [
+					"aberrant horrors and monsters from the Depths and Darklands",
+					"evil orcs",
+					"infighting",
+					"natural disasters"
+				],
+				"features": [
+					{
+						"name": "Of Dwarven Make",
+						"entries": [
+							"{@filter Uncommon dwarf items|items||source=|rarity=uncommon|creature=dwarf|effect==sand|weapon==sand}, including magic items, are {@trait common} within Highhelm."
+						]
+					},
+					{
+						"name": "Forged With Power",
+						"entries": [
+							"Highhelm offers higher level access to weapons and armor thanks to the city's forges; {@filter armaments of up to 17th level|items||Level=[0;17]|category=armor;weapon} are available."
+						]
+					}
+				]
+			},
+			"residents": [
+				{
+					"name": "Borogrim the Hale",
+					"alignment": "ln",
+					"gender": "m",
+					"position": "magnate",
+					"bond": "High King and ruler of Highhelm, convener of the Gathering Council of leaders from other Five Kings Mountains' dwarven city-states."
+				},
+				{
+					"name": "Vanth Orridus",
+					"alignment": "ln",
+					"ancestry": "dwarf",
+					"position": "cleric of {@deity Torag}",
+					"bond": "High Priestess and head priest of {@deity Torag} and co-head of the powerful religious council called the Nine-Eyed Hammer"
+				},
+				{
+					"name": "Arridor Orridus",
+					"alignment": "lg",
+					"ancestry": "dwarf",
+					"position": "cleric of {@deity Folgrit|LOGM}",
+					"bond": "High Priest and head priest of {@deity Folgrit|LOGM} and co-head of the powerful religious council called the Nine-Eyed Hammer"
+				},
+				{
+					"name": "Kaltan the Pike",
+					"alignment": "ln",
+					"gender": "m",
+					"ancestry": "dwarf",
+					"position": "battle master",
+					"bond": "General of the Highhelm First Army"
+				},
+				{
+					"name": "Geralde Brightfist",
+					"alignment": "ln",
+					"gender": "f",
+					"ancestry": "dwarf",
+					"position": "ruffian",
+					"bond": "Head of the Blacknoon Thieves' Guild, Highhelm's largest gang"
+				}
+			]
+		},
+		{
+			"name": "Highhelm",
 			"source": "SKT0",
 			"page": 4,
 			"category": "Settlement",
@@ -263,7 +1285,13 @@
 					"{@language Terran}"
 				],
 				"religions": [
-					"{@deity Torag}, {@deity Folgrit|LOGM}, {@deity Grundinnar|LOGM}, {@deity Kols|LOGM}, other deities of the {@deity dwarven pantheon|LOGM}, {@deity Abadar}, {@deity Pharasma}"
+					"{@deity Torag}",
+					"{@deity Folgrit|LOGM}",
+					"{@deity Grundinnar|LOGM}",
+					"{@deity Kols|LOGM}",
+					"ther deities of the {@deity dwarven pantheon|LOGM}",
+					"{@deity Abadar}",
+					"{@deity Pharasma}"
 				],
 				"threats": [
 					"aberrant horrors and monsters from the Depths and Darklands",
@@ -275,7 +1303,7 @@
 					{
 						"name": "Of Dwarven Make",
 						"entries": [
-							"{@filter Uncommon dwarf items|items||rarity=uncommon|ancestry & heritage=dwarf}, including magic items, are common within Highhelm."
+							"{@filter Uncommon dwarf items|items||rarity=uncommon|ancestry & heritage=dwarf}, including magic items, are {@trait common} within Highhelm."
 						]
 					},
 					{
@@ -1170,7 +2198,7 @@
 				"religions": [
 					"{@deity Abadar}",
 					"{@deity Angradd}",
-					"{@deity Brigh}",
+					"{@deity Brigh|LOGM}",
 					"{@deity Torag}"
 				],
 				"threats": [
@@ -1411,7 +2439,7 @@
 				],
 				"religions": [
 					"{@deity Abadar}",
-					"{@deity Brigh}",
+					"{@deity Brigh|LOGM}",
 					"{@deity Erastil}"
 				],
 				"threats": [
@@ -1491,7 +2519,7 @@
 				],
 				"religions": [
 					"{@deity Abadar}",
-					"{@deity Brigh}",
+					"{@deity Brigh|LOGM}",
 					"{@deity Erastil}",
 					"{@deity Irori}",
 					"{@deity Torag}"
@@ -1533,7 +2561,7 @@
 					"level": 15,
 					"ancestry": "human",
 					"position": "cleric",
-					"bond": "head of the Church of {@deity Brigh}"
+					"bond": "head of the Church of {@deity Brigh|LOGM}"
 				},
 				{
 					"name": "Ironmaster Ytharia Vulane",
@@ -2944,7 +3972,7 @@
 				],
 				"religions": [
 					"{@deity Balumbdar}",
-					"{@deity Brigh}",
+					"{@deity Brigh|LOGM}",
 					"{@deity Desna}",
 					"{@deity Erastil}",
 					"{@deity Gozreh}",

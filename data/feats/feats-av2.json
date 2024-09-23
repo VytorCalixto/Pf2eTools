@@ -19,7 +19,7 @@
 			]
 		},
 		{
-			"name": "Advanced Seeker Of Truths",
+			"name": "Advanced Seeker of Truths",
 			"source": "AV2",
 			"page": 77,
 			"level": 12,
@@ -64,15 +64,15 @@
 			],
 			"leadsTo": [
 				"Able Ritualist|AV2",
-				"Advanced Seeker Of Truths|AV2",
+				"Advanced Seeker of Truths|AV2",
 				"Entities From Afar|AV2",
 				"Incredible Recollection|AV2",
 				"Know It All|AV2",
 				"Lorefinder|AV2",
 				"Scholarly Defense|AV2",
-				"Seeker Of Truths|AV2",
+				"Seeker of Truths|AV2",
 				"Strange Script|AV2",
-				"Words Of Unraveling|AV2"
+				"Words of Unraveling|AV2"
 			]
 		},
 		{
@@ -171,7 +171,7 @@
 			]
 		},
 		{
-			"name": "Seeker Of Truths",
+			"name": "Seeker of Truths",
 			"source": "AV2",
 			"page": 76,
 			"level": 4,
@@ -191,7 +191,7 @@
 				"You can take this feat up to three times, selecting a different domain each time."
 			],
 			"leadsTo": [
-				"Advanced Seeker Of Truths|AV2"
+				"Advanced Seeker of Truths|AV2"
 			]
 		},
 		{
@@ -214,7 +214,7 @@
 			]
 		},
 		{
-			"name": "Words Of Unraveling",
+			"name": "Words of Unraveling",
 			"source": "AV2",
 			"page": 77,
 			"level": 12,

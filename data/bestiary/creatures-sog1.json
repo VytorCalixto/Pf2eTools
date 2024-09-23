@@ -1673,7 +1673,8 @@
 						"name": "sensitive hearing"
 					}
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Noppera-Bo Trickster",
@@ -2096,7 +2097,8 @@
 						"name": "sensitive hearing"
 					}
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Shinigami",
@@ -2131,7 +2133,7 @@
 					"utopian"
 				],
 				"abilities": [
-					"tongues"
+					"{@spell tongues}"
 				]
 			},
 			"skills": {
@@ -2373,7 +2375,8 @@
 						"amount": 15
 					}
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Stone Spider",
@@ -2567,7 +2570,8 @@
 					"petrified",
 					"poison"
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Thatchling",
@@ -2739,7 +2743,8 @@
 						"amount": 2
 					}
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Red-Hooded Thatchling",
@@ -2972,7 +2977,8 @@
 						"amount": 2
 					}
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Hu Ban-Niang",
@@ -2990,7 +2996,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Female human guard captain",
+			"description": "Female {@ancestry human} guard captain",
 			"perception": {
 				"std": 11
 			},
@@ -3154,7 +3160,8 @@
 						"hp": 75
 					}
 				]
-			}
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Shou Matsuki",
@@ -3172,7 +3179,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human carpenter",
+			"description": "Male {@ancestry human} carpenter",
 			"perception": {
 				"std": 12
 			},
@@ -3257,7 +3264,7 @@
 					{
 						"name": "You Know, They Say...",
 						"entries": [
-							"Old Matsuki can use {@skill lore||Willowshore Lore} in place of {@skill Arcana}, {@skill Medicine}, {@skill Occultism}, or {@skill Religion} to attempt {@action Recall Knowledge} checks with a \u20132 penalty. He has the effects of the {@feat Dubious Knowledge} feat for {@action Recall Knowledge checks attempted in this way."
+							"Old Matsuki can use {@skill lore||Willowshore Lore} in place of {@skill Arcana}, {@skill Medicine}, {@skill Occultism}, or {@skill Religion} to attempt {@action Recall Knowledge} checks with a \u20132 penalty. He has the effects of the {@feat Dubious Knowledge} feat for {@action Recall Knowledge} checks attempted in this way."
 						]
 					}
 				],
@@ -3351,7 +3358,8 @@
 						"hp": 70
 					}
 				]
-			}
+			},
+			"hasImages": true
 		}
 	]
 }

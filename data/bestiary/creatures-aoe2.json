@@ -937,14 +937,11 @@
 							"number": 2,
 							"unit": "action"
 						},
-						"requirements": "The excorion has at least 70",
-						"name": "Vital Transfusion"
-					},
-					{
+						"requirements": "The excorion has at least 70 Hit Points",
 						"entries": [
 							"The excorion sacrifices itself and transfers its bloody, vital energy to a willing living creature within 30 feet. The excorion is immediately destroyed, and the targeted living creature heals a number of HP equal to half the excorion's remaining HP at the time that it used this ability. The living creature is {@condition slowed|CRB|slowed 1} during its next turn as its body adjusts to the newly transfused blood and vital energy; the living creature also counts as an excorion for 1 minute for the purpose of seeing other excorions' Bloody Handprint marks."
 						],
-						"name": "Hit Points; Effect"
+						"name": "Vital Transfusion"
 					},
 					{
 						"activity": {
@@ -1012,7 +1009,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Female human guildmaster",
+			"description": "Female {@ancestry human} guildmaster",
 			"perception": {
 				"std": 19
 			},
@@ -1711,7 +1708,7 @@
 				},
 				"deception": {
 					"std": 10,
-					"to Create a Diversion": 12
+					"to {@action Create a Diversion}": 12
 				},
 				"stealth": {
 					"std": 12
@@ -1995,7 +1992,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human guard captain",
+			"description": "Male {@ancestry human} guard captain",
 			"perception": {
 				"std": 18
 			},
@@ -2246,25 +2243,16 @@
 			"abilities": {
 				"bot": [
 					{
-						"activity": {
-							"number": 1,
-							"unit": "action"
-						},
-						"entries": [
-							"{@damage 1d6+5} piercing Melee war razor +17 (agile, backstabber, deadly <d8>, finesse), Damage {@damage 1d4+5} piercing Ranged {@as 1} dagger +17 (agile, finesse, thrown <10 feet>, versatile S), Damage {@damage 1d4+5} piercing."
-						],
-						"name": "S), Damage"
-					},
-					{
+						"name": "Sneak Attack",
 						"entries": [
 							"When attacking a {@condition flat-footed} creature, the Skinsaw murderer deals {@dice 1d6} additional precision damage."
 						],
-						"name": "Sneak Attack",
 						"generic": {
 							"tag": "ability"
 						}
 					},
 					{
+						"name": "Twin Takedown",
 						"activity": {
 							"number": 1,
 							"unit": "action"
@@ -2273,9 +2261,11 @@
 							"flourish"
 						],
 						"entries": [
-							"As the ranger feat (Core Rulebook 171)."
+							"As the ranger feat."
 						],
-						"name": "Twin Takedown"
+						"generic": {
+							"tag": "feat"
+						}
 					}
 				]
 			},
@@ -2415,16 +2405,6 @@
 					}
 				],
 				"bot": [
-					{
-						"activity": {
-							"number": 1,
-							"unit": "action"
-						},
-						"entries": [
-							"{@damage 2d6+7} piercing Ranged dagger +20 (agile, finesse, thrown <10 feet>, versatile S), Damage {@damage 1d4+7} piercing."
-						],
-						"name": "S), Damage"
-					},
 					{
 						"activity": {
 							"number": 1,
@@ -3210,9 +3190,9 @@
 					},
 					{
 						"entries": [
-							"Skinner can effectively wield abnormally long spiked chains and can do so using only one hand."
+							"The Skinner can effectively wield abnormally long spiked chains and can do so using only one hand."
 						],
-						"name": "Chain Expert The"
+						"name": "Chain Expert"
 					},
 					{
 						"activity": {

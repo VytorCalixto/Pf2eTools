@@ -960,7 +960,7 @@
 				"human",
 				"humanoid"
 			],
-			"description": "Male human explorer",
+			"description": "Male {@ancestry human} explorer",
 			"perception": {
 				"std": 19
 			},
@@ -1709,7 +1709,7 @@
 				"elf",
 				"humanoid"
 			],
-			"description": "Male elf hero",
+			"description": "Male {@ancestry elf} hero",
 			"perception": {
 				"std": 14
 			},
@@ -2114,7 +2114,7 @@
 				},
 				"athletics": {
 					"std": 9,
-					"to Climb": 13
+					"to {@action Climb}": 13
 				},
 				"deception": {
 					"std": 12
